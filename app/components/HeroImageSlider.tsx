@@ -7,7 +7,7 @@ import slideImage2 from "../../public/images/slide2.webp";
 import slideImage3 from "../../public/images/slide3.webp";
 import slideImage4 from "../../public/images/slide4.webp";
 import { Roboto_Condensed } from "next/font/google";
-// import { Noto_Sans_Canadian_Aboriginal } from "next/font/google";
+import { Noto_Sans_Canadian_Aboriginal } from "next/font/google";
 
 const roboto_condensed = Roboto_Condensed({
     weight: ["300", "400", "500", "700"],
@@ -15,11 +15,11 @@ const roboto_condensed = Roboto_Condensed({
     display: "swap",
 });
 
-// const noto = Noto_Sans_Canadian_Aboriginal({
-//     weight: ["300", "400", "500", "700"],
-//     subsets: ["latin"],
-//     display: "swap",
-// });
+const noto = Noto_Sans_Canadian_Aboriginal({
+    weight: ["300", "400", "500", "700"],
+    subsets: ["latin"],
+    display: "swap",
+});
 
 interface SettingsT {
     autoPlay: boolean;
@@ -98,7 +98,7 @@ function HeroImageSlider() {
             content: function () {
                 return (
                     <Box
-                        // className={noto.className}
+                        className={noto.className}
                         sx={{
                             position: "absolute",
                             zIndex: 50,
@@ -107,8 +107,8 @@ function HeroImageSlider() {
                         }}
                     >
                         <Typography
-                            // style={{ fontStretch: "extra-condensed" }}
-                            // className={roboto_condensed.className}
+                            style={{ fontStretch: "extra-condensed" }}
+                            className={noto.className}
                             sx={{ fontSize: "2vw" }}
                         >
                             Окна ПВХ и АЛ от производителя
@@ -231,7 +231,7 @@ function HeroImageSlider() {
         },
     ];
 
-    // console.log(items);
+    console.log(items);
 
     return (
         <Carousel
@@ -253,8 +253,8 @@ function Item({ item }) {
                 src={item.name.src}
                 alt={item.description}
                 width={"100%"}
-                height={"fit"}
-                sx={{ zIndex: 0, position: "absolute" }}
+                height={"auto"}
+                sx={{ zIndex: 0, position: "relative" }}
             />
             {item.content()}
         </Box>
