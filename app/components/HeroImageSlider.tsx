@@ -6,20 +6,6 @@ import slideImage1 from "../../public/images/slide1.webp";
 import slideImage2 from "../../public/images/slide2.webp";
 import slideImage3 from "../../public/images/slide3.webp";
 import slideImage4 from "../../public/images/slide4.webp";
-import { Roboto_Condensed } from "next/font/google";
-import { Noto_Sans_Canadian_Aboriginal } from "next/font/google";
-
-const roboto_condensed = Roboto_Condensed({
-    weight: ["300", "400", "500", "700"],
-    subsets: ["latin", "cyrillic"],
-    display: "swap",
-});
-
-const noto = Noto_Sans_Canadian_Aboriginal({
-    weight: ["300", "400", "500", "700"],
-    subsets: ["latin"],
-    display: "swap",
-});
 
 interface SettingsT {
     autoPlay: boolean;
@@ -52,7 +38,7 @@ function HeroImageSlider() {
             name: slideImage1,
             description: "Probably the most random thing you have ever seen!",
             left: "47vw",
-            top: "5vh",
+            top: "2vw",
             content: function () {
                 return (
                     <Box
@@ -63,10 +49,14 @@ function HeroImageSlider() {
                             left: this.left,
                         }}
                     >
-                        <Typography sx={{ fontSize: "2vw" }}>
+                        <Typography
+                            variant="sliderFont"
+                            sx={{ fontSize: "2vw" }}
+                        >
                             Расчёт стоимости
                         </Typography>
                         <Typography
+                            variant="sliderFont"
                             fontWeight={"light"}
                             sx={{ fontSize: "1.2vw" }}
                         >
@@ -94,11 +84,10 @@ function HeroImageSlider() {
             name: slideImage2,
             description: "Hello World!",
             left: "47vw",
-            top: "8%",
+            top: "2vw",
             content: function () {
                 return (
                     <Box
-                        className={noto.className}
                         sx={{
                             position: "absolute",
                             zIndex: 50,
@@ -107,13 +96,14 @@ function HeroImageSlider() {
                         }}
                     >
                         <Typography
+                            variant="sliderFont"
                             style={{ fontStretch: "extra-condensed" }}
-                            className={noto.className}
                             sx={{ fontSize: "2vw" }}
                         >
                             Окна ПВХ и АЛ от производителя
                         </Typography>
                         <Typography
+                            variant="sliderFont"
                             fontWeight={"light"}
                             sx={{ fontSize: "1.2vw" }}
                         >
@@ -121,6 +111,7 @@ function HeroImageSlider() {
                             крупнейшего завода РФ
                         </Typography>
                         <Typography
+                            variant="sliderFont"
                             fontWeight={"light"}
                             sx={{ fontSize: "1.2vw" }}
                         >
@@ -148,7 +139,7 @@ function HeroImageSlider() {
             name: slideImage3,
             description: "Probably the most random thing you have ever seen!",
             left: "48vw",
-            top: "17vh",
+            top: "6vw",
             content: function () {
                 return (
                     <Box
@@ -159,11 +150,14 @@ function HeroImageSlider() {
                             left: this.left,
                         }}
                     >
-                        <Typography variant="body1" sx={{ fontSize: "2vw" }}>
+                        <Typography
+                            variant="sliderFont"
+                            sx={{ fontSize: "2vw" }}
+                        >
                             Холодное остекление
                         </Typography>
                         <Typography
-                            variant="body1"
+                            variant="sliderFont"
                             fontWeight={"light"}
                             sx={{ fontSize: "1.2vw" }}
                         >
@@ -191,7 +185,7 @@ function HeroImageSlider() {
             name: slideImage4,
             description: "Probably the most random thing you have ever seen!",
             left: "48vw",
-            top: "18vh",
+            top: "6vw",
             content: function () {
                 return (
                     <Box
@@ -202,10 +196,14 @@ function HeroImageSlider() {
                             left: this.left,
                         }}
                     >
-                        <Typography variant="body1" sx={{ fontSize: "2vw" }}>
+                        <Typography
+                            variant="sliderFont"
+                            sx={{ fontSize: "2vw" }}
+                        >
                             Стоечно-ригельное остекление
                         </Typography>
                         <Typography
+                            variant="sliderFont"
                             fontWeight={"light"}
                             sx={{ fontSize: "1.2vw" }}
                         >
