@@ -6,8 +6,8 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Image from "next/image";
 import logoImage from "../../public/images/logo.png";
-import AccountBalanceWalletSharpIcon from "@mui/icons-material/AccountBalanceWalletSharp";
-import MoreTimeSharpIcon from "@mui/icons-material/MoreTimeSharp";
+import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
+import CalculateOutlinedIcon from "@mui/icons-material/CalculateOutlined";
 import DrawerMobileMenu from "./DrawerMobileMenu";
 import { Container } from "@mui/material";
 
@@ -75,16 +75,25 @@ const Navbar = () => {
                                     sm: "column",
                                     lg: "row",
                                 },
-                                justifyContent: "space-between",
-                                gap: { xs: 0, md: 1 },
+                                justifyContent: {
+                                    sm: "flex-start",
+                                    lg: "space-between",
+                                },
+                                alignContent: {
+                                    sm: "flex-start",
+                                    lg: "space-between",
+                                },
+                                gap: { sm: 0, lg: 1 },
                             }}
                         >
                             <Button
                                 sx={{
                                     color: "#e74f21",
+                                    paddingY: "3px",
+                                    mr: "auto",
                                 }}
                                 startIcon={
-                                    <AccountBalanceWalletSharpIcon
+                                    <CalculateOutlinedIcon
                                         sx={{
                                             width: { lg: 35 },
                                             height: { lg: 35 },
@@ -92,14 +101,23 @@ const Navbar = () => {
                                     />
                                 }
                             >
-                                <Typography color="#e74f21">
+                                <Typography
+                                    color="#e74f21"
+                                    fontWeight={"light"}
+                                    fontSize={"large"}
+                                    sx={{ textTransform: "none" }}
+                                >
                                     Калькулятор окон
                                 </Typography>
                             </Button>
                             <Button
-                                sx={{ color: "#e74f21" }}
+                                sx={{
+                                    color: "#e74f21",
+                                    paddingY: "3px",
+                                    mr: "auto",
+                                }}
                                 startIcon={
-                                    <MoreTimeSharpIcon
+                                    <AccountBalanceWalletOutlinedIcon
                                         sx={{
                                             width: { lg: 35 },
                                             height: { lg: 35 },
@@ -107,28 +125,41 @@ const Navbar = () => {
                                     />
                                 }
                             >
-                                <Typography color="#e74f21">
+                                <Typography
+                                    color="#e74f21"
+                                    fontWeight={"light"}
+                                    sx={{ textTransform: "none" }}
+                                    fontSize={"large"}
+                                >
                                     Рассрочка платежа
                                 </Typography>
                             </Button>
                         </Box>
                         <Box
                             sx={{ display: { xs: "none", md: "flex" } }}
-                            flexDirection={"column"}
+                            flexDirection={"row"}
                             alignSelf={"center"}
-                            gap={1}
+                            gap={2}
                         >
-                            <Box display={"flex"} flexDirection={"row"} gap={2}>
+                            <Box
+                                display={"flex"}
+                                flexDirection={"column"}
+                                gap={1}
+                            >
                                 <Typography fontWeight="fontWeightLight">
                                     О компании
                                 </Typography>
                                 <Typography fontWeight="fontWeightLight">
-                                    Услуги
+                                    Как заказать
                                 </Typography>
                             </Box>
-                            <Box display={"flex"} flexDirection={"row"} gap={2}>
+                            <Box
+                                display={"flex"}
+                                flexDirection={"column"}
+                                gap={1}
+                            >
                                 <Typography fontWeight="fontWeightLight">
-                                    Как заказать
+                                    Услуги
                                 </Typography>
                                 <Typography fontWeight="fontWeightLight">
                                     Контакты
@@ -143,23 +174,30 @@ const Navbar = () => {
                             textAlign={"right"}
                         >
                             <Typography
-                                variant="subtitle2"
+                                fontSize={"0.9rem"}
+                                lineHeight={"1.2rem"}
                                 fontWeight={"light"}
                             >
                                 Ежедневно с 9:00 до 19:00
                             </Typography>
                             <Typography
-                                variant="subtitle2"
+                                fontSize={"0.9rem"}
+                                lineHeight={"1.2rem"}
                                 fontWeight={"light"}
                             >
                                 Телефон в г.Туле
                             </Typography>
-                            <Typography variant="h5" fontWeight={"light"}>
-                                +7 (4872) 38-55-50
+                            <Typography variant="h5">
+                                <span style={{ fontWeight: "lighter" }}>
+                                    +7 (4872)
+                                </span>{" "}
+                                38-55-50
                             </Typography>
                             <Typography
-                                variant="subtitle2"
+                                fontSize={"0.9rem"}
+                                lineHeight={"1.2rem"}
                                 fontWeight={"light"}
+                                color="#e74f21"
                             >
                                 Почта: 385391@mail.ru
                             </Typography>

@@ -1,8 +1,7 @@
-import Image from "next/image";
-import styles from "./page.module.css";
 import Navbar from "./components/Navbar";
-import { Container } from "@mui/material";
 import HeroImageSlider from "./components/HeroImageSlider";
+import ProductionCards from "./components/ProductionCards";
+import { Box } from "@mui/material";
 
 export default function Home() {
     return (
@@ -12,6 +11,7 @@ export default function Home() {
             </header>
             <main>
                 <HeroImageSlider />
+                <ProductionCards />
             </main>
         </>
     );
