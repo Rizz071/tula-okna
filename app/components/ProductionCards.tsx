@@ -41,7 +41,12 @@ const ProductionCards = () => {
                     fontWeight={"light"}
                     paddingY={1}
                     sx={{
-                        fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" },
+                        fontSize: {
+                            xs: "1rem",
+                            sm: "1.2rem",
+                            md: "1.5rem",
+                            lg: "2rem",
+                        },
                     }}
                 >
                     Продукция и услуги
