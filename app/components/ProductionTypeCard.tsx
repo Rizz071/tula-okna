@@ -14,14 +14,12 @@ const ProductionTypeCard = ({ imgSrc, caption, price }: Props) => {
             flexDirection={{ xs: "column", md: "row" }}
             alignItems={"center"}
         >
-            {/* <Box display={{ xs: "none", sm: "block" }}> */}
             <Image
                 src={imgSrc.src}
                 width={imgSrc.width}
                 height={imgSrc.height}
                 alt={caption}
             />
-            {/* </Box> */}
             <Box
                 display={"flex"}
                 flexDirection={"column"}

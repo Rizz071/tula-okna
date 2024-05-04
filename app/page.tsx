@@ -8,6 +8,7 @@ import {
     List,
     ListItem,
     ListItemText,
+    Grid,
 } from "@mui/material";
 import Image from "next/image";
 import CertificateTN from "../public/images/certificates/tn/CertificateTN.webp";
@@ -23,8 +24,15 @@ export default function Home() {
                 <HeroImageSlider />
                 <ProductionCards />
                 <Container maxWidth="lg">
-                    <Box display={"flex"} marginTop={6} columnGap={10}>
-                        <Box>
+                    <Grid
+                        container
+                        marginTop={6}
+                        spacing={6}
+                        direction="row"
+                        alignItems={"flex-start"}
+                        justifyContent={"space-between"}
+                    >
+                        <Grid item xs>
                             <Typography
                                 variant="h1"
                                 sx={{ fontSize: "2rem" }}
@@ -193,18 +201,29 @@ export default function Home() {
                                     />
                                 </ListItem>
                             </List>
-                        </Box>
-                        <Box>
-                            <Image
-                                src={CertificateTN}
-                                alt={"Certificate of production quality"}
-                                style={{ border: "1px solid black" }}
-                            />
-                            <Typography variant="subtitle2">
-                                Протокол испытания окон (увеличить)
-                            </Typography>
-                        </Box>
-                    </Box>
+                        </Grid>
+                        <Grid item xs={12} sm={"auto"}>
+                            <Box
+                                display={"flex"}
+                                flexDirection="column"
+                                justifyContent={"center"}
+                                alignItems={"center"}
+                            >
+                                <Image
+                                    src={CertificateTN}
+                                    alt={"Certificate of production quality"}
+                                    style={{
+                                        border: "1px solid black",
+                                        width: "100%",
+                                        height: "auto",
+                                    }}
+                                />
+                                <Typography variant="subtitle2">
+                                    Протокол испытания окон (увеличить)
+                                </Typography>
+                            </Box>
+                        </Grid>
+                    </Grid>
                 </Container>
 
                 <Box width={"100%"}>
@@ -239,81 +258,92 @@ export default function Home() {
                         Створки не провисают. Рамы не деформируются на жаре.
                         Петли держатся надежно.
                     </Typography>
+                </Box>
 
-                    <Container maxWidth="lg">
-                        <Box
-                            display={"flex"}
-                            flexDirection={"row"}
-                            alignItems={"center"}
-                            columnGap={6}
+                <Container maxWidth="lg">
+                    <Grid container alignItems={"center"} columnGap={6}>
+                        <Grid
+                            item
+                            xs={12}
+                            md={6}
+                            bgcolor={"#f0f0f0"}
+                            border={"1px solid"}
+                            padding={2}
+                            alignItems="center"
+                            justifyContent="center"
                         >
                             <Box
-                                bgcolor={"#f0f0f0"}
-                                border={"1px solid"}
-                                padding={1}
+                                display="flex"
+                                flexDirection={"column"}
+                                alignItems="center"
+                                justifyContent="center"
                             >
                                 <Image
                                     src={besedka}
                                     alt={"Example of our work"}
+                                    style={{ width: "100%", height: "auto" }}
                                 />
 
                                 <Typography
                                     variant="subtitle2"
                                     fontWeight={"light"}
+                                    textAlign={"left"}
+                                    alignSelf={"flex-start"}
                                 >
                                     <strong>Остекление беседки</strong>
                                     <br />
                                     Образец нашей работы
                                 </Typography>
                             </Box>
-                            <Box>
-                                <Typography
-                                    variant="h1"
-                                    sx={{ fontSize: "2rem" }}
-                                    fontWeight={"light"}
-                                    gutterBottom
-                                >
-                                    Эксклюзивная гарантия
-                                </Typography>
-                                <Typography
-                                    fontSize="17px"
-                                    fontWeight={"light"}
-                                    lineHeight={"21px"}
-                                    marginY={2}
-                                >
-                                    Гарантийный срок — это характеристика
-                                    надежности производителя, показатель его
-                                    отношения к своему клиенту.
-                                </Typography>
-                                <Typography
-                                    fontSize="17px"
-                                    fontWeight={"light"}
-                                    lineHeight={"21px"}
-                                    marginY={2}
-                                >
-                                    Наша гарантия на окна составляет от 3 до 6
-                                    лет. В течение этого периода «Тульские Окна»
-                                    обязуются бесплатно устранять любые
-                                    неполадки, выполнять все необходимые
-                                    регулировки.
-                                </Typography>
-                                <Typography
-                                    fontSize="17px"
-                                    fontWeight={"light"}
-                                    lineHeight={"21px"}
-                                    marginY={2}
-                                >
-                                    Гарантия распространяется на дефекты,
-                                    связанные с механизмом фурнитуры,
-                                    герметичностью стеклопакетов, стабильностью
-                                    цвета профиля, работоспособностью резинового
-                                    уплотнителя, целостностью откосов из
-                                    сэндвич-панелей.
-                                </Typography>
-                            </Box>
-                        </Box>
-                    </Container>
-                </Box>
+                        </Grid>
+                        <Grid item xs>
+                            <Typography
+                                variant="h1"
+                                sx={{ fontSize: "2rem" }}
+                                fontWeight={"light"}
+                                gutterBottom
+                            >
+                                Эксклюзивная гарантия
+                            </Typography>
+                            <Typography
+                                fontSize="17px"
+                                fontWeight={"light"}
+                                lineHeight={"21px"}
+                                marginY={2}
+                                textAlign={"justify"}
+                            >
+                                Гарантийный срок — это характеристика надежности
+                                производителя, показатель его отношения к своему
+                                клиенту.
+                            </Typography>
+                            <Typography
+                                fontSize="17px"
+                                fontWeight={"light"}
+                                lineHeight={"21px"}
+                                marginY={2}
+                                textAlign={"justify"}
+                            >
+                                Наша гарантия на окна составляет от 3 до 6 лет.
+                                В течение этого периода «Тульские Окна»
+                                обязуются бесплатно устранять любые неполадки,
+                                выполнять все необходимые регулировки.
+                            </Typography>
+                            <Typography
+                                fontSize="17px"
+                                fontWeight={"light"}
+                                lineHeight={"21px"}
+                                marginY={2}
+                                textAlign={"justify"}
+                            >
+                                Гарантия распространяется на дефекты, связанные
+                                с механизмом фурнитуры, герметичностью
+                                стеклопакетов, стабильностью цвета профиля,
+                                работоспособностью резинового уплотнителя,
+                                целостностью откосов из сэндвич-панелей.
+                            </Typography>
+                        </Grid>
+                    </Grid>
+                </Container>
             </main>
         </>
     );
