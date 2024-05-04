@@ -76,7 +76,7 @@ function HeroImageSlider() {
                             fontWeight={"light"}
                             sx={{
                                 fontSize: {
-                                    xs: "0.9rem",
+                                    xs: "0.8rem",
                                     sm: "1.1rem",
                                     md: "1.2rem",
                                     lg: "1.5rem",

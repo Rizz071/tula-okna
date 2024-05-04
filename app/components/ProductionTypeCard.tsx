@@ -9,7 +9,11 @@ interface Props {
 
 const ProductionTypeCard = ({ imgSrc, caption, price }: Props) => {
     return (
-        <Box display={"flex"} flexDirection={"row"} alignItems={"center"}>
+        <Box
+            display={"flex"}
+            flexDirection={{ xs: "column", md: "row" }}
+            alignItems={"center"}
+        >
             {/* <Box display={{ xs: "none", sm: "block" }}> */}
             <Image
                 src={imgSrc.src}
@@ -21,22 +25,36 @@ const ProductionTypeCard = ({ imgSrc, caption, price }: Props) => {
             <Box
                 display={"flex"}
                 flexDirection={"column"}
+                justifyContent={"center"}
                 alignItems={"flex-start"}
-                marginLeft={3}
+                marginLeft={{ xs: 0, md: 3 }}
             >
                 <Typography
                     sx={{
-                        fontSize: "large",
+                        fontSize: { xs: "medium", sm: "medium", md: "large" },
                         fontWeight: "light",
-                        textAlign: "left",
+                        textAlign: { xs: "center", md: "left" },
                     }}
                 >
                     {caption}
                 </Typography>
                 {price && (
-                    <Typography
-                        sx={{ fontSize: { xs: "1.2rem", lg: "1.5rem" } }}
-                    >{`от ${price} ₽`}</Typography>
+                    <Box display={"flex"} width={"100%"}>
+                        <Typography
+                            marginLeft={0}
+                            sx={{
+                                fontSize: {
+                                    xs: "1.2rem",
+                                    sm: "1.2rem",
+                                    lg: "1.5rem",
+                                },
+                                width: "100%",
+                                textAlign: { xs: "center", md: "left" },
+                            }}
+                        >
+                            {`от ${price} ₽`}
+                        </Typography>
+                    </Box>
                 )}
             </Box>
         </Box>

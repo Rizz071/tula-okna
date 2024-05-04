@@ -25,7 +25,6 @@ const ProductionCards = () => {
                     position: "relative",
                     zIndex: "100",
                     textAlign: "center",
-                    // height: "300px",
                     mt: {
                         xs: -35.3,
                         sm: -32,
@@ -36,67 +35,78 @@ const ProductionCards = () => {
                     transform: "translate(-50%, 0%)",
                     left: "50%",
                     maxWidth: "lg",
-                    minWidth: "420px",
                 }}
             >
-                <Typography variant="h5" fontWeight={"light"} paddingY={2}>
+                <Typography
+                    fontWeight={"light"}
+                    paddingY={1}
+                    sx={{
+                        fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" },
+                    }}
+                >
                     Продукция и услуги
                 </Typography>
                 <Divider />
-                <Grid
-                    container
-                    rowSpacing={7}
-                    columnSpacing={4}
-                    padding={6}
-                    justifyContent="center"
-                    alignItems="center"
-                >
-                    <Grid item xs={12} sm={8} md={6} lg={4}>
-                        <ProductionTypeCard
-                            imgSrc={konstr1}
-                            caption={
-                                "Качественные окна ПВХ без свинца в составе"
-                            }
-                            price={"6 000"}
-                        />
-                    </Grid>
-                    <Grid item xs={12} sm={8} md={6} lg={4}>
-                        <ProductionTypeCard
-                            imgSrc={Front_small_2}
-                            caption={"Холодное и теплое балконное остекление"}
-                            price={"15 000"}
-                        />
-                    </Grid>
-                    <Grid item xs={12} sm={8} md={6} lg={4}>
-                        <ProductionTypeCard
-                            imgSrc={House}
-                            caption={
-                                "Энергоэффективное остекление домов и коттеджей"
-                            }
-                        />
-                    </Grid>
+                <Box padding={6}>
+                    <Grid
+                        container
+                        rowSpacing={7}
+                        columnSpacing={4}
+                        // padding={6}
+                        justifyContent="center"
+                        alignItems="center"
+                    >
+                        <Grid item xs={12} sm={4} md={6} lg={4}>
+                            <ProductionTypeCard
+                                imgSrc={konstr1}
+                                caption={
+                                    "Качественные окна ПВХ без свинца в составе"
+                                }
+                                price={"6 000"}
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm={4} md={6} lg={4}>
+                            <ProductionTypeCard
+                                imgSrc={Front_small_2}
+                                caption={
+                                    "Холодное и теплое балконное остекление"
+                                }
+                                price={"15 000"}
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm={4} md={6} lg={4}>
+                            <ProductionTypeCard
+                                imgSrc={House}
+                                caption={
+                                    "Энергоэффективное остекление домов и коттеджей"
+                                }
+                            />
+                        </Grid>
 
-                    <Grid item xs={12} sm={8} md={6} lg={4}>
-                        <ProductionTypeCard
-                            imgSrc={Doors}
-                            caption={"Входные группы Алюминий и ПВХ"}
-                            price={"15 000"}
-                        />
+                        <Grid item xs={12} sm={4} md={6} lg={4}>
+                            <ProductionTypeCard
+                                imgSrc={Doors}
+                                caption={"Входные группы Алюминий и ПВХ"}
+                                price={"15 000"}
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm={4} md={6} lg={4}>
+                            <ProductionTypeCard
+                                imgSrc={Fasad1}
+                                caption={
+                                    "Фасадное остекление алюминиевым профилем"
+                                }
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm={4} md={6} lg={4}>
+                            <ProductionTypeCard
+                                imgSrc={Front_small_3}
+                                caption={"Раздвижные порталы большой площади"}
+                                price={"59 000"}
+                            />
+                        </Grid>
                     </Grid>
-                    <Grid item xs={12} sm={8} md={6} lg={4}>
-                        <ProductionTypeCard
-                            imgSrc={Fasad1}
-                            caption={"Фасадное остекление алюминиевым профилем"}
-                        />
-                    </Grid>
-                    <Grid item xs={12} sm={8} md={6} lg={4}>
-                        <ProductionTypeCard
-                            imgSrc={Front_small_3}
-                            caption={"Раздвижные порталы большой площади"}
-                            price={"59 000"}
-                        />
-                    </Grid>
-                </Grid>
+                </Box>
             </Paper>
         </Container>
     );
