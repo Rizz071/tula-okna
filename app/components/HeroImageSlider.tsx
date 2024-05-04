@@ -45,15 +45,29 @@ function HeroImageSlider() {
                             position: "absolute",
                             zIndex: 50,
                             left: {
-                                md: "calc(100vw/2 - 40px)",
+                                xs: "calc(100vw/2 - 20px)",
+                                sm: "calc(100vw/2 - 30px)",
                                 lg: "calc(100vw/2 - 60px)",
+                                xl: "calc(100vw/2 - 60px)",
                             },
-                            top: "35px",
+                            top: {
+                                xs: "15px",
+                                sm: "22px",
+                                md: "30px",
+                                lg: "35px",
+                            },
                         }}
                     >
                         <Typography
                             variant="sliderFont"
-                            sx={{ fontSize: { md: "2rem", lg: "2.5rem" } }}
+                            sx={{
+                                fontSize: {
+                                    xs: "1.2rem",
+                                    sm: "1.5rem",
+                                    md: "2rem",
+                                    lg: "2.5rem",
+                                },
+                            }}
                         >
                             Расчёт стоимости
                         </Typography>
@@ -61,7 +75,12 @@ function HeroImageSlider() {
                             variant="sliderFont"
                             fontWeight={"light"}
                             sx={{
-                                fontSize: { md: "1.2rem", lg: "1.5rem" },
+                                fontSize: {
+                                    xs: "0.9rem",
+                                    sm: "1.1rem",
+                                    md: "1.2rem",
+                                    lg: "1.5rem",
+                                },
                             }}
                         >
                             Узнайте точную стоимость вашего окна!
@@ -70,9 +89,13 @@ function HeroImageSlider() {
                             variant="outlined"
                             color="primary"
                             sx={{
-                                mt: 2,
+                                mt: { xs: 1, md: 2 },
                                 border: "2px solid",
-                                fontSize: "1rem",
+                                fontSize: {
+                                    xs: "0.6rem",
+                                    sm: "0.8rem",
+                                    lg: "1rem",
+                                },
                             }}
                         >
                             Рассчитать!
@@ -90,18 +113,25 @@ function HeroImageSlider() {
                         sx={{
                             position: "absolute",
                             zIndex: 50,
-                            top: { md: "20px", lg: "35px" },
                             left: {
+                                xs: "calc(100vw/2 - 50px)",
+                                sm: "calc(100vw/2 - 50px)",
                                 md: "calc(100vw/2 - 50px)",
                                 lg: "calc(100vw/2 - 100px)",
                             },
+                            top: { xs: "5px", md: "20px", lg: "15px" },
                         }}
                     >
                         <Typography
                             variant="sliderFont"
                             sx={{
                                 my: 1,
-                                fontSize: { md: "1.5rem", lg: "2rem" },
+                                fontSize: {
+                                    xs: "1.2rem",
+                                    sm: "1.4rem",
+                                    md: "1.5rem",
+                                    lg: "2.5rem",
+                                },
                             }}
                         >
                             Окна ПВХ и АЛ от производителя
@@ -111,26 +141,29 @@ function HeroImageSlider() {
                             fontWeight={"light"}
                             sx={{
                                 mt: 1,
-                                fontSize: { md: "1.1rem", lg: "1.4rem" },
+                                fontSize: {
+                                    xs: "0.8rem",
+                                    sm: "1rem",
+                                    md: "1.2rem",
+                                    lg: "1.5rem",
+                                },
                             }}
                         >
                             Синергия собственного производства и поставок <br />
                             от двух крупнейших заводов Российской Федерации
                         </Typography>
-                        {/* <Typography
-                            variant="sliderFont"
-                            fontWeight={"light"}
-                            sx={{ fontSize: { md: "1.2rem", lg: "1.5rem" } }}
-                        >
-                            Огромный ассортимент оконно-дверной продукции
-                        </Typography> */}
                         <Button
                             variant="outlined"
                             color="primary"
                             sx={{
-                                mt: 2,
+                                mt: { xs: 1, md: 2 },
+
                                 border: "2px solid",
-                                fontSize: "1rem",
+                                fontSize: {
+                                    xs: "0.6rem",
+                                    sm: "0.8rem",
+                                    lg: "1rem",
+                                },
                             }}
                         >
                             Рассчитать
@@ -148,23 +181,44 @@ function HeroImageSlider() {
                         sx={{
                             position: "absolute",
                             zIndex: 50,
-                            top: { md: "65px", lg: "110px" },
+
                             left: {
+                                xs: "calc(100vw/2 - 16px)",
+                                sm: "calc(100vw/2 - 20px)",
                                 md: "calc(100vw/2 - 25px)",
                                 lg: "calc(100vw/2 - 35px)",
+                            },
+                            top: {
+                                xs: "45px",
+                                sm: "55px",
+                                md: "65px",
+                                lg: "110px",
                             },
                         }}
                     >
                         <Typography
                             variant="sliderFont"
-                            sx={{ fontSize: { md: "1.5rem", lg: "2rem" } }}
+                            sx={{
+                                fontSize: {
+                                    sm: "1.2rem",
+                                    md: "1.5rem",
+                                    lg: "2rem",
+                                },
+                            }}
                         >
                             Холодное остекление
                         </Typography>
                         <Typography
                             variant="sliderFont"
                             fontWeight={"light"}
-                            sx={{ fontSize: { md: "1.1rem", lg: "1.4rem" } }}
+                            sx={{
+                                fontSize: {
+                                    xs: "0.7rem",
+                                    sm: "0.9rem",
+                                    md: "1.1rem",
+                                    lg: "1.5rem",
+                                },
+                            }}
                         >
                             Для балконов, веранд, беседок
                         </Typography>
@@ -172,9 +226,13 @@ function HeroImageSlider() {
                             variant="outlined"
                             color="primary"
                             sx={{
-                                mt: 2,
+                                mt: { xs: 1, md: 2 },
                                 border: "2px solid",
-                                fontSize: "1rem",
+                                fontSize: {
+                                    xs: "0.6rem",
+                                    sm: "0.8rem",
+                                    lg: "1rem",
+                                },
                             }}
                         >
                             Подробнее
@@ -192,23 +250,43 @@ function HeroImageSlider() {
                         sx={{
                             position: "absolute",
                             zIndex: 50,
-                            top: { md: "65px", lg: "110px" },
                             left: {
+                                xs: "calc(100vw/2 - 17px)",
+                                sm: "calc(100vw/2 - 20px)",
                                 md: "calc(100vw/2 - 25px)",
                                 lg: "calc(100vw/2 - 35px)",
+                            },
+                            top: {
+                                xs: "45px",
+                                sm: "57px",
+                                md: "70px",
+                                lg: "130px",
                             },
                         }}
                     >
                         <Typography
                             variant="sliderFont"
-                            sx={{ fontSize: { md: "1.5rem", lg: "2rem" } }}
+                            sx={{
+                                fontSize: {
+                                    sm: "1.2rem",
+                                    md: "1.5rem",
+                                    lg: "2rem",
+                                },
+                            }}
                         >
                             Стоечно-ригельное остекление
                         </Typography>
                         <Typography
                             variant="sliderFont"
                             fontWeight={"light"}
-                            sx={{ fontSize: { md: "1.1rem", lg: "1.4rem" } }}
+                            sx={{
+                                fontSize: {
+                                    xs: "0.7rem",
+                                    sm: "0.9rem",
+                                    md: "1.1rem",
+                                    lg: "1.5rem",
+                                },
+                            }}
                         >
                             Входные двери, фасады, зимние сады
                         </Typography>
@@ -216,9 +294,13 @@ function HeroImageSlider() {
                             variant="outlined"
                             color="primary"
                             sx={{
-                                mt: 2,
+                                mt: { xs: 1, md: 2 },
                                 border: "2px solid",
-                                fontSize: "1rem",
+                                fontSize: {
+                                    xs: "0.6rem",
+                                    sm: "0.8rem",
+                                    lg: "1rem",
+                                },
                             }}
                         >
                             Подробнее
@@ -230,10 +312,7 @@ function HeroImageSlider() {
     ];
 
     return (
-        <Carousel
-            {...DefaultSettingsT}
-            sx={{ display: { xs: "none", md: "flex" } }}
-        >
+        <Carousel {...DefaultSettingsT} sx={{ display: { xs: "flex" } }}>
             {items.map((item, i) => (
                 <Item key={i} item={item} />
             ))}
@@ -253,7 +332,7 @@ interface Props {
 
 function Item({ item }: Props) {
     return (
-        <Box>
+        <Box minHeight={"410px"}>
             <Box
                 component="img"
                 src={item.name.src}
@@ -264,8 +343,11 @@ function Item({ item }: Props) {
                     transform: "translate(-50%, 0%)",
                     left: "50%",
                     width: {
+                        xs: item.name.width * 0.4,
+                        sm: item.name.width * 0.5,
                         md: item.name.width * 0.6,
                         lg: item.name.width * 0.9,
+                        xl: item.name.width * 1,
                     },
                 }}
             />
