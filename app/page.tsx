@@ -226,32 +226,33 @@ export default function Home() {
                     </Grid>
                 </Container>
 
-                <Box width={"100%"}>
+                <Box width={"100%"} bgcolor="#f7f7f7" paddingY={2} marginY={4}>
                     <Typography
                         variant="sliderFont"
-                        fontSize={"30px"}
+                        fontSize={{ xs: "1.7rem", sm: "30px" }}
                         fontWeight={"light"}
                         textAlign={"center"}
-                        marginTop={"10px"}
-                        marginBottom={"0"}
-                        paddingTop={"20px"}
-                        lineHeight={"40px"}
                         bgcolor={"#f7f7f7"}
+                        gutterBottom
                     >
                         Мы используем только полновесное стальное армирование
                         профиля - от 1.5мм до 2.0мм
-                        <br />
+                    </Typography>
+                    <Typography
+                        variant="sliderFont"
+                        fontSize={{ xs: "1.7rem", sm: "30px" }}
+                        fontWeight={"light"}
+                        textAlign={"center"}
+                        bgcolor={"#f7f7f7"}
+                        gutterBottom
+                    >
                         Для габаритных конструкций применяем современную
                         технологию вклейки стеклопакета в створку
                     </Typography>
                     <Typography
                         variant="sliderFont"
-                        fontSize={"22px"}
-                        marginTop={"0"}
-                        marginBottom={"30px"}
-                        paddingBottom={"20px"}
+                        fontSize={"large"}
                         textAlign={"center"}
-                        lineHeight={"30px"}
                         fontWeight={"light"}
                         bgcolor={"#f7f7f7"}
                     >
