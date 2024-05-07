@@ -213,10 +213,11 @@ const Navbar = () => {
                             gap: { md: 4 },
                         }}
                     >
-                        <Typography>ОКНА И ДВЕРИ</Typography>
+                        <Typography>ОКНА</Typography>
+                        <Typography>ДВЕРИ</Typography>
                         <Typography>БАЛКОНЫ</Typography>
-                        <Typography>ЦВЕТОВЫЕ РЕШЕНИЯ</Typography>
                         <Typography>ПОРТАЛЫ</Typography>
+                        <Typography>ФАСАДНОЕ ОСТЕКЛЕНИЕ</Typography>
                         <Typography>ЦЕНЫ</Typography>
                         <Typography>ПОРТФОЛИО</Typography>
                     </Toolbar>

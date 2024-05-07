@@ -3,6 +3,8 @@ import { Roboto } from 'next/font/google';
 import { Roboto_Condensed } from "next/font/google";
 import { createTheme } from '@mui/material/styles';
 
+//TODO Noto Serif Display
+
 const roboto = Roboto({
     weight: ['300', '400', '500', '700'],
     subsets: ['latin', 'cyrillic'],

@@ -1,13 +1,13 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
 
 interface Props {
     imgSrc: StaticImageData;
     caption: string;
-    price?: string;
+    link: string;
 }
 
-const ProductionTypeCard = ({ imgSrc, caption, price }: Props) => {
+const ProductionTypeCard = ({ imgSrc, caption, link }: Props) => {
     return (
         <Box
             display={"flex"}
@@ -19,13 +19,15 @@ const ProductionTypeCard = ({ imgSrc, caption, price }: Props) => {
                 width={imgSrc.width}
                 height={imgSrc.height}
                 alt={caption}
+                style={{ width: "auto" }}
             />
             <Box
                 display={"flex"}
                 flexDirection={"column"}
                 justifyContent={"center"}
-                alignItems={"flex-start"}
+                alignItems={{ xs: "center", md: "flex-start" }}
                 marginLeft={{ xs: 0, md: 3 }}
+                gap={1}
             >
                 <Typography
                     sx={{
@@ -36,7 +38,10 @@ const ProductionTypeCard = ({ imgSrc, caption, price }: Props) => {
                 >
                     {caption}
                 </Typography>
-                {price && (
+                <Button variant="outlined" size="small">
+                    ПЕРЕЙТИ
+                </Button>
+                {/* {price && (
                     <Box display={"flex"} width={"100%"}>
                         <Typography
                             marginLeft={0}
@@ -53,7 +58,7 @@ const ProductionTypeCard = ({ imgSrc, caption, price }: Props) => {
                             {`от ${price} ₽`}
                         </Typography>
                     </Box>
-                )}
+                )} */}
             </Box>
         </Box>
     );

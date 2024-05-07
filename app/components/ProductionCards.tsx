@@ -12,7 +12,8 @@ import Front_small_2 from "../../public/images/Front_small_2.webp";
 import Front_small_3 from "../../public/images/Front_small_3.webp";
 import House from "../../public/images/House.webp";
 import Doors from "../../public/images/Doors.webp";
-import Fasad1 from "../../public/images/Fasad1.webp";
+import apartements1 from "../../public/images/apartements3_104px.jpg";
+import dacha1 from "../../public/images/dacha1_104px.jpeg";
 
 const ProductionCards = () => {
     return (
@@ -49,7 +50,7 @@ const ProductionCards = () => {
                         },
                     }}
                 >
-                    Продукция и услуги
+                    Выбор продукции
                 </Typography>
                 <Divider />
                 <Box padding={6}>
@@ -57,17 +58,14 @@ const ProductionCards = () => {
                         container
                         rowSpacing={7}
                         columnSpacing={4}
-                        // padding={6}
                         justifyContent="center"
                         alignItems="center"
                     >
                         <Grid item xs={12} sm={4} md={6} lg={4}>
                             <ProductionTypeCard
-                                imgSrc={konstr1}
-                                caption={
-                                    "Качественные окна ПВХ без свинца в составе"
-                                }
-                                price={"6 000"}
+                                imgSrc={apartements1}
+                                caption={"Оптимальные окна ПВХ в квартиру"}
+                                link={"6 000"}
                             />
                         </Grid>
                         <Grid item xs={12} sm={4} md={6} lg={4}>
@@ -76,15 +74,22 @@ const ProductionCards = () => {
                                 caption={
                                     "Холодное и теплое балконное остекление"
                                 }
-                                price={"15 000"}
+                                link={"15 000"}
                             />
                         </Grid>
                         <Grid item xs={12} sm={4} md={6} lg={4}>
                             <ProductionTypeCard
                                 imgSrc={House}
-                                caption={
-                                    "Энергоэффективное остекление домов и коттеджей"
-                                }
+                                caption={"Энергоэффективное остекление домов"}
+                                link=""
+                            />
+                        </Grid>
+
+                        <Grid item xs={12} sm={4} md={6} lg={4}>
+                            <ProductionTypeCard
+                                imgSrc={dacha1}
+                                caption={"Недорогие окна ПВХ на дачу"}
+                                link={"6 000"}
                             />
                         </Grid>
 
@@ -92,22 +97,23 @@ const ProductionCards = () => {
                             <ProductionTypeCard
                                 imgSrc={Doors}
                                 caption={"Входные группы Алюминий и ПВХ"}
-                                price={"15 000"}
+                                link={"15 000"}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={4} md={6} lg={4}>
+                        {/* <Grid item xs={12} sm={4} md={6} lg={4}>
                             <ProductionTypeCard
                                 imgSrc={Fasad1}
                                 caption={
                                     "Фасадное остекление алюминиевым профилем"
                                 }
+                                link={""}
                             />
-                        </Grid>
+                        </Grid> */}
                         <Grid item xs={12} sm={4} md={6} lg={4}>
                             <ProductionTypeCard
                                 imgSrc={Front_small_3}
-                                caption={"Раздвижные порталы большой площади"}
-                                price={"59 000"}
+                                caption={"Раздвижные тёплые двери-порталы"}
+                                link={"59 000"}
                             />
                         </Grid>
                     </Grid>
