@@ -1,9 +1,31 @@
 'use client';
-import { Roboto } from 'next/font/google';
-import { Roboto_Condensed } from "next/font/google";
+import { Roboto, Roboto_Condensed, Inter, Inter_Tight, Noto_Sans, Noto_Serif } from 'next/font/google';
+
 import { createTheme } from '@mui/material/styles';
 
-//TODO Noto Serif Display
+const inter = Inter({
+    weight: ['300', '400', '500', '700'],
+    subsets: ['latin', 'cyrillic'],
+    display: 'swap',
+});
+
+const inter_tight = Inter_Tight({
+    weight: ['300', '400', '500', '700'],
+    subsets: ['latin', 'cyrillic'],
+    display: 'swap',
+});
+
+const noto_sans = Noto_Sans({
+    weight: ['300', '400', '500', '700'],
+    subsets: ['latin', 'cyrillic'],
+    display: 'swap',
+});
+
+const noto_serif = Noto_Sans({
+    weight: ['300', '400', '500', '700'],
+    subsets: ['latin', 'cyrillic'],
+    display: 'swap',
+});
 
 const roboto = Roboto({
     weight: ['300', '400', '500', '700'],
@@ -39,10 +61,13 @@ const theme = createTheme({
     typography: {
         sliderFont: {
             fontFamily: roboto_condensed.style.fontFamily,
+            // fontFamily: noto_serif.style.fontFamily,
             display: "block",
             // lineHeight: "1.5rem"
         },
-        fontFamily: roboto.style.fontFamily,
+        fontFamily: inter.style.fontFamily,
+        // fontFamily: roboto.style.fontFamily,
+
     },
     palette: {
         primary: {

@@ -21,17 +21,112 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
+import Tooltip from "@mui/material/Tooltip";
 
 import Image, { StaticImageData } from "next/image";
 import main_bg from "../../public/images/main-bg.webp";
 import kaleva_70 from "../../public/images/profiles/kaleva_70_3.jpg";
 import veka_70 from "../../public/images/profiles/veka_70_2.jpg";
 import veka_82 from "../../public/images/profiles/veka_82_1.jpg";
-import pic1 from "../../public/images/knipping2.webp";
+import isoterma1 from "../../public/images/slides/profile_compare_house_1.jpg";
+import veka_compare_1 from "../../public/images/profiles/veka_compare_2_800px.jpg";
+import kaleva_logo from "../../public/images/profiles/kaleva_logo.svg";
+import veka_logo from "../../public/images/profiles/Veka_logo_PNG1.png";
+import slide from "../../public/images/slides/slide_infra_house_1_1920px.jpg";
+import steklopaket from "../../public/images/slides/steklopaket_1.jpg";
 
 export default function Page() {
     return (
         <>
+            <Box sx={{ position: "relative" }}>
+                <Image
+                    src={slide}
+                    alt="Banner infrared checking"
+                    sizes="100vw"
+                    style={{ width: "100%", height: "auto", zIndex: "1" }}
+                    priority
+                />
+                <Box
+                    sx={{
+                        opacity: "90%",
+                        position: "absolute",
+                        bgcolor: "white",
+                        zIndex: "50",
+                        padding: { xs: "10px", sm: "20px", md: "30px" },
+                        width: {
+                            xs: "140px",
+                            sm: "240px",
+                            md: "300px",
+                            lg: "370px",
+                            xl: "450px",
+                        },
+                        height: {
+                            xs: "90px",
+                            sm: "140px",
+                            md: "200px",
+                            lg: "270px",
+                            xl: "350px",
+                        },
+                        left: {
+                            xs: "30px",
+                            sm: "50px",
+                            md: "100px",
+                            lg: "150px",
+                            xl: "200px",
+                        },
+                        top: {
+                            xs: "15px",
+                            sm: "40px",
+                            md: "50px",
+                            lg: "75px",
+                        },
+                        borderRadius: "1% 20% 1% 20%",
+                    }}
+                >
+                    <Box
+                        display={"flex"}
+                        flexDirection={"column"}
+                        height={"100%"}
+                        justifyContent={"space-evenly"}
+                    >
+                        <Typography
+                            gutterBottom
+                            variant="sliderFont"
+                            fontWeight={"light"}
+                            align="justify"
+                            sx={{
+                                fontSize: {
+                                    xs: "14px",
+                                    sm: "22px",
+                                    md: "30px",
+                                    lg: "40px",
+                                    xl: "50px",
+                                },
+                            }}
+                        >
+                            Остекление загородного дома
+                        </Typography>
+                        <Typography
+                            align="right"
+                            variant="sliderFont"
+                            bgcolor="white"
+                            fontWeight={"light"}
+                            sx={{
+                                fontSize: {
+                                    xs: "10px",
+                                    sm: "14px",
+                                    md: "18px",
+                                    lg: "22px",
+                                    xl: "30px",
+                                },
+                            }}
+                        >
+                            Делимся нашим опытом
+                        </Typography>
+                    </Box>
+                </Box>
+            </Box>
+
             <Box>
                 <Container maxWidth={"lg"}>
                     <Box
@@ -40,37 +135,82 @@ export default function Page() {
                         alignItems={"center"}
                         paddingY={6}
                     >
-                        <Box marginBottom={6}>
-                            <Typography variant="h1" fontSize="28px">
-                                Рекомендации по остеклению загородного дома
-                            </Typography>
-                        </Box>
-
                         <Grid
                             container
-                            columnGap={{ xs: 0, md: 6 }}
-                            rowGap={6}
+                            spacing={{ xs: 0, md: 6 }}
+                            rowGap={{ xs: 0, sm: 6, md: 12 }}
                             justifyContent={"space-around"}
                         >
-                            <Grid item xs={12} md={3}>
-                                {CardTextInfo("ПВХ или алюминий?", [
-                                    "ПВХ - значительно теплее алюминия и значительно дешевле.",
-                                    "К примеру, самый широкий алюминиевый профиль по теплосбережению примерно равен самому простому ПВХ шириной 60мм.",
+                            <Grid item xs={12} md={6}>
+                                <Box alignSelf={"center"}>
+                                    <Image
+                                        src={isoterma1}
+                                        sizes={"30vw"}
+                                        style={{
+                                            width: "100%",
+                                            height: "auto",
+                                        }}
+                                        alt={"Выбор материала оконного профиля"}
+                                    />
+                                </Box>
+                            </Grid>
+
+                            <Grid item xs={12} md={6} alignContent={"center"}>
+                                {CardTextInfo("Пластик, алюминий или дерево?", [
+                                    "ПВХ-профиль значительно теплее алюминия и существенно дешевле как алюминиевых окон, так и деревянных.",
+                                    "К примеру, самый широкий алюминиевый профиль по теплосбережению примерно соответствует самому простому ПВХ-профилю шириной 60мм.",
+                                    "Дерево, в свою очередь, менее долговечно, чем ПВХ.",
                                 ])}
                             </Grid>
-                            <Grid item xs={12} md={3}>
-                                {CardTextInfo("Толщина профиля?", [
-                                    "70мм - золотой стандарт.",
-                                    "60мм - дешевле на 10-20%, но затем сильно увеличатся расходы на отопление зимой",
-                                    "80мм - подойдёт тогда, когда средства вкладываются в энергоэффективность дома. Вложения окупаются в течение нескольких лет.",
-                                ])}
+
+                            <Grid item xs={12} md={6} order={{ xs: 2, md: 0 }}>
+                                <Tooltip title="Пассивный дом (нем. Passivhaus, англ. passive house) — здание, основной особенностью которого является низкое энергопотребление за счёт применения пассивных методов энергосбережения.">
+                                    {CardTextInfo("Глубина профиля", [
+                                        "Профиль 70мм - стандарт остекления загородных домов, сложившийся в России за десятилетия практики.",
+                                        `Профиль 60мм - дешевле на 10-20%, но значительно увеличивает расходы на отопление зимой.`,
+                                        'Профиль 82мм - нужен для технологий "пассивного дома". Дополнительные вложения в энергосбережение окупаются обычно в течение нескольких лет.',
+                                    ])}
+                                </Tooltip>
                             </Grid>
-                            <Grid item xs={12} md={3}>
-                                {CardTextInfo("Какой стеклопакет?", [
-                                    "Стеклопакет - только 3 стекла, энергосберегающее напыление.",
+
+                            <Grid item xs={12} md={6}>
+                                <Box alignSelf={"center"}>
+                                    <Image
+                                        src={veka_compare_1}
+                                        sizes={"30vw"}
+                                        style={{
+                                            width: "100%",
+                                            height: "auto",
+                                        }}
+                                        alt={
+                                            "Визуализация теплотехнического расчёта оконного блока"
+                                        }
+                                    />
+                                </Box>
+                            </Grid>
+
+                            <Grid item xs={12} md={5}>
+                                <Box alignSelf={"center"}>
+                                    <Image
+                                        src={steklopaket}
+                                        sizes={"30vw"}
+                                        style={{
+                                            width: "100%",
+                                            height: "auto",
+                                        }}
+                                        alt={
+                                            "Выбор стеклопакета для остекления коттеджа"
+                                        }
+                                    />
+                                </Box>
+                            </Grid>
+
+                            <Grid item xs={12} md={6} alignSelf={"center"}>
+                                {CardTextInfo("Выбор стеклопакета", [
+                                    "Оптимально - 3 стекла с энергосберегающим напылением.",
                                     "2 стекла - слишком холодно.",
-                                    "4 стекла - теряется прозрачность, большая весовая нагрузка на механизм.",
-                                    "Энергосберегающее напыление стоит чрезвычайно дёшево, но бережёт тепло почти как дополнительное стекло.",
+                                    "4 стекла - теряется прозрачность, увеличивается весовая нагрузка на механизм.",
+                                    "Энергосберегающее напыление стоит относительно дёшево, но бережёт тепло почти как дополнительное стекло. Слишком выгодно, чтобы от него отказываться.",
                                 ])}
                             </Grid>
                         </Grid>
@@ -95,8 +235,14 @@ export default function Page() {
                         paddingY={6}
                     >
                         <Box marginBottom={6}>
-                            <Typography variant="h1" fontSize="28px">
-                                Рекомендации по остеклению загородного дома
+                            <Typography
+                                gutterBottom
+                                variant="h4"
+                                component="div"
+                                fontWeight={300}
+                                marginBottom={4}
+                            >
+                                Наше предложение, основанное на 20-летнем опыте
                             </Typography>
                         </Box>
                         <Box
@@ -110,19 +256,40 @@ export default function Page() {
                                 kaleva_70,
                                 5,
                                 "КАЛЕВА 70мм",
-                                "Многокамерная система с превосходными изолирующими характеристиками"
+                                [
+                                    "Происхождение - Россия",
+                                    "Толщина стенки - не менее 2.5мм",
+                                    "3 стекла с энергосберегающим покрытием",
+                                    "Фурнитура Gretsch-Unitas или ROTO на выбор",
+                                    "Стандартная гарантия - 3 года",
+                                ],
+                                "Российская оконная система, созданная по образцу известной немецкой марки. Остекление будет экономичным, но при этом также полностью соответствовать требованиям для остекления дома круглогодичного проживания."
                             )}
                             {CardProfileSystem(
                                 veka_70,
                                 0,
                                 "VEKA SOFTLINE 70mm",
-                                "Многокамерная система с превосходными изолирующими характеристиками"
+                                [
+                                    "Происхождение - Германия",
+                                    "Толщина стенки - не менее 3мм",
+                                    "3 стекла с мультифункциональным покрытием",
+                                    "Фурнитура Gretsch-Unitas или ROTO на выбор",
+                                    "Расширенная гарантия - 5 лет",
+                                ],
+                                "Наиболее качественная оконная система на рынке РФ. Больше пластика в профиле, надёжнее соединения рам и створок. Переплата в 10-20% по сравнению с аналогами окупится высочайшим уровнем комфорта при эксплуатации и отсутствием проблем с регулировкой."
                             )}
                             {CardProfileSystem(
                                 veka_82,
                                 0,
                                 "VEKA SOFTLINE 82mm",
-                                "Многокамерная система с превосходными изолирующими характеристиками"
+                                [
+                                    "Происхождение - Германия",
+                                    "Толщина стенки - не менее 3мм",
+                                    "3 стекла с мультифункциональным покрытием",
+                                    "Фурнитура Gretsch-Unitas или ROTO на выбор",
+                                    "Расширенная гарантия - 5 лет",
+                                ],
+                                "Система созданна для применения в пассивном доме. Невероятное сочетание теплосбережения и надёжности."
                             )}
                         </Box>
                     </Box>
@@ -130,7 +297,7 @@ export default function Page() {
             </Box>
 
             <Box
-                // paddingY={"70px"}
+                paddingY={"70px"}
                 sx={{
                     objectFit: "cover",
                     backgroundImage: `url(${main_bg.src})`,
@@ -139,13 +306,14 @@ export default function Page() {
             >
                 <Container maxWidth={"lg"}>
                     <Typography
-                        variant="h2"
-                        fontSize={"36px"}
-                        fontWeight={"light"}
-                        marginY={"15px"}
+                        gutterBottom
+                        variant="h4"
+                        component="div"
+                        fontWeight={300}
+                        marginBottom={4}
                         align="center"
                     >
-                        В чём разница между этими системами?
+                        В чём разница между этими производителями?
                     </Typography>
                     <TableContainer component={Paper} elevation={4}>
                         <Table aria-label="simple table">
@@ -214,14 +382,14 @@ export default function Page() {
                                     ></TableCell>
 
                                     <TableCell align="left">
-                                        <Typography
+                                        {/* <Typography
                                             color="#e65022"
                                             letterSpacing={"-0.2px"}
                                             fontSize={"16px"}
                                             fontWeight={400}
                                         >
                                             Стандартное качество на рынке
-                                        </Typography>
+                                        </Typography> */}
 
                                         {/* <Typography
                                         color="grey"
@@ -231,27 +399,29 @@ export default function Page() {
                                         Экологичный профиль по рецептуре CaZn
                                         (без свинца в составе)
                                     </Typography> */}
-                                        <Image
-                                            src={pic1}
-                                            alt=""
-                                            style={{
-                                                maxWidth: pic1.width,
-                                                width: "100%",
-                                                height: "auto",
-                                                marginTop: "28px",
-                                                marginBottom: "9px",
-                                            }}
-                                        />
+                                        <Box padding={10}>
+                                            <Image
+                                                src={kaleva_logo}
+                                                alt=""
+                                                style={{
+                                                    // maxWidth: kaleva_logo.width,
+                                                    width: "100%",
+                                                    height: "auto",
+                                                    marginTop: "28px",
+                                                    marginBottom: "9px",
+                                                }}
+                                            />
+                                        </Box>
                                     </TableCell>
                                     <TableCell align="left">
-                                        <Typography
+                                        {/* <Typography
                                             color="#e65022"
                                             letterSpacing={"-0.2px"}
                                             fontSize={"16px"}
                                             fontWeight={400}
                                         >
                                             Премиальное качество на рынке
-                                        </Typography>
+                                        </Typography> */}
 
                                         {/* <Typography
                                         color="grey"
@@ -261,17 +431,19 @@ export default function Page() {
                                         Экологичный профиль по рецептуре CaZn
                                         (без свинца в составе)
                                     </Typography> */}
-                                        <Image
-                                            src={pic1}
-                                            alt=""
-                                            style={{
-                                                maxWidth: pic1.width,
-                                                width: "100%",
-                                                height: "auto",
-                                                marginTop: "28px",
-                                                marginBottom: "9px",
-                                            }}
-                                        />
+                                        <Box padding={0}>
+                                            <Image
+                                                src={veka_logo}
+                                                alt=""
+                                                style={{
+                                                    maxWidth: veka_logo.width,
+                                                    width: "100%",
+                                                    height: "auto",
+                                                    marginTop: "28px",
+                                                    marginBottom: "9px",
+                                                }}
+                                            />
+                                        </Box>
                                     </TableCell>
                                 </TableRow>
 
@@ -285,21 +457,19 @@ export default function Page() {
                                         }}
                                     >
                                         <Typography
-                                            fontSize={"14px"}
-                                            color="grey"
+                                            color="text.secondary"
+                                            fontSize={"small"}
                                         >
                                             Происхождение системы
                                         </Typography>
                                     </TableCell>
                                     <TableCell>
-                                        <Typography fontSize={"14px"}>
+                                        <Typography>
                                             Российская Федерация
                                         </Typography>
                                     </TableCell>
                                     <TableCell>
-                                        <Typography fontSize={"14px"}>
-                                            Германия
-                                        </Typography>
+                                        <Typography>Германия</Typography>
                                     </TableCell>
                                 </TableRow>
 
@@ -313,21 +483,17 @@ export default function Page() {
                                         }}
                                     >
                                         <Typography
-                                            fontSize={"14px"}
-                                            color="grey"
+                                            color="text.secondary"
+                                            fontSize={"small"}
                                         >
                                             Совместимость с системой
                                         </Typography>
                                     </TableCell>
                                     <TableCell>
-                                        <Typography fontSize={"14px"}>
-                                            Rehau
-                                        </Typography>
+                                        <Typography>Rehau</Typography>
                                     </TableCell>
                                     <TableCell>
-                                        <Typography fontSize={"14px"}>
-                                            VEKA
-                                        </Typography>
+                                        <Typography>VEKA</Typography>
                                     </TableCell>
                                 </TableRow>
 
@@ -341,24 +507,41 @@ export default function Page() {
                                         }}
                                     >
                                         <Typography
-                                            fontSize={"14px"}
-                                            color="grey"
+                                            color="text.secondary"
+                                            fontSize={"small"}
                                         >
                                             Ключевой различие
                                         </Typography>
                                     </TableCell>
-                                    <TableCell>
-                                        <Typography fontSize={"14px"}>
-                                            Толщина наружных стенок профиля -
-                                            2.7 мм, Толщина внутренних стенок
-                                            профиля - не регламентируется
+                                    <TableCell sx={{ verticalAlign: "top" }}>
+                                        <Typography gutterBottom>
+                                            Толщина стенок профиля - 2.7 мм
+                                        </Typography>
+                                        <Typography gutterBottom>
+                                            Профиль Класса "Б" по российскому
+                                            стандарту ГОСТ 30673-99
                                         </Typography>
                                     </TableCell>
                                     <TableCell>
-                                        <Typography fontSize={"14px"}>
-                                            Толщина наружных стенок профиля -
-                                            3,0 мм, Толщина внутренних стенок
-                                            профиля - 2,7 мм
+                                        <Typography gutterBottom>
+                                            Толщина стенок профиля - 3,0 мм
+                                        </Typography>
+                                        <Typography gutterBottom>
+                                            Профиль Класса "А" по немецкому
+                                            стандарту DIN EN 12608
+                                        </Typography>
+
+                                        <Typography gutterBottom>
+                                            Единственный профиль с такой
+                                            толщиной стенки на оконном рынке РФ
+                                        </Typography>
+
+                                        <Typography gutterBottom>
+                                            Толщина стенки оказывает
+                                            значительное влияние на прочность
+                                            спаянных углов створок и рам,
+                                            сопротивляется температурным
+                                            деформациям профиля.
                                         </Typography>
                                     </TableCell>
                                 </TableRow>
@@ -373,20 +556,20 @@ export default function Page() {
                                         }}
                                     >
                                         <Typography
-                                            fontSize={"14px"}
-                                            color="grey"
+                                            color="text.secondary"
+                                            fontSize={"small"}
                                         >
-                                            Базовая взломостойкость
+                                            Количество камер
                                         </Typography>
                                     </TableCell>
                                     <TableCell>
-                                        <Typography fontSize={"14px"}>
-                                            Есть
+                                        <Typography>
+                                            4 воздушные камеры в створке
                                         </Typography>
                                     </TableCell>
                                     <TableCell>
-                                        <Typography fontSize={"14px"}>
-                                            Есть
+                                        <Typography>
+                                            5 воздушных камер в створке
                                         </Typography>
                                     </TableCell>
                                 </TableRow>
@@ -401,133 +584,20 @@ export default function Page() {
                                         }}
                                     >
                                         <Typography
-                                            fontSize={"14px"}
-                                            color="grey"
-                                        >
-                                            Противопылевая заглушка
-                                        </Typography>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Typography fontSize={"14px"}>
-                                            Есть
-                                        </Typography>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Typography fontSize={"14px"}>
-                                            Опция
-                                        </Typography>
-                                    </TableCell>
-                                </TableRow>
-
-                                <TableRow>
-                                    <TableCell
-                                        sx={{
-                                            display: {
-                                                xs: "none",
-                                                sm: "table-cell",
-                                            },
-                                        }}
-                                    >
-                                        <Typography
-                                            fontSize={"14px"}
-                                            color="grey"
-                                        >
-                                            Тип оконной ручки
-                                        </Typography>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Typography fontSize={"14px"}>
-                                            Базовая ручка (Россия)
-                                        </Typography>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Typography fontSize={"14px"}>
-                                            Ручка премиум-класса
-                                        </Typography>
-                                    </TableCell>
-                                </TableRow>
-
-                                <TableRow>
-                                    <TableCell
-                                        sx={{
-                                            display: {
-                                                xs: "none",
-                                                sm: "table-cell",
-                                            },
-                                        }}
-                                    >
-                                        <Typography
-                                            fontSize={"14px"}
-                                            color="grey"
-                                        >
-                                            Уплотнительная резина
-                                        </Typography>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Typography fontSize={"14px"}>
-                                            Стандартный уплотнитель (Россия)
-                                        </Typography>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Typography fontSize={"14px"}>
-                                            Фирменный уплотнитель REHAU RAUCELL
-                                        </Typography>
-                                    </TableCell>
-                                </TableRow>
-
-                                <TableRow>
-                                    <TableCell
-                                        sx={{
-                                            display: {
-                                                xs: "none",
-                                                sm: "table-cell",
-                                            },
-                                        }}
-                                    >
-                                        <Typography
-                                            fontSize={"14px"}
-                                            color="grey"
-                                        >
-                                            Коэффициент теплозащиты окна R0 (м2
-                                            × °C)/Вт
-                                        </Typography>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Typography fontSize={"14px"}>
-                                            0,64
-                                        </Typography>
-                                    </TableCell>
-                                    <TableCell>
-                                        <Typography fontSize={"14px"}>
-                                            0,70
-                                        </Typography>
-                                    </TableCell>
-                                </TableRow>
-
-                                <TableRow>
-                                    <TableCell
-                                        sx={{
-                                            display: {
-                                                xs: "none",
-                                                sm: "table-cell",
-                                            },
-                                        }}
-                                    >
-                                        <Typography
-                                            fontSize={"14px"}
+                                            fontSize={"small"}
                                             color="grey"
                                         >
                                             Гарантия на оконные блоки
                                         </Typography>
                                     </TableCell>
                                     <TableCell>
-                                        <Typography fontSize={"14px"}>
+                                        <Typography>
                                             Стандартная гарантия - 3 года
                                         </Typography>
                                     </TableCell>
                                     <TableCell>
-                                        <Typography fontSize={"14px"}>
-                                            Стандартная гарантия - 3 года
+                                        <Typography>
+                                            Расширенная гарантия - 5 лет
                                         </Typography>
                                     </TableCell>
                                 </TableRow>
@@ -542,41 +612,37 @@ export default function Page() {
                                         }}
                                     >
                                         <Typography
-                                            fontSize={"14px"}
-                                            color="grey"
+                                            color="text.secondary"
+                                            fontSize={"small"}
                                         >
                                             Рекомендации по применению
                                         </Typography>
                                     </TableCell>
-                                    <TableCell>
-                                        <Typography fontSize={"14px"}>
-                                            Оконные блоки в соответствии с ГОСТ
-                                            30674-99, ГОСТ Р 56926-2016
-                                            Классические оконные блоки,
-                                            собранные под контролем качества
-                                            Рекомендуются для остекления дач,
-                                            балконов и лоджий, технических
-                                            помещений, квартир эконом-класса С
-                                            этими окнами можно получить
-                                            качественный продукт, когда нужны
-                                            самые простые окна по минимальной
-                                            цене
+                                    <TableCell sx={{ verticalAlign: "top" }}>
+                                        <Typography gutterBottom>
+                                            Российская оконная система,
+                                            созданная по образцу немецкой РЕХАУ
+                                            и полностью с ней совместимая.
+                                        </Typography>
+                                        <Typography gutterBottom>
+                                            Остекление будет экономичным, но при
+                                            этом также полностью соответствовать
+                                            требованиям для остекления дома
+                                            круглогодичного проживания.
                                         </Typography>
                                     </TableCell>
                                     <TableCell>
-                                        <Typography fontSize={"14px"}>
-                                            Рекомендуются для многоквартирных
-                                            домов с центральным отоплением Эти
-                                            окна и двери отличаются от
-                                            эконом-класса идеально гладкой и
-                                            глянцевой поверхностью профиля
-                                            Энергосберегающее стекло является
-                                            дополнительной страховкой от
-                                            недотопа батарей и плохой
-                                            вентиляции. Фурнитура ROTO NX -
-                                            эталон качества на оконном рынке. С
-                                            ней оконные створки работают
-                                            десятилетиями без поломок
+                                        <Typography gutterBottom>
+                                            Наиболее качественная оконная
+                                            система на рынке РФ. Больше пластика
+                                            в профиле, надёжнее соединения рам и
+                                            створок.
+                                        </Typography>
+                                        <Typography gutterBottom>
+                                            Переплата в 10-20% по сравнению с
+                                            аналогами окупится высочайшим
+                                            уровнем комфорта при эксплуатации и
+                                            отсутствием проблем с регулировкой.
                                         </Typography>
                                     </TableCell>
                                 </TableRow>
@@ -592,7 +658,7 @@ export default function Page() {
                                     >
                                         <Typography
                                             fontSize={"18px"}
-                                            color="grey"
+                                            color="text.secondary"
                                         >
                                             Цена
                                         </Typography>
@@ -661,7 +727,8 @@ function CardProfileSystem(
     image: StaticImageData,
     imgPadding: number,
     title: string,
-    description: string
+    descriptionText: string[],
+    finalDescription: string
 ) {
     return (
         <Card sx={{ maxWidth: 345 }}>
@@ -675,8 +742,45 @@ function CardProfileSystem(
                 <Typography gutterBottom variant="h5" component="div">
                     {title}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
-                    {description}
+                <hr style={{ margin: "15px 0" }} />
+
+                {/* <Typography gutterBottom variant="h6" component="div">
+                    Комплектация:
+                </Typography> */}
+
+                <ul style={{ marginLeft: "30px" }}>
+                    {descriptionText.map((paragraph) => {
+                        return (
+                            <li>
+                                <Typography
+                                    // variant="body2"
+                                    fontSize={"16px"}
+                                    color="text.primary"
+                                    // variant="h6"
+                                    // color="text.secondary"
+                                    // textAlign={"justify"}
+                                    // fontWeight={"light"}
+                                    // fontSize={"18px"}
+                                    // lineHeight={"34px"}
+                                    gutterBottom
+                                >
+                                    {paragraph}
+                                </Typography>
+                            </li>
+                        );
+                    })}
+                </ul>
+                <hr style={{ margin: "15px 0" }} />
+                <Typography
+                    fontSize={"16px"}
+                    color="text.primary"
+                    // fontStyle={"normal"}
+                    // variant="body2"
+                    // color="text.secondary"
+                    // lineHeight={"34px"}
+                    gutterBottom
+                >
+                    {finalDescription}
                 </Typography>
             </CardContent>
             <CardActions>
@@ -688,19 +792,27 @@ function CardProfileSystem(
 
 function CardTextInfo(title: string, descriptionText: string[]) {
     return (
-        <Card>
+        <Card elevation={0}>
             <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography
+                    gutterBottom
+                    variant="h4"
+                    component="div"
+                    fontWeight={300}
+                    marginBottom={4}
+                >
                     {title}
                 </Typography>
 
                 {descriptionText.map((paragraph) => {
                     return (
                         <Typography
-                            variant="body1"
-                            color="text.secondary"
+                            variant="h6"
+                            // color="text.secondary"
                             textAlign={"justify"}
-                            fontSize={"16px"}
+                            fontWeight={"light"}
+                            // fontSize={"18px"}
+                            // lineHeight={"34px"}
                             gutterBottom
                         >
                             {paragraph}
