@@ -24,6 +24,12 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+
 import PermDeviceInformationSharpIcon from "@mui/icons-material/PermDeviceInformationSharp";
 import PermDeviceInformationTwoToneIcon from "@mui/icons-material/PermDeviceInformationTwoTone";
 import HelpCenterTwoToneIcon from "@mui/icons-material/HelpCenterTwoTone";
@@ -42,6 +48,8 @@ import veka_logo from "../../public/images/profiles/Veka_logo_PNG1.png";
 import slide from "../../public/images/slides/slide_infra_house_1_1920px.jpg";
 import steklopaket from "../../public/images/slides/steklopaket_1.jpg";
 import ProductionTypeCard from "../components/ProductionTypeCard";
+import lamination_1 from "../../public/images/slides/lamination_1.jpg";
+import burglar_1 from "../../public/images/slides/burglar_1.jpg";
 
 import arrow_1 from "../../public/images/slides/arrow_1.svg";
 
@@ -72,10 +80,10 @@ export default function Page() {
                         },
                         height: {
                             xs: "90px",
-                            sm: "140px",
-                            md: "200px",
-                            lg: "270px",
-                            xl: "350px",
+                            sm: "100px",
+                            md: "100px",
+                            lg: "170px",
+                            xl: "250px",
                         },
                         left: {
                             xs: "30px",
@@ -116,7 +124,7 @@ export default function Page() {
                         >
                             Остекление загородного дома
                         </Typography>
-                        <Typography
+                        {/* <Typography
                             align="right"
                             variant="sliderFont"
                             bgcolor="white"
@@ -132,7 +140,7 @@ export default function Page() {
                             }}
                         >
                             Делимся нашим опытом
-                        </Typography>
+                        </Typography> */}
                     </Box>
                 </Box>
             </Box>
@@ -147,11 +155,11 @@ export default function Page() {
                         zIndex: "100",
                         textAlign: "center",
                         mt: {
-                            xs: -35.3,
-                            sm: -32,
-                            md: -27,
-                            lg: -15,
-                            xl: -11,
+                            xs: -2,
+                            sm: -2,
+                            md: -3,
+                            lg: -4,
+                            xl: -6,
                         },
                         transform: "translate(-50%, 0%)",
                         left: "50%",
@@ -174,29 +182,31 @@ export default function Page() {
                     </Typography>
                     <Divider /> */}
                     <Box padding={6}>
-                        {CardTextInfoJSX(
-                            "Как не ошибиться с выбором окон для дома",
-                            [
-                                <Box component="p">
-                                    Известно, что до 40% тепла зимой теряется
-                                    через остекление. Чем теплее окна - тем
-                                    меньше придётся платить за отопление.
-                                    <Tooltip title="Пассивный дом (нем. Passivhaus, англ. passive house) — здание, основной особенностью которого является низкое энергопотребление за счёт применения пассивных методов энергосбережения.">
-                                        <InfoOutlinedIcon color="error" />
-                                    </Tooltip>
-                                </Box>,
-                                <Box component="p">
-                                    Окон в доме много - в среднем 10-15 штук.
-                                    Фурнитура должна быть качественная, иначе
-                                    придётся каждый сезон регулировать створки
-                                    вручную или вызывать мастера.
-                                </Box>,
-                                <Box component="p">
-                                    Дерево, в свою очередь, менее долговечно,
-                                    чем ПВХ.
-                                </Box>,
-                            ]
-                        )}
+                        {CardTextInfoJSX("5 шагов для выбора окон в дом", [
+                            <Box
+                                component="p"
+                                key={Math.round(Math.random() * 10000)}
+                            >
+                                Остекление коттеджа имеет свои особенности.
+                                Чтобы выбрать правильные окна нужно знать всего
+                                несколько ключевых параметров.
+                            </Box>,
+                            <Box
+                                component="p"
+                                key={Math.round(Math.random() * 10000)}
+                            >
+                                Мы устанавливаем окна в частные дома уже много
+                                лет и готовы поделиться своим опытом.
+                            </Box>,
+                            // <Box
+                            //     component="p"
+                            //     key={Math.round(Math.random() * 10000)}
+                            // >
+                            //     Надеемся, что вы оцените нашу компетентность и
+                            //     запросите у нас коммерческое предложение для
+                            //     вашего дома.
+                            // </Box>,
+                        ])}
                     </Box>
                 </Paper>
             </Container>
@@ -223,51 +233,68 @@ export default function Page() {
                                 order={{ xs: 2, md: 1 }}
                             >
                                 {CardTextInfoJSX("Выбор стеклопакета", [
-                                    <Box component="p">
+                                    <Box
+                                        component="p"
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
                                         В первую очередь выбираем не оконный
                                         профиль, а стеклопакет.
                                     </Box>,
-                                    <Box component="p">
+                                    <Box
+                                        component="p"
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
                                         Почему так? Ведь везде предлагают
                                         выбрать оконный профиль!
                                     </Box>,
-                                    <Box component="p">
+                                    <Box
+                                        component="p"
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
                                         Дело в том, что стеклопакет составляет
                                         около 90% площади каждого окна и именно
                                         он отвечает за сохранность тепла.
                                     </Box>,
-                                    <Box component="p">
+                                    <Box
+                                        component="p"
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
                                         Известно, что до 40% тепла зимой
                                         теряется через остекление. Чем теплее
-                                        стеклопакет - те меньше придётся платить
-                                        за отопление зимой.
+                                        стеклопакет - тем меньше придётся
+                                        платить за отопление зимой.
                                     </Box>,
-                                    <Box component="p">
+                                    <Box
+                                        component="p"
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
                                         Оптимальный выбор стеклопакета -{" "}
                                         <strong>
                                             3 стекла с энергосберегающим
-                                            напылением
+                                            напылением, с шириной от 36 до 42 мм
                                         </strong>
                                         .
                                     </Box>,
-                                    <Tooltip
-                                        componentsProps={{
-                                            tooltip: {
-                                                sx: {
-                                                    bgcolor: "common.black",
-                                                    "& .MuiTooltip-arrow": {
-                                                        color: "common.black",
-                                                    },
-                                                    maxWidth: {
-                                                        xs: "100vw",
-                                                        md: "70vw",
-                                                        xl: "50vw",
-                                                    },
-                                                    opacity: "80%",
-                                                },
-                                            },
-                                        }}
-                                        title={
+                                    <Accordion
+                                        elevation={0}
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
+                                        <AccordionSummary
+                                            sx={{ pl: 0 }}
+                                            aria-controls="panel1-content"
+                                            id="panel1-header"
+                                        >
+                                            <Typography
+                                                fontSize={"1rem"}
+                                                variant="button"
+                                                color="error"
+                                                gutterBottom
+                                            >
+                                                <ImportContactsTwoToneIcon fontSize="medium" />{" "}
+                                                ПОДРОБНЕЕ
+                                            </Typography>
+                                        </AccordionSummary>
+                                        <AccordionDetails>
                                             <Box>
                                                 <Typography
                                                     fontWeight={"light"}
@@ -284,50 +311,126 @@ export default function Page() {
                                                     fontWeight={"light"}
                                                     gutterBottom
                                                 >
-                                                    2 стекла - слишком холодно.
-                                                    Отопление будет затратным.
+                                                    При 2 стеклах - будет
+                                                    слишком холодно. Отопление
+                                                    станет слишком затратным.
                                                     Снижается шумоизоляция.
                                                 </Typography>
                                                 <Typography
                                                     fontWeight={"light"}
                                                     gutterBottom
                                                 >
-                                                    4 стекла - теряется
+                                                    При 4 стеклах - теряется
                                                     прозрачность, увеличивается
                                                     весовая нагрузка на
-                                                    механизм.
+                                                    механизм. Возможно
+                                                    применение для повышения
+                                                    шумоизоляции, но это не
+                                                    случай загородного дома.
+                                                </Typography>
+
+                                                <Typography
+                                                    fontWeight={"light"}
+                                                    gutterBottom
+                                                >
+                                                    <strong>
+                                                        <u>
+                                                            Почему стеклопакет
+                                                            должен быть шириной
+                                                            36 - 42 мм ?
+                                                        </u>
+                                                    </strong>
                                                 </Typography>
                                                 <Typography
                                                     fontWeight={"light"}
                                                     gutterBottom
                                                 >
-                                                    Энергосберегающее напыление
-                                                    стоит относительно дёшево,
-                                                    но бережёт тепло почти как
-                                                    дополнительное стекло.
+                                                    Чем шире изолирующий слой
+                                                    воздуха в стеклопакете, тем
+                                                    он теплее. Например,
+                                                    стеклопакет стандартный
+                                                    двухкамерный стеклопакет
+                                                    шириной 32 мм имеет
+                                                    коэффициент сопротивления
+                                                    теплопередаче 0,47. В нём
+                                                    воздушные камеры имеют
+                                                    ширину 10мм.
                                                 </Typography>
                                                 <Typography
                                                     fontWeight={"light"}
                                                     gutterBottom
                                                 >
-                                                    Слишком выгодная технология,
-                                                    чтобы от неё отказываться.
+                                                    В то же время у стеклопакета
+                                                    шириной 40мм воздушные
+                                                    камеры составляют 14 мм. Его
+                                                    коэффициент сопротивления
+                                                    теплопередаче - 0,6, и это
+                                                    теплее на 22%
+                                                </Typography>
+                                                <Typography
+                                                    fontWeight={"light"}
+                                                    gutterBottom
+                                                >
+                                                    Почему же не увеличивать
+                                                    расстояние между стёклами
+                                                    бесконечно? Дело в том, что
+                                                    при этом увеличивается риск
+                                                    &quot;термошока&quot;. Это
+                                                    такое явление, при котором
+                                                    весной стеклопакет может
+                                                    самопроизвольно разрушиться
+                                                    из-за неравномерного нагрева
+                                                    стекла солнечными лучами.
+                                                </Typography>
+                                                <Typography
+                                                    fontWeight={"light"}
+                                                    gutterBottom
+                                                >
+                                                    <strong>
+                                                        <u>
+                                                            Что такое
+                                                            энергосберегающее
+                                                            напыление ?
+                                                        </u>
+                                                    </strong>
+                                                </Typography>
+                                                <Typography
+                                                    fontWeight={"light"}
+                                                    gutterBottom
+                                                >
+                                                    Это - революционная
+                                                    технология в остеклении
+                                                    домов. Напыление находится
+                                                    внутри стеклопакета, на
+                                                    одном из стекол.
+                                                </Typography>
+                                                <Typography
+                                                    fontWeight={"light"}
+                                                    gutterBottom
+                                                >
+                                                    Оно эффективно отражает
+                                                    тепло обратно внутрь
+                                                    помещения, а
+                                                    &quot;мультифункциональное&quot;
+                                                    напыление ещё и блокирует
+                                                    изыбыточный солнечный жар,
+                                                    поступающий летом с улицы.
+                                                </Typography>
+                                                <Typography
+                                                    fontWeight={"light"}
+                                                    gutterBottom
+                                                >
+                                                    При замечательных
+                                                    преимуществах, эта
+                                                    технология не имеет минусов
+                                                    и стоимость её крайне мала.
+                                                    Мы применяем такое напыление
+                                                    для остекления каждого дома
+                                                    уже много лет.
                                                 </Typography>
                                             </Box>
-                                        }
-                                    >
-                                        <Box marginTop={4}>
-                                            <Typography
-                                                fontSize={"1rem"}
-                                                variant="button"
-                                                color="error"
-                                                gutterBottom
-                                            >
-                                                <ImportContactsTwoToneIcon fontSize="medium" />{" "}
-                                                ПОДРОБНЕЕ
-                                            </Typography>
-                                        </Box>
-                                    </Tooltip>,
+                                        </AccordionDetails>
+                                    </Accordion>,
                                 ])}
                             </Grid>
 
@@ -347,9 +450,17 @@ export default function Page() {
                                 </Box>
                             </Grid>
 
-                            {arrowDivider("right")}
+                            <Grid
+                                item
+                                xs={12}
+                                marginY={2}
+                                sx={{ display: { xs: "none", md: "flex" } }}
+                                order={{ xs: 3, md: 3 }}
+                            >
+                                {arrowDivider("right")}
+                            </Grid>
 
-                            <Grid item xs={12} md={6} order={{ xs: 3, md: 3 }}>
+                            <Grid item xs={12} md={6} order={{ xs: 4, md: 4 }}>
                                 <Box alignSelf={"center"}>
                                     <Image
                                         src={isoterma1}
@@ -368,42 +479,57 @@ export default function Page() {
                                 xs={12}
                                 md={6}
                                 alignContent={"center"}
-                                order={{ xs: 4, md: 4 }}
+                                order={{ xs: 5, md: 5 }}
                             >
                                 {CardTextInfoJSX(
                                     "Пластик, алюминий или дерево?",
                                     [
-                                        <Box component="p">
+                                        <Box
+                                            component="p"
+                                            key={Math.round(
+                                                Math.random() * 10000
+                                            )}
+                                        >
                                             <strong>
                                                 ПВХ-профиль станет оптимальным
                                                 выбором
                                             </strong>
                                             .
                                         </Box>,
-                                        <Box component="p">
+                                        <Box
+                                            component="p"
+                                            key={Math.round(
+                                                Math.random() * 10000
+                                            )}
+                                        >
                                             Этот материал значительно теплее
                                             алюминиевого профиля с терморазрывом
                                             и существенно дешевле как
                                             алюминиевых окон, так и деревянных.
                                         </Box>,
-                                        <Tooltip
-                                            componentsProps={{
-                                                tooltip: {
-                                                    sx: {
-                                                        bgcolor: "common.black",
-                                                        "& .MuiTooltip-arrow": {
-                                                            color: "common.black",
-                                                        },
-                                                        maxWidth: {
-                                                            xs: "100vw",
-                                                            md: "70vw",
-                                                            xl: "50vw",
-                                                        },
-                                                        opacity: "80%",
-                                                    },
-                                                },
-                                            }}
-                                            title={
+
+                                        <Accordion
+                                            elevation={0}
+                                            key={Math.round(
+                                                Math.random() * 10000
+                                            )}
+                                        >
+                                            <AccordionSummary
+                                                sx={{ pl: 0 }}
+                                                aria-controls="panel2-content"
+                                                id="panel2-header"
+                                            >
+                                                <Typography
+                                                    fontSize={"1rem"}
+                                                    variant="button"
+                                                    color="error"
+                                                    gutterBottom
+                                                >
+                                                    <ImportContactsTwoToneIcon fontSize="medium" />{" "}
+                                                    ПОДРОБНЕЕ
+                                                </Typography>
+                                            </AccordionSummary>
+                                            <AccordionDetails>
                                                 <Box>
                                                     <Typography
                                                         fontWeight={"light"}
@@ -448,81 +574,103 @@ export default function Page() {
                                                         Часто можно слышать
                                                         утвержение, что
                                                         деревянные окна
-                                                        "пропускают через себя
-                                                        свежий воздух". Это не
+                                                        &quot;пропускают через
+                                                        себя свежий
+                                                        воздух&quot;. Это не
                                                         соответствует
                                                         реальности, потому что
                                                         современные деревянные
                                                         окна производятся из
-                                                        клееного бруса, который,
-                                                        конечно же, ничего
-                                                        "через себя" не
+                                                        клееного бруса,
+                                                        пропитанного специальным
+                                                        составом от гниения
+                                                        древесины. Такой
+                                                        материал, конечно же,
+                                                        ничего &quot;через
+                                                        себя&quot; не
                                                         пропускает.
                                                     </Typography>
                                                 </Box>
-                                            }
-                                        >
-                                            <Box marginTop={4}>
-                                                <Typography
-                                                    fontSize={"1rem"}
-                                                    variant="button"
-                                                    color="error"
-                                                    gutterBottom
-                                                >
-                                                    <ImportContactsTwoToneIcon fontSize="medium" />{" "}
-                                                    ПОДРОБНЕЕ
-                                                </Typography>
-                                            </Box>
-                                        </Tooltip>,
+                                            </AccordionDetails>
+                                        </Accordion>,
                                     ]
                                 )}
                             </Grid>
 
-                            {arrowDivider("left")}
+                            <Grid
+                                item
+                                xs={12}
+                                marginY={2}
+                                sx={{ display: { xs: "none", md: "flex" } }}
+                                order={{ xs: 6, md: 6 }}
+                            >
+                                {arrowDivider("left")}
+                            </Grid>
 
-                            <Grid item xs={12} md={6} order={{ xs: 6, md: 5 }}>
+                            <Grid item xs={12} md={6} order={{ xs: 7, md: 6 }}>
                                 {CardTextInfoJSX("Глубина профиля", [
-                                    <Box component="p">
+                                    <Box
+                                        component="p"
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
                                         Глубина оконного профиля зависит от
                                         выбранного стеклопакета.
                                     </Box>,
-                                    <Box component="p">
-                                        Краевая зона стеклопакета - самая
-                                        уязвимая к промерзанию часть окна.
+                                    <Box
+                                        component="p"
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
+                                        Во-первых, стеклопакет должен
+                                        поместиться в оконный профиль.
+                                        Подходящий стеклопакет поместится только
+                                        в профиль глубиной 70мм и более.
                                     </Box>,
-                                    <Box component="p">
+                                    <Box
+                                        component="p"
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
+                                        Во-вторых, краевая зона стеклопакета -
+                                        самая уязвимая к промерзанию часть окна.
+                                    </Box>,
+                                    <Box
+                                        component="p"
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
                                         Выбираем такую глубину профиля, чтобы он
                                         был теплее, чем стеклопакет.
                                     </Box>,
-                                    <Box component="p">
+                                    <Box
+                                        component="p"
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
                                         <strong>
                                             По характеристикам нас устроит
                                             профиль 70мм
                                         </strong>{" "}
                                         - стандарт остекления загородных домов,
                                         сложившийся в средней полосе России за
-                                        десятилетия практики использования окон
-                                        ПВХ в индивидуальном жилищном
-                                        строительстве.
+                                        десятилетия практики.
                                     </Box>,
-                                    <Tooltip
-                                        componentsProps={{
-                                            tooltip: {
-                                                sx: {
-                                                    bgcolor: "common.black",
-                                                    "& .MuiTooltip-arrow": {
-                                                        color: "common.black",
-                                                    },
-                                                    maxWidth: {
-                                                        xs: "100vw",
-                                                        md: "70vw",
-                                                        xl: "50vw",
-                                                    },
-                                                    opacity: "80%",
-                                                },
-                                            },
-                                        }}
-                                        title={
+                                    <Accordion
+                                        elevation={0}
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
+                                        <AccordionSummary
+                                            sx={{ pl: 0 }}
+                                            aria-controls="panel3-content"
+                                            id="panel3-header"
+                                        >
+                                            <Typography
+                                                fontSize={"1rem"}
+                                                variant="button"
+                                                color="error"
+                                                gutterBottom
+                                            >
+                                                <ImportContactsTwoToneIcon fontSize="medium" />{" "}
+                                                ПОДРОБНЕЕ
+                                            </Typography>
+                                        </AccordionSummary>
+                                        <AccordionDetails>
                                             <Box>
                                                 <Typography
                                                     fontWeight={"light"}
@@ -600,24 +748,12 @@ export default function Page() {
                                                     10% от стоимости заказа.
                                                 </Typography>
                                             </Box>
-                                        }
-                                    >
-                                        <Box marginTop={4}>
-                                            <Typography
-                                                fontSize={"1rem"}
-                                                variant="button"
-                                                color="error"
-                                                gutterBottom
-                                            >
-                                                <ImportContactsTwoToneIcon fontSize="medium" />{" "}
-                                                ПОДРОБНЕЕ
-                                            </Typography>
-                                        </Box>
-                                    </Tooltip>,
+                                        </AccordionDetails>
+                                    </Accordion>,
                                 ])}
                             </Grid>
 
-                            <Grid item xs={12} md={6} order={{ xs: 5, md: 6 }}>
+                            <Grid item xs={12} md={6} order={{ xs: 6, md: 7 }}>
                                 <Box
                                     display={"flex"}
                                     height={"100%"}
@@ -636,6 +772,354 @@ export default function Page() {
                                         }
                                     />
                                 </Box>
+                            </Grid>
+
+                            <Grid
+                                item
+                                xs={12}
+                                marginY={2}
+                                sx={{ display: { xs: "none", md: "flex" } }}
+                                order={{ xs: 8, md: 8 }}
+                            >
+                                {arrowDivider("right")}
+                            </Grid>
+
+                            <Grid item xs={12} md={6} order={{ xs: 10, md: 9 }}>
+                                <Box
+                                    display={"flex"}
+                                    height={"100%"}
+                                    flexDirection={"column"}
+                                    justifyContent={"center"}
+                                >
+                                    <Image
+                                        src={lamination_1}
+                                        sizes={"30vw"}
+                                        style={{
+                                            width: "100%",
+                                            height: "auto",
+                                        }}
+                                        alt={"Пример ламинации оконного блока"}
+                                    />
+                                </Box>
+                            </Grid>
+
+                            <Grid item xs={12} md={6} order={{ xs: 9, md: 10 }}>
+                                {CardTextInfoJSX("Цвет оконного блока", [
+                                    <Box
+                                        component="p"
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
+                                        Чтобы получить нужный цвет - на оконный
+                                        профиль в заводских условиях наносится
+                                        специальная ламинационная плёнка.
+                                    </Box>,
+                                    <Box
+                                        component="p"
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
+                                        При качественном нанесении на профиль
+                                        такая плёнка держится очень надёжно и
+                                        условный срок службы окна в 40 лет не
+                                        снижается.
+                                    </Box>,
+                                    <Box
+                                        component="p"
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
+                                        При некачественном нанесении плёнки, на
+                                        ней образуются пузыри с воздухом.
+                                        Обращайте внимание на гарантийный срок
+                                        ваших окон! Он точно не может быть менее
+                                        3 лет, потому что такие дефекты
+                                        проявляются зачастую не в первый год
+                                        эксплуатации.
+                                    </Box>,
+                                    <Box
+                                        component="p"
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
+                                        <strong>
+                                            Известные на рынке плёнки
+                                            производятся фирмами Renolit, LG и
+                                            ADO.
+                                        </strong>{" "}
+                                        Все они достаточно качественные. Важно
+                                        не нарушить технологию их нанесения на
+                                        профиль.
+                                    </Box>,
+                                    <Accordion
+                                        elevation={0}
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
+                                        <AccordionSummary
+                                            sx={{ pl: 0 }}
+                                            aria-controls="panel4-content"
+                                            id="panel4-header"
+                                        >
+                                            <Typography
+                                                fontSize={"1rem"}
+                                                variant="button"
+                                                color="error"
+                                                gutterBottom
+                                            >
+                                                <ImportContactsTwoToneIcon fontSize="medium" />{" "}
+                                                ПОДРОБНЕЕ
+                                            </Typography>
+                                        </AccordionSummary>
+                                        <AccordionDetails>
+                                            <Box>
+                                                <Typography
+                                                    fontWeight={"light"}
+                                                    gutterBottom
+                                                >
+                                                    <strong>
+                                                        <u>
+                                                            Есть ли другие
+                                                            варианты
+                                                            производства цветных
+                                                            окон ?
+                                                        </u>
+                                                    </strong>
+                                                </Typography>
+                                                <Typography
+                                                    fontWeight={"light"}
+                                                    gutterBottom
+                                                >
+                                                    Да, существует технология
+                                                    окраски оконного профиля
+                                                    специальной краской.
+                                                </Typography>
+                                                <Typography
+                                                    fontWeight={"light"}
+                                                    gutterBottom
+                                                >
+                                                    Такую краску производит
+                                                    всего несколько
+                                                    производителей, например
+                                                    немецкий Zobel.
+                                                </Typography>
+                                                <Typography
+                                                    fontWeight={"light"}
+                                                    gutterBottom
+                                                >
+                                                    Однако, стойкость окрашенной
+                                                    поверности значительно ниже,
+                                                    чем стойкость ламинационной
+                                                    плёнки. Краска очень легко
+                                                    царапается.
+                                                </Typography>
+                                                <Typography
+                                                    fontWeight={"light"}
+                                                    gutterBottom
+                                                >
+                                                    Несмотря на это, мы активном
+                                                    применяем эту технологию для
+                                                    окраски торцевой части
+                                                    профиля, если это требуется
+                                                    техническим заданием.
+                                                </Typography>
+                                                <Typography
+                                                    fontWeight={"light"}
+                                                    gutterBottom
+                                                >
+                                                    Окрашивать же лицевые части
+                                                    профиля нет смысла, так как
+                                                    стоимость такой окраски не
+                                                    дешевле нанесения
+                                                    ламинационной плёнки, но при
+                                                    этом стойкость краски
+                                                    значительно ниже.
+                                                </Typography>
+                                            </Box>
+                                        </AccordionDetails>
+                                    </Accordion>,
+                                ])}
+                            </Grid>
+
+                            <Grid
+                                item
+                                xs={12}
+                                marginY={2}
+                                sx={{ display: { xs: "none", md: "flex" } }}
+                                order={{ xs: 11 }}
+                            >
+                                {arrowDivider("left")}
+                            </Grid>
+
+                            <Grid
+                                item
+                                xs={12}
+                                md={6}
+                                order={{ xs: 12, md: 13 }}
+                            >
+                                <Box
+                                    display={"flex"}
+                                    height={"100%"}
+                                    flexDirection={"column"}
+                                    justifyContent={"center"}
+                                >
+                                    <Image
+                                        src={burglar_1}
+                                        sizes={"30vw"}
+                                        style={{
+                                            width: "100%",
+                                            height: "auto",
+                                        }}
+                                        alt={"Взлом оконного блока"}
+                                    />
+                                </Box>
+                            </Grid>
+
+                            <Grid
+                                item
+                                xs={12}
+                                md={6}
+                                order={{ xs: 13, md: 12 }}
+                            >
+                                {CardTextInfoJSX("Защита от взлома окон", [
+                                    <Box
+                                        component="p"
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
+                                        Насколько быстро взломщик может вскрыть
+                                        окно? По статистике - за 7 секунд. При
+                                        этом абсолютно бесшумно.
+                                    </Box>,
+                                    <Box
+                                        component="p"
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
+                                        Можно ли защитить окна от взлома? Можно,
+                                        но подход должен быть разумным.
+                                    </Box>,
+                                    <Box
+                                        component="p"
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
+                                        Задача любого взломщика - действовать в
+                                        первую очередь бесшумно.
+                                    </Box>,
+                                    <Box
+                                        component="p"
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
+                                        <strong>
+                                            Устанавливаем на каждое окно первого
+                                            этажа одну противовзломную точку и
+                                            защиту от высверливания ручки.
+                                        </strong>
+                                    </Box>,
+                                    <Box
+                                        component="p"
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
+                                        Стоимость - незначительная, при этом
+                                        бесшумный взлом строительным
+                                        инструментом будет уже невозможен.
+                                    </Box>,
+                                    <Box
+                                        component="p"
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
+                                        При попытке отжать створку вверх,
+                                        защитные ответные планки будут
+                                        выворачиваться вместе с оконным профилем
+                                        и стальным армированием с очень громким
+                                        треском. Большая часть взломщиков просто
+                                        скроется с места преступления.
+                                    </Box>,
+                                    <Accordion
+                                        elevation={0}
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
+                                        <AccordionSummary
+                                            sx={{ pl: 0 }}
+                                            aria-controls="panel5-content"
+                                            id="panel5-header"
+                                        >
+                                            <Typography
+                                                fontSize={"1rem"}
+                                                variant="button"
+                                                color="error"
+                                                gutterBottom
+                                            >
+                                                <ImportContactsTwoToneIcon fontSize="medium" />{" "}
+                                                ПОДРОБНЕЕ
+                                            </Typography>
+                                        </AccordionSummary>
+                                        <AccordionDetails>
+                                            <Box>
+                                                <Typography
+                                                    fontWeight={"light"}
+                                                    gutterBottom
+                                                >
+                                                    <strong>
+                                                        <u>
+                                                            Нужно ли вкладывать
+                                                            в дорогую
+                                                            противовзломность ?
+                                                        </u>
+                                                    </strong>
+                                                </Typography>
+                                                <Typography
+                                                    fontWeight={"light"}
+                                                    gutterBottom
+                                                >
+                                                    При установке
+                                                    противовзломной фурнитуры
+                                                    самого высокого класса,
+                                                    установке противовзломной
+                                                    оконной ручки, установке
+                                                    защитной плёнки на стекло
+                                                    время взлома составит
+                                                    несколько минут. При этом
+                                                    стоимость такого окна
+                                                    значительно повысится.
+                                                </Typography>
+                                                <Typography
+                                                    fontWeight={"light"}
+                                                    gutterBottom
+                                                >
+                                                    Несколько минут на взлом -
+                                                    это много или мало?
+                                                </Typography>
+                                                <Typography
+                                                    fontWeight={"light"}
+                                                    gutterBottom
+                                                >
+                                                    Если дом и участок
+                                                    оборудованы комплексной
+                                                    охранной системой, то
+                                                    несколько минут хватит,
+                                                    чтобы группа быстрого
+                                                    реагирования приехала на
+                                                    вызов.
+                                                </Typography>
+                                                <Typography
+                                                    fontWeight={"light"}
+                                                    gutterBottom
+                                                >
+                                                    В этом случае вложения в
+                                                    дорогую противовзломность
+                                                    оправданы.
+                                                </Typography>
+                                                <Typography
+                                                    fontWeight={"light"}
+                                                    gutterBottom
+                                                >
+                                                    Если же такой комплексной
+                                                    защиты не планируется, то
+                                                    достаточно будет защититься
+                                                    от <u>бесшумного взлома</u>.
+                                                    Это можно назвать
+                                                    &quot;максимальной пользой
+                                                    при минимальных
+                                                    вложениях&quot;.
+                                                </Typography>
+                                            </Box>
+                                        </AccordionDetails>
+                                    </Accordion>,
+                                ])}
                             </Grid>
                         </Grid>
                     </Box>
@@ -744,24 +1228,13 @@ function CardProfileSystem(
                 </Typography>
                 <hr style={{ margin: "15px 0" }} />
 
-                {/* <Typography gutterBottom variant="h6" component="div">
-                    Комплектация:
-                </Typography> */}
-
                 <ul style={{ marginLeft: "30px" }}>
                     {descriptionText.map((paragraph) => {
                         return (
-                            <li>
+                            <li key={Math.round(Math.random() * 10000)}>
                                 <Typography
-                                    // variant="body2"
                                     fontSize={"16px"}
                                     color="text.primary"
-                                    // variant="h6"
-                                    // color="text.secondary"
-                                    // textAlign={"justify"}
-                                    // fontWeight={"light"}
-                                    // fontSize={"18px"}
-                                    // lineHeight={"34px"}
                                     gutterBottom
                                 >
                                     {paragraph}
@@ -771,15 +1244,7 @@ function CardProfileSystem(
                     })}
                 </ul>
                 <hr style={{ margin: "15px 0" }} />
-                <Typography
-                    fontSize={"16px"}
-                    color="text.primary"
-                    // fontStyle={"normal"}
-                    // variant="body2"
-                    // color="text.secondary"
-                    // lineHeight={"34px"}
-                    gutterBottom
-                >
+                <Typography fontSize={"16px"} color="text.primary" gutterBottom>
                     {finalDescription}
                 </Typography>
             </CardContent>
@@ -807,12 +1272,10 @@ function CardTextInfo(title: string, descriptionText: string[]) {
                 {descriptionText.map((paragraph) => {
                     return (
                         <Typography
+                            key={Math.round(Math.random() * 10000)}
                             variant="h6"
-                            // color="text.secondary"
                             textAlign={"justify"}
                             fontWeight={"light"}
-                            // fontSize={"18px"}
-                            // lineHeight={"34px"}
                             gutterBottom
                         >
                             {paragraph}
@@ -841,12 +1304,10 @@ function CardTextInfoJSX(title: string, descriptionJSX: JSX.Element[]) {
                 {descriptionJSX.map((paragraph) => {
                     return (
                         <Typography
+                            key={Math.round(Math.random() * 10000)}
                             variant="h6"
-                            // color="text.secondary"
                             textAlign={"justify"}
                             fontWeight={"light"}
-                            // fontSize={"18px"}
-                            // lineHeight={"34px"}
                             gutterBottom
                         >
                             {paragraph}
@@ -860,33 +1321,26 @@ function CardTextInfoJSX(title: string, descriptionJSX: JSX.Element[]) {
 
 function arrowDivider(direction: string) {
     return (
-        <Grid
-            item
-            xs={12}
-            marginY={2}
-            sx={{ display: { xs: "none", md: "flex" } }}
+        <Box
+            zIndex={-1}
+            display="flex"
+            justifyContent={"center"}
+            sx={{
+                transform: `rotate(${
+                    direction === "right" ? "15deg" : "-15deg"
+                }) scaleX(${direction === "right" ? "-1" : "1"})`,
+                opacity: "75%",
+            }}
         >
-            <Box
-                width="100%"
-                display="flex"
-                justifyContent={"center"}
-                sx={{
-                    transform: `rotate(${
-                        direction === "right" ? "15deg" : "-15deg"
-                    }) scaleX(${direction === "right" ? "-1" : "1"})`,
-                    opacity: "75%",
+            <Image
+                src={arrow_1}
+                alt="arrow"
+                sizes="60vw"
+                style={{
+                    width: "45%",
+                    height: "auto",
                 }}
-            >
-                <Image
-                    src={arrow_1}
-                    alt="arrow"
-                    sizes="60vw"
-                    style={{
-                        width: "45%",
-                        height: "auto",
-                    }}
-                />
-            </Box>
-        </Grid>
+            />
+        </Box>
     );
 }
