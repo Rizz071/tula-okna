@@ -5,7 +5,9 @@ import {
     Container,
     Box,
     Grid,
+    Link as MuiLink,
 } from "@mui/material";
+
 import ProductionTypeCard from "./ProductionTypeCard";
 import konstr1 from "../../public/images/konstr1.webp";
 import Front_small_2 from "../../public/images/Front_small_2.webp";
@@ -14,6 +16,8 @@ import House from "../../public/images/House.webp";
 import Doors from "../../public/images/Doors.webp";
 import apartements1 from "../../public/images/apartements3_104px.jpg";
 import dacha1 from "../../public/images/dacha1_104px.jpeg";
+
+import NextLink from "next/link";
 
 const ProductionCards = () => {
     return (
@@ -78,11 +82,20 @@ const ProductionCards = () => {
                             />
                         </Grid>
                         <Grid item xs={12} sm={4} md={6} lg={4}>
-                            <ProductionTypeCard
-                                imgSrc={House}
-                                caption={"Энергоэффективное остекление домов"}
-                                link=""
-                            />
+                            <MuiLink
+                                component={NextLink}
+                                href="/okna"
+                                color="inherit"
+                                underline="none"
+                            >
+                                <ProductionTypeCard
+                                    imgSrc={House}
+                                    caption={
+                                        "Энергоэффективное остекление домов"
+                                    }
+                                    link=""
+                                />
+                            </MuiLink>
                         </Grid>
 
                         <Grid item xs={12} sm={4} md={6} lg={4}>

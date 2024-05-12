@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./components/theme";
 import Navbar from "./components/Navbar";
+import OfferRequest from "./components/OfferRequest";
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -24,6 +25,9 @@ export default function RootLayout({
                             <Navbar />
                         </header>
                         <main>{children}</main>
+                        <footer>
+                            <OfferRequest />
+                        </footer>
                     </ThemeProvider>
                 </AppRouterCacheProvider>
             </body>

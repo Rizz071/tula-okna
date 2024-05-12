@@ -6,6 +6,9 @@ import glassprom1 from "../public/images/glassprom1.jpg";
 import besedka from "../public/images/besedka.webp";
 import FirstPageComparement from "./components/FirstPageComparement";
 
+import NextLink from "next/link";
+import { Link as MUILink } from "@mui/material";
+
 export default function Home() {
     return (
         <>
@@ -32,7 +35,6 @@ export default function Home() {
 
                         <Typography
                             fontSize={"17px"}
-                            lineHeight={"21px"}
                             textAlign={"justify"}
                             fontWeight={"light"}
                             marginBottom={2}
@@ -43,7 +45,6 @@ export default function Home() {
                         </Typography>
                         <Typography
                             fontSize={"17px"}
-                            lineHeight={"21px"}
                             textAlign={"justify"}
                             fontWeight={"light"}
                             marginBottom={2}
@@ -55,11 +56,10 @@ export default function Home() {
                             цехах, полностью контролируя качество сборки и
                             комплектующих, а часть - закупаем по оптовым ценам
                             на одном из крупнейших заводов России. Почему именно
-                            этот завод? Объясненим ниже.
+                            этот завод? Объясняем ниже.
                         </Typography>
                         <Typography
                             fontSize={"17px"}
-                            lineHeight={"21px"}
                             textAlign={"justify"}
                             fontWeight={"light"}
                             marginBottom={2}
@@ -177,7 +177,6 @@ export default function Home() {
                         <Typography
                             fontSize="17px"
                             fontWeight={"light"}
-                            lineHeight={"21px"}
                             marginY={2}
                             textAlign={"justify"}
                         >
@@ -188,7 +187,6 @@ export default function Home() {
                         <Typography
                             fontSize="17px"
                             fontWeight={"light"}
-                            lineHeight={"21px"}
                             marginY={2}
                             textAlign={"justify"}
                         >
@@ -200,7 +198,6 @@ export default function Home() {
                         <Typography
                             fontSize="17px"
                             fontWeight={"light"}
-                            lineHeight={"21px"}
                             marginY={2}
                             textAlign={"justify"}
                         >

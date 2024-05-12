@@ -34,7 +34,7 @@ const rows = [
 const FirstPageComparement = () => {
     return (
         <Box
-            paddingY={"70px"}
+            paddingY={35}
             sx={{
                 objectFit: "cover",
                 backgroundImage: `url(${main_bg.src})`,

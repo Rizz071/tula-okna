@@ -1,39 +1,19 @@
 import React from "react";
-import {
-    Container,
-    Box,
-    Typography,
-    List,
-    ListItem,
-    ListItemText,
-    Grid,
-    Paper,
-    Table,
-    TableBody,
-    TableCell,
-    TableContainer,
-    TableHead,
-    TableRow,
-    Divider,
-} from "@mui/material";
+import { Container, Box, Typography, Grid, Paper } from "@mui/material";
+
+import NextLink from "next/link";
+import { Link as MUILink } from "@mui/material";
 
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
-import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
-import PermDeviceInformationSharpIcon from "@mui/icons-material/PermDeviceInformationSharp";
-import PermDeviceInformationTwoToneIcon from "@mui/icons-material/PermDeviceInformationTwoTone";
-import HelpCenterTwoToneIcon from "@mui/icons-material/HelpCenterTwoTone";
-import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import ImportContactsTwoToneIcon from "@mui/icons-material/ImportContactsTwoTone";
 
 import Image, { StaticImageData } from "next/image";
@@ -43,11 +23,8 @@ import veka_70 from "../../public/images/profiles/veka_70_2.jpg";
 import veka_82 from "../../public/images/profiles/veka_82_1.jpg";
 import isoterma1 from "../../public/images/slides/profile_compare_house_1.jpg";
 import veka_compare_1 from "../../public/images/profiles/veka_compare_2_800px.jpg";
-import kaleva_logo from "../../public/images/profiles/kaleva_logo.svg";
-import veka_logo from "../../public/images/profiles/Veka_logo_PNG1.png";
 import slide from "../../public/images/slides/slide_infra_house_1_1920px.jpg";
 import steklopaket from "../../public/images/slides/steklopaket_1.jpg";
-import ProductionTypeCard from "../components/ProductionTypeCard";
 import lamination_1 from "../../public/images/slides/lamination_1.jpg";
 import burglar_1 from "../../public/images/slides/burglar_1.jpg";
 
@@ -232,7 +209,7 @@ export default function Page() {
                                 alignSelf={"center"}
                                 order={{ xs: 2, md: 1 }}
                             >
-                                {CardTextInfoJSX("Выбор стеклопакета", [
+                                {CardTextInfoJSX("Самое важное - стеклопакет", [
                                     <Box
                                         component="p"
                                         key={Math.round(Math.random() * 10000)}
@@ -244,36 +221,28 @@ export default function Page() {
                                         component="p"
                                         key={Math.round(Math.random() * 10000)}
                                     >
-                                        Почему так? Ведь везде предлагают
-                                        выбрать оконный профиль!
+                                        Стеклопакет составляет около 90% площади
+                                        каждого окна и именно он отвечает за
+                                        сохранность тепла.
                                     </Box>,
                                     <Box
                                         component="p"
                                         key={Math.round(Math.random() * 10000)}
                                     >
-                                        Дело в том, что стеклопакет составляет
-                                        около 90% площади каждого окна и именно
-                                        он отвечает за сохранность тепла.
+                                        40% тепла зимой теряется через
+                                        остекление. Чем теплее стеклопакет - тем
+                                        меньше придётся платить за отопление.
                                     </Box>,
                                     <Box
                                         component="p"
                                         key={Math.round(Math.random() * 10000)}
                                     >
-                                        Известно, что до 40% тепла зимой
-                                        теряется через остекление. Чем теплее
-                                        стеклопакет - тем меньше придётся
-                                        платить за отопление зимой.
-                                    </Box>,
-                                    <Box
-                                        component="p"
-                                        key={Math.round(Math.random() * 10000)}
-                                    >
-                                        Оптимальный выбор стеклопакета -{" "}
+                                        Оптимальный выбор -{" "}
                                         <strong>
                                             3 стекла с энергосберегающим
-                                            напылением, с шириной от 36 до 42 мм
-                                        </strong>
-                                        .
+                                            напылением, шириной от 36мм до 42мм
+                                        </strong>{" "}
+                                        (больше - лучше).
                                     </Box>,
                                     <Accordion
                                         elevation={0}
@@ -350,7 +319,7 @@ export default function Page() {
                                                     он теплее. Например,
                                                     стеклопакет стандартный
                                                     двухкамерный стеклопакет
-                                                    шириной 32 мм имеет
+                                                    шириной 32мм имеет
                                                     коэффициент сопротивления
                                                     теплопередаче 0,47. В нём
                                                     воздушные камеры имеют
@@ -362,7 +331,7 @@ export default function Page() {
                                                 >
                                                     В то же время у стеклопакета
                                                     шириной 40мм воздушные
-                                                    камеры составляют 14 мм. Его
+                                                    камеры составляют 14мм. Его
                                                     коэффициент сопротивления
                                                     теплопередаче - 0,6, и это
                                                     теплее на 22%
@@ -413,7 +382,7 @@ export default function Page() {
                                                     помещения, а
                                                     &quot;мультифункциональное&quot;
                                                     напыление ещё и блокирует
-                                                    изыбыточный солнечный жар,
+                                                    избыточный солнечный жар,
                                                     поступающий летом с улицы.
                                                 </Typography>
                                                 <Typography
@@ -481,120 +450,110 @@ export default function Page() {
                                 alignContent={"center"}
                                 order={{ xs: 5, md: 5 }}
                             >
-                                {CardTextInfoJSX(
-                                    "Пластик, алюминий или дерево?",
-                                    [
-                                        <Box
-                                            component="p"
-                                            key={Math.round(
-                                                Math.random() * 10000
-                                            )}
-                                        >
-                                            <strong>
-                                                ПВХ-профиль станет оптимальным
-                                                выбором
-                                            </strong>
-                                            .
-                                        </Box>,
-                                        <Box
-                                            component="p"
-                                            key={Math.round(
-                                                Math.random() * 10000
-                                            )}
-                                        >
-                                            Этот материал значительно теплее
-                                            алюминиевого профиля с терморазрывом
-                                            и существенно дешевле как
-                                            алюминиевых окон, так и деревянных.
-                                        </Box>,
+                                {CardTextInfoJSX("ПВХ, алюминий или дерево?", [
+                                    <Box
+                                        component="p"
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
+                                        <strong>
+                                            ПВХ-профиль станет оптимальным
+                                            выбором
+                                        </strong>
+                                        .
+                                    </Box>,
+                                    <Box
+                                        component="p"
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
+                                        Этот материал значительно теплее
+                                        алюминиевого профиля с терморазрывом и
+                                        существенно дешевле как алюминиевых
+                                        окон, так и деревянных.
+                                    </Box>,
 
-                                        <Accordion
-                                            elevation={0}
-                                            key={Math.round(
-                                                Math.random() * 10000
-                                            )}
+                                    <Accordion
+                                        elevation={0}
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
+                                        <AccordionSummary
+                                            sx={{ pl: 0 }}
+                                            aria-controls="panel2-content"
+                                            id="panel2-header"
                                         >
-                                            <AccordionSummary
-                                                sx={{ pl: 0 }}
-                                                aria-controls="panel2-content"
-                                                id="panel2-header"
+                                            <Typography
+                                                fontSize={"1rem"}
+                                                variant="button"
+                                                color="error"
+                                                gutterBottom
                                             >
+                                                <ImportContactsTwoToneIcon fontSize="medium" />{" "}
+                                                ПОДРОБНЕЕ
+                                            </Typography>
+                                        </AccordionSummary>
+                                        <AccordionDetails>
+                                            <Box>
                                                 <Typography
-                                                    fontSize={"1rem"}
-                                                    variant="button"
-                                                    color="error"
+                                                    fontWeight={"light"}
                                                     gutterBottom
                                                 >
-                                                    <ImportContactsTwoToneIcon fontSize="medium" />{" "}
-                                                    ПОДРОБНЕЕ
+                                                    <strong>
+                                                        <u>
+                                                            Почему не тёплый
+                                                            алюминий и не
+                                                            дерево?
+                                                        </u>
+                                                    </strong>
                                                 </Typography>
-                                            </AccordionSummary>
-                                            <AccordionDetails>
-                                                <Box>
-                                                    <Typography
-                                                        fontWeight={"light"}
-                                                        gutterBottom
-                                                    >
-                                                        <strong>
-                                                            <u>
-                                                                Почему именно
-                                                                ПВХ-профиль?
-                                                            </u>
-                                                        </strong>
-                                                    </Typography>
-                                                    <Typography
-                                                        fontWeight={"light"}
-                                                        gutterBottom
-                                                    >
-                                                        К примеру, самый широкий
-                                                        алюминиевый профиль по
-                                                        теплосбережению примерно
-                                                        соответствует самому
-                                                        простому ПВХ-профилю
-                                                        шириной 60мм.
-                                                    </Typography>
-                                                    <Typography
-                                                        fontWeight={"light"}
-                                                        gutterBottom
-                                                    >
-                                                        Дерево, в свою очередь,
-                                                        менее долговечно, чем
-                                                        ПВХ. Деревянные окна
-                                                        требуют либо установки
-                                                        защитных алюминиевых
-                                                        накладок с уличной
-                                                        стороны, либо обновления
-                                                        краски каждые 3-5 лет на
-                                                        всех окнах в доме.
-                                                    </Typography>
-                                                    <Typography
-                                                        fontWeight={"light"}
-                                                        gutterBottom
-                                                    >
-                                                        Часто можно слышать
-                                                        утвержение, что
-                                                        деревянные окна
-                                                        &quot;пропускают через
-                                                        себя свежий
-                                                        воздух&quot;. Это не
-                                                        соответствует
-                                                        реальности, потому что
-                                                        современные деревянные
-                                                        окна производятся из
-                                                        клееного бруса,
-                                                        пропитанного специальным
-                                                        составом от гниения
-                                                        древесины. Такой
-                                                        материал, конечно же,
-                                                        ничего &quot;через
-                                                        себя&quot; не
-                                                        пропускает.
-                                                    </Typography>
-                                                </Box>
-                                            </AccordionDetails>
-                                        </Accordion>,
-                                    ]
-                                )}
+                                                <Typography
+                                                    fontWeight={"light"}
+                                                    gutterBottom
+                                                >
+                                                    К примеру, самый широкий
+                                                    алюминиевый профиль по
+                                                    теплосбережению примерно
+                                                    соответствует самому узкому
+                                                    ПВХ-профилю глубиной 60мм.
+                                                </Typography>
+                                                <Typography
+                                                    fontWeight={"light"}
+                                                    gutterBottom
+                                                >
+                                                    Дерево, в свою очередь,
+                                                    менее долговечно, чем ПВХ.
+                                                    Деревянные окна требуют либо
+                                                    установки защитных
+                                                    алюминиевых накладок с
+                                                    уличной стороны, либо
+                                                    обновления окраски каждые
+                                                    3-5 лет на всех окнах в
+                                                    доме.
+                                                </Typography>
+                                                <Typography
+                                                    fontWeight={"light"}
+                                                    gutterBottom
+                                                >
+                                                    Часто можно слышать
+                                                    утвержение, что деревянные
+                                                    окна &quot;пропускают через
+                                                    себя свежий воздух&quot;.
+                                                    Это не соответствует
+                                                    реальности. Современные
+                                                    деревянные
+                                                    &quot;евроокна&quot;
+                                                    производятся из клееного
+                                                    бруса, пропитанного
+                                                    специальным
+                                                    сильнодействующим химическим
+                                                    составом от гниения
+                                                    древесины. Такой материал,
+                                                    конечно же, ничего
+                                                    &quot;через себя&quot; не
+                                                    пропускает.
+                                                </Typography>
+                                            </Box>
+                                        </AccordionDetails>
+                                    </Accordion>,
+                                ])}
                             </Grid>
 
                             <Grid
@@ -613,17 +572,15 @@ export default function Page() {
                                         component="p"
                                         key={Math.round(Math.random() * 10000)}
                                     >
-                                        Глубина оконного профиля зависит от
-                                        выбранного стеклопакета.
+                                        Профиль выбирается под нужный
+                                        стеклопакет.
                                     </Box>,
                                     <Box
                                         component="p"
                                         key={Math.round(Math.random() * 10000)}
                                     >
-                                        Во-первых, стеклопакет должен
+                                        Во-первых, стеклопакет должен физически
                                         поместиться в оконный профиль.
-                                        Подходящий стеклопакет поместится только
-                                        в профиль глубиной 70мм и более.
                                     </Box>,
                                     <Box
                                         component="p"
@@ -631,11 +588,6 @@ export default function Page() {
                                     >
                                         Во-вторых, краевая зона стеклопакета -
                                         самая уязвимая к промерзанию часть окна.
-                                    </Box>,
-                                    <Box
-                                        component="p"
-                                        key={Math.round(Math.random() * 10000)}
-                                    >
                                         Выбираем такую глубину профиля, чтобы он
                                         был теплее, чем стеклопакет.
                                     </Box>,
@@ -647,9 +599,8 @@ export default function Page() {
                                             По характеристикам нас устроит
                                             профиль 70мм
                                         </strong>{" "}
-                                        - стандарт остекления загородных домов,
-                                        сложившийся в средней полосе России за
-                                        десятилетия практики.
+                                        - стандарт остекления загородных домов в
+                                        средней полосе России.
                                     </Box>,
                                     <Accordion
                                         elevation={0}
@@ -695,8 +646,8 @@ export default function Page() {
                                                 >
                                                     Минимально подходящий
                                                     стеклопакет для остекления
-                                                    загородного дома - СПД
-                                                    4-10-4-10-И4.
+                                                    загородного дома - СПД 36мм
+                                                    (4М1-12-4М1-12-И4).
                                                 </Typography>
                                                 <Typography
                                                     fontWeight={"light"}
@@ -712,9 +663,9 @@ export default function Page() {
                                                 >
                                                     В свою очередь, коэффициент
                                                     сопротивления теплопередаче
-                                                    профиля 70 мм (учитывая
-                                                    стальное армирование внутри)
-                                                    - 0,79
+                                                    профиля глубиной 70мм
+                                                    (учитывая стальное
+                                                    армирование внутри) - 0,79
                                                 </Typography>
                                                 <Typography
                                                     fontWeight={"light"}
@@ -730,8 +681,23 @@ export default function Page() {
                                                     gutterBottom
                                                 >
                                                     А если взять профиль 60мм?
-                                                    Его сопротивление
-                                                    теплопередаче - 0,64
+                                                    Во-первых, наш стеклопакет
+                                                    туда попросту не войдёт.
+                                                    Макимальная ширина
+                                                    стеклопакета для профиля
+                                                    60мм составляет 32мм, что
+                                                    будет слишком расточительно
+                                                    по затратам на отопление для
+                                                    коттеджа.
+                                                </Typography>
+                                                <Typography
+                                                    fontWeight={"light"}
+                                                    gutterBottom
+                                                >
+                                                    Во-вторых, даже если бы наш
+                                                    стеклопакет туда поместился,
+                                                    сопротивление теплопередаче
+                                                    профиля 60мм всего - 0,64
                                                 </Typography>
                                                 <Typography
                                                     fontWeight={"light"}
@@ -739,13 +705,14 @@ export default function Page() {
                                                 >
                                                     Это меньше, чем у
                                                     стеклопакета. Таким образом,
-                                                    профиля 60 мм значительно
-                                                    повышает риск промерзания
-                                                    окна в краевой зоне
-                                                    стеклопакета. При этом такая
-                                                    экономия на профиле будет
-                                                    ничтожной и составит всего
-                                                    10% от стоимости заказа.
+                                                    с узким профилем 60мм
+                                                    значительно повышает риск
+                                                    промерзания окна в краевой
+                                                    зоне стеклопакета. При этом
+                                                    такая экономия на глубине
+                                                    профиля будет ничтожной и
+                                                    составит всего 10% от
+                                                    стоимости заказа.
                                                 </Typography>
                                             </Box>
                                         </AccordionDetails>
@@ -818,7 +785,7 @@ export default function Page() {
                                         key={Math.round(Math.random() * 10000)}
                                     >
                                         При качественном нанесении на профиль
-                                        такая плёнка держится очень надёжно и
+                                        такая плёнка держится очень надёжно, и
                                         условный срок службы окна в 40 лет не
                                         снижается.
                                     </Box>,
@@ -829,8 +796,8 @@ export default function Page() {
                                         При некачественном нанесении плёнки, на
                                         ней образуются пузыри с воздухом.
                                         Обращайте внимание на гарантийный срок
-                                        ваших окон! Он точно не может быть менее
-                                        3 лет, потому что такие дефекты
+                                        ваших окон! Он не может быть менее 3
+                                        лет, потому что такие дефекты
                                         проявляются зачастую не в первый год
                                         эксплуатации.
                                     </Box>,
@@ -996,8 +963,8 @@ export default function Page() {
                                         component="p"
                                         key={Math.round(Math.random() * 10000)}
                                     >
-                                        Задача любого взломщика - действовать в
-                                        первую очередь бесшумно.
+                                        Задача любого взломщика - действовать
+                                        очень тихо.
                                     </Box>,
                                     <Box
                                         component="p"
@@ -1150,7 +1117,8 @@ export default function Page() {
                                 fontWeight={300}
                                 marginBottom={4}
                             >
-                                Наше предложение, основанное на 20-летнем опыте
+                                Наше предложение, основанное на{" "}
+                                {new Date().getFullYear() - 1998}-летнем опыте
                             </Typography>
                         </Box>
                         <Box
@@ -1163,7 +1131,7 @@ export default function Page() {
                             {CardProfileSystem(
                                 kaleva_70,
                                 5,
-                                "КАЛЕВА 70мм",
+                                "КАЛЕВА Стандарт 70мм",
                                 [
                                     "Происхождение - Россия",
                                     "Толщина стенки - не менее 2.5мм",
@@ -1184,7 +1152,7 @@ export default function Page() {
                                     "Фурнитура Gretsch-Unitas или ROTO на выбор",
                                     "Расширенная гарантия - 5 лет",
                                 ],
-                                "Наиболее качественная оконная система на рынке РФ. Больше пластика в профиле, надёжнее соединения рам и створок. Переплата в 10-20% по сравнению с аналогами окупится высочайшим уровнем комфорта при эксплуатации и отсутствием проблем с регулировкой."
+                                "Наиболее качественная оконная система на рынке РФ (наряду с Rehau Brillant). Больше пластика в профиле, надёжнее соединения рам и створок. Переплата в 10-20% по сравнению с аналогами окупится высочайшим уровнем комфорта при эксплуатации и отсутствием проблем с регулировкой на долгие годы вперёд."
                             )}
                             {CardProfileSystem(
                                 veka_82,
