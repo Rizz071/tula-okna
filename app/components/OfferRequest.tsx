@@ -18,8 +18,14 @@ import { useTheme } from "@mui/material/styles";
 import background from "../../public/images/stoimost-fon.png";
 import man_image from "../../public/images/stoimost-img.webp";
 import AttachEmailIcon from "@mui/icons-material/AttachEmail";
+import AttachFileIcon from "@mui/icons-material/AttachFile";
+import SendIcon from "@mui/icons-material/Send";
+import CloseIcon from "@mui/icons-material/Close";
 
 import { useState } from "react";
+import { sendMail } from "../lib/mail";
+
+import { MuiFileInput } from "mui-file-input";
 
 const OfferRequest = () => {
     const [isContactsVisible, setContactsVisible] = useState<boolean>(false);
@@ -27,11 +33,67 @@ const OfferRequest = () => {
     const [userName, setUserName] = useState<string>("");
     const [userPhone, setUserPhone] = useState<string>("");
     const [userMail, setUserMail] = useState<string>("");
+    const [mailError, setMailError] = useState<boolean>(false);
+    const [uploadFieldError, setUploadFieldError] = useState<boolean>(false);
+    const [files, setFiles] = useState<File[] | undefined>(undefined);
 
     const theme = useTheme();
+
     const isSmallScreen = useMediaQuery((theme: Theme) =>
         theme.breakpoints.down("md")
     );
+
+    const handleChangeFiles = (newFiles: File[]) => {
+        setFiles(newFiles);
+    };
+
+    const handleSubmitSketch = async () => {
+        if (!userMail) {
+            setMailError(true);
+            return;
+        }
+
+        if (!files || files.length === 0) {
+            setUploadFieldError(true);
+            return;
+        }
+
+        setMailError(false);
+        setUploadFieldError(false);
+
+        if (!files) return;
+
+        //TODO CHeck for: 1.Too big files
+
+        const formData = new FormData();
+
+        files.forEach((file) => formData.append("files", file));
+
+        const sendingResult = await sendMail({
+            to: `iburykin071@gmail.com`,
+            from: `info@тульские-окна.рф`,
+            subject: "Получены эскизы на расчёт",
+            html: ` <h1>Информация о клиенте:</h1>
+                    <ul>
+                        <li><span style="font-size: 1.2rem">Почта:&nbsp;${userMail}</span></li>
+                        <li><span style="font-size: 1.2rem">Имя:&nbsp;${
+                            userName ? userName : "Не указано"
+                        }</span></li>
+                        <li><span style="font-size: 1.2rem">Телефон:&nbsp;${
+                            userPhone ? userPhone : "Не указан"
+                        }</span></li>
+                    </ul>`,
+            filesData: formData,
+        });
+
+        console.log(sendingResult);
+
+        setUserName("");
+        setUserPhone("");
+        setUserMail("");
+
+        alert("success");
+    };
 
     return (
         <Box sx={{ backgroundImage: `url(${background.src})` }}>
@@ -82,25 +144,74 @@ const OfferRequest = () => {
                                     rowGap={2}
                                     order={{ xs: 3, md: 2 }}
                                 >
-                                    <Box>
-                                        <StyledTextField
-                                            fullWidth
-                                            type="text"
-                                            label={"Имя (не обязательно)"}
-                                            value={userName}
-                                            onChange={(event) =>
-                                                setUserName(event.target.value)
-                                            }
-                                            size={"small"}
-                                        />
-                                    </Box>
-                                    <Box marginTop={2} width="100%">
-                                        <Button fullWidth variant="contained">
-                                            Прикрепить эскиз
-                                        </Button>
-                                    </Box>
+                                    <form onSubmit={handleSubmitSketch}>
+                                        <Box>
+                                            <StyledTextField
+                                                fullWidth
+                                                type="text"
+                                                label={"Имя (не обязательно)"}
+                                                value={userName}
+                                                onChange={(event) =>
+                                                    setUserName(
+                                                        event.target.value
+                                                    )
+                                                }
+                                                size={"small"}
+                                            />
+                                        </Box>
+                                        <Box marginTop={2} width="100%">
+                                            <MuiFileInput
+                                                error={uploadFieldError}
+                                                // label="Загрузить эскизы"
+                                                required
+                                                helperText="Нажмите, чтобы загрузить эскизы"
+                                                value={files}
+                                                size="small"
+                                                variant="outlined"
+                                                multiple
+                                                onChange={handleChangeFiles}
+                                                // label="Нажмите, чтобы загрузить эскизы"
+                                                // InputLabelProps={{
+                                                //     style: {
+                                                //         textOverflow:
+                                                //             "ellipsis",
+                                                //         whiteSpace: "nowrap",
+                                                //         overflow: "hidden",
+                                                //         color: "red",
+                                                //     },
+                                                // }}
+                                                sx={{
+                                                    color: "success",
+                                                    "& .MuiOutlinedInput-root":
+                                                        {
+                                                            backgroundColor:
+                                                                "white",
+                                                        },
+                                                }}
+                                                clearIconButtonProps={{
+                                                    title: "Remove",
+                                                    children: (
+                                                        <CloseIcon fontSize="small" />
+                                                    ),
+                                                }}
+                                                InputProps={{
+                                                    inputProps: {},
+                                                    startAdornment: (
+                                                        <AttachFileIcon />
+                                                    ),
+                                                }}
+                                            />
+                                        </Box>
+                                    </form>
+
                                     <Box marginTop={2}>
-                                        <Button fullWidth variant="contained">
+                                        <Button
+                                            fullWidth
+                                            type="submit"
+                                            startIcon={<SendIcon />}
+                                            variant="contained"
+                                            onClick={handleSubmitSketch}
+                                        >
                                             Отправить заявку
                                         </Button>
                                     </Box>
@@ -120,7 +231,9 @@ const OfferRequest = () => {
                                             <StyledTextField
                                                 fullWidth
                                                 type="tel"
-                                                label={"Телефон"}
+                                                label={
+                                                    "Телефон (не обязательно)"
+                                                }
                                                 value={userPhone}
                                                 onChange={(event) =>
                                                     setUserPhone(
@@ -134,7 +247,9 @@ const OfferRequest = () => {
                                         <Box marginTop={2}>
                                             <StyledTextField
                                                 fullWidth
+                                                required
                                                 type="email"
+                                                error={mailError}
                                                 label={"Электронная почта"}
                                                 value={userMail}
                                                 onChange={(event) =>
@@ -143,19 +258,11 @@ const OfferRequest = () => {
                                                     )
                                                 }
                                                 size={"small"}
+                                                helperText={
+                                                    mailError &&
+                                                    "Укажите, пожалуйста, вашу почту, чтобы мы могли ответить"
+                                                }
                                             />
-                                        </Box>
-                                        <Box marginTop={1}>
-                                            <Typography
-                                                fontSize={"0.70rem"}
-                                                textAlign={"justify"}
-                                                fontWeight={"light"}
-                                                gutterBottom
-                                            >
-                                                Укажите, пожалуйста, электронную
-                                                почту или телефон, чтобы мы
-                                                могли ответить
-                                            </Typography>
                                         </Box>
                                     </Box>
                                 </Grid>
