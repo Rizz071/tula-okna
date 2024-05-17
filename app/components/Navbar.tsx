@@ -5,7 +5,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Image from "next/image";
-import logoImage from "../../public/images/logo.png";
+import logoImage from "../../public/images/Logo1.svg";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 import CalculateOutlinedIcon from "@mui/icons-material/CalculateOutlined";
 import DrawerMobileMenu from "./DrawerMobileMenu";
@@ -50,8 +50,17 @@ const Navbar = () => {
                             >
                                 <DrawerMobileMenu />
                             </Box>
-                            <Box sx={{ display: { xs: "none", sm: "block" } }}>
-                                <Image src={logoImage} alt="Site logo" />
+                            <Box
+                                sx={{
+                                    display: { xs: "none", sm: "block" },
+                                    mt: 1,
+                                }}
+                            >
+                                <Image
+                                    src={logoImage}
+                                    height={128}
+                                    alt="Site logo"
+                                />
                             </Box>
                             <Box
                                 sx={{
@@ -110,7 +119,7 @@ const Navbar = () => {
                                     Калькулятор окон
                                 </Typography>
                             </Button>
-                            <Button
+                            {/* <Button
                                 sx={{
                                     color: "#e74f21",
                                     paddingY: "3px",
@@ -124,16 +133,16 @@ const Navbar = () => {
                                         }}
                                     />
                                 }
-                            >
-                                <Typography
+                            > */}
+                            {/* <Typography
                                     color="#e74f21"
                                     fontWeight={"light"}
                                     sx={{ textTransform: "none" }}
                                     fontSize={"large"}
                                 >
                                     Рассрочка платежа
-                                </Typography>
-                            </Button>
+                                </Typography> */}
+                            {/* </Button> */}
                         </Box>
                         <Box
                             sx={{ display: { xs: "none", md: "flex" } }}
@@ -146,11 +155,14 @@ const Navbar = () => {
                                 flexDirection={"column"}
                                 gap={1}
                             >
-                                <Typography fontWeight="fontWeightLight">
+                                {/* <Typography fontWeight="fontWeightLight">
                                     О компании
+                                </Typography> */}
+                                <Typography fontWeight="fontWeightLight">
+                                    Порядок работы с нами
                                 </Typography>
                                 <Typography fontWeight="fontWeightLight">
-                                    Как заказать
+                                    Схема проезда к офису
                                 </Typography>
                             </Box>
                             <Box
@@ -158,12 +170,9 @@ const Navbar = () => {
                                 flexDirection={"column"}
                                 gap={1}
                             >
-                                <Typography fontWeight="fontWeightLight">
+                                {/* <Typography fontWeight="fontWeightLight">
                                     Услуги
-                                </Typography>
-                                <Typography fontWeight="fontWeightLight">
-                                    Контакты
-                                </Typography>
+                                </Typography> */}
                             </Box>
                         </Box>
                         <Box
@@ -178,15 +187,15 @@ const Navbar = () => {
                                 lineHeight={"1.2rem"}
                                 fontWeight={"light"}
                             >
-                                Ежедневно с 9:00 до 19:00
+                                Пн - Пт с 9:00 до 19:00
                             </Typography>
-                            <Typography
+                            {/* <Typography
                                 fontSize={"0.9rem"}
                                 lineHeight={"1.2rem"}
                                 fontWeight={"light"}
                             >
                                 Телефон в г.Туле
-                            </Typography>
+                            </Typography> */}
                             <Typography variant="h5">
                                 <span style={{ fontWeight: "lighter" }}>
                                     +7 (4872)

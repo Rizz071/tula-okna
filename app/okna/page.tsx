@@ -15,6 +15,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 
 import ImportContactsTwoToneIcon from "@mui/icons-material/ImportContactsTwoTone";
+import SavingsOutlinedIcon from "@mui/icons-material/SavingsOutlined";
 
 import Image, { StaticImageData } from "next/image";
 import main_bg from "../../public/images/main-bg.webp";
@@ -43,7 +44,7 @@ export default function Page() {
                 />
                 <Box
                     sx={{
-                        opacity: "90%",
+                        opacity: "80%",
                         position: "absolute",
                         bgcolor: "white",
                         zIndex: "50",
@@ -60,7 +61,7 @@ export default function Page() {
                             sm: "100px",
                             md: "100px",
                             lg: "170px",
-                            xl: "250px",
+                            xl: "270px",
                         },
                         left: {
                             xs: "30px",
@@ -75,7 +76,7 @@ export default function Page() {
                             md: "50px",
                             lg: "75px",
                         },
-                        borderRadius: "1% 20% 1% 20%",
+                        borderRadius: "5% / 10%",
                     }}
                 >
                     <Box
@@ -101,23 +102,24 @@ export default function Page() {
                         >
                             Остекление загородного дома
                         </Typography>
-                        {/* <Typography
-                            align="right"
+                        <Typography
+                            align="left"
                             variant="sliderFont"
                             bgcolor="white"
                             fontWeight={"light"}
+                            gutterBottom
                             sx={{
                                 fontSize: {
                                     xs: "10px",
                                     sm: "14px",
                                     md: "18px",
-                                    lg: "22px",
-                                    xl: "30px",
+                                    lg: "20px",
+                                    xl: "22px",
                                 },
                             }}
                         >
-                            Делимся нашим опытом
-                        </Typography> */}
+                            Наш опыт экономии тепла
+                        </Typography>
                     </Box>
                 </Box>
             </Box>
@@ -136,7 +138,7 @@ export default function Page() {
                             sm: -2,
                             md: -3,
                             lg: -4,
-                            xl: -6,
+                            xl: -4,
                         },
                         transform: "translate(-50%, 0%)",
                         left: "50%",
@@ -163,18 +165,18 @@ export default function Page() {
                             <Box
                                 component="p"
                                 key={Math.round(Math.random() * 10000)}
+                                textAlign="center"
                             >
-                                Остекление коттеджа имеет свои особенности.
                                 Чтобы выбрать правильные окна нужно знать всего
                                 несколько ключевых параметров.
                             </Box>,
-                            <Box
-                                component="p"
-                                key={Math.round(Math.random() * 10000)}
-                            >
-                                Мы устанавливаем окна в частные дома уже много
-                                лет и готовы поделиться своим опытом.
-                            </Box>,
+                            // <Box
+                            //     component="p"
+                            //     key={Math.round(Math.random() * 10000)}
+                            // >
+                            //     Мы устанавливаем окна в частные дома уже много
+                            //     лет и готовы поделиться своим опытом.
+                            // </Box>,
                             // <Box
                             //     component="p"
                             //     key={Math.round(Math.random() * 10000)}

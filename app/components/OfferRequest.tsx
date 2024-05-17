@@ -132,8 +132,8 @@ const OfferRequest = () => {
                                             md: "1rem",
                                         }}
                                     >
-                                        Мы пришлём в ответ стоимость изделий и
-                                        работ
+                                        ... и мы пришлём стоимость в течение 1-2
+                                        дней!
                                     </Typography>
                                 </Grid>
 
@@ -280,7 +280,7 @@ const OfferRequest = () => {
                                 gutterBottom
                             >
                                 Работаем для Вас вот уже более{" "}
-                                {new Date().getFullYear() - 1998} лет!
+                                {new Date().getFullYear() - 1998} лет
                             </Typography>
                             <Typography
                                 fontWeight={"light"}
@@ -303,6 +303,7 @@ const OfferRequest = () => {
                                     display: isContactsVisible
                                         ? "none"
                                         : "block",
+                                    mt: 2,
                                 }}
                                 onClick={() => {
                                     setContactsVisible(!isContactsVisible);

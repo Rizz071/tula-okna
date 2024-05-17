@@ -31,12 +31,20 @@ const ProductionCards = () => {
                     zIndex: "100",
                     textAlign: "center",
                     mt: {
-                        xs: -35.3,
-                        sm: -32,
-                        md: -27,
+                        xs: -5,
+                        sm: -5,
+                        md: -10,
                         lg: -15,
                         xl: -11,
                     },
+
+                    // mt: {
+                    //     xs: -35.3,
+                    //     sm: -32,
+                    //     md: -27,
+                    //     lg: -15,
+                    //     xl: -11,
+                    // },
                     transform: "translate(-50%, 0%)",
                     left: "50%",
                     maxWidth: "lg",

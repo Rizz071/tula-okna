@@ -1,11 +1,23 @@
 "use client";
 import React from "react";
 import Carousel from "react-material-ui-carousel";
-import { Button, Box, Typography } from "@mui/material";
+import {
+    Button,
+    Box,
+    Typography,
+    Card,
+    CardActions,
+    CardContent,
+    List,
+    ListItem,
+    Divider,
+} from "@mui/material";
 import slideImage1 from "../../public/images/slide1.webp";
 import slideImage2 from "../../public/images/slide2.webp";
 import slideImage3 from "../../public/images/slide3.webp";
 import slideImage4 from "../../public/images/slide4.webp";
+import slideImage5 from "../../public/images/slides/slide_blue_man_1_6k.jpg";
+
 import { StaticImageData } from "next/image";
 
 interface SettingsT {
@@ -19,6 +31,7 @@ interface SettingsT {
     cycleNavigation: boolean;
     swipe: boolean;
     [key: string]: any;
+    height: number;
 }
 
 const DefaultSettingsT: SettingsT = {
@@ -31,12 +44,13 @@ const DefaultSettingsT: SettingsT = {
     cycleNavigation: true,
     fullHeightHover: true,
     swipe: true,
+    height: 410,
 };
 
 function HeroImageSlider() {
     var items = [
         {
-            name: slideImage1,
+            name: slideImage5,
             description: "Price evaluation slide",
             content: function () {
                 return (
@@ -312,11 +326,123 @@ function HeroImageSlider() {
     ];
 
     return (
-        <Carousel {...DefaultSettingsT} sx={{ display: { xs: "flex" } }}>
-            {items.map((item, i) => (
-                <Item key={i} item={item} />
-            ))}
-        </Carousel>
+        <Box
+            display={"flex"}
+            width="100%"
+            maxHeight="610px"
+            minHeight={{ xs: "250px", sm: "410px", md: "610px" }}
+            justifyContent={"center"}
+            sx={{
+                backgroundImage: `url(${slideImage5.src})`,
+                backgroundSize: "100%",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: { xs: "center 0%", md: "center 50%" },
+            }}
+        >
+            <Box
+                display={{ xs: "none", sm: "flex" }}
+                position="relative"
+                marginBottom={"auto"}
+                left={{ sm: "1%", md: "-5%" }}
+                top={{ sm: "-40px" }}
+                sx={{ transform: `translate(-50%, 50%)` }}
+                // bgcolor={"white"}
+            >
+                <Card sx={{ minWidth: 275, maxWidth: 320 }}>
+                    <CardContent>
+                        {/* <Typography
+                            sx={{ fontSize: 14 }}
+                            color="text.secondary"
+                            gutterBottom
+                        >
+                            Компания основана в 1998 году
+                        </Typography> */}
+
+                        <Typography
+                            variant="sliderFont"
+                            fontSize={{ xs: "1.2rem", lg: "1.5rem" }}
+                            component="div"
+                            fontWeight={"700"}
+                            color={"DodgerBlue"}
+                            // textAlign={"center"}
+                            sx={{ mb: { md: 1.5 } }}
+                        >
+                            Настоящая гарантия
+                        </Typography>
+                        {/* <Divider color={"DodgerBlue"} sx={{ mx: 0 }} /> */}
+                        {/* <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                            adjective
+                        </Typography> */}
+                        <List>
+                            <ListItem>
+                                <Typography
+                                    variant="body1"
+                                    fontWeight={500}
+                                    fontSize={{
+                                        sm: "0.8rem",
+                                        md: "0.9rem",
+                                        lg: "1rem",
+                                    }}
+                                >
+                                    Непрерывно выполняем свои гарантийные
+                                    обязательства уже 26 лет
+                                </Typography>
+                            </ListItem>
+                            <ListItem>
+                                <Typography
+                                    variant="body1"
+                                    fontWeight={500}
+                                    fontSize={{
+                                        sm: "0.8rem",
+                                        md: "0.9rem",
+                                        lg: "1rem",
+                                    }}
+                                >
+                                    70% клиентов обращаются к нам по
+                                    рекомендации
+                                </Typography>
+                            </ListItem>
+                            <ListItem>
+                                <Typography
+                                    variant="body1"
+                                    fontWeight={500}
+                                    fontSize={{
+                                        sm: "0.8rem",
+                                        md: "0.9rem",
+                                        lg: "1rem",
+                                    }}
+                                >
+                                    Решаем ваши задачи, а не продаём
+                                    &quot;дешёвые&quot; окна
+                                </Typography>
+                            </ListItem>
+                        </List>
+                    </CardContent>
+                    {/* <CardActions>
+                        <Button size="small">Learn More</Button>
+                    </CardActions> */}
+                </Card>
+
+                {/* <Typography
+                    paddingY={4}
+                    paddingX={8}
+                    variant="h5"
+                    sx={{
+                        color: "blue",
+                        fontWeight: "900",
+                        opacity: "70%",
+                    }}
+                >
+                    Работаем уже 26 лет
+                </Typography> */}
+            </Box>
+        </Box>
+
+        // <Carousel {...DefaultSettingsT} sx={{ display: { xs: "flex" } }}>
+        //     {items.map((item, i) => (
+        //         <Item key={i} item={item} />
+        //     ))}
+        // </Carousel>
     );
 }
 
