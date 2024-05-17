@@ -119,7 +119,7 @@ const Navbar = () => {
                                     Калькулятор окон
                                 </Typography>
                             </Button>
-                            {/* <Button
+                            <Button
                                 sx={{
                                     color: "#e74f21",
                                     paddingY: "3px",
@@ -133,16 +133,16 @@ const Navbar = () => {
                                         }}
                                     />
                                 }
-                            > */}
-                            {/* <Typography
+                            >
+                                <Typography
                                     color="#e74f21"
                                     fontWeight={"light"}
                                     sx={{ textTransform: "none" }}
                                     fontSize={"large"}
                                 >
-                                    Рассрочка платежа
-                                </Typography> */}
-                            {/* </Button> */}
+                                    Подбор типа окна
+                                </Typography>
+                            </Button>
                         </Box>
                         <Box
                             sx={{ display: { xs: "none", md: "flex" } }}
@@ -159,10 +159,10 @@ const Navbar = () => {
                                     О компании
                                 </Typography> */}
                                 <Typography fontWeight="fontWeightLight">
-                                    Порядок работы с нами
+                                    Порядок работы
                                 </Typography>
                                 <Typography fontWeight="fontWeightLight">
-                                    Схема проезда к офису
+                                    Схема проезда
                                 </Typography>
                             </Box>
                             <Box
