@@ -18,7 +18,14 @@ import slideImage3 from "../../public/images/slide3.webp";
 import slideImage4 from "../../public/images/slide4.webp";
 import slideImage5 from "../../public/images/slides/slide_blue_man_1_6k.jpg";
 
-import { StaticImageData } from "next/image";
+import VerifiedSharpIcon from "@mui/icons-material/VerifiedSharp";
+import GppGoodIcon from "@mui/icons-material/GppGood";
+import GppGoodOutlinedIcon from "@mui/icons-material/GppGoodOutlined";
+import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
+import BeachAccessOutlinedIcon from "@mui/icons-material/BeachAccessOutlined";
+import SecuritySharpIcon from "@mui/icons-material/SecuritySharp";
+
+import Image, { StaticImageData } from "next/image";
 
 interface SettingsT {
     autoPlay: boolean;
@@ -333,12 +340,23 @@ function HeroImageSlider() {
             minHeight={{ xs: "250px", sm: "410px", md: "610px" }}
             justifyContent={"center"}
             sx={{
-                backgroundImage: `url(${slideImage5.src})`,
-                backgroundSize: "100%",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: { xs: "center 0%", md: "center 50%" },
+                //     backgroundImage: `url(${slideImage5.src})`,
+                //     backgroundSize: "100%",
+                //     backgroundRepeat: "no-repeat",
+                //     backgroundPosition: { xs: "center 0%", md: "center 50%" },
+                position: "relative",
             }}
         >
+            <Image
+                src={slideImage5}
+                alt="Slider hero image"
+                sizes={"100vw"}
+                quality={100}
+                fill
+                objectFit="cover"
+                unoptimized={true}
+            />
+
             <Box
                 display={{ xs: "none", sm: "flex" }}
                 position="relative"
@@ -346,7 +364,6 @@ function HeroImageSlider() {
                 left={{ sm: "1%", md: "-5%" }}
                 top={{ sm: "-40px" }}
                 sx={{ transform: `translate(-50%, 50%)` }}
-                // bgcolor={"white"}
             >
                 <Card sx={{ minWidth: 275, maxWidth: 320 }}>
                     <CardContent>
@@ -357,64 +374,106 @@ function HeroImageSlider() {
                         >
                             Компания основана в 1998 году
                         </Typography> */}
-
-                        <Typography
-                            variant="sliderFont"
-                            fontSize={{ xs: "1.2rem", lg: "1.5rem" }}
-                            component="div"
-                            fontWeight={"700"}
-                            color={"DodgerBlue"}
-                            // textAlign={"center"}
-                            sx={{ mb: { md: 1.5 } }}
+                        <Box
+                            display={"flex"}
+                            columnGap={1}
+                            alignItems={"flex-start"}
+                            paddingLeft={0}
                         >
-                            Настоящая гарантия
-                        </Typography>
+                            <SecuritySharpIcon
+                                fontSize="large"
+                                sx={{ color: "DodgerBlue" }}
+                            />
+                            <Typography
+                                alignSelf={"flex-end"}
+                                variant="sliderFont"
+                                fontSize={{ xs: "1.2rem", lg: "1.5rem" }}
+                                component="div"
+                                fontWeight={"700"}
+                                color={"DodgerBlue"}
+                                // textAlign={"center"}
+                                // sx={{ mb: { md: 1.5 } }}
+                            >
+                                Настоящая гарантия
+                            </Typography>
+                        </Box>
                         {/* <Divider color={"DodgerBlue"} sx={{ mx: 0 }} /> */}
                         {/* <Typography sx={{ mb: 1.5 }} color="text.secondary">
                             adjective
                         </Typography> */}
                         <List>
                             <ListItem>
-                                <Typography
-                                    variant="body1"
-                                    fontWeight={500}
-                                    fontSize={{
-                                        sm: "0.8rem",
-                                        md: "0.9rem",
-                                        lg: "1rem",
-                                    }}
+                                <Box
+                                    display={"flex"}
+                                    columnGap={1}
+                                    alignItems={"flex-start"}
                                 >
-                                    Непрерывно выполняем свои гарантийные
-                                    обязательства уже 26 лет
-                                </Typography>
+                                    {/* <GppGoodOutlinedIcon
+                                        fontSize="large"
+                                        sx={{ color: "DodgerBlue" }}
+                                    /> */}
+                                    <Typography
+                                        variant="body1"
+                                        fontWeight={500}
+                                        fontSize={{
+                                            sm: "0.8rem",
+                                            md: "0.9rem",
+                                            lg: "1rem",
+                                        }}
+                                    >
+                                        Непрерывно выполняем гарантийные
+                                        обязательства более{" "}
+                                        {new Date().getFullYear() - 1998} лет
+                                    </Typography>
+                                </Box>
                             </ListItem>
                             <ListItem>
-                                <Typography
-                                    variant="body1"
-                                    fontWeight={500}
-                                    fontSize={{
-                                        sm: "0.8rem",
-                                        md: "0.9rem",
-                                        lg: "1rem",
-                                    }}
+                                <Box
+                                    display={"flex"}
+                                    columnGap={1}
+                                    alignItems={"flex-start"}
                                 >
-                                    70% клиентов обращаются к нам по
-                                    рекомендации
-                                </Typography>
+                                    {/* <GppGoodOutlinedIcon
+                                        fontSize="large"
+                                        sx={{ color: "DodgerBlue" }}
+                                    /> */}
+                                    <Typography
+                                        variant="body1"
+                                        fontWeight={500}
+                                        fontSize={{
+                                            sm: "0.8rem",
+                                            md: "0.9rem",
+                                            lg: "1rem",
+                                        }}
+                                    >
+                                        70% клиентов обращаются к нам по
+                                        рекомендации
+                                    </Typography>
+                                </Box>
                             </ListItem>
                             <ListItem>
-                                <Typography
-                                    variant="body1"
-                                    fontWeight={500}
-                                    fontSize={{
-                                        sm: "0.8rem",
-                                        md: "0.9rem",
-                                        lg: "1rem",
-                                    }}
+                                <Box
+                                    display={"flex"}
+                                    columnGap={1}
+                                    alignItems={"flex-start"}
                                 >
-                                    Решаем ваши задачи, а не продаём
-                                    &quot;дешёвые&quot; окна
-                                </Typography>
+                                    {/* <GppGoodOutlinedIcon
+                                        fontSize="large"
+                                        sx={{ color: "DodgerBlue" }}
+                                    /> */}
+                                    <Typography
+                                        variant="body1"
+                                        fontWeight={500}
+                                        fontSize={{
+                                            sm: "0.8rem",
+                                            md: "0.9rem",
+                                            lg: "1rem",
+                                        }}
+                                    >
+                                        Решаем ваши задачи, а не продаём
+                                        &quot;дешёвые&quot; окна
+                                    </Typography>
+                                </Box>
                             </ListItem>
                         </List>
                     </CardContent>
