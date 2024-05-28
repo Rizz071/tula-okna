@@ -4,7 +4,9 @@ import { Container, Box, Typography, Grid } from "@mui/material";
 import Image from "next/image";
 import glassprom1 from "../public/images/glassprom1.jpg";
 import besedka from "../public/images/besedka.webp";
+import AllVsVeka from "../public/images/slides/AllVsVeka.png";
 import FirstPageComparement from "./components/FirstPageComparement";
+import worker_plant_1 from "../public/images/slides/worker_plant_1.jpg";
 
 import NextLink from "next/link";
 import { Link as MUILink } from "@mui/material";
@@ -17,20 +19,55 @@ export default function Home() {
             <Container maxWidth="lg">
                 <Grid
                     container
-                    marginTop={6}
-                    spacing={6}
+                    marginTop={0}
+                    columnSpacing={6}
+                    rowSpacing={12}
+                    // rowGap={20}
                     direction="row"
                     alignItems={"flex-start"}
                     justifyContent={"space-between"}
                 >
-                    <Grid item xs>
+                    <Grid item xs={12} marginY={0}>
+                        <Typography
+                            variant="h3"
+                            textAlign={"center"}
+                            fontWeight={"light"}
+                        >
+                            Старейший производитель окон в Туле
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Box
+                            display={"flex"}
+                            flexDirection="column"
+                            justifyContent={"center"}
+                            alignItems={"center"}
+                        >
+                            <Image
+                                src={worker_plant_1}
+                                alt={"worker at our old plant"}
+                                style={{
+                                    border: "1px solid black",
+                                    width: "550px",
+                                    height: "auto",
+                                }}
+                                unoptimized
+                            />
+                            <Typography variant="subtitle2">
+                                Мы собирали окна и двери на собственном
+                                производстве много лет
+                            </Typography>
+                        </Box>
+                    </Grid>
+
+                    <Grid item xs={6}>
                         <Typography
                             variant="h1"
                             sx={{ fontSize: "2rem" }}
                             fontWeight={"light"}
                             gutterBottom
                         >
-                            Пластиковые окна в Туле
+                            Раньше - своё производство
                         </Typography>
 
                         <Typography
@@ -39,9 +76,8 @@ export default function Home() {
                             fontWeight={"light"}
                             marginBottom={2}
                         >
-                            «Тульские Окна» - один из старейших производителей
-                            алюминиевых и пластиковых окон в Туле, работающий на
-                            оконном рынке с 1998 года.
+                            Мы начинали как производители. Первый
+                            производственный цех был открыт нами в 1998 году.
                         </Typography>
                         <Typography
                             fontSize={"17px"}
@@ -49,14 +85,11 @@ export default function Home() {
                             fontWeight={"light"}
                             marginBottom={2}
                         >
-                            Мы - производственно-монтажное предприятие с
-                            огромным опытом работы, и это наше главное
-                            конкурентное преимущество. Часть продукции мы
-                            изготавливаем сами, в собственных производственных
-                            цехах, полностью контролируя качество сборки и
-                            комплектующих, а часть - закупаем по оптовым ценам
-                            на одном из крупнейших заводов России. Почему именно
-                            этот завод? Объясняем ниже.
+                            Сначала мы изготавливали деревянные окна, затем
+                            евроокна из сосны, потом алюминиевые раздвижки, а
+                            после этого открыли производство окон и дверей ПВХ.
+                            Позже у нас в ассортименте появился фасадный
+                            алюминий с окнами и входными группами.
                         </Typography>
                         <Typography
                             fontSize={"17px"}
@@ -64,13 +97,85 @@ export default function Home() {
                             fontWeight={"light"}
                             marginBottom={2}
                         >
-                            Собственные средства производства, надежные
-                            поставщики, профессиональные, увлеченные своим делом
-                            сотрудники, а также партнерские отношения с
-                            клиентами – основа нашего успеха.
+                            В своих цехах мы наладили полный техпроцесс
+                            производства, за исключением стеклопакетов.
+                        </Typography>
+                        <Typography
+                            fontSize={"17px"}
+                            textAlign={"justify"}
+                            fontWeight={"light"}
+                            marginBottom={2}
+                        >
+                            Высокого качества продукции мы добились тем, что не
+                            экономили на комлектующих.
                         </Typography>
                     </Grid>
-                    <Grid item xs={12} sm={"auto"}>
+
+                    <Grid item xs={6}>
+                        <Typography
+                            variant="h1"
+                            sx={{ fontSize: "2rem" }}
+                            fontWeight={"light"}
+                            gutterBottom
+                        >
+                            Сейчас - автоматизированное производство в Москве
+                        </Typography>
+                        <Typography
+                            fontSize={"17px"}
+                            textAlign={"justify"}
+                            fontWeight={"light"}
+                            marginBottom={2}
+                        >
+                            С 2019 года мы начали работать с заводами ЗАО
+                            &quot;ГЛАССПРОМ&quot; и АО &quot;СОФОС&quot; на
+                            партнёрских условиях. Своё производство стало не
+                            актуально.
+                        </Typography>
+                        <Typography
+                            fontSize={"17px"}
+                            textAlign={"justify"}
+                            fontWeight={"light"}
+                            marginBottom={2}
+                        >
+                            Сейчас мы как и раньше проектируем окна и двери
+                            сами, а затем отправляем заказ напрямую на
+                            производство нашего партнёра.
+                        </Typography>
+                        {/* <Typography
+                            fontSize={"17px"}
+                            textAlign={"justify"}
+                            fontWeight={"light"}
+                            marginBottom={2}
+                        >
+                            Крупный завод обладает автоматизированным
+                            производством и широким ассортиментом продукции.
+                        </Typography> */}
+                        <Typography
+                            fontSize={"17px"}
+                            textAlign={"justify"}
+                            fontWeight={"light"}
+                            marginBottom={2}
+                        >
+                            Там наш проект дополнительно проверяется
+                            технологами, а готовая продукция на выходе
+                            проверяется отделом технического контроля.
+                        </Typography>
+
+                        <Typography
+                            fontSize={"17px"}
+                            textAlign={"justify"}
+                            fontWeight={"light"}
+                            marginBottom={2}
+                        >
+                            Благодаря бесценному опыту собственного
+                            производства, мы общаемся с заводскими специалистами
+                            "на равных", можем настоять на своих технических
+                            решениям и предложить качествуенную продукцию
+                            клиентам.
+                        </Typography>
+                    </Grid>
+
+                    <Grid item xs={6}>
                         <Box
                             display={"flex"}
                             flexDirection="column"
@@ -79,22 +184,23 @@ export default function Home() {
                         >
                             <Image
                                 src={glassprom1}
-                                alt={"Window plant"}
+                                alt={"worker at our old plant"}
                                 style={{
                                     border: "1px solid black",
-                                    width: "100%",
+                                    width: "550px",
                                     height: "auto",
                                 }}
+                                unoptimized
                             />
                             <Typography variant="subtitle2">
-                                Производственный цех нашего основного поставщика
+                                Производственный цех нашего партнёра
                             </Typography>
                         </Box>
                     </Grid>
                 </Grid>
             </Container>
 
-            <Box width={"100%"} bgcolor="#f7f7f7" paddingY={2} marginY={4}>
+            <Box width={"100%"} bgcolor="#f7f7f7" paddingY={2} marginY={10}>
                 <Typography
                     variant="sliderFont"
                     fontSize={{ xs: "1.7rem", sm: "30px" }}
@@ -103,8 +209,8 @@ export default function Home() {
                     bgcolor={"#f7f7f7"}
                     gutterBottom
                 >
-                    Мы используем только полновесное стальное армирование
-                    профиля - от 1.5мм до 2.0мм
+                    Используем только полновесное стальное армирование профиля -
+                    от 1.5мм до 2.0мм
                 </Typography>
                 <Typography
                     variant="sliderFont"
@@ -119,25 +225,28 @@ export default function Home() {
                 </Typography>
                 <Typography
                     variant="sliderFont"
-                    fontSize={"large"}
-                    textAlign={"center"}
+                    fontSize={{ xs: "1.7rem", sm: "30px" }}
                     fontWeight={"light"}
+                    textAlign={"center"}
                     bgcolor={"#f7f7f7"}
+                    gutterBottom
                 >
-                    Створки не провисают. Рамы не деформируются на жаре. Петли
-                    держатся надежно.
+                    Устанавливаем только немецкую фурнитуру Gretsch-Unitas и
+                    ROTO
                 </Typography>
             </Box>
 
             <Container maxWidth="lg">
-                <Grid container alignItems={"center"} columnGap={6}>
+                <Grid
+                    container
+                    alignItems={"center"}
+                    columnSpacing={8}
+                    rowSpacing={6}
+                >
                     <Grid
                         item
                         xs={12}
                         md={6}
-                        bgcolor={"#f0f0f0"}
-                        border={"1px solid"}
-                        padding={2}
                         alignItems="center"
                         justifyContent="center"
                     >
@@ -146,6 +255,9 @@ export default function Home() {
                             flexDirection={"column"}
                             alignItems="center"
                             justifyContent="center"
+                            bgcolor={"#f0f0f0"}
+                            border={"1px solid"}
+                            padding={2}
                         >
                             <Image
                                 src={besedka}
@@ -165,7 +277,7 @@ export default function Home() {
                             </Typography>
                         </Box>
                     </Grid>
-                    <Grid item xs>
+                    <Grid item xs={12} md={6}>
                         <Typography
                             variant="h1"
                             sx={{ fontSize: "2rem" }}
@@ -190,8 +302,11 @@ export default function Home() {
                             marginY={2}
                             textAlign={"justify"}
                         >
-                            Наша гарантия на окна составляет от 3 до 6 лет. В
-                            течение этого периода «Тульские Окна» обязуются
+                            Наша гарантия на окна составляет:{" "}
+                            <strong>
+                                3 года на иделие и 5 лет на монтажные работы
+                            </strong>
+                            . В течение этого периода «Тульские Окна» обязуются
                             бесплатно устранять любые неполадки, выполнять все
                             необходимые регулировки.
                         </Typography>
@@ -207,6 +322,104 @@ export default function Home() {
                             резинового уплотнителя, целостностью откосов из
                             сэндвич-панелей.
                         </Typography>
+                    </Grid>
+                    <Grid item xs={12} marginY={8}>
+                        <Typography
+                            variant="h3"
+                            textAlign={"center"}
+                            fontWeight={"light"}
+                        >
+                            Почему мы работаем с окнами VEKA
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <Typography
+                            variant="h1"
+                            sx={{ fontSize: "2rem" }}
+                            fontWeight={"light"}
+                            gutterBottom
+                        >
+                            Надёжное закрепление в проёме
+                        </Typography>
+                        <Typography
+                            fontSize="17px"
+                            fontWeight={"light"}
+                            marginY={2}
+                            textAlign={"justify"}
+                        >
+                            Важнейшее преимущество оконных систем VEKA и WHS -
+                            замкнутое армирование в раме.
+                        </Typography>
+                        <Typography
+                            fontSize="17px"
+                            fontWeight={"light"}
+                            marginY={2}
+                            textAlign={"justify"}
+                        >
+                            К сожалению, крепление оконного блока за тонкую
+                            пластиковую стенку - самый распространённый способ
+                            монтажа в РФ. Вызвано это тем, что так закрепить
+                            окно легче всего.
+                        </Typography>
+                        <Typography
+                            fontSize="17px"
+                            fontWeight={"light"}
+                            marginY={2}
+                            textAlign={"justify"}
+                        >
+                            <strong>
+                                Окна VEKA просто не получится закрепить
+                                неправильно
+                            </strong>{" "}
+                            - этого не позволит сделать сама конструкция окна.
+                        </Typography>
+                        <Typography
+                            fontSize="17px"
+                            fontWeight={"light"}
+                            marginY={2}
+                            textAlign={"justify"}
+                        >
+                            Вы всегда можете быть уверены, что окна VEKA и WHS
+                            установлены надёжно.
+                        </Typography>
+                    </Grid>
+                    <Grid
+                        item
+                        xs={12}
+                        md={6}
+                        padding={2}
+                        alignItems="center"
+                        justifyContent="center"
+                    >
+                        <Box
+                            display="flex"
+                            flexDirection={"column"}
+                            alignItems="center"
+                            justifyContent="center"
+                            // bgcolor={"#f0f0f0"}
+                            border={"1px solid"}
+                            padding={2}
+                        >
+                            <Image
+                                src={AllVsVeka}
+                                alt={"Example of our work"}
+                                // style={{ width: "100%", height: "auto" }}
+                                unoptimized
+                            />
+
+                            {/* <Typography
+                                variant="subtitle2"
+                                fontWeight={"light"}
+                                textAlign={"left"}
+                                alignSelf={"flex-start"}
+                            >
+                                <strong>
+                                    Схема крепления оконной рамы в проём
+                                </strong>
+                                <br />
+                                Преимущество систем VEKA
+                            </Typography> */}
+                        </Box>
                     </Grid>
                 </Grid>
             </Container>
