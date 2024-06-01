@@ -1,5 +1,12 @@
 import React from "react";
-import { Container, Box, Typography, Grid, Paper } from "@mui/material";
+import {
+    Container,
+    Box,
+    Typography,
+    Grid,
+    Paper,
+    Divider,
+} from "@mui/material";
 
 import NextLink from "next/link";
 import { Link as MUILink } from "@mui/material";
@@ -124,7 +131,7 @@ export default function Page() {
                 </Box>
             </Box>
 
-            <Container>
+            {/* <Container>
                 <Paper
                     elevation={4}
                     square={false}
@@ -144,8 +151,8 @@ export default function Page() {
                         left: "50%",
                         maxWidth: "lg",
                     }}
-                >
-                    {/* <Typography
+                > */}
+            {/* <Typography
                         fontWeight={"light"}
                         paddingY={1}
                         sx={{
@@ -160,10 +167,10 @@ export default function Page() {
                         Выбор продукции
                     </Typography>
                     <Divider /> */}
-                    <Box padding={6}>
+            {/* <Box padding={6}>
                         {CardTextInfoJSX("5 шагов для выбора окон в дом", [
                             <Box
-                                component="p"
+                                // component="p"
                                 key={Math.round(Math.random() * 10000)}
                                 textAlign="center"
                             >
@@ -186,9 +193,9 @@ export default function Page() {
                             //     вашего дома.
                             // </Box>,
                         ])}
-                    </Box>
-                </Paper>
-            </Container>
+                    </Box> */}
+            {/* </Paper>
+            </Container> */}
 
             <Box>
                 <Container maxWidth={"lg"}>
@@ -259,7 +266,6 @@ export default function Page() {
                                                 fontSize={"1rem"}
                                                 variant="button"
                                                 color="error"
-                                                gutterBottom
                                             >
                                                 <ImportContactsTwoToneIcon fontSize="medium" />{" "}
                                                 ПОДРОБНЕЕ
@@ -267,10 +273,7 @@ export default function Page() {
                                         </AccordionSummary>
                                         <AccordionDetails>
                                             <Box>
-                                                <Typography
-                                                    fontWeight={"light"}
-                                                    gutterBottom
-                                                >
+                                                <Typography>
                                                     <strong>
                                                         <u>
                                                             Почему именно 3
@@ -278,19 +281,13 @@ export default function Page() {
                                                         </u>
                                                     </strong>
                                                 </Typography>
-                                                <Typography
-                                                    fontWeight={"light"}
-                                                    gutterBottom
-                                                >
+                                                <Typography>
                                                     При 2 стеклах - будет
                                                     слишком холодно. Отопление
                                                     станет слишком затратным.
                                                     Снижается шумоизоляция.
                                                 </Typography>
-                                                <Typography
-                                                    fontWeight={"light"}
-                                                    gutterBottom
-                                                >
+                                                <Typography>
                                                     При 4 стеклах - теряется
                                                     прозрачность, увеличивается
                                                     весовая нагрузка на
@@ -300,10 +297,7 @@ export default function Page() {
                                                     случай загородного дома.
                                                 </Typography>
 
-                                                <Typography
-                                                    fontWeight={"light"}
-                                                    gutterBottom
-                                                >
+                                                <Typography>
                                                     <strong>
                                                         <u>
                                                             Почему стеклопакет
@@ -312,10 +306,7 @@ export default function Page() {
                                                         </u>
                                                     </strong>
                                                 </Typography>
-                                                <Typography
-                                                    fontWeight={"light"}
-                                                    gutterBottom
-                                                >
+                                                <Typography>
                                                     Чем шире изолирующий слой
                                                     воздуха в стеклопакете, тем
                                                     он теплее. Например,
@@ -327,10 +318,7 @@ export default function Page() {
                                                     воздушные камеры имеют
                                                     ширину 10мм.
                                                 </Typography>
-                                                <Typography
-                                                    fontWeight={"light"}
-                                                    gutterBottom
-                                                >
+                                                <Typography>
                                                     В то же время у стеклопакета
                                                     шириной 40мм воздушные
                                                     камеры составляют 14мм. Его
@@ -338,10 +326,7 @@ export default function Page() {
                                                     теплопередаче - 0,6, и это
                                                     теплее на 22%
                                                 </Typography>
-                                                <Typography
-                                                    fontWeight={"light"}
-                                                    gutterBottom
-                                                >
+                                                <Typography>
                                                     Почему же не увеличивать
                                                     расстояние между стёклами
                                                     бесконечно? Дело в том, что
@@ -353,10 +338,7 @@ export default function Page() {
                                                     из-за неравномерного нагрева
                                                     стекла солнечными лучами.
                                                 </Typography>
-                                                <Typography
-                                                    fontWeight={"light"}
-                                                    gutterBottom
-                                                >
+                                                <Typography>
                                                     <strong>
                                                         <u>
                                                             Что такое
@@ -424,11 +406,12 @@ export default function Page() {
                             <Grid
                                 item
                                 xs={12}
-                                marginY={2}
-                                sx={{ display: { xs: "none", md: "flex" } }}
+                                // marginY={2}
+                                // sx={{ display: { xs: "none", md: "flex" } }}
                                 order={{ xs: 3, md: 3 }}
                             >
-                                {arrowDivider("right")}
+                                {/* {arrowDivider("right")} */}
+                                <Divider />
                             </Grid>
 
                             <Grid item xs={12} md={6} order={{ xs: 4, md: 4 }}>
@@ -561,11 +544,12 @@ export default function Page() {
                             <Grid
                                 item
                                 xs={12}
-                                marginY={2}
-                                sx={{ display: { xs: "none", md: "flex" } }}
+                                // marginY={2}
+                                // sx={{ display: { xs: "none", md: "flex" } }}
                                 order={{ xs: 6, md: 6 }}
                             >
-                                {arrowDivider("left")}
+                                {/* {arrowDivider("left")} */}
+                                <Divider />
                             </Grid>
 
                             <Grid item xs={12} md={6} order={{ xs: 7, md: 6 }}>
@@ -746,11 +730,12 @@ export default function Page() {
                             <Grid
                                 item
                                 xs={12}
-                                marginY={2}
-                                sx={{ display: { xs: "none", md: "flex" } }}
+                                // marginY={2}
+                                // sx={{ display: { xs: "none", md: "flex" } }}
                                 order={{ xs: 8, md: 8 }}
                             >
-                                {arrowDivider("right")}
+                                {/* {arrowDivider("right")} */}
+                                <Divider />
                             </Grid>
 
                             <Grid item xs={12} md={6} order={{ xs: 10, md: 9 }}>
@@ -908,11 +893,12 @@ export default function Page() {
                             <Grid
                                 item
                                 xs={12}
-                                marginY={2}
-                                sx={{ display: { xs: "none", md: "flex" } }}
+                                // marginY={2}
+                                // sx={{ display: { xs: "none", md: "flex" } }}
                                 order={{ xs: 11 }}
                             >
-                                {arrowDivider("left")}
+                                {/* {arrowDivider("left")} */}
+                                <Divider />
                             </Grid>
 
                             <Grid
@@ -1229,24 +1215,15 @@ function CardTextInfo(title: string, descriptionText: string[]) {
     return (
         <Card elevation={0}>
             <CardContent>
-                <Typography
-                    gutterBottom
-                    variant="h4"
-                    component="div"
-                    fontWeight={300}
-                    marginBottom={4}
-                >
+                <Typography variant="h2" component="div">
                     {title}
                 </Typography>
 
                 {descriptionText.map((paragraph) => {
                     return (
                         <Typography
+                            component="div"
                             key={Math.round(Math.random() * 10000)}
-                            variant="h6"
-                            textAlign={"justify"}
-                            fontWeight={"light"}
-                            gutterBottom
                         >
                             {paragraph}
                         </Typography>
@@ -1261,23 +1238,15 @@ function CardTextInfoJSX(title: string, descriptionJSX: JSX.Element[]) {
     return (
         <Card elevation={0}>
             <CardContent>
-                <Typography
-                    gutterBottom
-                    variant="h4"
-                    component="div"
-                    fontWeight={300}
-                    marginBottom={4}
-                >
+                <Typography component="div" variant="h2">
                     {title}
                 </Typography>
 
                 {descriptionJSX.map((paragraph) => {
                     return (
                         <Typography
+                            component="div"
                             key={Math.round(Math.random() * 10000)}
-                            variant="h6"
-                            textAlign={"justify"}
-                            fontWeight={"light"}
                             gutterBottom
                         >
                             {paragraph}
@@ -1289,28 +1258,28 @@ function CardTextInfoJSX(title: string, descriptionJSX: JSX.Element[]) {
     );
 }
 
-function arrowDivider(direction: string) {
-    return (
-        <Box
-            zIndex={-1}
-            display="flex"
-            justifyContent={"center"}
-            sx={{
-                transform: `rotate(${
-                    direction === "right" ? "15deg" : "-15deg"
-                }) scaleX(${direction === "right" ? "-1" : "1"})`,
-                opacity: "75%",
-            }}
-        >
-            <Image
-                src={arrow_1}
-                alt="arrow"
-                sizes="60vw"
-                style={{
-                    width: "45%",
-                    height: "auto",
-                }}
-            />
-        </Box>
-    );
-}
+// function arrowDivider(direction: string) {
+//     return (
+//         <Box
+//             zIndex={-1}
+//             display="flex"
+//             justifyContent={"center"}
+//             sx={{
+//                 transform: `rotate(${
+//                     direction === "right" ? "15deg" : "-15deg"
+//                 }) scaleX(${direction === "right" ? "-1" : "1"})`,
+//                 opacity: "75%",
+//             }}
+//         >
+//             <Image
+//                 src={arrow_1}
+//                 alt="arrow"
+//                 sizes="60vw"
+//                 style={{
+//                     width: "45%",
+//                     height: "auto",
+//                 }}
+//             />
+//         </Box>
+//     );
+// }

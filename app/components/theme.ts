@@ -1,5 +1,5 @@
 'use client';
-import { Roboto, Roboto_Condensed, Inter, Inter_Tight, Noto_Sans, Noto_Serif } from 'next/font/google';
+import { Roboto, Roboto_Condensed, Inter, Inter_Tight, Noto_Sans, Noto_Serif, Montserrat, Rubik } from 'next/font/google';
 
 import { createTheme } from '@mui/material/styles';
 
@@ -16,6 +16,18 @@ const inter_tight = Inter_Tight({
 });
 
 const noto_sans = Noto_Sans({
+    weight: ['300', '400', '500', '700'],
+    subsets: ['latin', 'cyrillic'],
+    display: 'swap',
+});
+
+const montserrat = Montserrat({
+    weight: ['300', '400', '500', '700'],
+    subsets: ['latin', 'cyrillic'],
+    display: 'swap',
+});
+
+const rubik = Rubik({
     weight: ['300', '400', '500', '700'],
     subsets: ['latin', 'cyrillic'],
     display: 'swap',
@@ -61,19 +73,39 @@ const theme = createTheme({
     typography: {
         sliderFont: {
             fontFamily: roboto_condensed.style.fontFamily,
-            // fontFamily: noto_serif.style.fontFamily,
+            fontWeight: 300,
+            // fontFamily: roboto_condensed.style.fontFamily,
+            //// fontFamily: noto_serif.style.fontFamily,
             display: "block",
             // lineHeight: "1.5rem"
         },
-        fontFamily: inter.style.fontFamily,
-        // fontFamily: roboto.style.fontFamily,
-
+        body1: {
+            fontFamily: roboto.style.fontFamily,
+            fontSize: "1.2rem",
+            fontWeight: 300,
+            lineHeight: "32px",
+            textAlign: "justify",
+            marginTop: "1.5rem"
+        },
+        h1: {
+            fontFamily: roboto.style.fontFamily,
+            fontSize: "3rem",
+            fontWeight: 300,
+            textAlign: "center",
+        },
+        h2: {
+            fontFamily: roboto.style.fontFamily,
+            fontSize: "2rem",
+            textAlign: "left",
+            fontWeight: 300
+        },
     },
     palette: {
         primary: {
             main: "#e74f21"
         }
     },
+
     components: {
         MuiTypography: {
             defaultProps: {
@@ -84,6 +116,7 @@ const theme = createTheme({
             },
         },
     },
+
 });
 
 export default theme;

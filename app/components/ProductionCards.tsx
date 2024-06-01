@@ -50,7 +50,7 @@ const ProductionCards = () => {
                     maxWidth: "lg",
                 }}
             >
-                <Typography
+                {/* <Typography
                     fontWeight={"light"}
                     paddingY={1}
                     sx={{
@@ -64,7 +64,7 @@ const ProductionCards = () => {
                 >
                     Выбор продукции
                 </Typography>
-                <Divider />
+                <Divider /> */}
                 <Box padding={6}>
                     <Grid
                         container

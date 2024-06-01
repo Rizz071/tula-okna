@@ -114,6 +114,7 @@ const Navbar = () => {
                                     color="#e74f21"
                                     fontWeight={"light"}
                                     fontSize={"large"}
+                                    margin={0}
                                     sx={{ textTransform: "none" }}
                                 >
                                     Калькулятор окон
@@ -139,6 +140,7 @@ const Navbar = () => {
                                     fontWeight={"light"}
                                     sx={{ textTransform: "none" }}
                                     fontSize={"large"}
+                                    margin={0}
                                 >
                                     Подбор типа окна
                                 </Typography>
@@ -158,10 +160,10 @@ const Navbar = () => {
                                 {/* <Typography fontWeight="fontWeightLight">
                                     О компании
                                 </Typography> */}
-                                <Typography fontWeight="fontWeightLight">
+                                <Typography margin={0}>
                                     Порядок работы
                                 </Typography>
-                                <Typography fontWeight="fontWeightLight">
+                                <Typography margin={0}>
                                     Схема проезда
                                 </Typography>
                             </Box>
@@ -204,9 +206,10 @@ const Navbar = () => {
                             </Typography>
                             <Typography
                                 fontSize={"0.9rem"}
-                                lineHeight={"1.2rem"}
+                                // lineHeight={"1.2rem"}
                                 fontWeight={"light"}
                                 color="#e74f21"
+                                margin={0}
                             >
                                 Почта: 385391@mail.ru
                             </Typography>
@@ -220,6 +223,7 @@ const Navbar = () => {
                             letterSpacing: { md: ".2rem" },
                             textAlign: "center",
                             gap: { md: 4 },
+                            mb: 2,
                         }}
                     >
                         <Typography>ОКНА</Typography>
@@ -229,6 +233,10 @@ const Navbar = () => {
                         <Typography>ФАСАДНОЕ ОСТЕКЛЕНИЕ</Typography>
                         <Typography>ЦЕНЫ</Typography>
                         <Typography>ПОРТФОЛИО</Typography>
+
+                        {/* <Typography>ПРОДУКЦИЯ</Typography>
+                        <Typography>ЦЕНЫ</Typography>
+                        <Typography>ПОРТФОЛИО</Typography> */}
                     </Toolbar>
                 </AppBar>
             </Box>

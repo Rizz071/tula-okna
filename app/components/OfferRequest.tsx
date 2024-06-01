@@ -91,6 +91,7 @@ const OfferRequest = () => {
         setUserName("");
         setUserPhone("");
         setUserMail("");
+        setFiles(undefined);
 
         alert("success");
     };
@@ -105,7 +106,7 @@ const OfferRequest = () => {
                 >
                     <Grid container spacing={4} marginTop={1}>
                         <Grid item xs={12} sm={7}>
-                            <Grid container spacing={2}>
+                            <Grid container columnSpacing={2}>
                                 <Grid item xs={12} order={{ xs: 1 }}>
                                     <Box display={"flex"} alignItems={"center"}>
                                         <AttachEmailIcon color="primary" />
@@ -116,6 +117,7 @@ const OfferRequest = () => {
                                                 lg: "1.5rem",
                                             }}
                                             textAlign={"left"}
+                                            margin={0}
                                         >
                                             &nbsp;Отправьте заказ на расчёт
                                         </Typography>
@@ -144,65 +146,60 @@ const OfferRequest = () => {
                                     rowGap={2}
                                     order={{ xs: 3, md: 2 }}
                                 >
-                                    <form onSubmit={handleSubmitSketch}>
-                                        <Box>
-                                            <StyledTextField
-                                                fullWidth
-                                                type="text"
-                                                label={"Имя (не обязательно)"}
-                                                value={userName}
-                                                onChange={(event) =>
-                                                    setUserName(
-                                                        event.target.value
-                                                    )
-                                                }
-                                                size={"small"}
-                                            />
-                                        </Box>
-                                        <Box marginTop={2} width="100%">
-                                            <MuiFileInput
-                                                error={uploadFieldError}
-                                                // label="Загрузить эскизы"
-                                                required
-                                                helperText="Нажмите, чтобы загрузить эскизы"
-                                                value={files}
-                                                size="small"
-                                                variant="outlined"
-                                                multiple
-                                                onChange={handleChangeFiles}
-                                                // label="Нажмите, чтобы загрузить эскизы"
-                                                // InputLabelProps={{
-                                                //     style: {
-                                                //         textOverflow:
-                                                //             "ellipsis",
-                                                //         whiteSpace: "nowrap",
-                                                //         overflow: "hidden",
-                                                //         color: "red",
-                                                //     },
-                                                // }}
-                                                sx={{
-                                                    color: "success",
-                                                    "& .MuiOutlinedInput-root":
-                                                        {
-                                                            backgroundColor:
-                                                                "white",
-                                                        },
-                                                }}
-                                                clearIconButtonProps={{
-                                                    title: "Remove",
-                                                    children: (
-                                                        <CloseIcon fontSize="small" />
-                                                    ),
-                                                }}
-                                                InputProps={{
-                                                    inputProps: {},
-                                                    startAdornment: (
-                                                        <AttachFileIcon />
-                                                    ),
-                                                }}
-                                            />
-                                        </Box>
-                                    </form>
+                                    {/* <form onSubmit={handleSubmitSketch}> */}
+                                    <Box>
+                                        <StyledTextField
+                                            fullWidth
+                                            type="text"
+                                            label={"Имя (не обязательно)"}
+                                            value={userName}
+                                            onChange={(event) =>
+                                                setUserName(event.target.value)
+                                            }
+                                            size={"small"}
+                                        />
+                                    </Box>
+                                    <Box width="100%">
+                                        <MuiFileInput
+                                            error={uploadFieldError}
+                                            // label="Загрузить эскизы"
+                                            required
+                                            helperText="Нажмите, чтобы загрузить эскизы"
+                                            value={files}
+                                            size="small"
+                                            variant="outlined"
+                                            multiple
+                                            onChange={handleChangeFiles}
+                                            // label="Нажмите, чтобы загрузить эскизы"
+                                            // InputLabelProps={{
+                                            //     style: {
+                                            //         textOverflow:
+                                            //             "ellipsis",
+                                            //         whiteSpace: "nowrap",
+                                            //         overflow: "hidden",
+                                            //         color: "red",
+                                            //     },
+                                            // }}
+                                            sx={{
+                                                color: "success",
+                                                "& .MuiOutlinedInput-root": {
+                                                    backgroundColor: "white",
+                                                },
+                                            }}
+                                            clearIconButtonProps={{
+                                                title: "Remove",
+                                                children: (
+                                                    <CloseIcon fontSize="small" />
+                                                ),
+                                            }}
+                                            InputProps={{
+                                                startAdornment: (
+                                                    <AttachFileIcon />
+                                                ),
+                                            }}
+                                        />
+                                    </Box>
+                                    {/* </form> */}
 
                                     <Box marginTop={2}>
                                         <Button
@@ -244,7 +241,7 @@ const OfferRequest = () => {
                                             />
                                         </Box>
 
-                                        <Box marginTop={2}>
+                                        <Box>
                                             <StyledTextField
                                                 fullWidth
                                                 required
@@ -277,19 +274,17 @@ const OfferRequest = () => {
                                     md: "1.2rem",
                                     lg: "1.5rem",
                                 }}
-                                gutterBottom
+                                margin={0}
                             >
                                 Работаем для Вас вот уже более{" "}
                                 {new Date().getFullYear() - 1998} лет
                             </Typography>
                             <Typography
-                                fontWeight={"light"}
-                                align="justify"
                                 fontSize={{
                                     xs: "0.9rem",
                                     md: "1rem",
                                 }}
-                                gutterBottom
+                                lineHeight={"1.5rem"}
                             >
                                 Вы всегда можете пообщаться с нашим специалистом
                                 или написать нам письмо (мы отвечаем на все
