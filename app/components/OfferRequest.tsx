@@ -8,6 +8,7 @@ import {
     TextField,
     Theme,
     Typography,
+    InputAdornment,
 } from "@mui/material";
 import Image from "next/image";
 
@@ -20,12 +21,11 @@ import man_image from "../../public/images/stoimost-img.webp";
 import AttachEmailIcon from "@mui/icons-material/AttachEmail";
 import AttachFileIcon from "@mui/icons-material/AttachFile";
 import SendIcon from "@mui/icons-material/Send";
-import CloseIcon from "@mui/icons-material/Close";
+import FileUploadOutlined from "@mui/icons-material/FileUploadOutlined";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { sendMail } from "../lib/mail";
-
-import { MuiFileInput } from "mui-file-input";
+import { UploadFileOutlined } from "@mui/icons-material";
 
 const OfferRequest = () => {
     const [isContactsVisible, setContactsVisible] = useState<boolean>(false);
@@ -36,8 +36,10 @@ const OfferRequest = () => {
     const [mailError, setMailError] = useState<boolean>(false);
     const [uploadFieldError, setUploadFieldError] = useState<boolean>(false);
     const [files, setFiles] = useState<File[] | undefined>(undefined);
+    const [uploadErrorText, setUploadErrorText] = useState<string>("");
 
     const theme = useTheme();
+    const fileRef = useRef<HTMLInputElement | null>(null);
 
     const isSmallScreen = useMediaQuery((theme: Theme) =>
         theme.breakpoints.down("md")
@@ -62,8 +64,6 @@ const OfferRequest = () => {
         setUploadFieldError(false);
 
         if (!files) return;
-
-        //TODO CHeck for: 1.Too big files
 
         const formData = new FormData();
 
@@ -93,7 +93,7 @@ const OfferRequest = () => {
         setUserMail("");
         setFiles(undefined);
 
-        alert("success");
+        alert("Файлы отправлены успешно");
     };
 
     return (
@@ -160,51 +160,127 @@ const OfferRequest = () => {
                                         />
                                     </Box>
                                     <Box width="100%">
-                                        <MuiFileInput
+                                        <StyledTextField
+                                            inputRef={fileRef}
                                             error={uploadFieldError}
-                                            // label="Загрузить эскизы"
-                                            required
-                                            helperText="Нажмите, чтобы загрузить эскизы"
-                                            value={files}
+                                            onClick={() =>
+                                                fileRef.current?.click()
+                                            }
+                                            fullWidth
+                                            type="file"
                                             size="small"
-                                            variant="outlined"
-                                            multiple
-                                            onChange={handleChangeFiles}
-                                            // label="Нажмите, чтобы загрузить эскизы"
-                                            // InputLabelProps={{
-                                            //     style: {
-                                            //         textOverflow:
-                                            //             "ellipsis",
-                                            //         whiteSpace: "nowrap",
-                                            //         overflow: "hidden",
-                                            //         color: "red",
-                                            //     },
-                                            // }}
-                                            sx={{
-                                                color: "success",
-                                                "& .MuiOutlinedInput-root": {
-                                                    backgroundColor: "white",
+                                            inputProps={{
+                                                multiple: true,
+                                                style: {
+                                                    visibility: "hidden",
                                                 },
-                                            }}
-                                            clearIconButtonProps={{
-                                                title: "Remove",
-                                                children: (
-                                                    <CloseIcon fontSize="small" />
-                                                ),
                                             }}
                                             InputProps={{
                                                 startAdornment: (
-                                                    <AttachFileIcon />
+                                                    <InputAdornment position="start">
+                                                        <FileUploadOutlined />
+                                                        {!files ? (
+                                                            <Typography
+                                                                sx={{ m: 0 }}
+                                                            >
+                                                                &nbsp;Приложить
+                                                                файлы
+                                                            </Typography>
+                                                        ) : files.length ===
+                                                          1 ? (
+                                                            <Typography
+                                                                fontSize={
+                                                                    "1rem"
+                                                                }
+                                                                sx={{
+                                                                    m: 0,
+                                                                }}
+                                                            >
+                                                                &nbsp;
+                                                                {files[0].name}
+                                                            </Typography>
+                                                        ) : files.length < 5 ? (
+                                                            <Typography
+                                                                fontSize={
+                                                                    "1rem"
+                                                                }
+                                                                sx={{ m: 0 }}
+                                                            >
+                                                                &nbsp;
+                                                                {
+                                                                    files.length
+                                                                }{" "}
+                                                                файла
+                                                            </Typography>
+                                                        ) : (
+                                                            <Typography
+                                                                fontSize={
+                                                                    "1rem"
+                                                                }
+                                                                sx={{ m: 0 }}
+                                                            >
+                                                                &nbsp;
+                                                                {
+                                                                    files.length
+                                                                }{" "}
+                                                                файлов
+                                                            </Typography>
+                                                        )}
+                                                    </InputAdornment>
                                                 ),
                                             }}
+                                            onChange={() => {
+                                                const reference =
+                                                    fileRef.current;
+                                                if (!reference) return;
+
+                                                console.log(
+                                                    "width: ",
+                                                    (() =>
+                                                        fileRef.current
+                                                            ?.offsetWidth)()
+                                                );
+
+                                                const filesToSend: File[] = [
+                                                    ...Array.from(
+                                                        reference.files || []
+                                                    ),
+                                                ];
+
+                                                const totalSizeOfFiles =
+                                                    filesToSend.reduce(
+                                                        (
+                                                            accumulator,
+                                                            currentValue
+                                                        ) =>
+                                                            accumulator +
+                                                            currentValue.size /
+                                                                1000000,
+                                                        0
+                                                    );
+
+                                                if (totalSizeOfFiles > 20) {
+                                                    setUploadFieldError(true);
+                                                    setUploadErrorText(
+                                                        "Размер файлов превышает допустимый в 20МБ. Пожалуйста, уменьшите размер файлов. Если это невозможно - отправьте ссылку в текстовой форме на эти файлы в облачном хранилище."
+                                                    );
+                                                    return;
+                                                }
+
+                                                setFiles(filesToSend);
+                                                setUploadFieldError(false);
+                                                setUploadErrorText("");
+                                            }}
+                                            helperText={
+                                                uploadFieldError &&
+                                                uploadErrorText
+                                            }
                                         />
                                     </Box>
-                                    {/* </form> */}
-
                                     <Box marginTop={2}>
                                         <Button
                                             fullWidth
-                                            type="submit"
+                                            // type="submit"
                                             startIcon={<SendIcon />}
                                             variant="contained"
                                             onClick={handleSubmitSketch}
