@@ -197,7 +197,11 @@ const OfferRequest = () => {
                                                                 }}
                                                             >
                                                                 &nbsp;
-                                                                {files[0].name}
+                                                                {files[0].name.substring(
+                                                                    0,
+                                                                    10
+                                                                )}
+                                                                ...
                                                             </Typography>
                                                         ) : files.length < 5 ? (
                                                             <Typography
