@@ -76,16 +76,14 @@ const ProductionCards = () => {
                         <Grid item xs={12} sm={4} md={6} lg={4}>
                             <ProductionTypeCard
                                 imgSrc={apartements1}
-                                caption={"Оптимальные окна ПВХ в квартиру"}
+                                caption={"Остекление квартир"}
                                 link={"6 000"}
                             />
                         </Grid>
                         <Grid item xs={12} sm={4} md={6} lg={4}>
                             <ProductionTypeCard
                                 imgSrc={Front_small_2}
-                                caption={
-                                    "Холодное и теплое балконное остекление"
-                                }
+                                caption={"Остекление и отделка балконов"}
                                 link={"15 000"}
                             />
                         </Grid>
@@ -98,9 +96,7 @@ const ProductionCards = () => {
                             >
                                 <ProductionTypeCard
                                     imgSrc={House}
-                                    caption={
-                                        "Энергоэффективное остекление домов"
-                                    }
+                                    caption={"Остекление домов"}
                                     link=""
                                 />
                             </MuiLink>
@@ -109,7 +105,7 @@ const ProductionCards = () => {
                         <Grid item xs={12} sm={4} md={6} lg={4}>
                             <ProductionTypeCard
                                 imgSrc={dacha1}
-                                caption={"Недорогие окна ПВХ на дачу"}
+                                caption={"Остекление дач"}
                                 link={"6 000"}
                             />
                         </Grid>
@@ -117,7 +113,7 @@ const ProductionCards = () => {
                         <Grid item xs={12} sm={4} md={6} lg={4}>
                             <ProductionTypeCard
                                 imgSrc={Doors}
-                                caption={"Входные группы Алюминий и ПВХ"}
+                                caption={"Входные двери для предприятий"}
                                 link={"15 000"}
                             />
                         </Grid>
@@ -133,7 +129,7 @@ const ProductionCards = () => {
                         <Grid item xs={12} sm={4} md={6} lg={4}>
                             <ProductionTypeCard
                                 imgSrc={Front_small_3}
-                                caption={"Раздвижные тёплые двери-порталы"}
+                                caption={"Раздвижные двери-порталы"}
                                 link={"59 000"}
                             />
                         </Grid>

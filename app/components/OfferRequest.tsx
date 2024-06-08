@@ -96,6 +96,9 @@ const OfferRequest = () => {
         alert("Файлы отправлены успешно");
     };
 
+    //TODO Add text message field
+    //TODO Add progress bar for uploading
+
     return (
         <Box sx={{ backgroundImage: `url(${background.src})` }}>
             <Container>
