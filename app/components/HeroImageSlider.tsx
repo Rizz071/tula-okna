@@ -343,7 +343,6 @@ function HeroImageSlider() {
                 quality={100}
                 fill
                 style={{ objectFit: "cover" }}
-                // objectFit="cover"
                 unoptimized={true}
                 priority
             />

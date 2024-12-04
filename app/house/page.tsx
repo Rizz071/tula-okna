@@ -6,6 +6,9 @@ import {
     Grid,
     Paper,
     Divider,
+    List,
+    ListItem,
+    Link as MuiLink,
 } from "@mui/material";
 
 import NextLink from "next/link";
@@ -24,6 +27,13 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import ImportContactsTwoToneIcon from "@mui/icons-material/ImportContactsTwoTone";
 import SavingsOutlinedIcon from "@mui/icons-material/SavingsOutlined";
 
+import portal_vector_1 from "../../public/images/slides/portal_vector_1.svg";
+import Front_small_3 from "../../public/images/Front_small_3.webp";
+import House from "../../public/images/House.webp";
+import Doors from "../../public/images/Doors.webp";
+import apartements1 from "../../public/images/apartements3_104px.jpg";
+import dacha1 from "../../public/images/dacha1_104px.jpeg";
+
 import Image, { StaticImageData } from "next/image";
 import main_bg from "../../public/images/main-bg.webp";
 import kaleva_70 from "../../public/images/profiles/kaleva_70_3.jpg";
@@ -31,107 +41,144 @@ import veka_70 from "../../public/images/profiles/veka_70_2.jpg";
 import veka_82 from "../../public/images/profiles/veka_82_1.jpg";
 import isoterma1 from "../../public/images/slides/profile_compare_house_1.jpg";
 import veka_compare_1 from "../../public/images/profiles/veka_compare_2_800px.jpg";
-import slide from "../../public/images/slides/slide_infra_house_1_1920px.jpg";
+import slide from "../../public/images/slides/house_slide_2.jpg";
 import steklopaket from "../../public/images/slides/steklopaket_1.jpg";
 import lamination_1 from "../../public/images/slides/lamination_1.jpg";
+import glued from "../../public/images/slides/glued.jpg";
+
+import windows_1 from "../../public/images/slides/windows_1.jpg";
 import burglar_1 from "../../public/images/slides/burglar_1.jpg";
 
+import SecuritySharpIcon from "@mui/icons-material/SecuritySharp";
+
 import arrow_1 from "../../public/images/slides/arrow_1.svg";
+import { LaptopMac } from "@mui/icons-material";
 
 export default function Page() {
     return (
         <>
-            <Box sx={{ position: "relative" }}>
+            <Box
+                display={"flex"}
+                width="100%"
+                maxHeight="610px"
+                minHeight={{ xs: "250px", sm: "410px", md: "610px" }}
+                justifyContent={"center"}
+                sx={{ position: "relative" }}
+            >
                 <Image
                     src={slide}
-                    alt="Banner infrared checking"
+                    alt="Windows for houses slider"
                     sizes="100vw"
-                    style={{ width: "100%", height: "auto", zIndex: "1" }}
+                    style={{ zIndex: "1", objectFit: "cover" }}
                     priority
+                    quality={100}
+                    fill
+                    // unoptimized={true}
                 />
                 <Box
-                    sx={{
-                        opacity: "80%",
-                        position: "absolute",
-                        bgcolor: "white",
-                        zIndex: "50",
-                        padding: { xs: "10px", sm: "20px", md: "30px" },
-                        width: {
-                            xs: "140px",
-                            sm: "240px",
-                            md: "300px",
-                            lg: "370px",
-                            xl: "450px",
-                        },
-                        height: {
-                            xs: "90px",
-                            sm: "100px",
-                            md: "100px",
-                            lg: "170px",
-                            xl: "270px",
-                        },
-                        left: {
-                            xs: "30px",
-                            sm: "50px",
-                            md: "100px",
-                            lg: "150px",
-                            xl: "200px",
-                        },
-                        top: {
-                            xs: "15px",
-                            sm: "40px",
-                            md: "50px",
-                            lg: "75px",
-                        },
-                        borderRadius: "5% / 10%",
-                    }}
+                    display={{ xs: "none", sm: "flex" }}
+                    position="relative"
+                    marginBottom={"auto"}
+                    left={{ sm: "1%", md: "-12%" }}
+                    top={{ sm: "-40px" }}
+                    sx={{ zIndex: "50", transform: `translate(-50%, 50%)` }}
                 >
-                    <Box
-                        display={"flex"}
-                        flexDirection={"column"}
-                        height={"100%"}
-                        justifyContent={"space-evenly"}
-                    >
-                        <Typography
-                            gutterBottom
-                            variant="sliderFont"
-                            fontWeight={"light"}
-                            align="justify"
-                            sx={{
-                                fontSize: {
-                                    xs: "14px",
-                                    sm: "22px",
-                                    md: "30px",
-                                    lg: "40px",
-                                    xl: "50px",
-                                },
-                            }}
-                        >
-                            Остекление загородного дома
-                        </Typography>
-                        <Typography
-                            align="left"
-                            variant="sliderFont"
-                            bgcolor="white"
-                            fontWeight={"light"}
-                            gutterBottom
-                            sx={{
-                                fontSize: {
-                                    xs: "10px",
-                                    sm: "14px",
-                                    md: "18px",
-                                    lg: "20px",
-                                    xl: "22px",
-                                },
-                            }}
-                        >
-                            Наш опыт экономии тепла
-                        </Typography>
-                    </Box>
+                    <Card sx={{ minWidth: 275, maxWidth: 300 }}>
+                        <CardContent>
+                            <Box
+                                display={"flex"}
+                                columnGap={1}
+                                alignItems={"flex-start"}
+                                paddingLeft={0}
+                            >
+                                <SecuritySharpIcon
+                                    fontSize="large"
+                                    sx={{ color: "DodgerBlue" }}
+                                />
+                                <Typography
+                                    alignSelf={"flex-end"}
+                                    variant="sliderFont"
+                                    fontSize={{ xs: "1.2rem", lg: "1.5rem" }}
+                                    component="div"
+                                    fontWeight={"700"}
+                                    color={"DodgerBlue"}
+                                >
+                                    Настоящая гарантия
+                                </Typography>
+                            </Box>
+                            <List>
+                                <ListItem>
+                                    <Box
+                                        display={"flex"}
+                                        columnGap={1}
+                                        alignItems={"flex-start"}
+                                    >
+                                        <Typography
+                                            fontWeight={500}
+                                            marginTop={0}
+                                            lineHeight={"1.5rem"}
+                                            fontSize={{
+                                                sm: "0.8rem",
+                                                md: "0.9rem",
+                                                lg: "1rem",
+                                            }}
+                                        >
+                                            Непрерывно выполняем гарантийные
+                                            обязательства более{" "}
+                                            {new Date().getFullYear() - 1998}{" "}
+                                            лет
+                                        </Typography>
+                                    </Box>
+                                </ListItem>
+                                <ListItem>
+                                    <Box
+                                        display={"flex"}
+                                        columnGap={1}
+                                        alignItems={"flex-start"}
+                                    >
+                                        <Typography
+                                            marginTop={0}
+                                            fontWeight={500}
+                                            lineHeight={"1.5rem"}
+                                            fontSize={{
+                                                sm: "0.8rem",
+                                                md: "0.9rem",
+                                                lg: "1rem",
+                                            }}
+                                        >
+                                            70% клиентов обращаются к нам по
+                                            рекомендации
+                                        </Typography>
+                                    </Box>
+                                </ListItem>
+                                <ListItem>
+                                    <Box
+                                        display={"flex"}
+                                        columnGap={1}
+                                        alignItems={"flex-start"}
+                                    >
+                                        <Typography
+                                            marginTop={0}
+                                            fontWeight={500}
+                                            lineHeight={"1.5rem"}
+                                            fontSize={{
+                                                sm: "0.8rem",
+                                                md: "0.9rem",
+                                                lg: "1rem",
+                                            }}
+                                        >
+                                            Решаем ваши задачи, а не продаём
+                                            &quot;дешёвые&quot; окна
+                                        </Typography>
+                                    </Box>
+                                </ListItem>
+                            </List>
+                        </CardContent>
+                    </Card>
                 </Box>
             </Box>
 
-            {/* <Container>
+            <Container>
                 <Paper
                     elevation={4}
                     square={false}
@@ -141,20 +188,21 @@ export default function Page() {
                         zIndex: "100",
                         textAlign: "center",
                         mt: {
-                            xs: -2,
-                            sm: -2,
-                            md: -3,
-                            lg: -4,
-                            xl: -4,
+                            xs: -5,
+                            sm: -5,
+                            md: -10,
+                            lg: -15,
+                            xl: -11,
                         },
                         transform: "translate(-50%, 0%)",
                         left: "50%",
                         maxWidth: "lg",
                     }}
-                > */}
-            {/* <Typography
+                >
+                    <Typography
                         fontWeight={"light"}
-                        paddingY={1}
+                        paddingY={2}
+                        align="center"
                         sx={{
                             fontSize: {
                                 xs: "1rem",
@@ -164,38 +212,45 @@ export default function Page() {
                             },
                         }}
                     >
-                        Выбор продукции
+                        Комплексное остекление коттеджей
                     </Typography>
-                    <Divider /> */}
-            {/* <Box padding={6}>
-                        {CardTextInfoJSX("5 шагов для выбора окон в дом", [
-                            <Box
-                                // component="p"
-                                key={Math.round(Math.random() * 10000)}
-                                textAlign="center"
-                            >
-                                Чтобы выбрать правильные окна нужно знать всего
-                                несколько ключевых параметров.
-                            </Box>,
-                            // <Box
-                            //     component="p"
-                            //     key={Math.round(Math.random() * 10000)}
-                            // >
-                            //     Мы устанавливаем окна в частные дома уже много
-                            //     лет и готовы поделиться своим опытом.
-                            // </Box>,
-                            // <Box
-                            //     component="p"
-                            //     key={Math.round(Math.random() * 10000)}
-                            // >
-                            //     Надеемся, что вы оцените нашу компетентность и
-                            //     запросите у нас коммерческое предложение для
-                            //     вашего дома.
-                            // </Box>,
-                        ])}
-                    </Box> */}
-            {/* </Paper>
-            </Container> */}
+                    <Divider />
+                    <Box padding={6}>
+                        <Grid
+                            container
+                            rowSpacing={7}
+                            columnSpacing={4}
+                            justifyContent="center"
+                            alignItems="center"
+                        >
+                            <Grid item xs={12} sm={4} md={6} lg={4}>
+                                <ProductionTypeCard
+                                    imgSrc={windows_1}
+                                    caption={
+                                        "Оконные и дверные блоки VEKA, Rehau, Kaleva. Энергоэффективная комплектация."
+                                    }
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={4} md={6} lg={4}>
+                                <ProductionTypeCard
+                                    imgSrc={portal_vector_1}
+                                    caption={
+                                        "Раздвижные двери-порталы. Все виды. Большой опыт монтажа."
+                                    }
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={4} md={6} lg={4}>
+                                <ProductionTypeCard
+                                    imgSrc={lamination_1}
+                                    caption={
+                                        "Ламинация Renolit, Hornshusch, Ado. Окраска торца Zobel."
+                                    }
+                                />
+                            </Grid>
+                        </Grid>
+                    </Box>
+                </Paper>
+            </Container>
 
             <Box>
                 <Container maxWidth={"lg"}>
@@ -211,6 +266,17 @@ export default function Page() {
                             rowGap={{ xs: 0, sm: 0 }}
                             justifyContent={"space-around"}
                         >
+                            <Grid item xs={12}>
+                                <Divider />
+                            </Grid>
+                            <Grid item xs={12} marginY={0}>
+                                <Typography variant="h1">
+                                    Оконные и дверные блоки в дом
+                                </Typography>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Divider />
+                            </Grid>
                             <Grid
                                 item
                                 xs={12}
@@ -249,7 +315,7 @@ export default function Page() {
                                         Оптимальный выбор -{" "}
                                         <strong>
                                             3 стекла с энергосберегающим
-                                            напылением, шириной от 36мм до 42мм
+                                            напылением, шириной около 40мм
                                         </strong>{" "}
                                         (больше - лучше).
                                     </Box>,
@@ -302,7 +368,7 @@ export default function Page() {
                                                         <u>
                                                             Почему стеклопакет
                                                             должен быть шириной
-                                                            36 - 42 мм ?
+                                                            от 40мм ?
                                                         </u>
                                                     </strong>
                                                 </Typography>
@@ -746,6 +812,176 @@ export default function Page() {
                                     justifyContent={"center"}
                                 >
                                     <Image
+                                        src={glued}
+                                        sizes={"30vw"}
+                                        style={{
+                                            width: "100%",
+                                            height: "auto",
+                                        }}
+                                        alt={
+                                            "Описание технологии вклейки стеклопакета"
+                                        }
+                                    />
+                                </Box>
+                            </Grid>
+
+                            <Grid item xs={12} md={6} order={{ xs: 9, md: 10 }}>
+                                {CardTextInfoJSX(
+                                    "Особенности входных дверей ПВХ",
+                                    [
+                                        <Box
+                                            component="p"
+                                            key={Math.round(
+                                                Math.random() * 10000
+                                            )}
+                                        >
+                                            Мы используем вклейку стеклопакета
+                                            для всех входных дверей без
+                                            исключения.
+                                        </Box>,
+                                        <Box
+                                            component="p"
+                                            key={Math.round(
+                                                Math.random() * 10000
+                                            )}
+                                        >
+                                            Цветной профиль двери нагревается
+                                            летом до 80 градусов и его геометрия
+                                            &quot;плывёт&quot; на несколько
+                                            миллиметров независимо от мощности
+                                            внутренней армировки. Как правило,
+                                            замок сразу начинает заедать.
+                                        </Box>,
+                                        <Box
+                                            component="p"
+                                            key={Math.round(
+                                                Math.random() * 10000
+                                            )}
+                                        >
+                                            Такой ежегодный негативный эффект
+                                            полностью устраняется только
+                                            технологией вклейки стеклопакета в
+                                            створку. Вы получаете действительно
+                                            надёжную и тёплую дверь.
+                                        </Box>,
+                                        <Box
+                                            component="p"
+                                            key={Math.round(
+                                                Math.random() * 10000
+                                            )}
+                                        >
+                                            То же самое касается очень больших
+                                            оконных створок. В них мы также
+                                            применяем вклейку стеклопакета.
+                                        </Box>,
+                                        <Accordion
+                                            elevation={0}
+                                            key={Math.round(
+                                                Math.random() * 10000
+                                            )}
+                                        >
+                                            <AccordionSummary
+                                                sx={{ pl: 0 }}
+                                                aria-controls="panel4-content"
+                                                id="panel4-header"
+                                            >
+                                                <Typography
+                                                    fontSize={"1rem"}
+                                                    variant="button"
+                                                    color="error"
+                                                    gutterBottom
+                                                >
+                                                    <ImportContactsTwoToneIcon fontSize="medium" />{" "}
+                                                    ПОДРОБНЕЕ
+                                                </Typography>
+                                            </AccordionSummary>
+                                            <AccordionDetails>
+                                                <Box>
+                                                    <Typography
+                                                        fontWeight={"light"}
+                                                        gutterBottom
+                                                    >
+                                                        <strong>
+                                                            <u>
+                                                                Можно ли не
+                                                                использовать
+                                                                вклейку для
+                                                                входных дверей?
+                                                            </u>
+                                                        </strong>
+                                                    </Typography>
+                                                    <Typography
+                                                        fontWeight={"light"}
+                                                        gutterBottom
+                                                    >
+                                                        Да, можно. Однако, у нас
+                                                        есть многолетний опыт,
+                                                        который показывает что
+                                                        без вклейки мы выезжаем
+                                                        на регулировку по
+                                                        гарантии уже через 1 год
+                                                        эксплуатации двери.
+                                                    </Typography>
+                                                    <Typography
+                                                        fontWeight={"light"}
+                                                        gutterBottom
+                                                    >
+                                                        <strong>
+                                                            <u>
+                                                                Что делать, если
+                                                                стеклопакет
+                                                                разобьётся?
+                                                                Можно ли его
+                                                                будет заменить?
+                                                            </u>
+                                                        </strong>
+                                                    </Typography>
+                                                    <Typography
+                                                        fontWeight={"light"}
+                                                        gutterBottom
+                                                    >
+                                                        Да, вклееный стеклопает
+                                                        допускает его замену.
+                                                        Для этого старый
+                                                        стеклопакет вырезается
+                                                        из створки. Остатки
+                                                        старого клея вычищаются.
+                                                        Наносится новый клей из
+                                                        специального ремонтного
+                                                        набора и устанавливается
+                                                        новый стеклопакет.
+                                                    </Typography>
+                                                </Box>
+                                            </AccordionDetails>
+                                        </Accordion>,
+                                    ]
+                                )}
+                            </Grid>
+
+                            <Grid
+                                item
+                                xs={12}
+                                // marginY={2}
+                                // sx={{ display: { xs: "none", md: "flex" } }}
+                                order={{ xs: 11, md: 11 }}
+                            >
+                                {/* {arrowDivider("right")} */}
+                                <Divider />
+                            </Grid>
+
+                            <Grid
+                                item
+                                xs={12}
+                                md={6}
+                                order={{ xs: 13, md: 12 }}
+                            >
+                                <Box
+                                    display={"flex"}
+                                    height={"100%"}
+                                    flexDirection={"column"}
+                                    justifyContent={"center"}
+                                >
+                                    <Image
                                         src={lamination_1}
                                         sizes={"30vw"}
                                         style={{
@@ -757,7 +993,12 @@ export default function Page() {
                                 </Box>
                             </Grid>
 
-                            <Grid item xs={12} md={6} order={{ xs: 9, md: 10 }}>
+                            <Grid
+                                item
+                                xs={12}
+                                md={6}
+                                order={{ xs: 12, md: 13 }}
+                            >
                                 {CardTextInfoJSX("Цвет оконного блока", [
                                     <Box
                                         component="p"
@@ -895,7 +1136,7 @@ export default function Page() {
                                 xs={12}
                                 // marginY={2}
                                 // sx={{ display: { xs: "none", md: "flex" } }}
-                                order={{ xs: 11 }}
+                                order={{ xs: 14 }}
                             >
                                 {/* {arrowDivider("left")} */}
                                 <Divider />
@@ -905,7 +1146,7 @@ export default function Page() {
                                 item
                                 xs={12}
                                 md={6}
-                                order={{ xs: 12, md: 13 }}
+                                order={{ xs: 15, md: 16 }}
                             >
                                 <Box
                                     display={"flex"}
@@ -929,7 +1170,7 @@ export default function Page() {
                                 item
                                 xs={12}
                                 md={6}
-                                order={{ xs: 13, md: 12 }}
+                                order={{ xs: 16, md: 15 }}
                             >
                                 {CardTextInfoJSX("Защита от взлома окон", [
                                     <Box
@@ -1283,3 +1524,38 @@ function CardTextInfoJSX(title: string, descriptionJSX: JSX.Element[]) {
 //         </Box>
 //     );
 // }
+
+interface Props {
+    imgSrc: StaticImageData;
+    caption: string;
+}
+
+const ProductionTypeCard = ({ imgSrc, caption }: Props) => {
+    return (
+        <Box
+            display={"flex"}
+            flexDirection={{ xs: "column" }}
+            alignItems={"center"}
+        >
+            <Image src={imgSrc.src} width={200} height={200} alt={caption} />
+            <Box
+                display={"flex"}
+                flexDirection={"column"}
+                justifyContent={"center"}
+                alignItems={{ xs: "center", md: "flex-start" }}
+                marginLeft={{ xs: 0, md: 3 }}
+                gap={1}
+            >
+                <Typography
+                    fontWeight={"400"}
+                    sx={{
+                        fontSize: { xs: "medium", sm: "medium", md: "large" },
+                        textAlign: { xs: "center", md: "center" },
+                    }}
+                >
+                    {caption}
+                </Typography>
+            </Box>
+        </Box>
+    );
+};

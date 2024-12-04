@@ -37,14 +37,6 @@ const ProductionCards = () => {
                         lg: -15,
                         xl: -11,
                     },
-
-                    // mt: {
-                    //     xs: -35.3,
-                    //     sm: -32,
-                    //     md: -27,
-                    //     lg: -15,
-                    //     xl: -11,
-                    // },
                     transform: "translate(-50%, 0%)",
                     left: "50%",
                     maxWidth: "lg",
@@ -117,15 +109,6 @@ const ProductionCards = () => {
                                 link={"15 000"}
                             />
                         </Grid>
-                        {/* <Grid item xs={12} sm={4} md={6} lg={4}>
-                            <ProductionTypeCard
-                                imgSrc={Fasad1}
-                                caption={
-                                    "Фасадное остекление алюминиевым профилем"
-                                }
-                                link={""}
-                            />
-                        </Grid> */}
                         <Grid item xs={12} sm={4} md={6} lg={4}>
                             <ProductionTypeCard
                                 imgSrc={Front_small_3}

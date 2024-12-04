@@ -31,7 +31,7 @@ import veka_70 from "../../public/images/profiles/veka_70_2.jpg";
 import veka_82 from "../../public/images/profiles/veka_82_1.jpg";
 import isoterma1 from "../../public/images/slides/profile_compare_house_1.jpg";
 import veka_compare_1 from "../../public/images/profiles/veka_compare_2_800px.jpg";
-import slide from "../../public/images/slides/slide_infra_house_1_1920px.jpg";
+import slide from "../../public/images/slides/apartment_slide_1.jpg";
 import steklopaket from "../../public/images/slides/steklopaket_1.jpg";
 import lamination_1 from "../../public/images/slides/lamination_1.jpg";
 import burglar_1 from "../../public/images/slides/burglar_1.jpg";
@@ -41,13 +41,26 @@ import arrow_1 from "../../public/images/slides/arrow_1.svg";
 export default function Page() {
     return (
         <>
-            <Box sx={{ position: "relative" }}>
+            <Box
+                sx={{ position: "relative" }}
+                display={"flex"}
+                width="100%"
+                maxHeight="610px"
+                minHeight={{ xs: "250px", sm: "410px", md: "610px" }}
+                justifyContent={"center"}
+            >
                 <Image
                     src={slide}
                     alt="Banner infrared checking"
                     sizes="100vw"
-                    style={{ width: "100%", height: "auto", zIndex: "1" }}
+                    style={{
+                        zIndex: "1",
+                        objectFit: "cover",
+                    }}
                     priority
+                    quality={100}
+                    fill
+                    unoptimized={true}
                 />
                 <Box
                     sx={{
