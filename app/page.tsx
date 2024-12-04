@@ -40,7 +40,7 @@ export default function Home() {
                             Работаем с 1998 года
                         </Typography> */}
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={12} md={6}>
                         <Box
                             display={"flex"}
                             flexDirection="column"
@@ -52,7 +52,7 @@ export default function Home() {
                                 alt={"worker at our old plant"}
                                 style={{
                                     border: "1px solid black",
-                                    width: "550px",
+                                    width: "100%",
                                     height: "auto",
                                 }}
                                 unoptimized
@@ -64,7 +64,7 @@ export default function Home() {
                         </Box>
                     </Grid>
 
-                    <Grid item xs={6}>
+                    <Grid item xs={12} md={6}>
                         <Typography variant="h2">
                             Раньше - своё производство
                         </Typography>
@@ -89,7 +89,7 @@ export default function Home() {
                     <Grid item xs={12}>
                         <Divider />
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs>
                         <Typography variant="h2">
                             Сегодня - автоматизированное производство в Москве
                         </Typography>
@@ -113,7 +113,7 @@ export default function Home() {
                         </Typography>
                     </Grid>
 
-                    <Grid item xs={6}>
+                    <Grid item>
                         <Box
                             display={"flex"}
                             flexDirection="column"
@@ -125,7 +125,7 @@ export default function Home() {
                                 alt={"worker at our old plant"}
                                 style={{
                                     border: "1px solid black",
-                                    width: "550px",
+                                    width: "100%",
                                     height: "auto",
                                 }}
                                 unoptimized
