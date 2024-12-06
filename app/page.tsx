@@ -1,6 +1,22 @@
 import HeroImageSlider from "./components/HeroImageSlider";
 import ProductionCards from "./components/ProductionCards";
-import { Container, Box, Typography, Grid, Divider } from "@mui/material";
+import {
+    Container,
+    Box,
+    Typography,
+    Grid,
+    Divider,
+    List,
+    ListItem,
+    Paper,
+    Table,
+    TableContainer,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableRow,
+    ListItemText,
+} from "@mui/material";
 import Image from "next/image";
 import glassprom1 from "../public/images/glassprom1.jpg";
 import besedka from "../public/images/besedka.webp";
@@ -9,6 +25,7 @@ import FirstPageComparement from "./components/FirstPageComparement";
 import worker_plant_1 from "../public/images/slides/worker_plant_1.jpg";
 import veka_profil_ugol from "../public/images/slides/Softline_70_verh-niz_2.png";
 import real_economy_1 from "../public/images/slides/real_economy_1.jpg";
+import profile_compare_img from "../public/images/slides/profile_compare_house_1.jpg";
 
 // import NextLink from "next/link";
 // import { Link as MUILink } from "@mui/material";
@@ -30,15 +47,8 @@ export default function Home() {
                 >
                     <Grid item xs={12} marginY={0}>
                         <Typography variant="h1">
-                            Старейший производитель окон в Туле
+                            Производитель окон в Туле с 1998 года
                         </Typography>
-                        {/* <Typography
-                            // variant="sliderFont"
-                            textAlign={"center"}
-                            fontWeight={"light"}
-                        >
-                            Работаем с 1998 года
-                        </Typography> */}
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <Box
@@ -66,7 +76,7 @@ export default function Home() {
 
                     <Grid item xs={12} md={6}>
                         <Typography variant="h2">
-                            Раньше - своё производство
+                            Собственное производство
                         </Typography>
 
                         <Typography>
@@ -86,9 +96,11 @@ export default function Home() {
                             производства.
                         </Typography>
                     </Grid>
+
                     <Grid item xs={12}>
                         <Divider />
                     </Grid>
+
                     <Grid item xs>
                         <Typography variant="h2">
                             Сегодня - автоматизированное производство в Москве
@@ -124,16 +136,88 @@ export default function Home() {
                                 src={glassprom1}
                                 alt={"worker at our old plant"}
                                 style={{
-                                    border: "1px solid black",
+                                    // border: "1px solid black",
                                     width: "100%",
                                     height: "auto",
                                 }}
-                                unoptimized
                             />
                             <Typography variant="subtitle2">
                                 Производственный цех нашего партнёра сегодня
                             </Typography>
                         </Box>
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <Divider />
+                    </Grid>
+
+                    <Grid
+                        item
+                        xs={12}
+                        md={6}
+                        alignItems="center"
+                        justifyContent="center"
+                    >
+                        <Box
+                            display={"flex"}
+                            flexDirection={"column"}
+                            alignItems={"center"}
+                            justifyContent={"center"}
+                        >
+                            <Image
+                                src={profile_compare_img}
+                                alt={"Example of our work"}
+                                style={{
+                                    border: "1px solid black",
+                                    width: "100%",
+                                    height: "auto",
+                                }}
+                            />
+
+                            <Typography variant="subtitle2">
+                                Широкий ассортимент оконной и дверной продукции
+                            </Typography>
+                        </Box>
+                    </Grid>
+
+                    <Grid item xs={12} md={6}>
+                        <Typography variant="h2">
+                            Своим клиентам мы предлагаем:
+                        </Typography>
+                        <List sx={{ listStyleType: "disc" }}>
+                            <ListItemText sx={{ display: "list-item" }}>
+                                <strong>
+                                    широкий выбор конструкций окон ПВХ под любые
+                                    задачи:
+                                </strong>{" "}
+                                профильные системы VEKA, REHAU и KALEVA с
+                                безупречной репутацией для квартиры, дома, дачи,
+                                производственного помещения
+                            </ListItemText>
+                            <ListItemText sx={{ display: "list-item" }}>
+                                <strong>
+                                    гарантированное качество сборки продукции
+                                </strong>
+                                , подтвержденное протоколами государственных
+                                испытаний и специальным гарантийным сроком
+                            </ListItemText>
+                            <ListItemText sx={{ display: "list-item" }}>
+                                <strong>качественный монтаж</strong> с
+                                использованием самых современных материалов,
+                                соответствующих требованиям ГОСТ
+                            </ListItemText>
+                            <ListItemText sx={{ display: "list-item" }}>
+                                <strong>фурнитуру премиум сегмента</strong> от
+                                немецких производителей{" "}
+                                <strong>Gretsch-Unitas</strong> и{" "}
+                                <strong>ROTO Frank Fenster</strong>
+                            </ListItemText>
+                            <ListItemText sx={{ display: "list-item" }}>
+                                <strong>фурнитуру экономичного сегмента</strong>{" "}
+                                <strong>REZE</strong> - от ведущего
+                                производителя Турции
+                            </ListItemText>
+                        </List>
                     </Grid>
                 </Grid>
             </Container>
@@ -154,7 +238,7 @@ export default function Home() {
                     gutterBottom
                 >
                     Используем только полновесное армирование профиля - толщиной
-                    от 1.5мм до 2.0мм
+                    от 1.5 до 2.5мм
                 </Typography>
                 <Typography
                     variant="sliderFont"
@@ -173,13 +257,16 @@ export default function Home() {
                     bgcolor={"#f7f7f7"}
                     gutterBottom
                 >
-                    Устанавливаем только немецкую фурнитуру Gretsch-Unitas и
-                    ROTO
+                    Устанавливаем только проверенную лично нами в сборке и
+                    эксплуатации фурнитуру
                 </Typography>
             </Box>
 
             <Container maxWidth="lg">
                 <Grid container columnSpacing={8} rowSpacing={10}>
+                    <Grid item xs={12}>
+                        <Divider />
+                    </Grid>
                     <Grid
                         item
                         xs={12}
@@ -215,13 +302,11 @@ export default function Home() {
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <Typography variant="h2">
-                            Эксклюзивная гарантия
-                        </Typography>
+                        <Typography variant="h2">Настоящая гарантия</Typography>
                         <Typography>
-                            Гарантийный срок — это характеристика надежности
-                            производителя, показатель его отношения к своему
-                            клиенту.
+                            Гарантийный срок — это единственная характеристика
+                            надежности производителя, показатель его отношения к
+                            своему клиенту.
                         </Typography>
                         <Typography>
                             Наша гарантия на окна составляет:{" "}
@@ -240,12 +325,353 @@ export default function Home() {
                             сэндвич-панелей.
                         </Typography>
                     </Grid>
+
+                    <Grid item xs={12}>
+                        <Divider />
+                    </Grid>
+
+                    <Grid item xs={12} marginY={0}>
+                        <Typography variant="h1" gutterBottom>
+                            Краткое сравнение нашей продукции
+                        </Typography>
+
+                        <TableContainer component={Paper} elevation={12}>
+                            <Table
+                                // sx={{ minWidth: 650 }}
+                                aria-label="Profile comapament table"
+                                size="small"
+                                style={{ tableLayout: "fixed" }}
+                            >
+                                <TableHead
+                                    sx={{ bgcolor: "rgb(98, 106, 115)" }}
+                                >
+                                    <TableRow>
+                                        <TableCell></TableCell>
+                                        <TableCell
+                                            align="justify"
+                                            sx={{ verticalALign: "top" }}
+                                        >
+                                            <Typography
+                                                sx={{
+                                                    color: "white",
+                                                    fontWeight: 500,
+                                                    letterSpacing: 3,
+                                                    textTransform: "uppercase",
+                                                    my: 0,
+                                                    py: 0,
+                                                }}
+                                            >
+                                                Окна KALEVA
+                                            </Typography>
+                                            <Typography
+                                                variant="caption"
+                                                gutterBottom
+                                                sx={{
+                                                    color: "white",
+                                                    fontWeight: 500,
+                                                    letterSpacing: 3,
+                                                    textTransform: "uppercase",
+                                                    my: 0,
+                                                    py: 0,
+                                                }}
+                                            >
+                                                Profi, Standart
+                                            </Typography>
+                                        </TableCell>
+                                        <TableCell
+                                            align="justify"
+                                            sx={{ verticalALign: "top" }}
+                                        >
+                                            <Typography
+                                                sx={{
+                                                    color: "white",
+                                                    fontWeight: 500,
+                                                    letterSpacing: 3,
+                                                    textTransform: "uppercase",
+                                                    my: 0,
+                                                    py: 0,
+                                                }}
+                                            >
+                                                Окна VEKA
+                                            </Typography>
+                                            <Typography
+                                                variant="caption"
+                                                gutterBottom
+                                                sx={{
+                                                    color: "white",
+                                                    fontWeight: 500,
+                                                    letterSpacing: 3,
+                                                    textTransform: "uppercase",
+                                                }}
+                                            >
+                                                Euroline, Softline
+                                            </Typography>
+                                        </TableCell>
+                                        <TableCell
+                                            align="justify"
+                                            sx={{ verticalALign: "top" }}
+                                        >
+                                            <Typography
+                                                sx={{
+                                                    color: "white",
+                                                    fontWeight: 500,
+                                                    letterSpacing: 3,
+                                                    textTransform: "uppercase",
+                                                }}
+                                            >
+                                                Окна REHAU
+                                            </Typography>
+                                            <Typography
+                                                variant="caption"
+                                                gutterBottom
+                                                sx={{
+                                                    color: "white",
+                                                    fontWeight: 500,
+                                                    letterSpacing: 3,
+                                                    textTransform: "uppercase",
+                                                }}
+                                            >
+                                                Blitz, Constanta, Grazio,
+                                                Delight, Intellio
+                                            </Typography>
+                                        </TableCell>
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    <TableRow>
+                                        <TableCell component="th">
+                                            <Typography variant="overline">
+                                                Толщина стенок
+                                            </Typography>
+                                        </TableCell>
+                                        <TableCell align="justify">
+                                            <Typography variant="overline">
+                                                Класс Б по ГОСТ (Россия)
+                                            </Typography>
+                                        </TableCell>
+                                        <TableCell
+                                            align="justify"
+                                            sx={{
+                                                bgcolor: "lightgreen",
+                                            }}
+                                        >
+                                            <Typography variant="overline">
+                                                Класс А по RAL (Германия)
+                                            </Typography>
+                                        </TableCell>
+                                        <TableCell align="justify">
+                                            <Typography variant="overline">
+                                                Класс А по ГОСТ (Россия)
+                                            </Typography>
+                                        </TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                        <TableCell component="th">
+                                            <Typography variant="overline">
+                                                Армирование в раме
+                                            </Typography>
+                                        </TableCell>
+                                        <TableCell align="justify">
+                                            <Typography variant="overline">
+                                                П-образное
+                                                <br />
+                                                Замкнутое - опция
+                                            </Typography>
+                                        </TableCell>
+                                        <TableCell
+                                            align="justify"
+                                            sx={{
+                                                bgcolor: "lightgreen",
+                                            }}
+                                        >
+                                            <Typography variant="overline">
+                                                Только замкнутый квадрат
+                                            </Typography>
+                                        </TableCell>
+                                        <TableCell align="justify">
+                                            <Typography variant="overline">
+                                                П-образное
+                                                <br />
+                                                Замкнутое - опция
+                                            </Typography>
+                                        </TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                        <TableCell component="th">
+                                            <Typography variant="overline">
+                                                Степень глянца
+                                            </Typography>
+                                        </TableCell>
+                                        <TableCell align="justify">
+                                            <Typography variant="overline">
+                                                Средняя
+                                            </Typography>
+                                        </TableCell>
+                                        <TableCell align="justify">
+                                            <Typography variant="overline">
+                                                Средняя
+                                            </Typography>
+                                        </TableCell>
+                                        <TableCell
+                                            align="justify"
+                                            sx={{
+                                                bgcolor: "lightgreen",
+                                            }}
+                                        >
+                                            <Typography variant="overline">
+                                                Высокая
+                                            </Typography>
+                                        </TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                        <TableCell component="th">
+                                            <Typography variant="overline">
+                                                Фурнитура
+                                            </Typography>
+                                        </TableCell>
+                                        <TableCell align="justify">
+                                            <Typography variant="overline">
+                                                Gretsch-Unitas (Германия)
+                                            </Typography>
+                                        </TableCell>
+                                        <TableCell align="justify">
+                                            <Typography variant="overline">
+                                                Gretsch-Unitas (Германия)
+                                            </Typography>
+                                        </TableCell>
+                                        <TableCell align="justify">
+                                            <Typography variant="overline">
+                                                ROTO (Германия)
+                                                <br />
+                                                REZE (Турция)
+                                            </Typography>
+                                        </TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                        <TableCell component="th">
+                                            <Typography variant="overline">
+                                                Стоимость
+                                            </Typography>
+                                        </TableCell>
+                                        <TableCell
+                                            align="justify"
+                                            sx={{
+                                                bgcolor: "lightgreen",
+                                            }}
+                                        >
+                                            <Typography variant="overline">
+                                                Низкая цена
+                                            </Typography>
+                                        </TableCell>
+                                        <TableCell align="justify">
+                                            <Typography variant="overline">
+                                                Средняя цена
+                                            </Typography>
+                                        </TableCell>
+                                        <TableCell align="justify">
+                                            <Typography variant="overline">
+                                                Высокая цена
+                                            </Typography>
+                                        </TableCell>
+                                    </TableRow>
+                                    <TableRow sx={{ verticalAlign: "top" }}>
+                                        <TableCell component="th">
+                                            <Typography variant="overline">
+                                                Рекомендованное применение
+                                            </Typography>
+                                        </TableCell>
+                                        <TableCell>
+                                            <List
+                                                sx={{
+                                                    listStyleType: "disc",
+                                                }}
+                                            >
+                                                {[
+                                                    "Окна стандартных размеров",
+                                                ].map((item, i) => (
+                                                    <ListItemText
+                                                        key={i}
+                                                        sx={{
+                                                            display:
+                                                                "list-item",
+                                                        }}
+                                                    >
+                                                        <Typography variant="overline">
+                                                            {item}
+                                                        </Typography>
+                                                    </ListItemText>
+                                                ))}
+                                            </List>
+                                        </TableCell>
+                                        <TableCell>
+                                            <List
+                                                sx={{
+                                                    listStyleType: "disc",
+                                                }}
+                                            >
+                                                {[
+                                                    "Окна любых размеров",
+                                                    "Особо высокие нагрузки",
+                                                ].map((item, i) => (
+                                                    <ListItemText
+                                                        key={i}
+                                                        sx={{
+                                                            display:
+                                                                "list-item",
+                                                        }}
+                                                    >
+                                                        <Typography variant="overline">
+                                                            {item}
+                                                        </Typography>
+                                                    </ListItemText>
+                                                ))}
+                                            </List>
+                                        </TableCell>
+                                        <TableCell>
+                                            <List
+                                                sx={{ listStyleType: "disc" }}
+                                            >
+                                                {[
+                                                    "Окна любых размеров",
+                                                    "особо высокие требования по глянцу и белизне",
+                                                ].map((item, i) => (
+                                                    <ListItemText
+                                                        key={i}
+                                                        sx={{
+                                                            display:
+                                                                "list-item",
+                                                        }}
+                                                    >
+                                                        <Typography variant="overline">
+                                                            {item}
+                                                        </Typography>
+                                                    </ListItemText>
+                                                ))}
+                                            </List>
+                                        </TableCell>
+                                    </TableRow>
+                                </TableBody>
+                            </Table>
+                        </TableContainer>
+                        <Typography align="center">
+                            Представленное сравнение относится только к нашим
+                            изделиям. Другие производители могут собирать окна и
+                            двери совершенно иначе, но, тем не менее,
+                            использовать аналогичные названия брендов и
+                            технологий.
+                        </Typography>
+                        <Typography align="center">
+                            Просим оценивать по данной таблице только нашу
+                            продукцию и не применять её к чужим изделиям.
+                        </Typography>
+                    </Grid>
+
                     <Grid item xs={12}>
                         <Divider />
                     </Grid>
                     <Grid item xs={12} marginY={0}>
                         <Typography variant="h1">
-                            Почему мы работаем с окнами VEKA
+                            Уникальные отличия окон VEKA
                         </Typography>
                     </Grid>
                     <Grid item xs={12}>
