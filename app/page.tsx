@@ -20,6 +20,7 @@ import {
     Step,
     StepLabel,
     StepContent,
+    Zoom,
 } from "@mui/material";
 import Image from "next/image";
 import glassprom1 from "../public/images/glassprom1.jpg";
@@ -38,6 +39,9 @@ import preim_5 from "../public/images/chestno.webp";
 import preim_6 from "../public/images/bistro.webp";
 import preim_7 from "../public/images/quality.webp";
 import preim_8 from "../public/images/eco.webp";
+import kaleva_sert_1 from "../public/images/certificates/kaleva_sert_1.jpg";
+import veka_sert_1 from "../public/images/certificates/veka_sert_1.jpg";
+import rehau_sert_1 from "../public/images/certificates/rehau_cert1.jpg";
 
 // import NextLink from "next/link";
 // import { Link as MUILink } from "@mui/material";
@@ -1301,16 +1305,47 @@ export default function Home() {
                     <Grid item xs={12}>
                         <Divider />
                     </Grid>
+
+                    <Grid item xs={12}>
+                        <Typography variant="h1">
+                            Сертификаты соответствия ГОСТ Р
+                        </Typography>
+                    </Grid>
+
+                    {[kaleva_sert_1, veka_sert_1, rehau_sert_1].map(
+                        (item, index) => {
+                            return (
+                                <Grid item xs={12} md={4} key={index}>
+                                    <Image
+                                        src={item}
+                                        alt={"certificate"}
+                                        width={0}
+                                        height={0}
+                                        sizes="100vw"
+                                        style={{
+                                            width: "100%",
+                                            height: "auto",
+                                        }}
+                                        unoptimized
+                                    ></Image>
+                                </Grid>
+                            );
+                        }
+                    )}
+
+                    {/* <Grid item xs={12}>
+                        <Divider />
+                    </Grid>
                     <Grid item xs={12} marginY={0}>
                         <Typography variant="h1">
                             Как сэкономить на остеклении
                         </Typography>
-                    </Grid>
-                    <Grid item xs={12}>
+                    </Grid> */}
+                    {/* <Grid item xs={12}>
                         <Divider />
-                    </Grid>
+                    </Grid> */}
 
-                    <Grid item xs={12}>
+                    {/* <Grid item xs={12}>
                         <Grid
                             container
                             marginTop={0}
@@ -1473,7 +1508,7 @@ export default function Home() {
                             {/* <Grid item xs={1}>
                                 <Divider orientation="vertical" />
                             </Grid> */}
-                            <Grid item xs={5}>
+                    {/* <Grid item xs={5}>
                                 <Typography variant="h2" align="center">
                                     Неправильно:
                                 </Typography>
@@ -1492,9 +1527,9 @@ export default function Home() {
                                     открываются каждый сезон под новыми
                                     юридическими названиями.
                                 </Typography>
-                            </Grid>
-                        </Grid>
-                    </Grid>
+                            </Grid> 
+                        </Grid> 
+                    </Grid> */}
                 </Grid>
             </Container>
 
