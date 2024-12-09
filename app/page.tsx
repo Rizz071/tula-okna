@@ -26,6 +26,14 @@ import worker_plant_1 from "../public/images/slides/worker_plant_1.jpg";
 import veka_profil_ugol from "../public/images/slides/Softline_70_verh-niz_2.png";
 import real_economy_1 from "../public/images/slides/real_economy_1.jpg";
 import profile_compare_img from "../public/images/slides/profile_compare_house_1.jpg";
+import preim_1 from "../public/images/prof.webp";
+import preim_2 from "../public/images/vigodno.webp";
+import preim_3 from "../public/images/udobno.webp";
+import preim_4 from "../public/images/nadejno.webp";
+import preim_5 from "../public/images/chestno.webp";
+import preim_6 from "../public/images/bistro.webp";
+import preim_7 from "../public/images/quality.webp";
+import preim_8 from "../public/images/eco.webp";
 
 // import NextLink from "next/link";
 // import { Link as MUILink } from "@mui/material";
@@ -61,7 +69,7 @@ export default function Home() {
                                 src={worker_plant_1}
                                 alt={"worker at our old plant"}
                                 style={{
-                                    border: "1px solid black",
+                                    border: "1px solid green",
                                     width: "100%",
                                     height: "auto",
                                 }}
@@ -76,7 +84,7 @@ export default function Home() {
 
                     <Grid item xs={12} md={6}>
                         <Typography variant="h2">
-                            Собственное производство
+                            Собственное производство в Туле
                         </Typography>
 
                         <Typography>
@@ -103,7 +111,7 @@ export default function Home() {
 
                     <Grid item xs>
                         <Typography variant="h2">
-                            Сегодня - автоматизированное производство в Москве
+                            Автоматизированное производство в Москве
                         </Typography>
                         <Typography>
                             С появлением на оконном рынке крупных заводов иметь
@@ -136,7 +144,7 @@ export default function Home() {
                                 src={glassprom1}
                                 alt={"worker at our old plant"}
                                 style={{
-                                    // border: "1px solid black",
+                                    border: "1px solid black",
                                     width: "100%",
                                     height: "auto",
                                 }}
@@ -237,8 +245,8 @@ export default function Home() {
                     bgcolor={"#f7f7f7"}
                     gutterBottom
                 >
-                    Используем только полновесное армирование профиля - толщиной
-                    от 1.5 до 2.5мм
+                    Используем полновесное армирование профиля - толщиной от 1.5
+                    до 2.5мм
                 </Typography>
                 <Typography
                     variant="sliderFont"
@@ -247,8 +255,8 @@ export default function Home() {
                     bgcolor={"#f7f7f7"}
                     gutterBottom
                 >
-                    Для габаритных конструкций применяем современную технологию
-                    вклейки стеклопакета в створку
+                    Для больших конструкций применяем технологию вклейки
+                    стеклопакета в створку
                 </Typography>
                 <Typography
                     variant="sliderFont"
@@ -257,8 +265,7 @@ export default function Home() {
                     bgcolor={"#f7f7f7"}
                     gutterBottom
                 >
-                    Устанавливаем только проверенную лично нами в сборке и
-                    эксплуатации фурнитуру
+                    Устанавливаем проверенную фурнитуру от G-U и ROTO
                 </Typography>
             </Box>
 
@@ -346,9 +353,16 @@ export default function Home() {
                                     sx={{ bgcolor: "rgb(98, 106, 115)" }}
                                 >
                                     <TableRow>
-                                        <TableCell></TableCell>
                                         <TableCell
-                                            align="justify"
+                                            sx={{
+                                                display: {
+                                                    xs: "none",
+                                                    md: "table-cell",
+                                                },
+                                            }}
+                                        ></TableCell>
+                                        <TableCell
+                                            align="left"
                                             sx={{ verticalALign: "top" }}
                                         >
                                             <Typography
@@ -379,7 +393,7 @@ export default function Home() {
                                             </Typography>
                                         </TableCell>
                                         <TableCell
-                                            align="justify"
+                                            align="left"
                                             sx={{ verticalALign: "top" }}
                                         >
                                             <Typography
@@ -408,7 +422,7 @@ export default function Home() {
                                             </Typography>
                                         </TableCell>
                                         <TableCell
-                                            align="justify"
+                                            align="left"
                                             sx={{ verticalALign: "top" }}
                                         >
                                             <Typography
@@ -427,6 +441,7 @@ export default function Home() {
                                                 sx={{
                                                     color: "white",
                                                     fontWeight: 500,
+
                                                     letterSpacing: 3,
                                                     textTransform: "uppercase",
                                                 }}
@@ -439,18 +454,26 @@ export default function Home() {
                                 </TableHead>
                                 <TableBody>
                                     <TableRow>
-                                        <TableCell component="th">
+                                        <TableCell
+                                            component="th"
+                                            sx={{
+                                                display: {
+                                                    xs: "none",
+                                                    md: "table-cell",
+                                                },
+                                            }}
+                                        >
                                             <Typography variant="overline">
                                                 Толщина стенок
                                             </Typography>
                                         </TableCell>
-                                        <TableCell align="justify">
+                                        <TableCell align="left">
                                             <Typography variant="overline">
                                                 Класс Б по ГОСТ (Россия)
                                             </Typography>
                                         </TableCell>
                                         <TableCell
-                                            align="justify"
+                                            align="left"
                                             sx={{
                                                 bgcolor: "lightgreen",
                                             }}
@@ -459,19 +482,27 @@ export default function Home() {
                                                 Класс А по RAL (Германия)
                                             </Typography>
                                         </TableCell>
-                                        <TableCell align="justify">
+                                        <TableCell align="left">
                                             <Typography variant="overline">
                                                 Класс А по ГОСТ (Россия)
                                             </Typography>
                                         </TableCell>
                                     </TableRow>
                                     <TableRow>
-                                        <TableCell component="th">
+                                        <TableCell
+                                            component="th"
+                                            sx={{
+                                                display: {
+                                                    xs: "none",
+                                                    md: "table-cell",
+                                                },
+                                            }}
+                                        >
                                             <Typography variant="overline">
                                                 Армирование в раме
                                             </Typography>
                                         </TableCell>
-                                        <TableCell align="justify">
+                                        <TableCell align="left">
                                             <Typography variant="overline">
                                                 П-образное
                                                 <br />
@@ -479,7 +510,7 @@ export default function Home() {
                                             </Typography>
                                         </TableCell>
                                         <TableCell
-                                            align="justify"
+                                            align="left"
                                             sx={{
                                                 bgcolor: "lightgreen",
                                             }}
@@ -488,7 +519,7 @@ export default function Home() {
                                                 Только замкнутый квадрат
                                             </Typography>
                                         </TableCell>
-                                        <TableCell align="justify">
+                                        <TableCell align="left">
                                             <Typography variant="overline">
                                                 П-образное
                                                 <br />
@@ -497,23 +528,31 @@ export default function Home() {
                                         </TableCell>
                                     </TableRow>
                                     <TableRow>
-                                        <TableCell component="th">
+                                        <TableCell
+                                            component="th"
+                                            sx={{
+                                                display: {
+                                                    xs: "none",
+                                                    md: "table-cell",
+                                                },
+                                            }}
+                                        >
                                             <Typography variant="overline">
                                                 Степень глянца
                                             </Typography>
                                         </TableCell>
-                                        <TableCell align="justify">
+                                        <TableCell align="left">
                                             <Typography variant="overline">
                                                 Средняя
                                             </Typography>
                                         </TableCell>
-                                        <TableCell align="justify">
+                                        <TableCell align="left">
                                             <Typography variant="overline">
                                                 Средняя
                                             </Typography>
                                         </TableCell>
                                         <TableCell
-                                            align="justify"
+                                            align="left"
                                             sx={{
                                                 bgcolor: "lightgreen",
                                             }}
@@ -524,22 +563,30 @@ export default function Home() {
                                         </TableCell>
                                     </TableRow>
                                     <TableRow>
-                                        <TableCell component="th">
+                                        <TableCell
+                                            component="th"
+                                            sx={{
+                                                display: {
+                                                    xs: "none",
+                                                    md: "table-cell",
+                                                },
+                                            }}
+                                        >
                                             <Typography variant="overline">
                                                 Фурнитура
                                             </Typography>
                                         </TableCell>
-                                        <TableCell align="justify">
+                                        <TableCell align="left">
                                             <Typography variant="overline">
                                                 Gretsch-Unitas (Германия)
                                             </Typography>
                                         </TableCell>
-                                        <TableCell align="justify">
+                                        <TableCell align="left">
                                             <Typography variant="overline">
                                                 Gretsch-Unitas (Германия)
                                             </Typography>
                                         </TableCell>
-                                        <TableCell align="justify">
+                                        <TableCell align="left">
                                             <Typography variant="overline">
                                                 ROTO (Германия)
                                                 <br />
@@ -548,13 +595,21 @@ export default function Home() {
                                         </TableCell>
                                     </TableRow>
                                     <TableRow>
-                                        <TableCell component="th">
+                                        <TableCell
+                                            component="th"
+                                            sx={{
+                                                display: {
+                                                    xs: "none",
+                                                    md: "table-cell",
+                                                },
+                                            }}
+                                        >
                                             <Typography variant="overline">
                                                 Стоимость
                                             </Typography>
                                         </TableCell>
                                         <TableCell
-                                            align="justify"
+                                            align="left"
                                             sx={{
                                                 bgcolor: "lightgreen",
                                             }}
@@ -563,19 +618,27 @@ export default function Home() {
                                                 Низкая цена
                                             </Typography>
                                         </TableCell>
-                                        <TableCell align="justify">
+                                        <TableCell align="left">
                                             <Typography variant="overline">
                                                 Средняя цена
                                             </Typography>
                                         </TableCell>
-                                        <TableCell align="justify">
+                                        <TableCell align="left">
                                             <Typography variant="overline">
                                                 Высокая цена
                                             </Typography>
                                         </TableCell>
                                     </TableRow>
                                     <TableRow sx={{ verticalAlign: "top" }}>
-                                        <TableCell component="th">
+                                        <TableCell
+                                            component="th"
+                                            sx={{
+                                                display: {
+                                                    xs: "none",
+                                                    md: "table-cell",
+                                                },
+                                            }}
+                                        >
                                             <Typography variant="overline">
                                                 Рекомендованное применение
                                             </Typography>
@@ -677,6 +740,7 @@ export default function Home() {
                     <Grid item xs={12}>
                         <Divider />
                     </Grid>
+
                     <Grid item xs={12} md={6}>
                         <Typography variant="h2">
                             Квадратное армирование в раме
@@ -848,9 +912,182 @@ export default function Home() {
                         </Box>
                     </Grid>
 
-                    {/* <Grid item xs={12}>
+                    <Grid item xs={12}>
                         <Divider />
-                    </Grid> */}
+                    </Grid>
+                    <Grid item xs={12} marginY={0}>
+                        <Typography variant="h1">Наши преимущества</Typography>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Divider />
+                    </Grid>
+
+                    {[
+                        {
+                            image: preim_1,
+                            title_text: "профессионально",
+                            descr_text: (
+                                <Typography
+                                    fontWeight={300}
+                                    fontSize={"1.2rem"}
+                                    lineHeight={"normal"}
+                                >
+                                    Индивидуально подберем окна, подходящие к
+                                    типу вашего помещения.
+                                    <br />
+                                    <strong>
+                                        Доверьте подбор окон специалистам!
+                                    </strong>
+                                </Typography>
+                            ),
+                        },
+                        {
+                            image: preim_2,
+                            title_text: "способ оплаты",
+                            descr_text: (
+                                <Typography
+                                    fontWeight={300}
+                                    fontSize={"1.2rem"}
+                                    lineHeight={"normal"}
+                                >
+                                    Все варианты оплаты - наличными, картой,
+                                    переводом на счёт. В офисе или удалённо.
+                                    Работаем с НДС.
+                                </Typography>
+                            ),
+                        },
+                        {
+                            image: preim_3,
+                            title_text: "договор на дому",
+                            descr_text: (
+                                <Typography
+                                    fontWeight={300}
+                                    fontSize={"1.2rem"}
+                                    lineHeight={"normal"}
+                                >
+                                    Заключение договора на дому{" "}
+                                    <strong>в удобное время</strong>. Разгрузку
+                                    и подъем оконных конструкций к месту монтажа
+                                    выполняют сотрудники нашей компании.
+                                </Typography>
+                            ),
+                        },
+                        {
+                            image: preim_4,
+                            title_text: "надёжно",
+                            descr_text: (
+                                <Typography
+                                    fontWeight={300}
+                                    fontSize={"1.2rem"}
+                                    lineHeight={"normal"}
+                                >
+                                    <strong>Доставка спецтранспортом</strong>.
+                                    Надежное крепление и упаковка предотвращают
+                                    повреждения.
+                                    <br />
+                                    Реальная долгосрочная гарантия.
+                                </Typography>
+                            ),
+                        },
+                        {
+                            image: preim_5,
+                            title_text: "честно",
+                            descr_text: (
+                                <Typography
+                                    fontWeight={300}
+                                    fontSize={"1.2rem"}
+                                    lineHeight={"normal"}
+                                >
+                                    Максимально точный расчет цены в день
+                                    обращения. Перед подписанием договора Вы
+                                    будете знать точную стоимость и конфигурацию
+                                    заказа
+                                </Typography>
+                            ),
+                        },
+                        {
+                            image: preim_6,
+                            title_text: "быстро",
+                            descr_text: (
+                                <Typography
+                                    fontWeight={300}
+                                    fontSize={"1.2rem"}
+                                    lineHeight={"normal"}
+                                >
+                                    От замера объекта до монтажа всех
+                                    конструкций в соответствии с заказом пройдет
+                                    не более 10 дней
+                                </Typography>
+                            ),
+                        },
+                        {
+                            image: preim_7,
+                            title_text: "качественно",
+                            descr_text: (
+                                <Typography
+                                    fontWeight={300}
+                                    fontSize={"1.2rem"}
+                                    lineHeight={"normal"}
+                                >
+                                    Регулярная сертификация окон по ГОСТ. Монтаж
+                                    производится квалифицированными бригадами в
+                                    соответствии с нормами ГОСТ.
+                                </Typography>
+                            ),
+                        },
+                        {
+                            image: preim_8,
+                            title_text: "экологично",
+                            descr_text: (
+                                <Typography
+                                    fontWeight={300}
+                                    fontSize={"1.2rem"}
+                                    lineHeight={"normal"}
+                                >
+                                    Наши окна не содержат в своём составе
+                                    свинец! Они абсолютно безопасны для
+                                    здоровья.
+                                </Typography>
+                            ),
+                        },
+                    ].map(({ image, title_text, descr_text }, index) => {
+                        return (
+                            <Grid item xs={6} md={3} key={index}>
+                                <Box
+                                    display={"flex"}
+                                    flexDirection="column"
+                                    justifyContent={"left"}
+                                    alignItems={"top"}
+                                >
+                                    <Box height={"100px"}>
+                                        <Image
+                                            src={image}
+                                            alt={"Профессионально"}
+                                            style={
+                                                {
+                                                    // width: "30%",
+                                                    // maxWidth: "100%",
+                                                    // maxHeight: "100px",
+                                                }
+                                            }
+                                        />
+                                    </Box>
+                                    <Typography
+                                        sx={{
+                                            fontWeight: 500,
+                                            letterSpacing: 2,
+                                            textTransform: "uppercase",
+                                            marginTop: 2,
+                                            marginBottom: 0,
+                                        }}
+                                    >
+                                        {title_text}
+                                    </Typography>
+                                    {descr_text}
+                                </Box>
+                            </Grid>
+                        );
+                    })}
 
                     <Grid item xs={12} marginY={0}>
                         <Typography variant="h1">
