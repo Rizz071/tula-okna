@@ -334,7 +334,7 @@ function HeroImageSlider() {
             maxHeight="610px"
             minHeight={{ xs: "250px", sm: "410px", md: "610px" }}
             justifyContent={"center"}
-            sx={{ position: "relative" }}
+            position={"relative"}
         >
             <Image
                 src={slideImage}

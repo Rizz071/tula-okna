@@ -68,6 +68,9 @@ export default function Home() {
                             <Image
                                 src={worker_plant_1}
                                 alt={"worker at our old plant"}
+                                width={0}
+                                height={0}
+                                sizes="100vw"
                                 style={{
                                     border: "1px solid green",
                                     width: "100%",
@@ -143,6 +146,9 @@ export default function Home() {
                             <Image
                                 src={glassprom1}
                                 alt={"worker at our old plant"}
+                                width={0}
+                                height={0}
+                                sizes="100vw"
                                 style={{
                                     border: "1px solid black",
                                     width: "100%",
@@ -175,6 +181,9 @@ export default function Home() {
                             <Image
                                 src={profile_compare_img}
                                 alt={"Example of our work"}
+                                width={0}
+                                height={0}
+                                sizes="100vw"
                                 style={{
                                     border: "1px solid black",
                                     width: "100%",
@@ -293,6 +302,9 @@ export default function Home() {
                             <Image
                                 src={besedka}
                                 alt={"Example of our work"}
+                                width={0}
+                                height={0}
+                                sizes="100vw"
                                 style={{ width: "100%", height: "auto" }}
                             />
 
@@ -793,7 +805,10 @@ export default function Home() {
                             <Image
                                 src={AllVsVeka}
                                 alt={"Example of our work"}
-                                // style={{ width: "100%", height: "auto" }}
+                                width={0}
+                                height={0}
+                                sizes="100vw"
+                                style={{ width: "100%", height: "auto" }}
                                 unoptimized
                             />
 
@@ -834,8 +849,11 @@ export default function Home() {
                             <Image
                                 src={veka_profil_ugol}
                                 alt={"Example of our work"}
-                                height={600}
-                                // style={{ width: "100%", height: "auto" }}
+                                // height={600}
+                                width={0}
+                                height={0}
+                                sizes="100vw"
+                                style={{ width: "70%", height: "auto" }}
                                 unoptimized
                             />
 
@@ -890,36 +908,8 @@ export default function Home() {
                     <Grid item xs={12}>
                         <Divider />
                     </Grid>
-                    <Grid item xs={12}>
-                        <Box
-                            display="flex"
-                            flexDirection={"column"}
-                            alignItems="center"
-                            justifyContent="center"
-                            // padding={2}
-                        >
-                            <Image
-                                src={real_economy_1}
-                                alt={"Illustration of economy in family"}
-                                // sizes={"100vw"}
-                                // quality={100}
-                                // fill
-                                // style={{ objectFit: "cover" }}
-                                height={500}
-                                // style={{ width: "100%", height: "auto" }}
-                                unoptimized
-                            />
-                        </Box>
-                    </Grid>
-
-                    <Grid item xs={12}>
-                        <Divider />
-                    </Grid>
                     <Grid item xs={12} marginY={0}>
                         <Typography variant="h1">Наши преимущества</Typography>
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Divider />
                     </Grid>
 
                     {[
@@ -1089,6 +1079,153 @@ export default function Home() {
                         );
                     })}
 
+                    <Grid item xs={12}>
+                        <Divider />
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Box
+                            display="flex"
+                            flexDirection={"column"}
+                            alignItems="center"
+                            justifyContent="center"
+                        >
+                            <Image
+                                src={real_economy_1}
+                                alt={"Illustration of economy in family"}
+                                // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                quality={100}
+                                // unoptimized
+                                width={0}
+                                height={0}
+                                sizes="100vw"
+                                style={{ width: "100%", height: "auto" }}
+                            />
+                        </Box>
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <Divider />
+                    </Grid>
+                    <Grid item xs={12} marginY={0}>
+                        <Typography variant="h1">
+                            Установка пластиковых окон
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Typography>
+                            Любое, даже самый качественный оконный блок потеряет
+                            все свои преимущества при неправильном монтаже,
+                            поэтому профессиональная установка - это залог
+                            отсутствия проблем с эксплуатацией в будущем. В
+                            нашем распоряжении две монтажные бригады, работающие
+                            с нами уже более 15 лет. Мы никогда не привлекаем к
+                            монтажным работам посторонние бригады, т.к. не
+                            уверены в их профессионализме. В пакет монтажных
+                            услуг входят следующие работы:
+                        </Typography>
+                        <List sx={{ listStyleType: "disc" }}>
+                            {[
+                                "замеры, которые производятся теми же монтажниками, которые в дальнейшем будут проводить монтажные работы (бесплатно)",
+                                "аккуратная доставка на объект спецтранспортом (бесплатно по г.Туле)",
+                                "подъем на этаж (бесплатно)",
+                                "демонтаж старых окон (бесплатно)",
+                                "профессиональный монтаж изделий. В перечень работ включены отделка оконного проема, регулировка фурнитуры, дополнительно - установка теплых откосов, отливов, подоконников",
+                            ].map((item, index) => {
+                                return (
+                                    <ListItemText
+                                        sx={{ display: "list-item", ml: 10 }}
+                                        key={index}
+                                    >
+                                        {item}
+                                    </ListItemText>
+                                );
+                            })}
+                        </List>
+                        <Typography>
+                            При монтаже используются современные герметичные
+                            гидро-, звуко-, теплоизоляционные материалы.
+                        </Typography>
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <Divider />
+                    </Grid>
+                    <Grid item xs={12} marginY={0}>
+                        <Typography variant="h1">
+                            Как заказать "под ключ" окна Veka и Rehau в Туле и
+                            области
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Typography>
+                            Для того чтобы заказать оконные блоки или остекление
+                            балконов в Туле от нашей организации, выполните
+                            несколько простых действий:
+                        </Typography>
+                        <List sx={{ listStyleType: "disc" }}>
+                            {[
+                                "обратитесь в диспетчерскую службу по телефону или по электронной почте. Опишите вашу задачу, укажите адрес, определите удобное время приезда замерщика. При обращении вы получите профессиональную консультацию по нашей продукции, срокам исполнения, стоимости, а также другим интересующим вас вопросам",
+                                "определитесь с конфигурацией изделий",
+                                "уточните детали заказа с замерщиком",
+                                "подпишите договор",
+                                "в назначенный срок ожидайте приезда бригады специалистов-монтажников",
+                            ].map((item, index) => {
+                                return (
+                                    <ListItemText
+                                        sx={{ display: "list-item", ml: 10 }}
+                                        key={index}
+                                    >
+                                        {item}
+                                    </ListItemText>
+                                );
+                            })}
+                        </List>
+                        <Typography>
+                            Хотите сделать свою квартиру максимально комфортной,
+                            привлекательной, безопасной - выберите оконные блоки
+                            от нашей Компании!
+                        </Typography>
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <Divider />
+                    </Grid>
+                    <Grid item xs={12} marginY={0}>
+                        <Typography variant="h1">
+                            Как купить пластиковые окна Veka и Rehau для
+                            самостоятельной установки
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Typography>
+                            Купить окна в Туле для самостоятельной установки
+                            возможно у нас. Необходимый порядок действий:
+                        </Typography>
+                        <List sx={{ listStyleType: "disc" }}>
+                            {[
+                                "Снимите точные размеры оконного проема. Не забудьте учесть отклонение сторон от вертикальности-горизонтальности (с помощью строительного уровня)",
+                                "Помните, что монтажный зазор между оконным блоком и проемом не может быть меньше 10мм, а также не желателен более 50мм. Зазор менее 10мм не обеспечит нужную теплоизоляцию оконной рамы - оконный блок будет промерзать!",
+                                "Приезжайте к нам или присылайте эскизы окон с размерами для консультации со специалистом. Подскажем, какой тип оконного блока вам подойдет лучше всего. Оконные блоки для летнего дома, квартиры или коттеджа, не говоря уже о техническом помещениии, будут очень разные!",
+                                "Подтвердите Счет-Договор на производство оконных/дверных блоков. Уточните возможность и стоимость доставки, срок изготовления ваших изделий.",
+                                "Внесите необходимую предоплату (для заказов без нашего монтажа мы берём только 100% предоплату)",
+                                "В согласованный день примите ваш заказ по акту приёмки",
+                                "Обязательно учитывайте то, что установка окон требует профессиональных навыков! Прежде чем браться за самостоятельный монтаж обязательно изучите все нюансы, оцените непредвзято свои возможности.",
+                            ].map((item, index) => {
+                                return (
+                                    <ListItemText
+                                        sx={{ display: "list-item", ml: 10 }}
+                                        key={index}
+                                    >
+                                        {item}
+                                    </ListItemText>
+                                );
+                            })}
+                        </List>
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <Divider />
+                    </Grid>
                     <Grid item xs={12} marginY={0}>
                         <Typography variant="h1">
                             Как сэкономить на остеклении
