@@ -22,14 +22,18 @@ export default function Page() {
             <Grid
                 container
                 marginTop={0}
-                columnSpacing={6}
+                columnSpacing={1}
                 rowSpacing={10}
-                direction="row"
+                direction={"row"}
                 alignItems={"flex-start"}
                 justifyContent={"center"}
             >
                 <Grid item marginY={0}>
-                    <ButtonImage caption="пластиковые окна" image={okna_pvc} />
+                    <ButtonImage
+                        caption="пластиковые окна"
+                        image={okna_pvc}
+                        link={"/okna/plastikovye-okna"}
+                    />
                 </Grid>
                 <Grid item marginY={0}>
                     <ButtonImage caption="алюминиевые окна" image={okna_alu} />
