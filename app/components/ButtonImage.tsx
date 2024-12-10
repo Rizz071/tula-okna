@@ -18,14 +18,19 @@ const ButtonImage = ({ caption, image, link = "" }: Props) => {
     return (
         <Link
             href={link}
-            style={{ textDecoration: "none" }}
+            style={{
+                textDecoration: "none",
+            }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
             <Button
                 variant="text"
                 size="small"
-                style={{ display: "flex", flexDirection: "column" }}
+                style={{
+                    display: "flex",
+                    flexDirection: "column",
+                }}
             >
                 <Image
                     src={image.src}
@@ -40,9 +45,10 @@ const ButtonImage = ({ caption, image, link = "" }: Props) => {
                     letterSpacing={1.5}
                     fontWeight={300}
                     color={"white"}
-                    bgcolor={isHovering ? "primary.main" : "rgba(0, 0, 0, 0.6)"}
+                    bgcolor={isHovering ? "primary.main" : "black"}
                     align={"center"}
                     width={"100%"}
+                    sx={{ opacity: isHovering ? 0.9 : 0.7 }}
                 >
                     {caption}
                 </Typography>

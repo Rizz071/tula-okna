@@ -10,6 +10,8 @@ import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalance
 import CalculateOutlinedIcon from "@mui/icons-material/CalculateOutlined";
 import DrawerMobileMenu from "./DrawerMobileMenu";
 import { Container } from "@mui/material";
+import Link from "next/link";
+import BreadCrumbs from "./BreadCrumbs";
 
 const Navbar = () => {
     return (
@@ -50,32 +52,34 @@ const Navbar = () => {
                             >
                                 <DrawerMobileMenu />
                             </Box>
-                            <Box
-                                sx={{
-                                    display: { xs: "none", sm: "block" },
-                                    mt: 1,
-                                }}
-                            >
-                                <Image
-                                    src={logoImage}
-                                    height={128}
-                                    alt="Site logo"
-                                />
-                            </Box>
-                            <Box
-                                sx={{
-                                    display: { xs: "block", sm: "none" },
-                                    my: "auto",
-                                    textAlign: "center",
-                                }}
-                            >
-                                <Typography variant="h5">
-                                    ТУЛЬСКИЕ ОКНА
-                                </Typography>
-                                <Typography variant="caption">
-                                    светопрозрачные конструкции
-                                </Typography>
-                            </Box>
+                            <Link href={"/"} style={{ textDecoration: "none" }}>
+                                <Box
+                                    sx={{
+                                        display: { xs: "none", sm: "block" },
+                                        mt: 1,
+                                    }}
+                                >
+                                    <Image
+                                        src={logoImage}
+                                        height={128}
+                                        alt="Site logo"
+                                    />
+                                </Box>
+                                <Box
+                                    sx={{
+                                        display: { xs: "block", sm: "none" },
+                                        my: "auto",
+                                        textAlign: "center",
+                                    }}
+                                >
+                                    <Typography variant="h5">
+                                        ТУЛЬСКИЕ ОКНА
+                                    </Typography>
+                                    <Typography variant="caption">
+                                        светопрозрачные конструкции
+                                    </Typography>
+                                </Box>
+                            </Link>
                         </Box>
                         <Box
                             sx={{
@@ -226,7 +230,9 @@ const Navbar = () => {
                             mb: 2,
                         }}
                     >
-                        <Typography>ОКНА</Typography>
+                        <Link href={"/okna"} style={{ textDecoration: "none" }}>
+                            <Typography>ОКНА</Typography>
+                        </Link>
                         <Typography>ДВЕРИ</Typography>
                         <Typography>БАЛКОНЫ</Typography>
                         <Typography>ПОРТАЛЫ</Typography>
@@ -238,6 +244,7 @@ const Navbar = () => {
                         <Typography>ЦЕНЫ</Typography>
                         <Typography>ПОРТФОЛИО</Typography> */}
                     </Toolbar>
+                    <BreadCrumbs />
                 </AppBar>
             </Box>
         </Container>
