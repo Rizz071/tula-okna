@@ -80,7 +80,7 @@ export default function Home() {
                                 height={0}
                                 sizes="100vw"
                                 style={{
-                                    border: "1px solid green",
+                                    border: "1px solid grey",
                                     width: "100%",
                                     height: "auto",
                                 }}
@@ -158,7 +158,7 @@ export default function Home() {
                                 height={0}
                                 sizes="100vw"
                                 style={{
-                                    border: "1px solid black",
+                                    // border: "1px solid black",
                                     width: "100%",
                                     height: "auto",
                                 }}
@@ -193,7 +193,7 @@ export default function Home() {
                                 height={0}
                                 sizes="100vw"
                                 style={{
-                                    border: "1px solid black",
+                                    // border: "1px solid black",
                                     width: "100%",
                                     height: "auto",
                                 }}
@@ -249,41 +249,30 @@ export default function Home() {
 
             <Box
                 width={"100%"}
-                bgcolor="#f7f7f7"
+                bgcolor="lightgoldenrodyellow"
                 paddingY={2}
                 marginY={16}
                 lineHeight={2}
             >
-                <Typography
-                    variant="sliderFont"
-                    fontSize={{ xs: "1.7rem", sm: "30px" }}
-                    fontWeight={"light"}
-                    textAlign={"center"}
-                    bgcolor={"#f7f7f7"}
-                    gutterBottom
-                >
-                    Используем полновесное армирование профиля - толщиной от 1.5
-                    до 2.5мм
-                </Typography>
-                <Typography
-                    variant="sliderFont"
-                    fontSize={{ xs: "1.7rem", sm: "30px" }}
-                    textAlign={"center"}
-                    bgcolor={"#f7f7f7"}
-                    gutterBottom
-                >
-                    Для больших конструкций применяем технологию вклейки
-                    стеклопакета в створку
-                </Typography>
-                <Typography
-                    variant="sliderFont"
-                    fontSize={{ xs: "1.7rem", sm: "30px" }}
-                    textAlign={"center"}
-                    bgcolor={"#f7f7f7"}
-                    gutterBottom
-                >
-                    Устанавливаем проверенную фурнитуру от G-U и ROTO
-                </Typography>
+                {[
+                    "Используем полновесное армирование профиля - толщиной от 1.5 до 2.5мм",
+                    "Для больших конструкций применяем технологию вклейки стеклопакета в створку",
+                    "Устанавливаем проверенную фурнитуру от G-U и ROTO",
+                ].map((item, index) => {
+                    return (
+                        <Typography
+                            key={index}
+                            variant="sliderFont"
+                            fontSize={{ xs: "1.7rem", sm: "30px" }}
+                            fontWeight={"light"}
+                            textAlign={"center"}
+                            bgcolor={"lightgoldenrodyellow"}
+                            gutterBottom
+                        >
+                            {item}
+                        </Typography>
+                    );
+                })}
             </Box>
 
             <Container maxWidth="lg">
@@ -1205,10 +1194,8 @@ export default function Home() {
                                         "Для заказов с нашим монтажом мы принимаем предоплату в размере 70% от всей суммы заказа. Деньги можно внести любым способом - через кассовый терминал в нашем офисе или удалённо - переводом. С момента внесения предоплаты наш договор считается подписанный и начинается работа по изготовлению изделий.",
                                 },
                                 {
-                                    item_label: "Согласуйте дату монтажа.",
-                                },
-                                {
-                                    item_label:
+                                    item_label: "Согласуйте дату монтажа",
+                                    item_content:
                                         "За несколько дней до готовности изделий, мы свяжемся с вами чтобы согласовать дату монтажа. Этот день модно передвинуть по вашему желанию. В назначенный срок ожидайте приезда бригады специалистов-монтажников.",
                                 },
                             ].map(({ item_label, item_content }, index) => {

@@ -81,9 +81,9 @@ const theme = createTheme({
         },
         body1: {
             fontFamily: roboto.style.fontFamily,
-            fontSize: "1.2rem",
+            fontSize: "1.1rem",
             fontWeight: 300,
-            lineHeight: "32px",
+            lineHeight: "30px",
             textAlign: "justify",
             marginTop: "1.5rem"
         },
