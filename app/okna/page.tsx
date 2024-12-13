@@ -37,49 +37,25 @@ import ButtonImage from "../components/ButtonImage";
 import okna_pvc from "../../public/images/about2.jpg";
 import okna_alu from "../../public/images/dveri/alumarks70.jpg";
 import { randomInt } from "crypto";
+import { StaticImageData } from "next/image";
+
+interface ICardDescriptionTable {
+    system_title: string;
+    image: StaticImageData;
+    link: string;
+    floor: number;
+    heating: number;
+    output_air: number;
+    price: number;
+}
 
 export default function Page() {
     const [floor, setFloor] = React.useState<string>("1");
     const [heating, setHeating] = React.useState<string>("1");
     const [outputAir, setOutputAir] = React.useState<string>("1");
-    const [apartmentWindowsList, setApartmentWindowsList] = React.useState([
-        {
-            system_title: "калева профи 60",
-            image: okna_pvc,
-            link: "",
-            floor: "до 9 этажа",
-            heating: 2,
-            output_air: 2,
-            price: "Низкая",
-        },
-        {
-            system_title: "калева стандарт 70",
-            image: okna_pvc,
-            link: "",
-            floor: "до 12 этажа",
-            heating: 1,
-            output_air: 1,
-            price: "Низкая",
-        },
-        {
-            system_title: "VEKA Softline 70",
-            image: okna_pvc,
-            link: "",
-            floor: "до 17 этажа",
-            heating: 1,
-            output_air: 1,
-            price: "Средняя",
-        },
-        {
-            system_title: "VEKA Softline 82",
-            image: okna_pvc,
-            link: "",
-            floor: "выше 17 этажа",
-            heating: 0,
-            output_air: 0,
-            price: "Высокая",
-        },
-    ]);
+    const [apartmentWindowsList, setApartmentWindowsList] = React.useState<
+        ICardDescriptionTable[]
+    >([]);
 
     const handleChangeFloor = (event: SelectChangeEvent) => {
         setFloor(event.target.value as string);
@@ -88,48 +64,47 @@ export default function Page() {
 
     const handleChangeHeating = (event: SelectChangeEvent) => {
         setHeating(event.target.value as string);
-        () => console.log(apartmentWindowsList);
     };
 
     const handleChangeOutputAir = (event: SelectChangeEvent) => {
         setOutputAir(event.target.value as string);
     };
-    const initialApatmentWindowsList = [
+    const initialApatmentWindowsList: ICardDescriptionTable[] = [
         {
             system_title: "калева профи 60",
             image: okna_pvc,
             link: "",
-            floor: "до 9 этажа",
+            floor: 0,
             heating: 2,
             output_air: 2,
-            price: "Низкая",
+            price: 0,
         },
         {
             system_title: "калева стандарт 70",
             image: okna_pvc,
             link: "",
-            floor: "до 12 этажа",
+            floor: 1,
             heating: 1,
             output_air: 1,
-            price: "Низкая",
+            price: 0,
         },
         {
             system_title: "VEKA Softline 70",
             image: okna_pvc,
             link: "",
-            floor: "до 17 этажа",
+            floor: 2,
             heating: 1,
             output_air: 1,
-            price: "Средняя",
+            price: 1,
         },
         {
             system_title: "VEKA Softline 82",
             image: okna_pvc,
             link: "",
-            floor: "выше 17 этажа",
+            floor: 3,
             heating: 0,
             output_air: 0,
-            price: "Высокая",
+            price: 2,
         },
     ];
 
@@ -153,6 +128,34 @@ export default function Page() {
         output_air:
             "Вытяжка отводит лишнюю влажность из помещения. При нерабочей вытяжке влажность воздуха повышается настолько, что точка росы смещается на стело и выпадает конденсат.",
         price: "Здесь указана приблизительная сравнительная стоимость. Чем выше цена - тем большее количество ПВХ-материала используется, и тем мощнее армирование устанавливается в оконный профиль.",
+    };
+
+    const renderPrice = (price: number): string => {
+        switch (price) {
+            case 0:
+                return "Низкая";
+            case 1:
+                return "Средняя";
+            case 2:
+                return "Высокая";
+            default:
+                return "";
+        }
+    };
+
+    const renderFloor = (floor: number): string => {
+        switch (floor) {
+            case 0:
+                return "До 9 этажа";
+            case 1:
+                return "До 12 этажа";
+            case 2:
+                return "До 17 этажа";
+            case 3:
+                return "Выше 17 этажа";
+            default:
+                return "";
+        }
     };
 
     const renderHeating = (heating: number): string => {
@@ -235,7 +238,7 @@ export default function Page() {
                                     <MenuItem value={"1"}>До 12 этажа</MenuItem>
                                     <MenuItem value={"2"}>До 17 этажа</MenuItem>
                                     <MenuItem value={"3"}>
-                                        Выше 17 этажа
+                                        От 18 этажа и выше
                                     </MenuItem>
                                 </Select>
                             </FormControl>
@@ -373,7 +376,9 @@ export default function Page() {
                                                                     my: 0,
                                                                 }}
                                                             >
-                                                                {floor}
+                                                                {renderFloor(
+                                                                    floor
+                                                                )}
                                                             </Typography>
                                                         </Tooltip>
                                                     </TableCell>
@@ -506,7 +511,9 @@ export default function Page() {
                                                                     my: 0,
                                                                 }}
                                                             >
-                                                                {price}
+                                                                {renderPrice(
+                                                                    price
+                                                                )}
                                                             </Typography>
                                                         </Tooltip>
                                                     </TableCell>
