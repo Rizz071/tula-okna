@@ -30,6 +30,7 @@ const ButtonImage = ({ caption, image, link = "" }: Props) => {
                 style={{
                     display: "flex",
                     flexDirection: "column",
+                    padding: 0,
                 }}
             >
                 <Image

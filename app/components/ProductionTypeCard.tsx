@@ -31,9 +31,10 @@ const ProductionTypeCard = ({ imgSrc, caption, link }: Props) => {
             >
                 <Typography
                     sx={{
-                        fontSize: { xs: "medium", sm: "medium", md: "large" },
+                        fontSize: { xs: "large", sm: "large", md: "larger" },
                         fontWeight: "light",
                         textAlign: { xs: "center", md: "left" },
+                        my: 0,
                     }}
                 >
                     {caption}
@@ -41,24 +42,6 @@ const ProductionTypeCard = ({ imgSrc, caption, link }: Props) => {
                 <Button variant="outlined" size="small">
                     ПЕРЕЙТИ
                 </Button>
-                {/* {price && (
-                    <Box display={"flex"} width={"100%"}>
-                        <Typography
-                            marginLeft={0}
-                            sx={{
-                                fontSize: {
-                                    xs: "1.2rem",
-                                    sm: "1.2rem",
-                                    lg: "1.5rem",
-                                },
-                                width: "100%",
-                                textAlign: { xs: "center", md: "left" },
-                            }}
-                        >
-                            {`от ${price} ₽`}
-                        </Typography>
-                    </Box>
-                )} */}
             </Box>
         </Box>
     );

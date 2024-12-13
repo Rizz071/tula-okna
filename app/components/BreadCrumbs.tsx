@@ -17,8 +17,6 @@ const BreadCrumbs = () => {
         return name;
     });
 
-    console.log(pathNamesOriginal.join("/"));
-
     return (
         <Breadcrumbs aria-label="breadcrumb" separator="›">
             <Link color="inherit" href="/">
