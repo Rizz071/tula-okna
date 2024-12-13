@@ -404,7 +404,7 @@ export default function Page() {
                                                                         my: 0,
                                                                     }}
                                                                 >
-                                                                    Отопление
+                                                                    Отопление1
                                                                 </Typography>
                                                             </Stack>
                                                         </Tooltip>
