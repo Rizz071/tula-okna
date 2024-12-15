@@ -4,7 +4,6 @@ import {
     Container,
     Box,
     Typography,
-    Grid,
     Divider,
     List,
     ListItem,
@@ -22,6 +21,7 @@ import {
     StepContent,
     Zoom,
 } from "@mui/material";
+import Grid from "@mui/material/Grid2";
 import Image from "next/image";
 import glassprom1 from "../public/images/glassprom1.jpg";
 import besedka from "../public/images/besedka.webp";
@@ -61,12 +61,12 @@ export default function Home() {
                     alignItems={"flex-start"}
                     justifyContent={"space-between"}
                 >
-                    <Grid item xs={12} marginY={0}>
+                    <Grid size={{ xs: 12 }} marginY={0}>
                         <Typography variant="h1">
                             Производитель окон в Туле с 1998 года
                         </Typography>
                     </Grid>
-                    <Grid item xs={12} md={6}>
+                    <Grid size={{ xs: 12, md: 6 }}>
                         <Box
                             display={"flex"}
                             flexDirection="column"
@@ -93,7 +93,7 @@ export default function Home() {
                         </Box>
                     </Grid>
 
-                    <Grid item xs={12} md={6}>
+                    <Grid size={{ xs: 12, md: 6 }}>
                         <Typography variant="h2">
                             Собственное производство в Туле
                         </Typography>
@@ -116,11 +116,11 @@ export default function Home() {
                         </Typography>
                     </Grid>
 
-                    <Grid item xs={12}>
+                    <Grid size={{ xs: 12 }}>
                         <Divider />
                     </Grid>
 
-                    <Grid item xs>
+                    <Grid size={{ xs: 12, md: 6 }}>
                         <Typography variant="h2">
                             Автоматизированное производство в Москве
                         </Typography>
@@ -144,7 +144,7 @@ export default function Home() {
                         </Typography>
                     </Grid>
 
-                    <Grid item>
+                    <Grid size={{ xs: 12, md: 6 }}>
                         <Box
                             display={"flex"}
                             flexDirection="column"
@@ -169,14 +169,12 @@ export default function Home() {
                         </Box>
                     </Grid>
 
-                    <Grid item xs={12}>
+                    <Grid size={{ xs: 12 }}>
                         <Divider />
                     </Grid>
 
                     <Grid
-                        item
-                        xs={12}
-                        md={6}
+                        size={{ xs: 12, md: 6 }}
                         alignItems="center"
                         justifyContent="center"
                     >
@@ -205,7 +203,7 @@ export default function Home() {
                         </Box>
                     </Grid>
 
-                    <Grid item xs={12} md={6}>
+                    <Grid size={{ xs: 12, md: 6 }}>
                         <Typography variant="h2">
                             Своим клиентам мы предлагаем:
                         </Typography>
@@ -277,13 +275,11 @@ export default function Home() {
 
             <Container maxWidth="lg">
                 <Grid container columnSpacing={8} rowSpacing={10}>
-                    <Grid item xs={12}>
+                    <Grid size={{ xs: 12 }}>
                         <Divider />
                     </Grid>
                     <Grid
-                        item
-                        xs={12}
-                        md={6}
+                        size={{ xs: 12, md: 6 }}
                         alignItems="center"
                         justifyContent="center"
                     >
@@ -317,7 +313,7 @@ export default function Home() {
                             </Typography>
                         </Box>
                     </Grid>
-                    <Grid item xs={12} md={6}>
+                    <Grid size={{ xs: 12, md: 6 }}>
                         <Typography variant="h2">Настоящая гарантия</Typography>
                         <Typography>
                             Гарантийный срок — это единственная характеристика
@@ -342,11 +338,11 @@ export default function Home() {
                         </Typography>
                     </Grid>
 
-                    <Grid item xs={12}>
+                    <Grid size={{ xs: 12 }}>
                         <Divider />
                     </Grid>
 
-                    <Grid item xs={12} marginY={0}>
+                    <Grid size={{ xs: 12 }} marginY={0}>
                         <Typography variant="h1" gutterBottom>
                             Краткое сравнение нашей продукции
                         </Typography>
@@ -738,19 +734,19 @@ export default function Home() {
                         </Typography>
                     </Grid>
 
-                    <Grid item xs={12}>
+                    <Grid size={{ xs: 12 }}>
                         <Divider />
                     </Grid>
-                    <Grid item xs={12} marginY={0}>
+                    <Grid size={{ xs: 12 }} marginY={0}>
                         <Typography variant="h1">
                             Уникальные отличия окон VEKA
                         </Typography>
                     </Grid>
-                    <Grid item xs={12}>
+                    <Grid size={{ xs: 12 }}>
                         <Divider />
                     </Grid>
 
-                    <Grid item xs={12} md={6}>
+                    <Grid size={{ xs: 12, md: 6 }}>
                         <Typography variant="h2">
                             Квадратное армирование в раме
                         </Typography>
@@ -782,14 +778,7 @@ export default function Home() {
                             исключён люфт профиля.
                         </Typography>
                     </Grid>
-                    <Grid
-                        item
-                        xs={12}
-                        md={6}
-                        // padding={2}
-                        // alignItems="center"
-                        // justifyContent="center"
-                    >
+                    <Grid size={{ xs: 12, md: 6 }}>
                         <Box
                             display="flex"
                             flexDirection={"column"}
@@ -823,13 +812,11 @@ export default function Home() {
                             </Typography> */}
                         </Box>
                     </Grid>
-                    <Grid item xs={12}>
+                    <Grid size={{ xs: 12 }}>
                         <Divider />
                     </Grid>
                     <Grid
-                        item
-                        xs={12}
-                        md={6}
+                        size={{ xs: 12, md: 6 }}
                         // padding={2}
                         alignItems="center"
                         justifyContent="center"
@@ -868,7 +855,7 @@ export default function Home() {
                             </Typography> */}
                         </Box>
                     </Grid>
-                    <Grid item xs={12} md={6}>
+                    <Grid size={{ xs: 12, md: 6 }}>
                         <Typography variant="h2">
                             Толщина стенки по евро стандарту
                         </Typography>
@@ -902,10 +889,10 @@ export default function Home() {
                         </Typography>
                     </Grid>
 
-                    <Grid item xs={12}>
+                    <Grid size={{ xs: 12 }}>
                         <Divider />
                     </Grid>
-                    <Grid item xs={12} marginY={0}>
+                    <Grid size={{ xs: 12 }} marginY={0}>
                         <Typography variant="h1">Наши преимущества</Typography>
                     </Grid>
 
@@ -1039,7 +1026,7 @@ export default function Home() {
                         },
                     ].map(({ image, title_text, descr_text }, index) => {
                         return (
-                            <Grid item xs={6} md={3} key={index}>
+                            <Grid size={{ xs: 6, md: 3 }} key={index}>
                                 <Box
                                     display={"flex"}
                                     flexDirection="column"
@@ -1076,10 +1063,10 @@ export default function Home() {
                         );
                     })}
 
-                    <Grid item xs={12}>
+                    <Grid size={{ xs: 12 }}>
                         <Divider />
                     </Grid>
-                    <Grid item xs={12}>
+                    <Grid size={{ xs: 12 }}>
                         <Box
                             display="flex"
                             flexDirection={"column"}
@@ -1100,15 +1087,15 @@ export default function Home() {
                         </Box>
                     </Grid>
 
-                    <Grid item xs={12}>
+                    <Grid size={{ xs: 12 }}>
                         <Divider />
                     </Grid>
-                    <Grid item xs={12} marginY={0}>
+                    <Grid size={{ xs: 12 }} marginY={0}>
                         <Typography variant="h1">
                             Установка пластиковых окон
                         </Typography>
                     </Grid>
-                    <Grid item xs={12}>
+                    <Grid size={{ xs: 12 }}>
                         <Typography>
                             Любой, даже самый качественный оконный блок потеряет
                             все свои преимущества при неправильном монтаже,
@@ -1147,17 +1134,17 @@ export default function Home() {
                         </Typography>
                     </Grid>
 
-                    <Grid item xs={12}>
+                    <Grid size={{ xs: 12 }}>
                         <Divider />
                     </Grid>
 
-                    <Grid item xs={12}>
+                    <Grid size={{ xs: 12 }}>
                         <Typography variant="h1">
                             Как заказать окна Kaleva, Veka и Rehau в Туле и
                             области
                         </Typography>
                     </Grid>
-                    <Grid item xs={12} md={6}>
+                    <Grid size={{ xs: 12, md: 6 }}>
                         <Typography variant="h2">
                             Установка окон "под ключ"
                         </Typography>
@@ -1223,7 +1210,7 @@ export default function Home() {
                         </Typography>
                     </Grid>
 
-                    <Grid item xs={12} md={6}>
+                    <Grid size={{ xs: 12, md: 6 }}>
                         <Typography variant="h2">
                             Самостоятельная установка
                         </Typography>
@@ -1289,11 +1276,11 @@ export default function Home() {
                         </Typography>
                     </Grid>
 
-                    <Grid item xs={12}>
+                    <Grid size={{ xs: 12 }}>
                         <Divider />
                     </Grid>
 
-                    <Grid item xs={12}>
+                    <Grid size={{ xs: 12 }}>
                         <Typography variant="h1">
                             Сертификаты соответствия ГОСТ Р
                         </Typography>
@@ -1302,7 +1289,7 @@ export default function Home() {
                     {[kaleva_sert_1, veka_sert_1, rehau_sert_1].map(
                         (item, index) => {
                             return (
-                                <Grid item xs={12} md={4} key={index}>
+                                <Grid size={{ xs: 12, md: 4 }} key={index}>
                                     <Image
                                         src={item}
                                         alt={"certificate"}
