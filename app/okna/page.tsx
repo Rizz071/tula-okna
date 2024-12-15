@@ -34,9 +34,8 @@ import CurrencyRubleSharpIcon from "@mui/icons-material/CurrencyRubleSharp";
 
 import ButtonImage from "../components/ButtonImage";
 
-import okna_pvc from "../../public/images/about2.jpg";
-import okna_alu from "../../public/images/dveri/alumarks70.jpg";
-import { randomInt } from "crypto";
+import kaleva_profi from "../../public/images/kaleva_profi_1.png";
+import kaleva_standart from "../../public/images/kaleva_standart_1.png";
 import { StaticImageData } from "next/image";
 
 interface ICardDescriptionTable {
@@ -50,9 +49,9 @@ interface ICardDescriptionTable {
 }
 
 export default function Page() {
-    const [floor, setFloor] = React.useState<string>("1");
-    const [heating, setHeating] = React.useState<string>("1");
-    const [outputAir, setOutputAir] = React.useState<string>("1");
+    const [floor, setFloor] = React.useState<string>("10");
+    const [heating, setHeating] = React.useState<string>("10");
+    const [outputAir, setOutputAir] = React.useState<string>("10");
     const [apartmentWindowsList, setApartmentWindowsList] = React.useState<
         ICardDescriptionTable[]
     >([]);
@@ -72,7 +71,7 @@ export default function Page() {
     const initialApatmentWindowsList: ICardDescriptionTable[] = [
         {
             system_title: "калева профи 60",
-            image: okna_pvc,
+            image: kaleva_profi,
             link: "",
             floor: 0,
             heating: 2,
@@ -81,7 +80,7 @@ export default function Page() {
         },
         {
             system_title: "калева стандарт 70",
-            image: okna_pvc,
+            image: kaleva_standart,
             link: "",
             floor: 1,
             heating: 1,
@@ -90,16 +89,16 @@ export default function Page() {
         },
         {
             system_title: "VEKA Softline 70",
-            image: okna_pvc,
+            image: kaleva_profi,
             link: "",
             floor: 2,
-            heating: 1,
-            output_air: 1,
+            heating: 0,
+            output_air: 0,
             price: 1,
         },
         {
             system_title: "VEKA Softline 82",
-            image: okna_pvc,
+            image: kaleva_profi,
             link: "",
             floor: 3,
             heating: 0,
@@ -111,11 +110,16 @@ export default function Page() {
     useEffect(() => {
         setApartmentWindowsList(
             initialApatmentWindowsList.filter((item) => {
-                if (item.heating <= parseInt(heating)) return true;
+                if (
+                    item.floor >= parseInt(floor) &&
+                    item.heating <= parseInt(heating) &&
+                    item.output_air <= parseInt(outputAir)
+                )
+                    return true;
                 return false;
             })
         );
-    }, [heating]);
+    }, [floor, heating, outputAir]);
 
     useEffect(() => {
         console.log(apartmentWindowsList);
@@ -222,8 +226,8 @@ export default function Page() {
                 >
                     <Grid item xs={12} sm={3} md={3}>
                         <Box>
-                            <FormControl fullWidth size="small">
-                                <InputLabel id="floor-select-input-label">
+                            <FormControl fullWidth variant="filled">
+                                <InputLabel id="heating-select-input-label">
                                     Этаж
                                 </InputLabel>
                                 <Select
@@ -234,12 +238,10 @@ export default function Page() {
                                     onChange={handleChangeFloor}
                                 >
                                     <MenuItem value={"10"}>Не выбрано</MenuItem>
-                                    <MenuItem value={"0"}>До 9 этажа</MenuItem>
-                                    <MenuItem value={"1"}>До 12 этажа</MenuItem>
-                                    <MenuItem value={"2"}>До 17 этажа</MenuItem>
-                                    <MenuItem value={"3"}>
-                                        От 18 этажа и выше
-                                    </MenuItem>
+                                    <MenuItem value={"0"}>1 - 9</MenuItem>
+                                    <MenuItem value={"1"}>10 - 12</MenuItem>
+                                    <MenuItem value={"2"}>13 - 17</MenuItem>
+                                    <MenuItem value={"3"}>18 и выше</MenuItem>
                                 </Select>
                             </FormControl>
                         </Box>
@@ -247,7 +249,7 @@ export default function Page() {
 
                     <Grid item xs={12} sm={3} md={3}>
                         <Box>
-                            <FormControl fullWidth size="small">
+                            <FormControl fullWidth variant="filled">
                                 <InputLabel id="heating-select-input-label">
                                     Отопление
                                 </InputLabel>
@@ -271,7 +273,7 @@ export default function Page() {
 
                     <Grid item xs={12} sm={3} md={3}>
                         <Box>
-                            <FormControl fullWidth size="small">
+                            <FormControl fullWidth variant="filled">
                                 <InputLabel id="output-air-select-label">
                                     Вытяжка
                                 </InputLabel>
@@ -404,7 +406,7 @@ export default function Page() {
                                                                         my: 0,
                                                                     }}
                                                                 >
-                                                                    Отопление1
+                                                                    Отопление
                                                                 </Typography>
                                                             </Stack>
                                                         </Tooltip>
