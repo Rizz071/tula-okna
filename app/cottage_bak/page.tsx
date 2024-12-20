@@ -25,18 +25,18 @@ import ImportContactsTwoToneIcon from "@mui/icons-material/ImportContactsTwoTone
 import SavingsOutlinedIcon from "@mui/icons-material/SavingsOutlined";
 
 import Image, { StaticImageData } from "next/image";
-import main_bg from "../../public/images/main-bg.webp";
-import kaleva_70 from "../../public/images/profiles/kaleva_70_3.jpg";
-import veka_70 from "../../public/images/profiles/veka_70_2.jpg";
-import veka_82 from "../../public/images/profiles/veka_82_1.jpg";
-import isoterma1 from "../../public/images/slides/profile_compare_house_1.jpg";
-import veka_compare_1 from "../../public/images/profiles/veka_compare_2_800px.jpg";
-import slide from "../../public/images/slides/apartment_slide_1.jpg";
-import steklopaket from "../../public/images/slides/steklopaket_1.jpg";
-import lamination_1 from "../../public/images/slides/lamination_1.jpg";
-import burglar_1 from "../../public/images/slides/burglar_1.jpg";
+import main_bg from "@/public/images/main-bg.webp";
+import kaleva_70 from "@/public/images/profiles/kaleva_70_3.jpg";
+import veka_70 from "@/public/images/profiles/veka_70_2.jpg";
+import veka_82 from "@/public/images/profiles/veka_82_1.jpg";
+import isoterma1 from "@/public/images/slides/profile_compare_house_1.jpg";
+import veka_compare_1 from "@/public/images/profiles/veka_compare_2_800px.jpg";
+import slide from "@/public/images/slides/apartment_slide_1.jpg";
+import steklopaket from "@/public/images/slides/steklopaket_1.jpg";
+import lamination_1 from "@/public/images/slides/lamination_1.jpg";
+import burglar_1 from "@/public/images/slides/burglar_1.jpg";
 
-import arrow_1 from "../../public/images/slides/arrow_1.svg";
+import arrow_1 from "@/public/images/slides/arrow_1.svg";
 
 export default function Page() {
     return (

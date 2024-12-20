@@ -27,31 +27,31 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import ImportContactsTwoToneIcon from "@mui/icons-material/ImportContactsTwoTone";
 import SavingsOutlinedIcon from "@mui/icons-material/SavingsOutlined";
 
-import portal_vector_1 from "../../public/images/slides/portal_vector_1.svg";
-import Front_small_3 from "../../public/images/Front_small_3.webp";
-import House from "../../public/images/House.webp";
-import Doors from "../../public/images/Doors.webp";
-import apartements1 from "../../public/images/apartements3_104px.jpg";
-import dacha1 from "../../public/images/dacha1_104px.jpeg";
+import portal_vector_1 from "@/public/images/slides/portal_vector_1.svg";
+import Front_small_3 from "@/public/images/Front_small_3.webp";
+import House from "@/public/images/House.webp";
+import Doors from "@/public/images/Doors.webp";
+import apartements1 from "@/public/images/apartements3_104px.jpg";
+import dacha1 from "@/public/images/dacha1_104px.jpeg";
 
 import Image, { StaticImageData } from "next/image";
-import main_bg from "../../public/images/main-bg.webp";
-import kaleva_70 from "../../public/images/profiles/kaleva_70_3.jpg";
-import veka_70 from "../../public/images/profiles/veka_70_2.jpg";
-import veka_82 from "../../public/images/profiles/veka_82_1.jpg";
-import isoterma1 from "../../public/images/slides/profile_compare_house_1.jpg";
-import veka_compare_1 from "../../public/images/profiles/veka_compare_2_800px.jpg";
-import slide from "../../public/images/slides/house_slide_2.jpg";
-import steklopaket from "../../public/images/slides/steklopaket_1.jpg";
-import lamination_1 from "../../public/images/slides/lamination_1.jpg";
-import glued from "../../public/images/slides/glued.jpg";
+import main_bg from "@/public/images/main-bg.webp";
+import kaleva_70 from "@/public/images/profiles/kaleva_70_3.jpg";
+import veka_70 from "@/public/images/profiles/veka_70_2.jpg";
+import veka_82 from "@/public/images/profiles/veka_82_1.jpg";
+import isoterma1 from "@/public/images/slides/profile_compare_house_1.jpg";
+import veka_compare_1 from "@/public/images/profiles/veka_compare_2_800px.jpg";
+import slide from "@/public/images/slides/house_slide_2.jpg";
+import steklopaket from "@/public/images/slides/steklopaket_1.jpg";
+import lamination_1 from "@/public/images/slides/lamination_1.jpg";
+import glued from "@/public/images/slides/glued.jpg";
 
-import windows_1 from "../../public/images/slides/windows_1.jpg";
-import burglar_1 from "../../public/images/slides/burglar_1.jpg";
+import windows_1 from "@/public/images/slides/windows_1.jpg";
+import burglar_1 from "@/public/images/slides/burglar_1.jpg";
 
 import SecuritySharpIcon from "@mui/icons-material/SecuritySharp";
 
-import arrow_1 from "../../public/images/slides/arrow_1.svg";
+import arrow_1 from "@/public/images/slides/arrow_1.svg";
 import { LaptopMac } from "@mui/icons-material";
 
 export default function Page() {
@@ -201,7 +201,7 @@ export default function Page() {
                 >
                     <Typography
                         fontWeight={"light"}
-                        paddingY={2}
+                        paddingY={3}
                         align="center"
                         sx={{
                             fontSize: {
@@ -266,12 +266,9 @@ export default function Page() {
                             rowGap={{ xs: 0, sm: 0 }}
                             justifyContent={"space-around"}
                         >
-                            <Grid item xs={12}>
-                                <Divider />
-                            </Grid>
                             <Grid item xs={12} marginY={0}>
                                 <Typography variant="h1">
-                                    Оконные и дверные блоки в дом
+                                    Оконные блоки в дом
                                 </Typography>
                             </Grid>
                             <Grid item xs={12}>

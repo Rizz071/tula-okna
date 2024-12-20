@@ -33,19 +33,36 @@ const ButtonImage = ({ caption, image, link = "" }: Props) => {
                         display: "flex",
                         flexDirection: "column",
                         padding: 0,
+                        alignItems: "flex-end",
                     }}
                 >
-                    <Image
-                        src={image.src}
-                        width={300}
-                        height={0}
+                    <Box
+                        margin={0}
+                        padding={0}
                         style={{
-                            width: "100%",
+                            width: "300px",
                             height: "400px",
+                            overflow: "hidden",
                         }}
-                        alt="windows pvc"
-                    />
+                    >
+                        <Image
+                            src={image.src}
+                            width={image.width}
+                            height={image.height}
+                            style={
+                                {
+                                    // position: "relative"
+                                    //     width: image.width,
+                                    //     height: "auto",
+                                }
+                            }
+                            // objectFit="contain"
+                            unoptimized
+                            alt="windows pvc"
+                        />
+                    </Box>
                     <Typography
+                        alignSelf={"flex-end"}
                         textTransform={"uppercase"}
                         paddingY={0.6}
                         marginTop={-5}
@@ -56,6 +73,7 @@ const ButtonImage = ({ caption, image, link = "" }: Props) => {
                         align={"center"}
                         width={"100%"}
                         sx={{ opacity: isHovering ? 0.9 : 0.7 }}
+                        // alignSelf={"flex-end"}
                     >
                         {caption}
                     </Typography>

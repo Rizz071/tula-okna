@@ -54,16 +54,16 @@ export default function Home() {
             <Container maxWidth="lg">
                 <Grid
                     container
-                    marginTop={0}
+                    marginTop={10}
                     columnSpacing={6}
                     rowSpacing={10}
                     direction="row"
                     alignItems={"flex-start"}
                     justifyContent={"space-between"}
                 >
-                    <Grid size={{ xs: 12 }} marginY={0}>
+                    <Grid size={{ xs: 12 }}>
                         <Typography variant="h1">
-                            Производитель окон в Туле с 1998 года
+                            Производитель окон с 1998 года
                         </Typography>
                     </Grid>
                     <Grid size={{ xs: 12, md: 6 }}>
@@ -1146,7 +1146,7 @@ export default function Home() {
                     </Grid>
                     <Grid size={{ xs: 12, md: 6 }}>
                         <Typography variant="h2">
-                            Установка окон "под ключ"
+                            Установка окон &quot;под ключ&quot;
                         </Typography>
                         <Typography>
                             Для того чтобы заказать оконные блоки или остекление

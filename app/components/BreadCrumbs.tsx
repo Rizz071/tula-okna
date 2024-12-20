@@ -16,28 +16,51 @@ const BreadCrumbs = () => {
 
         return name;
     });
-
+    console.log(paths);
     return (
-        <Breadcrumbs aria-label="breadcrumb" separator="›">
-            <Link color="inherit" href="/">
-                <Typography variant="overline">Главная</Typography>
-            </Link>
+        paths !== "/" && (
+            <Breadcrumbs
+                aria-label="breadcrumb"
+                separator="›"
+                sx={{
+                    marginX: 3,
+                    marginY: 0,
+                    padding: 0,
+                }}
+            >
+                <Link
+                    color="inherit"
+                    href="/"
+                    style={{ textDecoration: "none" }}
+                >
+                    <Typography variant="overline" color="red" fontWeight={100}>
+                        Главная
+                    </Typography>
+                </Link>
 
-            {pathNames.map((item, index) => {
-                return (
-                    <Link
-                        color="inherit"
-                        href={
-                            "/" +
-                            pathNamesOriginal.slice(0, index + 1).join("/")
-                        }
-                        key={index}
-                    >
-                        <Typography variant="overline">{item}</Typography>
-                    </Link>
-                );
-            })}
-        </Breadcrumbs>
+                {pathNames.map((item, index) => {
+                    return (
+                        <Link
+                            color="inherit"
+                            style={{ textDecoration: "none" }}
+                            href={
+                                "/" +
+                                pathNamesOriginal.slice(0, index + 1).join("/")
+                            }
+                            key={index}
+                        >
+                            <Typography
+                                variant="overline"
+                                color="red"
+                                fontWeight={300}
+                            >
+                                {item}
+                            </Typography>
+                        </Link>
+                    );
+                })}
+            </Breadcrumbs>
+        )
     );
 };
 
