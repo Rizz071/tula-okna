@@ -26,7 +26,6 @@ import Image from "next/image";
 import glassprom1 from "../public/images/glassprom1.jpg";
 import besedka from "../public/images/besedka.webp";
 import AllVsVeka from "../public/images/slides/AllVsVeka.png";
-import FirstPageComparement from "./components/FirstPageComparement";
 import worker_plant_1 from "../public/images/slides/worker_plant_1.jpg";
 import veka_profil_ugol from "../public/images/slides/Softline_70_verh-niz_2.png";
 import real_economy_1 from "../public/images/slides/real_economy_1.jpg";
@@ -164,7 +163,8 @@ export default function Home() {
                                 }}
                             />
                             <Typography variant="subtitle2">
-                                Производственный цех нашего партнёра сегодня
+                                Производственный цех нашего партнёра ЗСК
+                                ГЛАССПРОМ
                             </Typography>
                         </Box>
                     </Grid>
@@ -248,6 +248,7 @@ export default function Home() {
             <Box
                 width={"100%"}
                 bgcolor="lightgoldenrodyellow"
+                textAlign={"center"}
                 paddingY={2}
                 marginY={16}
                 lineHeight={2}

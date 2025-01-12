@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Typography, Grid, Divider } from "@mui/material";
+import { Container, Typography, Divider } from "@mui/material";
+import Grid from "@mui/material/Grid2";
 
 import NextLink from "next/link";
 import { Link as MUILink } from "@mui/material";
@@ -19,62 +20,41 @@ export default function Page() {
                 rowSpacing={10}
                 direction={"row"}
                 alignItems={"flex-start"}
-                justifyContent={"center"}
             >
-                <Grid item xs={12}>
-                    <Typography variant="h1">Окна ВЕКА</Typography>
+                <Grid size={{ xs: 12 }}>
+                    <Typography variant="h1">Частным лицам</Typography>
+                    <Typography></Typography>
                 </Grid>
-                <Grid item marginY={0}>
-                    <ButtonImage caption="VEKA Euroline 58" image={okna_pvc} />
+                <Grid size={{ xs: 12, md: 4 }}>
+                    <ButtonImage
+                        caption="Окна в квартиру"
+                        image={okna_pvc}
+                        link={"/okna/apartments"}
+                    />
                 </Grid>
-                <Grid item marginY={0}>
-                    <ButtonImage caption="VEKA Softline 70" image={okna_alu} />
+                <Grid size={{ xs: 12, md: 4 }}>
+                    <ButtonImage
+                        caption="Окна в коттедж"
+                        image={okna_alu}
+                        link={"/okna/cottage"}
+                    />
                 </Grid>
-                <Grid item marginY={0}>
-                    <ButtonImage caption="VEKA Softline 82" image={okna_alu} />
+                <Grid size={{ xs: 12, md: 4 }}>
+                    <ButtonImage caption="Окна на дачу" image={okna_alu} />
                 </Grid>
 
-                <Grid item xs={12}>
+                <Grid size={{ xs: 12 }}>
                     <Divider />
                 </Grid>
 
-                <Grid item xs={12}>
-                    <Typography variant="h1">Окна РЕХАУ</Typography>
+                <Grid size={{ xs: 12 }}>
+                    <Typography variant="h1">Предприятиям</Typography>
                 </Grid>
-                <Grid item marginY={0}>
-                    <ButtonImage caption="REHAU Blitz 60" image={okna_pvc} />
+                <Grid size={{ xs: 12, md: 4 }}>
+                    <ButtonImage caption="Окна в офис" image={okna_pvc} />
                 </Grid>
-                <Grid item marginY={0}>
-                    <ButtonImage
-                        caption="REHAU Constanta 60"
-                        image={okna_alu}
-                    />
-                </Grid>
-                <Grid item marginY={0}>
-                    <ButtonImage caption="REHAU Grazio 70" image={okna_alu} />
-                </Grid>
-                <Grid item marginY={0}>
-                    <ButtonImage caption="REHAU Delight 70" image={okna_alu} />
-                </Grid>
-                <Grid item marginY={0}>
-                    <ButtonImage caption="REHAU Intelio 80" image={okna_alu} />
-                </Grid>
-
-                <Grid item xs={12}>
-                    <Divider />
-                </Grid>
-
-                <Grid item xs={12}>
-                    <Typography variant="h1">Окна КАЛЕВА</Typography>
-                </Grid>
-                <Grid item marginY={0}>
-                    <ButtonImage caption="KALEVA Profi 60" image={okna_pvc} />
-                </Grid>
-                <Grid item marginY={0}>
-                    <ButtonImage
-                        caption="KALEVA Standart 70"
-                        image={okna_alu}
-                    />
+                <Grid size={{ xs: 12, md: 4 }}>
+                    <ButtonImage caption="Окна в цех" image={okna_alu} />
                 </Grid>
             </Grid>
         </Container>

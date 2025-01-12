@@ -23,17 +23,8 @@ import Button from "@mui/material/Button";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
-
 import ImportContactsTwoToneIcon from "@mui/icons-material/ImportContactsTwoTone";
-import SavingsOutlinedIcon from "@mui/icons-material/SavingsOutlined";
-
 import portal_vector_1 from "@/public/images/slides/portal_vector_1.svg";
-import Front_small_3 from "@/public/images/Front_small_3.webp";
-import House from "@/public/images/House.webp";
-import Doors from "@/public/images/Doors.webp";
-import apartements1 from "@/public/images/apartements3_104px.jpg";
-import dacha1 from "@/public/images/dacha1_104px.jpeg";
-
 import Image, { StaticImageData } from "next/image";
 import main_bg from "@/public/images/main-bg.webp";
 import kaleva_70 from "@/public/images/profiles/kaleva_70_3.jpg";
@@ -45,14 +36,9 @@ import slide from "@/public/images/slides/house_slide_2.jpg";
 import steklopaket from "@/public/images/slides/steklopaket_1.jpg";
 import lamination_1 from "@/public/images/slides/lamination_1.jpg";
 import glued from "@/public/images/slides/glued.jpg";
-
 import windows_1 from "@/public/images/slides/windows_1.jpg";
 import burglar_1 from "@/public/images/slides/burglar_1.jpg";
-
 import SecuritySharpIcon from "@mui/icons-material/SecuritySharp";
-
-import arrow_1 from "@/public/images/slides/arrow_1.svg";
-import { LaptopMac } from "@mui/icons-material";
 
 export default function Page() {
     return (
@@ -271,9 +257,6 @@ export default function Page() {
                                     Оконные блоки в дом
                                 </Typography>
                             </Grid>
-                            <Grid item xs={12}>
-                                <Divider />
-                            </Grid>
                             <Grid
                                 item
                                 xs={12}
@@ -335,22 +318,30 @@ export default function Page() {
                                             </Typography>
                                         </AccordionSummary>
                                         <AccordionDetails>
-                                            <Box>
-                                                <Typography>
-                                                    <strong>
-                                                        <u>
-                                                            Почему именно 3
-                                                            стекла?
-                                                        </u>
-                                                    </strong>
+                                            <Box
+                                                bgcolor={"lightyellow"}
+                                                padding={2}
+                                            >
+                                                <Typography
+                                                    variant="h6"
+                                                    marginTop={2}
+                                                    gutterBottom
+                                                >
+                                                    Почему именно 3 стекла?
                                                 </Typography>
-                                                <Typography>
+                                                <Typography
+                                                    variant="subtitle1"
+                                                    gutterBottom
+                                                >
                                                     При 2 стеклах - будет
                                                     слишком холодно. Отопление
                                                     станет слишком затратным.
                                                     Снижается шумоизоляция.
                                                 </Typography>
-                                                <Typography>
+                                                <Typography
+                                                    variant="subtitle1"
+                                                    gutterBottom
+                                                >
                                                     При 4 стеклах - теряется
                                                     прозрачность, увеличивается
                                                     весовая нагрузка на
@@ -360,16 +351,18 @@ export default function Page() {
                                                     случай загородного дома.
                                                 </Typography>
 
-                                                <Typography>
-                                                    <strong>
-                                                        <u>
-                                                            Почему стеклопакет
-                                                            должен быть шириной
-                                                            от 40мм ?
-                                                        </u>
-                                                    </strong>
+                                                <Typography
+                                                    variant={"h6"}
+                                                    marginTop={2}
+                                                    gutterBottom
+                                                >
+                                                    Почему стеклопакет должен
+                                                    быть шириной от 40мм ?
                                                 </Typography>
-                                                <Typography>
+                                                <Typography
+                                                    variant="subtitle1"
+                                                    gutterBottom
+                                                >
                                                     Чем шире изолирующий слой
                                                     воздуха в стеклопакете, тем
                                                     он теплее. Например,
@@ -381,7 +374,10 @@ export default function Page() {
                                                     воздушные камеры имеют
                                                     ширину 10мм.
                                                 </Typography>
-                                                <Typography>
+                                                <Typography
+                                                    variant="subtitle1"
+                                                    gutterBottom
+                                                >
                                                     В то же время у стеклопакета
                                                     шириной 40мм воздушные
                                                     камеры составляют 14мм. Его
@@ -389,7 +385,10 @@ export default function Page() {
                                                     теплопередаче - 0,6, и это
                                                     теплее на 22%
                                                 </Typography>
-                                                <Typography>
+                                                <Typography
+                                                    variant="subtitle1"
+                                                    gutterBottom
+                                                >
                                                     Почему же не увеличивать
                                                     расстояние между стёклами
                                                     бесконечно? Дело в том, что
@@ -401,17 +400,16 @@ export default function Page() {
                                                     из-за неравномерного нагрева
                                                     стекла солнечными лучами.
                                                 </Typography>
-                                                <Typography>
-                                                    <strong>
-                                                        <u>
-                                                            Что такое
-                                                            энергосберегающее
-                                                            напыление ?
-                                                        </u>
-                                                    </strong>
+                                                <Typography
+                                                    variant="h6"
+                                                    marginTop={2}
+                                                    gutterBottom
+                                                >
+                                                    Что такое энергосберегающее
+                                                    напыление ?
                                                 </Typography>
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant="subtitle1"
                                                     gutterBottom
                                                 >
                                                     Это - революционная
@@ -421,7 +419,7 @@ export default function Page() {
                                                     одном из стекол.
                                                 </Typography>
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant="subtitle1"
                                                     gutterBottom
                                                 >
                                                     Оно эффективно отражает
@@ -433,7 +431,7 @@ export default function Page() {
                                                     поступающий летом с улицы.
                                                 </Typography>
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant="subtitle1"
                                                     gutterBottom
                                                 >
                                                     При замечательных
@@ -504,19 +502,17 @@ export default function Page() {
                                         key={Math.round(Math.random() * 10000)}
                                     >
                                         <strong>
-                                            ПВХ-профиль станет оптимальным
-                                            выбором
+                                            ПВХ-профиль оптимальный выбор
                                         </strong>
-                                        .
                                     </Box>,
                                     <Box
                                         component="p"
                                         key={Math.round(Math.random() * 10000)}
                                     >
                                         Этот материал значительно теплее
-                                        алюминиевого профиля с терморазрывом и
-                                        существенно дешевле как алюминиевых
-                                        окон, так и деревянных.
+                                        алюминиевого профиля с терморазрывом, и
+                                        существенно дешевле как алюминиевых, так
+                                        и деревянных окон.
                                     </Box>,
 
                                     <Accordion
@@ -539,21 +535,19 @@ export default function Page() {
                                             </Typography>
                                         </AccordionSummary>
                                         <AccordionDetails>
-                                            <Box>
+                                            <Box
+                                                bgcolor={"lightyellow"}
+                                                padding={2}
+                                            >
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant={"h6"}
                                                     gutterBottom
                                                 >
-                                                    <strong>
-                                                        <u>
-                                                            Почему не тёплый
-                                                            алюминий и не
-                                                            дерево?
-                                                        </u>
-                                                    </strong>
+                                                    Почему не тёплый алюминий и
+                                                    не дерево?
                                                 </Typography>
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant="subtitle1"
                                                     gutterBottom
                                                 >
                                                     К примеру, самый широкий
@@ -563,7 +557,7 @@ export default function Page() {
                                                     ПВХ-профилю глубиной 60мм.
                                                 </Typography>
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant="subtitle1"
                                                     gutterBottom
                                                 >
                                                     Дерево, в свою очередь,
@@ -577,7 +571,7 @@ export default function Page() {
                                                     доме.
                                                 </Typography>
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant="subtitle1"
                                                     gutterBottom
                                                 >
                                                     Часто можно слышать
@@ -671,26 +665,25 @@ export default function Page() {
                                             </Typography>
                                         </AccordionSummary>
                                         <AccordionDetails>
-                                            <Box>
+                                            <Box
+                                                bgcolor={"lightyellow"}
+                                                padding={2}
+                                            >
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant={"h6"}
                                                     gutterBottom
                                                 >
-                                                    <strong>
-                                                        <u>
-                                                            Почему именно 70мм ?
-                                                        </u>
-                                                    </strong>
+                                                    Почему именно 70мм ?
                                                 </Typography>
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant="subtitle1"
                                                     gutterBottom
                                                 >
                                                     Возьмём данные из ГОСТ
                                                     26602.1-99, ГОСТ 24866-99
                                                 </Typography>
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant="subtitle1"
                                                     gutterBottom
                                                 >
                                                     Минимально подходящий
@@ -699,7 +692,7 @@ export default function Page() {
                                                     (4М1-12-4М1-12-И4).
                                                 </Typography>
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant="subtitle1"
                                                     gutterBottom
                                                 >
                                                     Его коэффициент
@@ -707,7 +700,7 @@ export default function Page() {
                                                     - 0,68
                                                 </Typography>
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant="subtitle1"
                                                     gutterBottom
                                                 >
                                                     В свою очередь, коэффициент
@@ -717,7 +710,7 @@ export default function Page() {
                                                     армирование внутри) - 0,79
                                                 </Typography>
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant="subtitle1"
                                                     gutterBottom
                                                 >
                                                     Получается, что такое
@@ -726,7 +719,7 @@ export default function Page() {
                                                     в окне отлично.
                                                 </Typography>
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant="subtitle1"
                                                     gutterBottom
                                                 >
                                                     А если взять профиль 60мм?
@@ -740,7 +733,7 @@ export default function Page() {
                                                     коттеджа.
                                                 </Typography>
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant="subtitle1"
                                                     gutterBottom
                                                 >
                                                     Во-вторых, даже если бы наш
@@ -749,7 +742,7 @@ export default function Page() {
                                                     профиля 60мм всего - 0,64
                                                 </Typography>
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant="subtitle1"
                                                     gutterBottom
                                                 >
                                                     Это меньше, чем у
@@ -893,22 +886,20 @@ export default function Page() {
                                                 </Typography>
                                             </AccordionSummary>
                                             <AccordionDetails>
-                                                <Box>
+                                                <Box
+                                                    bgcolor={"lightyellow"}
+                                                    padding={2}
+                                                >
                                                     <Typography
-                                                        fontWeight={"light"}
+                                                        variant={"h6"}
                                                         gutterBottom
                                                     >
-                                                        <strong>
-                                                            <u>
-                                                                Можно ли не
-                                                                использовать
-                                                                вклейку для
-                                                                входных дверей?
-                                                            </u>
-                                                        </strong>
+                                                        Можно ли не использовать
+                                                        вклейку для входных
+                                                        дверей?
                                                     </Typography>
                                                     <Typography
-                                                        fontWeight={"light"}
+                                                        variant="subtitle1"
                                                         gutterBottom
                                                     >
                                                         Да, можно. Однако, у нас
@@ -920,21 +911,16 @@ export default function Page() {
                                                         эксплуатации двери.
                                                     </Typography>
                                                     <Typography
-                                                        fontWeight={"light"}
+                                                        variant={"h6"}
                                                         gutterBottom
                                                     >
-                                                        <strong>
-                                                            <u>
-                                                                Что делать, если
-                                                                стеклопакет
-                                                                разобьётся?
-                                                                Можно ли его
-                                                                будет заменить?
-                                                            </u>
-                                                        </strong>
+                                                        Что делать, если
+                                                        стеклопакет разобьётся?
+                                                        Можно ли его будет
+                                                        заменить?
                                                     </Typography>
                                                     <Typography
-                                                        fontWeight={"light"}
+                                                        variant="subtitle1"
                                                         gutterBottom
                                                     >
                                                         Да, вклееный стеклопает
@@ -1059,22 +1045,19 @@ export default function Page() {
                                             </Typography>
                                         </AccordionSummary>
                                         <AccordionDetails>
-                                            <Box>
+                                            <Box
+                                                bgcolor={"lightyellow"}
+                                                padding={2}
+                                            >
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant={"h6"}
                                                     gutterBottom
                                                 >
-                                                    <strong>
-                                                        <u>
-                                                            Есть ли другие
-                                                            варианты
-                                                            производства цветных
-                                                            окон ?
-                                                        </u>
-                                                    </strong>
+                                                    Есть ли другие варианты
+                                                    производства цветных окон ?
                                                 </Typography>
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant="subtitle1"
                                                     gutterBottom
                                                 >
                                                     Да, существует технология
@@ -1082,7 +1065,7 @@ export default function Page() {
                                                     специальной краской.
                                                 </Typography>
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant="subtitle1"
                                                     gutterBottom
                                                 >
                                                     Такую краску производит
@@ -1091,7 +1074,7 @@ export default function Page() {
                                                     немецкий Zobel.
                                                 </Typography>
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant="subtitle1"
                                                     gutterBottom
                                                 >
                                                     Однако, стойкость окрашенной
@@ -1101,7 +1084,7 @@ export default function Page() {
                                                     царапается.
                                                 </Typography>
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant="subtitle1"
                                                     gutterBottom
                                                 >
                                                     Несмотря на это, мы активном
@@ -1111,7 +1094,7 @@ export default function Page() {
                                                     техническим заданием.
                                                 </Typography>
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant="subtitle1"
                                                     gutterBottom
                                                 >
                                                     Окрашивать же лицевые части
@@ -1241,21 +1224,20 @@ export default function Page() {
                                             </Typography>
                                         </AccordionSummary>
                                         <AccordionDetails>
-                                            <Box>
+                                            <Box
+                                                bgcolor={"lightyellow"}
+                                                padding={2}
+                                            >
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant="h6"
                                                     gutterBottom
                                                 >
-                                                    <strong>
-                                                        <u>
-                                                            Нужно ли вкладывать
-                                                            в дорогую
-                                                            противовзломность ?
-                                                        </u>
-                                                    </strong>
+                                                    Нужно ли вкладывать средства
+                                                    в более дорогую
+                                                    противовзломность ?
                                                 </Typography>
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant="subtitle1"
                                                     gutterBottom
                                                 >
                                                     При установке
@@ -1270,14 +1252,14 @@ export default function Page() {
                                                     значительно повысится.
                                                 </Typography>
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant="subtitle1"
                                                     gutterBottom
                                                 >
                                                     Несколько минут на взлом -
                                                     это много или мало?
                                                 </Typography>
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant="subtitle1"
                                                     gutterBottom
                                                 >
                                                     Если дом и участок
@@ -1289,7 +1271,7 @@ export default function Page() {
                                                     вызов.
                                                 </Typography>
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant="subtitle1"
                                                     gutterBottom
                                                 >
                                                     В этом случае вложения в
@@ -1297,7 +1279,7 @@ export default function Page() {
                                                     оправданы.
                                                 </Typography>
                                                 <Typography
-                                                    fontWeight={"light"}
+                                                    variant="subtitle1"
                                                     gutterBottom
                                                 >
                                                     Если же такой комплексной

@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -8,12 +10,16 @@ import Image from "next/image";
 import logoImage from "../../public/images/Logo1.svg";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 import CalculateOutlinedIcon from "@mui/icons-material/CalculateOutlined";
+import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import DrawerMobileMenu from "./DrawerMobileMenu";
 import { Container } from "@mui/material";
 import Link from "next/link";
 import BreadCrumbs from "./BreadCrumbs";
 
 const Navbar = () => {
+    const [isContactsVisible, setIsContactsVisible] =
+        React.useState<boolean>(false);
+
     return (
         <Container maxWidth="lg">
             <Box sx={{ flexGrow: 1 }}>
@@ -149,37 +155,32 @@ const Navbar = () => {
                                     Подбор типа окна
                                 </Typography>
                             </Button>
-                        </Box>
-                        <Box
-                            sx={{ display: { xs: "none", md: "flex" } }}
-                            flexDirection={"row"}
-                            alignSelf={"center"}
-                            gap={2}
-                        >
-                            <Box
-                                display={"flex"}
-                                flexDirection={"column"}
-                                gap={1}
+
+                            <Button
+                                sx={{
+                                    color: "#e74f21",
+                                    paddingY: "3px",
+                                    mr: "auto",
+                                }}
+                                startIcon={
+                                    <MapOutlinedIcon
+                                        sx={{
+                                            width: { lg: 35 },
+                                            height: { lg: 35 },
+                                        }}
+                                    />
+                                }
                             >
-                                {/* <Typography fontWeight="fontWeightLight">
-                                    О компании
-                                </Typography> */}
-                                <Typography margin={0}>
-                                    Порядок работы
-                                </Typography>
-                                <Typography margin={0}>
+                                <Typography
+                                    color="#e74f21"
+                                    fontWeight={"light"}
+                                    sx={{ textTransform: "none" }}
+                                    fontSize={"large"}
+                                    margin={0}
+                                >
                                     Схема проезда
                                 </Typography>
-                            </Box>
-                            <Box
-                                display={"flex"}
-                                flexDirection={"column"}
-                                gap={1}
-                            >
-                                {/* <Typography fontWeight="fontWeightLight">
-                                    Услуги
-                                </Typography> */}
-                            </Box>
+                            </Button>
                         </Box>
                         <Box
                             sx={{ display: { xs: "none", sm: "flex" } }}
@@ -188,35 +189,56 @@ const Navbar = () => {
                             justifyContent={"flex-end"}
                             textAlign={"right"}
                         >
-                            <Typography
-                                fontSize={"0.9rem"}
-                                lineHeight={"1.2rem"}
-                                fontWeight={"light"}
+                            <Button
+                                variant={"contained"}
+                                color="success"
+                                sx={{
+                                    display: isContactsVisible
+                                        ? "none"
+                                        : "block",
+                                    mt: 0,
+                                    // height: 50,
+                                }}
+                                onClick={() => {
+                                    setIsContactsVisible(!isContactsVisible);
+                                }}
                             >
-                                Пн - Пт с 9:00 до 19:00
-                            </Typography>
-                            {/* <Typography
-                                fontSize={"0.9rem"}
-                                lineHeight={"1.2rem"}
-                                fontWeight={"light"}
+                                Показать телефон и почту
+                            </Button>
+                            <Box
+                                sx={{
+                                    display: isContactsVisible
+                                        ? "block"
+                                        : "none",
+                                }}
                             >
-                                Телефон в г.Туле
-                            </Typography> */}
-                            <Typography variant="h5">
-                                <span style={{ fontWeight: "lighter" }}>
-                                    +7 (4872)
-                                </span>{" "}
-                                38-55-50
-                            </Typography>
-                            <Typography
-                                fontSize={"0.9rem"}
-                                // lineHeight={"1.2rem"}
-                                fontWeight={"light"}
-                                color="#e74f21"
-                                margin={0}
-                            >
-                                Почта: 385391@mail.ru
-                            </Typography>
+                                <Typography
+                                    fontSize={"0.9rem"}
+                                    lineHeight={"1.2rem"}
+                                >
+                                    Телефон в г.Туле
+                                </Typography>
+                                <Typography variant="h5">
+                                    +7 (4872) 38-55-50
+                                </Typography>
+                                <Typography
+                                    fontSize={"0.9rem"}
+                                    color="#e74f21"
+                                    margin={0}
+                                >
+                                    Почта: 385391@mail.ru
+                                </Typography>
+
+                                <Typography
+                                    fontSize={"0.9rem"}
+                                    lineHeight={"1.2rem"}
+                                    fontWeight={"light"}
+                                >
+                                    Пн - Пт 9:00 - 19:00
+                                    <br />
+                                    Сб 10.00 - 15.00
+                                </Typography>
+                            </Box>
                         </Box>
                     </Toolbar>
                     <Toolbar
@@ -231,18 +253,52 @@ const Navbar = () => {
                         }}
                     >
                         <Link href={"/okna"} style={{ textDecoration: "none" }}>
-                            <Typography>ОКНА</Typography>
+                            <Typography
+                                fontWeight={400}
+                                color="black"
+                                letterSpacing={1.5}
+                            >
+                                ОКНА
+                            </Typography>
                         </Link>
-                        <Typography>ДВЕРИ</Typography>
-                        <Typography>БАЛКОНЫ</Typography>
-                        <Typography>ПОРТАЛЫ</Typography>
-                        <Typography>ФАСАДНОЕ ОСТЕКЛЕНИЕ</Typography>
-                        <Typography>ЦЕНЫ</Typography>
-                        <Typography>ПОРТФОЛИО</Typography>
-
-                        {/* <Typography>ПРОДУКЦИЯ</Typography>
-                        <Typography>ЦЕНЫ</Typography>
-                        <Typography>ПОРТФОЛИО</Typography> */}
+                        <Typography
+                            fontWeight={400}
+                            color="black"
+                            letterSpacing={1.5}
+                        >
+                            ДВЕРИ
+                        </Typography>
+                        <Typography
+                            fontWeight={400}
+                            color="black"
+                            letterSpacing={1.5}
+                        >
+                            БАЛКОНЫ
+                        </Typography>
+                        <Typography
+                            fontWeight={400}
+                            color="black"
+                            letterSpacing={1.5}
+                        >
+                            ПОРТАЛЫ
+                        </Typography>
+                        <Typography
+                            fontWeight={400}
+                            color="black"
+                            letterSpacing={1.5}
+                        >
+                            ФАСАДНОЕ ОСТЕКЛЕНИЕ
+                        </Typography>
+                        <Typography
+                            fontWeight={400}
+                            color="black"
+                            letterSpacing={1.5}
+                        >
+                            ЦЕНЫ
+                        </Typography>
+                        <Typography fontWeight={400} color="black">
+                            ПОРТФОЛИО
+                        </Typography>
                     </Toolbar>
                     <BreadCrumbs />
                 </AppBar>

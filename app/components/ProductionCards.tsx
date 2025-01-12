@@ -69,7 +69,7 @@ const ProductionCards = () => {
                             <ProductionTypeCard
                                 imgSrc={apartements1}
                                 caption={"Остекление квартир"}
-                                link={"6 000"}
+                                link={"/okna/apartments"}
                             />
                         </Grid>
                         <Grid item xs={12} sm={4} md={6} lg={4}>

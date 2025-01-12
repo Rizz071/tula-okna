@@ -12,14 +12,13 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 
-import { styled } from "@mui/system";
+import { color, fontSize, styled } from "@mui/system";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 
 import background from "../../public/images/stoimost-fon.png";
 import man_image from "../../public/images/stoimost-img.webp";
 import AttachEmailIcon from "@mui/icons-material/AttachEmail";
-import AttachFileIcon from "@mui/icons-material/AttachFile";
 import SendIcon from "@mui/icons-material/Send";
 import FileUploadOutlined from "@mui/icons-material/FileUploadOutlined";
 
@@ -121,6 +120,7 @@ const OfferRequest = () => {
                                             }}
                                             textAlign={"left"}
                                             margin={0}
+                                            fontWeight={400}
                                         >
                                             &nbsp;Отправьте заказ на расчёт
                                         </Typography>
@@ -131,14 +131,16 @@ const OfferRequest = () => {
                                             xs: "justify",
                                             md: "left",
                                         }}
-                                        fontWeight={"light"}
                                         fontSize={{
                                             xs: "0.9rem",
                                             md: "1rem",
                                         }}
+                                        fontWeight={400}
                                     >
-                                        ... и мы пришлём стоимость в течение 1-2
-                                        дней!
+                                        Пришлём расчёт стоимости в течение 1
+                                        рабочего дня.
+                                        <br />
+                                        Не будем беспокоить голосовыми звонками!
                                     </Typography>
                                 </Grid>
 
@@ -149,7 +151,6 @@ const OfferRequest = () => {
                                     rowGap={2}
                                     order={{ xs: 3, md: 2 }}
                                 >
-                                    {/* <form onSubmit={handleSubmitSketch}> */}
                                     <Box>
                                         <StyledTextField
                                             fullWidth
@@ -181,10 +182,20 @@ const OfferRequest = () => {
                                             InputProps={{
                                                 startAdornment: (
                                                     <InputAdornment position="start">
-                                                        <FileUploadOutlined />
+                                                        <FileUploadOutlined
+                                                            style={{
+                                                                fontWeight: 300,
+                                                                color: "black",
+                                                            }}
+                                                        />
                                                         {!files ? (
                                                             <Typography
-                                                                sx={{ m: 0 }}
+                                                                margin={0}
+                                                                color="black"
+                                                                fontWeight={400}
+                                                                fontSize={
+                                                                    "medium"
+                                                                }
                                                             >
                                                                 &nbsp;Приложить
                                                                 файлы
@@ -292,7 +303,7 @@ const OfferRequest = () => {
                                             variant="contained"
                                             onClick={handleSubmitSketch}
                                         >
-                                            Отправить заявку
+                                            Отправить на расчёт
                                         </Button>
                                     </Box>
                                 </Grid>
@@ -350,7 +361,6 @@ const OfferRequest = () => {
                         </Grid>
 
                         <Grid item xs={12} sm={5}>
-                            {/* <Box display={"flex"} flexDirection={"column"}> */}
                             <Typography
                                 fontSize={{
                                     xs: "1rem",
@@ -395,6 +405,12 @@ const OfferRequest = () => {
                                         ? "block"
                                         : "none",
                                 }}
+                                marginTop={2}
+                                padding={1}
+                                bgcolor={"white"}
+                                border={1}
+                                borderColor={"lightgrey"}
+                                borderRadius={2}
                             >
                                 <Typography
                                     fontSize={{
@@ -403,25 +419,31 @@ const OfferRequest = () => {
                                         md: "1.3rem",
                                         xl: "1.5rem",
                                     }}
+                                    margin={0}
+                                    fontWeight={500}
                                     align="right"
                                 >
-                                    +7 (4872) 38-55-50
+                                    Тел: +7 (4872) 38-55-50
                                 </Typography>
                                 <Typography
                                     align="right"
                                     variant={"subtitle1"}
                                     fontSize={{
-                                        xs: "0.8rem",
+                                        xs: "1rem",
                                     }}
+                                    fontWeight={400}
                                 >
-                                    Ежедневно с 9.00 до 19:00
+                                    Пн-Пт: 9.00 - 19:00
+                                    <br />
+                                    Сб: 10.00 - 15.00
                                 </Typography>
                                 <Typography
                                     align="right"
                                     variant={"subtitle1"}
                                     fontSize={{
-                                        xs: "0.8rem",
+                                        xs: "1rem",
                                     }}
+                                    fontWeight={400}
                                 >
                                     Почта:{" "}
                                     <a href="mailto:385391@mail.ru">
@@ -461,6 +483,8 @@ const StyledTextField = styled(TextField)({
     },
     variant: "outlined",
     label: {
-        fontWeight: 300,
+        color: "black",
+        fontSize: "medium",
+        fontWeight: 400,
     },
 });

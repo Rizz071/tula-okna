@@ -1,20 +1,28 @@
 "use client";
 
-import React, { ReactNode } from "react";
+import React from "react";
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { Box, Breadcrumbs, Typography } from "@mui/material";
+import { Breadcrumbs, Typography } from "@mui/material";
 
 const BreadCrumbs = () => {
     const paths = usePathname();
     const pathNamesOriginal = paths.split("/").filter((path) => path);
 
     const pathNames = pathNamesOriginal.map((name) => {
-        if (name == "okna") return "окна";
-        if (name == "plastikovye-okna") return "пластиковые окна";
-
-        return name;
+        switch (name) {
+            case "okna":
+                return "окна";
+            case "plastikovye-okna":
+                return "пластиковые окна";
+            case "cottage":
+                return "в частный дом";
+            case "apartments":
+                return "в квартиру";
+            default:
+                return name;
+        }
     });
     console.log(paths);
     return (

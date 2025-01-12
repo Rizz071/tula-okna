@@ -32,14 +32,14 @@ const ProductionTypeCard = ({ imgSrc, caption, link }: Props) => {
                 <Typography
                     sx={{
                         fontSize: { xs: "large", sm: "large", md: "larger" },
-                        fontWeight: "light",
+                        fontWeight: 300,
                         textAlign: { xs: "center", md: "left" },
                         my: 0,
                     }}
                 >
                     {caption}
                 </Typography>
-                <Button variant="outlined" size="small">
+                <Button variant="outlined" size="small" href={link}>
                     ПЕРЕЙТИ
                 </Button>
             </Box>
