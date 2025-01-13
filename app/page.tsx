@@ -254,14 +254,13 @@ export default function Home() {
                 lineHeight={2}
             >
                 {[
-                    "Используем полновесное армирование профиля - толщиной от 1.5 до 2.5мм",
+                    "Используем полновесное армирование по ГОСТ - толщиной от 1.5 до 2.5мм",
                     "Для больших конструкций применяем технологию вклейки стеклопакета в створку",
-                    "Устанавливаем проверенную фурнитуру от G-U и ROTO",
+                    "Устанавливаем немецкую фурнитуру Gretsch Unitas и ROTO",
                 ].map((item, index) => {
                     return (
                         <Typography
                             key={index}
-                            variant="sliderFont"
                             fontSize={{ xs: "1.7rem", sm: "30px" }}
                             fontWeight={"light"}
                             textAlign={"center"}
@@ -276,9 +275,6 @@ export default function Home() {
 
             <Container maxWidth="lg">
                 <Grid container columnSpacing={8} rowSpacing={10}>
-                    <Grid size={{ xs: 12 }}>
-                        <Divider />
-                    </Grid>
                     <Grid
                         size={{ xs: 12, md: 6 }}
                         alignItems="center"
