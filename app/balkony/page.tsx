@@ -4,15 +4,10 @@ import {
     Box,
     Typography,
     Grid,
-    Paper,
     Divider,
     List,
     ListItem,
-    Link as MuiLink,
 } from "@mui/material";
-
-import NextLink from "next/link";
-import { Link as MUILink } from "@mui/material";
 
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -24,7 +19,6 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ImportContactsTwoToneIcon from "@mui/icons-material/ImportContactsTwoTone";
-import portal_vector_1 from "@/public/images/slides/portal_vector_1.svg";
 import Image, { StaticImageData } from "next/image";
 import main_bg from "@/public/images/main-bg.webp";
 import kaleva_70 from "@/public/images/profiles/kaleva_70_3.jpg";
@@ -36,11 +30,36 @@ import slide from "@/public/images/balkoni/BalcFront1.jpg";
 import steklopaket from "@/public/images/slides/steklopaket_1.jpg";
 import lamination_1 from "@/public/images/slides/lamination_1.jpg";
 import glued from "@/public/images/slides/glued.jpg";
-import cold_ostekl from "@/public/images/balkoni/Provedal_banner.jpg";
+import cold_ostekl from "@/public/images/balkoni/cold_ostekl_tmblr.jpg";
 import tepl_ostekl from "@/public/images/balkoni/tepl_ostek_tmblr.jpg";
+import otdelka from "@/public/images/balkoni/otdelka_tmblr.jpg";
 import burglar_1 from "@/public/images/slides/burglar_1.jpg";
 import SecuritySharpIcon from "@mui/icons-material/SecuritySharp";
-import ButtonImage from "../components/ButtonImage";
+import { IProductionCard } from "../lib/types";
+import ProductionCardsContainer from "../components/ProductionCardsContainer";
+
+const cardsArray: IProductionCard[] = [
+    {
+        image: cold_ostekl,
+        caption: "Холодное остекление",
+        link: "/okna/apartments",
+    },
+    {
+        image: tepl_ostekl,
+        caption: "Тёплое остекление",
+        link: "/balkony",
+    },
+    {
+        image: otdelka,
+        caption: "Внутренняя отделка",
+        link: "/okna/cottage",
+    },
+    // {
+    //     image: cold_ostekl,
+    //     caption: "Шкафы-купе",
+    //     link: "6 000",
+    // },
+];
 
 export default function Page() {
     return (
@@ -166,79 +185,7 @@ export default function Page() {
                 </Box>
             </Box>
 
-            <Container>
-                <Paper
-                    elevation={4}
-                    square={false}
-                    color="white"
-                    sx={{
-                        position: "relative",
-                        zIndex: "100",
-                        textAlign: "center",
-                        mt: {
-                            xs: -5,
-                            sm: -5,
-                            md: -10,
-                            lg: -15,
-                            xl: -11,
-                        },
-                        transform: "translate(-50%, 0%)",
-                        left: "50%",
-                        maxWidth: "lg",
-                    }}
-                >
-                    <Typography
-                        fontWeight={"light"}
-                        paddingY={3}
-                        align="center"
-                        sx={{
-                            fontSize: {
-                                xs: "1rem",
-                                sm: "1.2rem",
-                                md: "1.5rem",
-                                lg: "2rem",
-                            },
-                        }}
-                    >
-                        Остекление балконов в Туле
-                    </Typography>
-                    <Divider />
-                    <Box padding={6}>
-                        <Grid
-                            container
-                            rowSpacing={7}
-                            columnSpacing={4}
-                            justifyContent="center"
-                            alignItems="center"
-                        >
-                            <Grid item xs={12} sm={6} md={3}>
-                                <ProductionTypeCard
-                                    imgSrc={cold_ostekl}
-                                    caption={"Холодное остекление"}
-                                />
-                            </Grid>
-                            <Grid item xs={12} sm={6} md={3}>
-                                <ProductionTypeCard
-                                    imgSrc={tepl_ostekl}
-                                    caption={"Тёплое остекление"}
-                                />
-                            </Grid>
-                            <Grid item xs={12} sm={6} md={3}>
-                                <ProductionTypeCard
-                                    imgSrc={lamination_1}
-                                    caption={"Внутренняя отделка"}
-                                />
-                            </Grid>
-                            <Grid item xs={12} sm={6} md={3}>
-                                <ProductionTypeCard
-                                    imgSrc={lamination_1}
-                                    caption={"Шкафы-купе"}
-                                />
-                            </Grid>
-                        </Grid>
-                    </Box>
-                </Paper>
-            </Container>
+            <ProductionCardsContainer title={""} cardsArray={cardsArray} />
 
             <Box>
                 <Container maxWidth={"lg"}>

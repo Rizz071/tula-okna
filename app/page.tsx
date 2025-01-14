@@ -1,5 +1,4 @@
 import HeroImageSlider from "./components/HeroImageSlider";
-import ProductionCards from "./components/ProductionCards";
 import {
     Container,
     Box,
@@ -18,7 +17,6 @@ import {
     Step,
     StepLabel,
     StepContent,
-    Zoom,
 } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import Image from "next/image";
@@ -48,6 +46,7 @@ import Doors from "@/public/images/Doors.webp";
 import apartements1 from "@/public/images/apartements3_104px.jpg";
 import dacha1 from "@/public/images/dacha1_104px.jpeg";
 import { IProductionCard } from "./lib/types";
+import ProductionCardsContainer from "./components/ProductionCardsContainer";
 
 export default function Home() {
     const cardsArray: IProductionCard[] = [
@@ -59,7 +58,7 @@ export default function Home() {
         {
             image: Front_small_2,
             caption: "Остекление и отделка балконов",
-            link: "15 000",
+            link: "/balkony",
         },
         {
             image: House,
@@ -86,7 +85,7 @@ export default function Home() {
     return (
         <>
             <HeroImageSlider />
-            <ProductionCards cardsArray={cardsArray} />
+            <ProductionCardsContainer title={""} cardsArray={cardsArray} />
             <Container maxWidth="lg">
                 <Grid
                     container
