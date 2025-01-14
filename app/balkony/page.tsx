@@ -231,88 +231,53 @@ export default function Page() {
                                 alignSelf={"center"}
                                 order={{ xs: 2, md: 1 }}
                             >
-                                {CardTextInfoJSX(
+                                {articlePart(
                                     "Особенность наших холодных раздвижных балконных рам",
                                     [
-                                        <Box
-                                            component="p"
-                                            key={Math.round(
-                                                Math.random() * 10000
-                                            )}
-                                        >
+                                        <Typography key={Math.random()}>
                                             <strong>
                                                 Кратко: на надёжности нельзя
                                                 экономить.
                                             </strong>
-                                        </Box>,
-                                        <Box
-                                            component="p"
-                                            key={Math.round(
-                                                Math.random() * 10000
-                                            )}
-                                        >
+                                        </Typography>,
+                                        <Typography key={Math.random()}>
                                             Алюминиевые рамы не подпадают под
                                             действие ни одного ГОСТа. Из-за
                                             этого рынок наводнён
                                             низкокачественной продукцией.
-                                        </Box>,
-                                        <Box
-                                            component="p"
-                                            key={Math.round(
-                                                Math.random() * 10000
-                                            )}
-                                        >
+                                        </Typography>,
+                                        <Typography key={Math.random()}>
                                             Главное отличие качественной рамы
                                             &ndash; толщина стенок алюминиевого
                                             профиля.
-                                        </Box>,
-                                        <Box
-                                            component="p"
-                                            key={Math.round(
-                                                Math.random() * 10000
-                                            )}
-                                        >
+                                        </Typography>,
+                                        <Typography key={Math.random()}>
                                             Настоящий алюминиевый профиль имеет
                                             толщину стенки &ndash; не менее 1мм,
                                             в нём также присутствуют все рёбра
                                             жесткости, предусмотренные авторами
                                             системы.
-                                        </Box>,
-                                        <Box
-                                            component="p"
-                                            key={Math.round(
-                                                Math.random() * 10000
-                                            )}
-                                        >
+                                        </Typography>,
+                                        <Typography key={Math.random()}>
                                             Цель использования тонкого профиля
                                             одна &ndash; сэкономить деньги на
                                             стоимости рамы, то есть предложить
                                             потребителю более низкую цену.
-                                        </Box>,
-                                        <Box
-                                            component="p"
-                                            key={Math.round(
-                                                Math.random() * 10000
-                                            )}
-                                        >
+                                        </Typography>,
+                                        <Typography key={Math.random()}>
                                             Последствия установки таких
                                             &quot;хлипких&quot; рам хорошо
                                             известны - лёгкие створки выпадают
                                             от сильного ветра, рамы гнутся от
                                             малейшей нагрузки.
-                                        </Box>,
-                                        <Box
-                                            component="p"
-                                            key={Math.round(
-                                                Math.random() * 10000
-                                            )}
-                                        >
+                                        </Typography>,
+                                        <Typography key={Math.random()}>
                                             <strong>
                                                 Мы производим наши алюминиевые
                                                 рамы на мощностях АО СОФОС
                                                 только из полновесного профиля.
                                             </strong>
-                                        </Box>,
+                                        </Typography>,
 
                                         <Accordion
                                             elevation={0}
@@ -481,24 +446,18 @@ export default function Page() {
                                 alignContent={"center"}
                                 order={{ xs: 5, md: 5 }}
                             >
-                                {CardTextInfoJSX("ПВХ, алюминий или дерево?", [
-                                    <Box
-                                        component="p"
-                                        key={Math.round(Math.random() * 10000)}
-                                    >
+                                {articlePart("ПВХ, алюминий или дерево?", [
+                                    <Typography key={Math.random()}>
                                         <strong>
                                             ПВХ-профиль оптимальный выбор
                                         </strong>
-                                    </Box>,
-                                    <Box
-                                        component="p"
-                                        key={Math.round(Math.random() * 10000)}
-                                    >
+                                    </Typography>,
+                                    <Typography key={Math.random()}>
                                         Этот материал значительно теплее
                                         алюминиевого профиля с терморазрывом, и
                                         существенно дешевле как алюминиевых, так
                                         и деревянных окон.
-                                    </Box>,
+                                    </Typography>,
 
                                     <Accordion
                                         elevation={0}
@@ -595,41 +554,29 @@ export default function Page() {
                             </Grid>
 
                             <Grid item xs={12} md={6} order={{ xs: 7, md: 6 }}>
-                                {CardTextInfoJSX("Глубина профиля", [
-                                    <Box
-                                        component="p"
-                                        key={Math.round(Math.random() * 10000)}
-                                    >
+                                {articlePart("Глубина профиля", [
+                                    <Typography key={Math.random()}>
                                         Профиль выбирается под нужный
                                         стеклопакет.
-                                    </Box>,
-                                    <Box
-                                        component="p"
-                                        key={Math.round(Math.random() * 10000)}
-                                    >
+                                    </Typography>,
+                                    <Typography key={Math.random()}>
                                         Во-первых, стеклопакет должен физически
                                         поместиться в оконный профиль.
-                                    </Box>,
-                                    <Box
-                                        component="p"
-                                        key={Math.round(Math.random() * 10000)}
-                                    >
+                                    </Typography>,
+                                    <Typography key={Math.random()}>
                                         Во-вторых, краевая зона стеклопакета -
                                         самая уязвимая к промерзанию часть окна.
                                         Выбираем такую глубину профиля, чтобы он
                                         был теплее, чем стеклопакет.
-                                    </Box>,
-                                    <Box
-                                        component="p"
-                                        key={Math.round(Math.random() * 10000)}
-                                    >
+                                    </Typography>,
+                                    <Typography key={Math.random()}>
                                         <strong>
                                             По характеристикам нас устроит
                                             профиль 70мм
                                         </strong>{" "}
                                         - стандарт остекления загородных домов в
                                         средней полосе России.
-                                    </Box>,
+                                    </Typography>,
                                     <Accordion
                                         elevation={0}
                                         key={Math.round(Math.random() * 10000)}
@@ -801,129 +748,101 @@ export default function Page() {
                             </Grid>
 
                             <Grid item xs={12} md={6} order={{ xs: 9, md: 10 }}>
-                                {CardTextInfoJSX(
-                                    "Особенности входных дверей ПВХ",
-                                    [
-                                        <Box
-                                            component="p"
-                                            key={Math.round(
-                                                Math.random() * 10000
-                                            )}
+                                {articlePart("Особенности входных дверей ПВХ", [
+                                    <Typography key={Math.random()}>
+                                        Мы используем вклейку стеклопакета для
+                                        всех входных дверей без исключения.
+                                    </Typography>,
+                                    <Typography key={Math.random()}>
+                                        Цветной профиль двери нагревается летом
+                                        до 80 градусов и его геометрия
+                                        &quot;плывёт&quot; на несколько
+                                        миллиметров независимо от мощности
+                                        внутренней армировки. Как правило, замок
+                                        сразу начинает заедать.
+                                    </Typography>,
+                                    <Typography key={Math.random()}>
+                                        Такой ежегодный негативный эффект
+                                        полностью устраняется только технологией
+                                        вклейки стеклопакета в створку. Вы
+                                        получаете действительно надёжную и
+                                        тёплую дверь.
+                                    </Typography>,
+                                    <Typography key={Math.random()}>
+                                        То же самое касается очень больших
+                                        оконных створок. В них мы также
+                                        применяем вклейку стеклопакета.
+                                    </Typography>,
+                                    <Accordion
+                                        elevation={0}
+                                        key={Math.round(Math.random() * 10000)}
+                                    >
+                                        <AccordionSummary
+                                            sx={{ pl: 0 }}
+                                            aria-controls="panel4-content"
+                                            id="panel4-header"
                                         >
-                                            Мы используем вклейку стеклопакета
-                                            для всех входных дверей без
-                                            исключения.
-                                        </Box>,
-                                        <Box
-                                            component="p"
-                                            key={Math.round(
-                                                Math.random() * 10000
-                                            )}
-                                        >
-                                            Цветной профиль двери нагревается
-                                            летом до 80 градусов и его геометрия
-                                            &quot;плывёт&quot; на несколько
-                                            миллиметров независимо от мощности
-                                            внутренней армировки. Как правило,
-                                            замок сразу начинает заедать.
-                                        </Box>,
-                                        <Box
-                                            component="p"
-                                            key={Math.round(
-                                                Math.random() * 10000
-                                            )}
-                                        >
-                                            Такой ежегодный негативный эффект
-                                            полностью устраняется только
-                                            технологией вклейки стеклопакета в
-                                            створку. Вы получаете действительно
-                                            надёжную и тёплую дверь.
-                                        </Box>,
-                                        <Box
-                                            component="p"
-                                            key={Math.round(
-                                                Math.random() * 10000
-                                            )}
-                                        >
-                                            То же самое касается очень больших
-                                            оконных створок. В них мы также
-                                            применяем вклейку стеклопакета.
-                                        </Box>,
-                                        <Accordion
-                                            elevation={0}
-                                            key={Math.round(
-                                                Math.random() * 10000
-                                            )}
-                                        >
-                                            <AccordionSummary
-                                                sx={{ pl: 0 }}
-                                                aria-controls="panel4-content"
-                                                id="panel4-header"
+                                            <Typography
+                                                fontSize={"1rem"}
+                                                variant="button"
+                                                color="error"
+                                                gutterBottom
+                                            >
+                                                <ImportContactsTwoToneIcon fontSize="medium" />{" "}
+                                                ПОДРОБНЕЕ
+                                            </Typography>
+                                        </AccordionSummary>
+                                        <AccordionDetails>
+                                            <Box
+                                                bgcolor={"lightyellow"}
+                                                padding={2}
                                             >
                                                 <Typography
-                                                    fontSize={"1rem"}
-                                                    variant="button"
-                                                    color="error"
+                                                    variant={"h6"}
                                                     gutterBottom
                                                 >
-                                                    <ImportContactsTwoToneIcon fontSize="medium" />{" "}
-                                                    ПОДРОБНЕЕ
+                                                    Можно ли не использовать
+                                                    вклейку для входных дверей?
                                                 </Typography>
-                                            </AccordionSummary>
-                                            <AccordionDetails>
-                                                <Box
-                                                    bgcolor={"lightyellow"}
-                                                    padding={2}
+                                                <Typography
+                                                    variant="subtitle1"
+                                                    gutterBottom
                                                 >
-                                                    <Typography
-                                                        variant={"h6"}
-                                                        gutterBottom
-                                                    >
-                                                        Можно ли не использовать
-                                                        вклейку для входных
-                                                        дверей?
-                                                    </Typography>
-                                                    <Typography
-                                                        variant="subtitle1"
-                                                        gutterBottom
-                                                    >
-                                                        Да, можно. Однако, у нас
-                                                        есть многолетний опыт,
-                                                        который показывает что
-                                                        без вклейки мы выезжаем
-                                                        на регулировку по
-                                                        гарантии уже через 1 год
-                                                        эксплуатации двери.
-                                                    </Typography>
-                                                    <Typography
-                                                        variant={"h6"}
-                                                        gutterBottom
-                                                    >
-                                                        Что делать, если
-                                                        стеклопакет разобьётся?
-                                                        Можно ли его будет
-                                                        заменить?
-                                                    </Typography>
-                                                    <Typography
-                                                        variant="subtitle1"
-                                                        gutterBottom
-                                                    >
-                                                        Да, вклееный стеклопает
-                                                        допускает его замену.
-                                                        Для этого старый
-                                                        стеклопакет вырезается
-                                                        из створки. Остатки
-                                                        старого клея вычищаются.
-                                                        Наносится новый клей из
-                                                        специального ремонтного
-                                                        набора и устанавливается
-                                                        новый стеклопакет.
-                                                    </Typography>
-                                                </Box>
-                                            </AccordionDetails>
-                                        </Accordion>,
-                                    ]
-                                )}
+                                                    Да, можно. Однако, у нас
+                                                    есть многолетний опыт,
+                                                    который показывает что без
+                                                    вклейки мы выезжаем на
+                                                    регулировку по гарантии уже
+                                                    через 1 год эксплуатации
+                                                    двери.
+                                                </Typography>
+                                                <Typography
+                                                    variant={"h6"}
+                                                    gutterBottom
+                                                >
+                                                    Что делать, если стеклопакет
+                                                    разобьётся? Можно ли его
+                                                    будет заменить?
+                                                </Typography>
+                                                <Typography
+                                                    variant="subtitle1"
+                                                    gutterBottom
+                                                >
+                                                    Да, вклееный стеклопает
+                                                    допускает его замену. Для
+                                                    этого старый стеклопакет
+                                                    вырезается из створки.
+                                                    Остатки старого клея
+                                                    вычищаются. Наносится новый
+                                                    клей из специального
+                                                    ремонтного набора и
+                                                    устанавливается новый
+                                                    стеклопакет.
+                                                </Typography>
+                                            </Box>
+                                        </AccordionDetails>
+                                    </Accordion>,
+                                ])}
                             </Grid>
 
                             <Grid
@@ -967,28 +886,19 @@ export default function Page() {
                                 md={6}
                                 order={{ xs: 12, md: 13 }}
                             >
-                                {CardTextInfoJSX("Цвет оконного блока", [
-                                    <Box
-                                        component="p"
-                                        key={Math.round(Math.random() * 10000)}
-                                    >
+                                {articlePart("Цвет оконного блока", [
+                                    <Typography key={Math.random()}>
                                         Чтобы получить нужный цвет - на оконный
                                         профиль в заводских условиях наносится
                                         специальная ламинационная плёнка.
-                                    </Box>,
-                                    <Box
-                                        component="p"
-                                        key={Math.round(Math.random() * 10000)}
-                                    >
+                                    </Typography>,
+                                    <Typography key={Math.random()}>
                                         При качественном нанесении на профиль
                                         такая плёнка держится очень надёжно, и
                                         условный срок службы окна в 40 лет не
                                         снижается.
-                                    </Box>,
-                                    <Box
-                                        component="p"
-                                        key={Math.round(Math.random() * 10000)}
-                                    >
+                                    </Typography>,
+                                    <Typography key={Math.random()}>
                                         При некачественном нанесении плёнки, на
                                         ней образуются пузыри с воздухом.
                                         Обращайте внимание на гарантийный срок
@@ -996,11 +906,8 @@ export default function Page() {
                                         лет, потому что такие дефекты
                                         проявляются зачастую не в первый год
                                         эксплуатации.
-                                    </Box>,
-                                    <Box
-                                        component="p"
-                                        key={Math.round(Math.random() * 10000)}
-                                    >
+                                    </Typography>,
+                                    <Typography key={Math.random()}>
                                         <strong>
                                             Известные на рынке плёнки
                                             производятся фирмами Renolit, LG и
@@ -1009,7 +916,7 @@ export default function Page() {
                                         Все они достаточно качественные. Важно
                                         не нарушить технологию их нанесения на
                                         профиль.
-                                    </Box>,
+                                    </Typography>,
                                     <Accordion
                                         elevation={0}
                                         key={Math.round(Math.random() * 10000)}
@@ -1137,58 +1044,40 @@ export default function Page() {
                                 md={6}
                                 order={{ xs: 16, md: 15 }}
                             >
-                                {CardTextInfoJSX("Защита от взлома окон", [
-                                    <Box
-                                        component="p"
-                                        key={Math.round(Math.random() * 10000)}
-                                    >
+                                {articlePart("Защита от взлома окон", [
+                                    <Typography key={Math.random()}>
                                         Насколько быстро взломщик может вскрыть
                                         окно? По статистике - за 7 секунд. При
                                         этом абсолютно бесшумно.
-                                    </Box>,
-                                    <Box
-                                        component="p"
-                                        key={Math.round(Math.random() * 10000)}
-                                    >
+                                    </Typography>,
+                                    <Typography key={Math.random()}>
                                         Можно ли защитить окна от взлома? Можно,
                                         но подход должен быть разумным.
-                                    </Box>,
-                                    <Box
-                                        component="p"
-                                        key={Math.round(Math.random() * 10000)}
-                                    >
+                                    </Typography>,
+                                    <Typography key={Math.random()}>
                                         Задача любого взломщика - действовать
                                         очень тихо.
-                                    </Box>,
-                                    <Box
-                                        component="p"
-                                        key={Math.round(Math.random() * 10000)}
-                                    >
+                                    </Typography>,
+                                    <Typography key={Math.random()}>
                                         <strong>
                                             Устанавливаем на каждое окно первого
                                             этажа одну противовзломную точку и
                                             защиту от высверливания ручки.
                                         </strong>
-                                    </Box>,
-                                    <Box
-                                        component="p"
-                                        key={Math.round(Math.random() * 10000)}
-                                    >
+                                    </Typography>,
+                                    <Typography key={Math.random()}>
                                         Стоимость - незначительная, при этом
                                         бесшумный взлом строительным
                                         инструментом будет уже невозможен.
-                                    </Box>,
-                                    <Box
-                                        component="p"
-                                        key={Math.round(Math.random() * 10000)}
-                                    >
+                                    </Typography>,
+                                    <Typography key={Math.random()}>
                                         При попытке отжать створку вверх,
                                         защитные ответные планки будут
                                         выворачиваться вместе с оконным профилем
                                         и стальным армированием с очень громким
                                         треском. Большая часть взломщиков просто
                                         скроется с места преступления.
-                                    </Box>,
+                                    </Typography>,
                                     <Accordion
                                         elevation={0}
                                         key={Math.round(Math.random() * 10000)}
@@ -1416,110 +1305,11 @@ function CardProfileSystem(
     );
 }
 
-function CardTextInfo(title: string, descriptionText: string[]) {
+function articlePart(title: string, descriptionJSX: JSX.Element[]) {
     return (
-        <Card elevation={0}>
-            <CardContent>
-                <Typography variant="h2" component="div">
-                    {title}
-                </Typography>
-
-                {descriptionText.map((paragraph) => {
-                    return (
-                        <Typography
-                            component="div"
-                            key={Math.round(Math.random() * 10000)}
-                        >
-                            {paragraph}
-                        </Typography>
-                    );
-                })}
-            </CardContent>
-        </Card>
-    );
-}
-
-function CardTextInfoJSX(title: string, descriptionJSX: JSX.Element[]) {
-    return (
-        <Card elevation={10}>
-            <CardContent>
-                <Typography component="div" variant="h2">
-                    {title}
-                </Typography>
-
-                {descriptionJSX.map((paragraph) => {
-                    return (
-                        <Typography
-                            component="div"
-                            key={Math.round(Math.random() * 10000)}
-                            gutterBottom
-                        >
-                            {paragraph}
-                        </Typography>
-                    );
-                })}
-            </CardContent>
-        </Card>
-    );
-}
-
-// function arrowDivider(direction: string) {
-//     return (
-//         <Box
-//             zIndex={-1}
-//             display="flex"
-//             justifyContent={"center"}
-//             sx={{
-//                 transform: `rotate(${
-//                     direction === "right" ? "15deg" : "-15deg"
-//                 }) scaleX(${direction === "right" ? "-1" : "1"})`,
-//                 opacity: "75%",
-//             }}
-//         >
-//             <Image
-//                 src={arrow_1}
-//                 alt="arrow"
-//                 sizes="60vw"
-//                 style={{
-//                     width: "45%",
-//                     height: "auto",
-//                 }}
-//             />
-//         </Box>
-//     );
-// }
-
-interface Props {
-    imgSrc: StaticImageData;
-    caption: string;
-}
-
-const ProductionTypeCard = ({ imgSrc, caption }: Props) => {
-    return (
-        <Box
-            display={"flex"}
-            flexDirection={{ xs: "column" }}
-            alignItems={"center"}
-        >
-            <Image src={imgSrc.src} width={200} height={200} alt={caption} />
-            <Box
-                display={"flex"}
-                flexDirection={"column"}
-                justifyContent={"center"}
-                alignItems={{ xs: "center", md: "flex-start" }}
-                marginLeft={{ xs: 0, md: 3 }}
-                gap={1}
-            >
-                <Typography
-                    fontWeight={"400"}
-                    sx={{
-                        fontSize: { xs: "medium", sm: "medium", md: "large" },
-                        textAlign: { xs: "center", md: "center" },
-                    }}
-                >
-                    {caption}
-                </Typography>
-            </Box>
+        <Box>
+            <Typography variant="h2">{title}</Typography>
+            {descriptionJSX.map((paragraph) => paragraph)}
         </Box>
     );
-};
+}
