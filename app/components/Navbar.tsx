@@ -268,13 +268,18 @@ const Navbar = () => {
                         >
                             ДВЕРИ
                         </Typography>
-                        <Typography
-                            fontWeight={400}
-                            color="black"
-                            letterSpacing={1.5}
+                        <Link
+                            href={"/balkony"}
+                            style={{ textDecoration: "none" }}
                         >
-                            БАЛКОНЫ
-                        </Typography>
+                            <Typography
+                                fontWeight={400}
+                                color="black"
+                                letterSpacing={1.5}
+                            >
+                                БАЛКОНЫ
+                            </Typography>
+                        </Link>
                         <Typography
                             fontWeight={400}
                             color="black"

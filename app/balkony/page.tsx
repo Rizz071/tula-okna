@@ -36,9 +36,11 @@ import slide from "@/public/images/balkoni/BalcFront1.jpg";
 import steklopaket from "@/public/images/slides/steklopaket_1.jpg";
 import lamination_1 from "@/public/images/slides/lamination_1.jpg";
 import glued from "@/public/images/slides/glued.jpg";
-import windows_1 from "@/public/images/slides/windows_1.jpg";
+import cold_ostekl from "@/public/images/balkoni/Provedal_banner.jpg";
+import tepl_ostekl from "@/public/images/balkoni/tepl_ostek_tmblr.jpg";
 import burglar_1 from "@/public/images/slides/burglar_1.jpg";
 import SecuritySharpIcon from "@mui/icons-material/SecuritySharp";
+import ButtonImage from "../components/ButtonImage";
 
 export default function Page() {
     return (
@@ -198,7 +200,7 @@ export default function Page() {
                             },
                         }}
                     >
-                        Комплексное остекление коттеджей
+                        Остекление балконов в Туле
                     </Typography>
                     <Divider />
                     <Box padding={6}>
@@ -209,28 +211,28 @@ export default function Page() {
                             justifyContent="center"
                             alignItems="center"
                         >
-                            <Grid item xs={12} sm={4} md={6} lg={4}>
+                            <Grid item xs={12} sm={6} md={3}>
                                 <ProductionTypeCard
-                                    imgSrc={windows_1}
-                                    caption={
-                                        "Оконные и дверные блоки VEKA, Rehau, Kaleva. Энергоэффективная комплектация."
-                                    }
+                                    imgSrc={cold_ostekl}
+                                    caption={"Холодное остекление"}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={4} md={6} lg={4}>
+                            <Grid item xs={12} sm={6} md={3}>
                                 <ProductionTypeCard
-                                    imgSrc={portal_vector_1}
-                                    caption={
-                                        "Раздвижные двери-порталы. Все виды. Большой опыт монтажа."
-                                    }
+                                    imgSrc={tepl_ostekl}
+                                    caption={"Тёплое остекление"}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={4} md={6} lg={4}>
+                            <Grid item xs={12} sm={6} md={3}>
                                 <ProductionTypeCard
                                     imgSrc={lamination_1}
-                                    caption={
-                                        "Ламинация Renolit, Hornshusch, Ado. Окраска торца Zobel."
-                                    }
+                                    caption={"Внутренняя отделка"}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={6} md={3}>
+                                <ProductionTypeCard
+                                    imgSrc={lamination_1}
+                                    caption={"Шкафы-купе"}
                                 />
                             </Grid>
                         </Grid>

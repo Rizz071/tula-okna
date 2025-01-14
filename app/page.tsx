@@ -42,14 +42,52 @@ import kaleva_sert_1 from "../public/images/certificates/kaleva_sert_1.jpg";
 import veka_sert_1 from "../public/images/certificates/veka_sert_1.jpg";
 import rehau_sert_1 from "../public/images/certificates/rehau_cert1.jpg";
 
-// import NextLink from "next/link";
-// import { Link as MUILink } from "@mui/material";
+import Front_small_2 from "@/app/public/images/Front_small_2.webp";
+import Front_small_3 from "@/app/public/images/Front_small_3.webp";
+import House from "@/app/public/images/House.webp";
+import Doors from "@/app/public/images/Doors.webp";
+import apartements1 from "@/app/public/images/apartements3_104px.jpg";
+import dacha1 from "@/app/public/images/dacha1_104px.jpeg";
+import { IProductionCard } from "./lib/types";
 
 export default function Home() {
+    const cardsArray: IProductionCard[] = [
+        {
+            image: apartements1,
+            caption: "Остекление квартир",
+            link: "/okna/apartments",
+        },
+        {
+            image: Front_small_2,
+            caption: "Остекление и отделка балконов",
+            link: "15 000",
+        },
+        {
+            image: House,
+            caption: "Остекление домов",
+            link: "/okna/cottage",
+        },
+        {
+            image: dacha1,
+            caption: "Остекление дач",
+            link: "6 000",
+        },
+        {
+            image: Doors,
+            caption: "Входные двери для предприятий",
+            link: "15 000",
+        },
+        {
+            image: Front_small_3,
+            caption: "Раздвижные двери-порталы",
+            link: "59 000",
+        },
+    ];
+
     return (
         <>
             <HeroImageSlider />
-            <ProductionCards />
+            <ProductionCards cardsArray={cardsArray} />
             <Container maxWidth="lg">
                 <Grid
                     container

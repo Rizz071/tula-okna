@@ -1,25 +1,14 @@
-import {
-    Paper,
-    Typography,
-    Divider,
-    Container,
-    Box,
-    Grid,
-    Link as MuiLink,
-} from "@mui/material";
+import { Paper, Container, Box } from "@mui/material";
+import Grid from "@mui/material/Grid2";
 
 import ProductionTypeCard from "./ProductionTypeCard";
-import konstr1 from "../../public/images/konstr1.webp";
-import Front_small_2 from "../../public/images/Front_small_2.webp";
-import Front_small_3 from "../../public/images/Front_small_3.webp";
-import House from "../../public/images/House.webp";
-import Doors from "../../public/images/Doors.webp";
-import apartements1 from "../../public/images/apartements3_104px.jpg";
-import dacha1 from "../../public/images/dacha1_104px.jpeg";
+import { IProductionCard } from "../lib/types";
 
-import NextLink from "next/link";
+interface Props {
+    cardsArray: IProductionCard[];
+}
 
-const ProductionCards = () => {
+const ProductionCards = ({ cardsArray }: Props) => {
     return (
         <Container>
             <Paper
@@ -42,21 +31,6 @@ const ProductionCards = () => {
                     maxWidth: "lg",
                 }}
             >
-                {/* <Typography
-                    fontWeight={"light"}
-                    paddingY={1}
-                    sx={{
-                        fontSize: {
-                            xs: "1rem",
-                            sm: "1.2rem",
-                            md: "1.5rem",
-                            lg: "2rem",
-                        },
-                    }}
-                >
-                    Выбор продукции
-                </Typography>
-                <Divider /> */}
                 <Box padding={6}>
                     <Grid
                         container
@@ -65,36 +39,52 @@ const ProductionCards = () => {
                         justifyContent="center"
                         alignItems="center"
                     >
-                        <Grid item xs={12} sm={4} md={6} lg={4}>
+                        {cardsArray.map((card, index) => {
+                            return (
+                                <Grid
+                                    size={{ xs: 12, sm: 4, md: 6, lg: 4 }}
+                                    key={index}
+                                >
+                                    <ProductionTypeCard
+                                        imgSrc={card.image}
+                                        caption={card.caption}
+                                        link={card.link}
+                                    />
+                                </Grid>
+                            );
+                        })}
+                    </Grid>
+
+                    {/* <Grid
+                        container
+                        rowSpacing={7}
+                        columnSpacing={4}
+                        justifyContent="center"
+                        alignItems="center"
+                    >
+                        <Grid size={{ xs: 12, sm: 4, md: 6, lg: 4 }}>
                             <ProductionTypeCard
                                 imgSrc={apartements1}
                                 caption={"Остекление квартир"}
                                 link={"/okna/apartments"}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={4} md={6} lg={4}>
+                        <Grid size={{ xs: 12, sm: 4, md: 6, lg: 4 }}>
                             <ProductionTypeCard
                                 imgSrc={Front_small_2}
                                 caption={"Остекление и отделка балконов"}
                                 link={"15 000"}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={4} md={6} lg={4}>
-                            <MuiLink
-                                component={NextLink}
-                                href="/okna"
-                                color="inherit"
-                                underline="none"
-                            >
-                                <ProductionTypeCard
-                                    imgSrc={House}
-                                    caption={"Остекление домов"}
-                                    link=""
-                                />
-                            </MuiLink>
+                        <Grid size={{ xs: 12, sm: 4, md: 6, lg: 4 }}>
+                            <ProductionTypeCard
+                                imgSrc={House}
+                                caption={"Остекление домов"}
+                                link="/okna/cottage"
+                            />
                         </Grid>
 
-                        <Grid item xs={12} sm={4} md={6} lg={4}>
+                        <Grid size={{ xs: 12, sm: 4, md: 6, lg: 4 }}>
                             <ProductionTypeCard
                                 imgSrc={dacha1}
                                 caption={"Остекление дач"}
@@ -102,21 +92,21 @@ const ProductionCards = () => {
                             />
                         </Grid>
 
-                        <Grid item xs={12} sm={4} md={6} lg={4}>
+                        <Grid size={{ xs: 12, sm: 4, md: 6, lg: 4 }}>
                             <ProductionTypeCard
                                 imgSrc={Doors}
                                 caption={"Входные двери для предприятий"}
                                 link={"15 000"}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={4} md={6} lg={4}>
+                        <Grid size={{ xs: 12, sm: 4, md: 6, lg: 4 }}>
                             <ProductionTypeCard
                                 imgSrc={Front_small_3}
                                 caption={"Раздвижные двери-порталы"}
                                 link={"59 000"}
                             />
                         </Grid>
-                    </Grid>
+                    </Grid> */}
                 </Box>
             </Paper>
         </Container>
