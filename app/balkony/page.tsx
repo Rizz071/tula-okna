@@ -7,6 +7,8 @@ import {
     Divider,
     List,
     ListItem,
+    Stack,
+    Paper,
 } from "@mui/material";
 
 import Card from "@mui/material/Card";
@@ -33,10 +35,16 @@ import glued from "@/public/images/slides/glued.jpg";
 import cold_ostekl from "@/public/images/balkoni/cold_ostekl_tmblr.jpg";
 import tepl_ostekl from "@/public/images/balkoni/tepl_ostek_tmblr.jpg";
 import otdelka from "@/public/images/balkoni/otdelka_tmblr.jpg";
+import vynos_tmblr from "@/public/images/balkoni/vynos_tmblr.jpg";
+import roof_tmblr from "@/public/images/balkoni/krisha_tmblr.jpg";
+import shkaf_tmblr from "@/public/images/balkoni/shkaf_tmblr.jpg";
 import burglar_1 from "@/public/images/slides/burglar_1.jpg";
 import SecuritySharpIcon from "@mui/icons-material/SecuritySharp";
 import { IProductionCard } from "../lib/types";
 import ProductionCardsContainer from "../components/ProductionCardsContainer";
+
+import polnoves_provedal from "@/public/images/balkoni/Polnoves_provedal.jpg";
+import oblegch_provedal from "@/public/images/balkoni/Oblegch_provedal.jpg";
 
 const cardsArray: IProductionCard[] = [
     {
@@ -54,11 +62,21 @@ const cardsArray: IProductionCard[] = [
         caption: "Внутренняя отделка",
         link: "/okna/cottage",
     },
-    // {
-    //     image: cold_ostekl,
-    //     caption: "Шкафы-купе",
-    //     link: "6 000",
-    // },
+    {
+        image: shkaf_tmblr,
+        caption: "Шкафы-купе",
+        link: "6 000",
+    },
+    {
+        image: roof_tmblr,
+        caption: "Установка крыши",
+        link: "6 000",
+    },
+    {
+        image: vynos_tmblr,
+        caption: "Вынос рамы вперёд",
+        link: "6 000",
+    },
 ];
 
 export default function Page() {
@@ -203,7 +221,7 @@ export default function Page() {
                         >
                             <Grid item xs={12} marginY={0}>
                                 <Typography variant="h1">
-                                    Оконные блоки в дом
+                                    Остекление балконов в Туле
                                 </Typography>
                             </Grid>
                             <Grid
@@ -213,204 +231,222 @@ export default function Page() {
                                 alignSelf={"center"}
                                 order={{ xs: 2, md: 1 }}
                             >
-                                {CardTextInfoJSX("Самое важное - стеклопакет", [
-                                    <Box
-                                        component="p"
-                                        key={Math.round(Math.random() * 10000)}
-                                    >
-                                        В первую очередь выбираем не оконный
-                                        профиль, а стеклопакет.
-                                    </Box>,
-                                    <Box
-                                        component="p"
-                                        key={Math.round(Math.random() * 10000)}
-                                    >
-                                        Стеклопакет составляет около 90% площади
-                                        каждого окна и именно он отвечает за
-                                        сохранность тепла.
-                                    </Box>,
-                                    <Box
-                                        component="p"
-                                        key={Math.round(Math.random() * 10000)}
-                                    >
-                                        40% тепла зимой теряется через
-                                        остекление. Чем теплее стеклопакет - тем
-                                        меньше придётся платить за отопление.
-                                    </Box>,
-                                    <Box
-                                        component="p"
-                                        key={Math.round(Math.random() * 10000)}
-                                    >
-                                        Оптимальный выбор -{" "}
-                                        <strong>
-                                            3 стекла с энергосберегающим
-                                            напылением, шириной около 40мм
-                                        </strong>{" "}
-                                        (больше - лучше).
-                                    </Box>,
-                                    <Accordion
-                                        elevation={0}
-                                        key={Math.round(Math.random() * 10000)}
-                                    >
-                                        <AccordionSummary
-                                            sx={{ pl: 0 }}
-                                            aria-controls="panel1-content"
-                                            id="panel1-header"
+                                {CardTextInfoJSX(
+                                    "Особенность наших холодных раздвижных балконных рам",
+                                    [
+                                        <Box
+                                            component="p"
+                                            key={Math.round(
+                                                Math.random() * 10000
+                                            )}
                                         >
-                                            <Typography
-                                                fontSize={"1rem"}
-                                                variant="button"
-                                                color="error"
-                                            >
-                                                <ImportContactsTwoToneIcon fontSize="medium" />{" "}
-                                                ПОДРОБНЕЕ
-                                            </Typography>
-                                        </AccordionSummary>
-                                        <AccordionDetails>
-                                            <Box
-                                                bgcolor={"lightyellow"}
-                                                padding={2}
-                                            >
-                                                <Typography
-                                                    variant="h6"
-                                                    marginTop={2}
-                                                    gutterBottom
-                                                >
-                                                    Почему именно 3 стекла?
-                                                </Typography>
-                                                <Typography
-                                                    variant="subtitle1"
-                                                    gutterBottom
-                                                >
-                                                    При 2 стеклах - будет
-                                                    слишком холодно. Отопление
-                                                    станет слишком затратным.
-                                                    Снижается шумоизоляция.
-                                                </Typography>
-                                                <Typography
-                                                    variant="subtitle1"
-                                                    gutterBottom
-                                                >
-                                                    При 4 стеклах - теряется
-                                                    прозрачность, увеличивается
-                                                    весовая нагрузка на
-                                                    механизм. Возможно
-                                                    применение для повышения
-                                                    шумоизоляции, но это не
-                                                    случай загородного дома.
-                                                </Typography>
+                                            <strong>
+                                                Кратко: на надёжности нельзя
+                                                экономить.
+                                            </strong>
+                                        </Box>,
+                                        <Box
+                                            component="p"
+                                            key={Math.round(
+                                                Math.random() * 10000
+                                            )}
+                                        >
+                                            Алюминиевые рамы не подпадают под
+                                            действие ни одного ГОСТа. Из-за
+                                            этого рынок наводнён
+                                            низкокачественной продукцией.
+                                        </Box>,
+                                        <Box
+                                            component="p"
+                                            key={Math.round(
+                                                Math.random() * 10000
+                                            )}
+                                        >
+                                            Главное отличие качественной рамы
+                                            &ndash; толщина стенок алюминиевого
+                                            профиля.
+                                        </Box>,
+                                        <Box
+                                            component="p"
+                                            key={Math.round(
+                                                Math.random() * 10000
+                                            )}
+                                        >
+                                            Настоящий алюминиевый профиль имеет
+                                            толщину стенки &ndash; не менее 1мм,
+                                            в нём также присутствуют все рёбра
+                                            жесткости, предусмотренные авторами
+                                            системы.
+                                        </Box>,
+                                        <Box
+                                            component="p"
+                                            key={Math.round(
+                                                Math.random() * 10000
+                                            )}
+                                        >
+                                            Цель использования тонкого профиля
+                                            одна &ndash; сэкономить деньги на
+                                            стоимости рамы, то есть предложить
+                                            потребителю более низкую цену.
+                                        </Box>,
+                                        <Box
+                                            component="p"
+                                            key={Math.round(
+                                                Math.random() * 10000
+                                            )}
+                                        >
+                                            Последствия установки таких
+                                            &quot;хлипких&quot; рам хорошо
+                                            известны - лёгкие створки выпадают
+                                            от сильного ветра, рамы гнутся от
+                                            малейшей нагрузки.
+                                        </Box>,
+                                        <Box
+                                            component="p"
+                                            key={Math.round(
+                                                Math.random() * 10000
+                                            )}
+                                        >
+                                            <strong>
+                                                Мы производим наши алюминиевые
+                                                рамы на мощностях АО СОФОС
+                                                только из полновесного профиля.
+                                            </strong>
+                                        </Box>,
 
+                                        <Accordion
+                                            elevation={0}
+                                            key={Math.round(
+                                                Math.random() * 10000
+                                            )}
+                                        >
+                                            <AccordionSummary
+                                                sx={{ pl: 0 }}
+                                                aria-controls="panel1-content"
+                                                id="panel1-header"
+                                            >
                                                 <Typography
-                                                    variant={"h6"}
-                                                    marginTop={2}
-                                                    gutterBottom
+                                                    fontSize={"1rem"}
+                                                    variant="button"
+                                                    color="error"
                                                 >
-                                                    Почему стеклопакет должен
-                                                    быть шириной от 40мм ?
+                                                    <ImportContactsTwoToneIcon fontSize="medium" />{" "}
+                                                    ПОДРОБНЕЕ
                                                 </Typography>
-                                                <Typography
-                                                    variant="subtitle1"
-                                                    gutterBottom
+                                            </AccordionSummary>
+                                            <AccordionDetails>
+                                                <Box
+                                                    bgcolor={"lightyellow"}
+                                                    padding={2}
                                                 >
-                                                    Чем шире изолирующий слой
-                                                    воздуха в стеклопакете, тем
-                                                    он теплее. Например,
-                                                    стеклопакет стандартный
-                                                    двухкамерный стеклопакет
-                                                    шириной 32мм имеет
-                                                    коэффициент сопротивления
-                                                    теплопередаче 0,47. В нём
-                                                    воздушные камеры имеют
-                                                    ширину 10мм.
-                                                </Typography>
-                                                <Typography
-                                                    variant="subtitle1"
-                                                    gutterBottom
-                                                >
-                                                    В то же время у стеклопакета
-                                                    шириной 40мм воздушные
-                                                    камеры составляют 14мм. Его
-                                                    коэффициент сопротивления
-                                                    теплопередаче - 0,6, и это
-                                                    теплее на 22%
-                                                </Typography>
-                                                <Typography
-                                                    variant="subtitle1"
-                                                    gutterBottom
-                                                >
-                                                    Почему же не увеличивать
-                                                    расстояние между стёклами
-                                                    бесконечно? Дело в том, что
-                                                    при этом увеличивается риск
-                                                    &quot;термошока&quot;. Это
-                                                    такое явление, при котором
-                                                    весной стеклопакет может
-                                                    самопроизвольно разрушиться
-                                                    из-за неравномерного нагрева
-                                                    стекла солнечными лучами.
-                                                </Typography>
-                                                <Typography
-                                                    variant="h6"
-                                                    marginTop={2}
-                                                    gutterBottom
-                                                >
-                                                    Что такое энергосберегающее
-                                                    напыление ?
-                                                </Typography>
-                                                <Typography
-                                                    variant="subtitle1"
-                                                    gutterBottom
-                                                >
-                                                    Это - революционная
-                                                    технология в остеклении
-                                                    домов. Напыление находится
-                                                    внутри стеклопакета, на
-                                                    одном из стекол.
-                                                </Typography>
-                                                <Typography
-                                                    variant="subtitle1"
-                                                    gutterBottom
-                                                >
-                                                    Оно эффективно отражает
-                                                    тепло обратно внутрь
-                                                    помещения, а
-                                                    &quot;мультифункциональное&quot;
-                                                    напыление ещё и блокирует
-                                                    избыточный солнечный жар,
-                                                    поступающий летом с улицы.
-                                                </Typography>
-                                                <Typography
-                                                    variant="subtitle1"
-                                                    gutterBottom
-                                                >
-                                                    При замечательных
-                                                    преимуществах, эта
-                                                    технология не имеет минусов
-                                                    и стоимость её крайне мала.
-                                                    Мы применяем такое напыление
-                                                    для остекления каждого дома
-                                                    уже много лет.
-                                                </Typography>
-                                            </Box>
-                                        </AccordionDetails>
-                                    </Accordion>,
-                                ])}
+                                                    <Typography
+                                                        variant="h6"
+                                                        marginTop={2}
+                                                        gutterBottom
+                                                    >
+                                                        Откуда вообще берётся
+                                                        тонкий профиль?
+                                                    </Typography>
+                                                    <Typography
+                                                        variant="subtitle1"
+                                                        gutterBottom
+                                                    >
+                                                        Заводы выпускают
+                                                        облегчённый профиль для
+                                                        изготовления маленьких
+                                                        рам. Например, он хорошо
+                                                        подходит для
+                                                        изготовления
+                                                        шкафов-купе, окон
+                                                        раздачи в учреждениях
+                                                        питания и т.д.
+                                                    </Typography>
+                                                    <Typography
+                                                        variant="subtitle1"
+                                                        gutterBottom
+                                                    >
+                                                        Однако, пользуясь тем,
+                                                        что потребитель не
+                                                        различает полновесный
+                                                        профиль от
+                                                        низкосортного,
+                                                        недобросовестные
+                                                        монтажнные организации
+                                                        применяют его буквально
+                                                        везде.
+                                                    </Typography>
+                                                    <Typography
+                                                        variant="subtitle1"
+                                                        gutterBottom
+                                                    >
+                                                        В итоге потребитель
+                                                        платит немного меньше
+                                                        при заказе такой
+                                                        продукции, но через
+                                                        некоторое время
+                                                        сталкивается с
+                                                        негативными
+                                                        последствиями.
+                                                    </Typography>
+                                                </Box>
+                                            </AccordionDetails>
+                                        </Accordion>,
+                                    ]
+                                )}
                             </Grid>
 
                             <Grid item xs={12} md={5} order={{ xs: 1, md: 2 }}>
-                                <Box alignSelf={"center"}>
-                                    <Image
-                                        src={steklopaket}
-                                        sizes={"30vw"}
-                                        style={{
-                                            width: "100%",
-                                            height: "auto",
-                                        }}
-                                        alt={
-                                            "Выбор стеклопакета для остекления коттеджа"
-                                        }
-                                    />
-                                </Box>
+                                <Stack direction={"column"} rowGap={6}>
+                                    <Box alignSelf={"center"}>
+                                        <Box padding={0}>
+                                            <Image
+                                                src={polnoves_provedal}
+                                                sizes={"30vw"}
+                                                style={{
+                                                    width: "100%",
+                                                    height: "auto",
+                                                }}
+                                                alt={
+                                                    "Полновесный профиль Provedal"
+                                                }
+                                            />
+                                        </Box>
+                                        <Typography
+                                            align={"center"}
+                                            variant="body2"
+                                            fontWeight={500}
+                                        >
+                                            Полновесный профиль раздвижной рамы.
+                                            <br />
+                                            Вес - 0,79 кг/пог.м.
+                                        </Typography>
+                                    </Box>
+                                    <Box alignSelf={"center"}>
+                                        <Box padding={4}>
+                                            <Image
+                                                src={oblegch_provedal}
+                                                sizes={"30vw"}
+                                                style={{
+                                                    width: "100%",
+                                                    height: "auto",
+                                                }}
+                                                alt={
+                                                    "Облегчённый профиль Provedal"
+                                                }
+                                            />
+                                        </Box>
+                                        <Typography
+                                            align={"center"}
+                                            variant="body2"
+                                            fontWeight={500}
+                                        >
+                                            Облегчённый эконом-профиль
+                                            раздвижной рамы.
+                                            <br />
+                                            Вес - 0,564 кг/пог.м. и менее...
+                                        </Typography>
+                                    </Box>
+                                </Stack>
                             </Grid>
 
                             <Grid
@@ -1405,7 +1441,7 @@ function CardTextInfo(title: string, descriptionText: string[]) {
 
 function CardTextInfoJSX(title: string, descriptionJSX: JSX.Element[]) {
     return (
-        <Card elevation={0}>
+        <Card elevation={10}>
             <CardContent>
                 <Typography component="div" variant="h2">
                     {title}

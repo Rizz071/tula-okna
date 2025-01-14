@@ -10,7 +10,7 @@ interface Props {
 const ProductionCard = ({ imgSrc, caption, link }: Props) => {
     return (
         <Stack
-            direction={{ xs: "column", sm: "column", md: "row" }}
+            direction={{ xs: "column", sm: "column", lg: "row" }}
             alignItems={"center"}
         >
             {/* <Paper elevation={10}>
@@ -18,7 +18,7 @@ const ProductionCard = ({ imgSrc, caption, link }: Props) => {
             <Image
                 src={imgSrc.src}
                 width={imgSrc.width}
-                height={imgSrc.height}
+                height={104}
                 alt={caption}
             />
             {/* </Box>
@@ -27,15 +27,15 @@ const ProductionCard = ({ imgSrc, caption, link }: Props) => {
                 display={"flex"}
                 flexDirection={"column"}
                 justifyContent={"center"}
-                alignItems={{ xs: "center", md: "flex-start" }}
-                marginLeft={{ xs: 0, sm: 0, md: 3 }}
+                alignItems={{ xs: "center", lg: "flex-start" }}
+                marginLeft={{ xs: 0, lg: 3 }}
                 gap={1}
             >
                 <Typography
                     sx={{
-                        fontSize: { xs: "large", sm: "large", md: "larger" },
+                        fontSize: { xs: "large", md: "larger" },
                         fontWeight: 300,
-                        textAlign: { xs: "center", md: "left" },
+                        textAlign: { xs: "center", lg: "left" },
                         my: 0,
                     }}
                 >

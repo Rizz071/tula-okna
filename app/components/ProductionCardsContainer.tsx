@@ -64,9 +64,8 @@ const ProductionCardsContainer = ({ title, cardsArray }: Props) => {
                                 <Grid
                                     size={{
                                         xs: 12,
-                                        sm: 4,
-                                        md: 5,
-                                        lg: 4,
+                                        sm: 5,
+                                        md: 4,
                                     }}
                                     key={index}
                                 >
