@@ -6,7 +6,6 @@ import {
     Typography,
     Divider,
     List,
-    ListItem,
     Paper,
     Table,
     TableContainer,
@@ -42,12 +41,12 @@ import kaleva_sert_1 from "../public/images/certificates/kaleva_sert_1.jpg";
 import veka_sert_1 from "../public/images/certificates/veka_sert_1.jpg";
 import rehau_sert_1 from "../public/images/certificates/rehau_cert1.jpg";
 
-import Front_small_2 from "@/app/public/images/Front_small_2.webp";
-import Front_small_3 from "@/app/public/images/Front_small_3.webp";
-import House from "@/app/public/images/House.webp";
-import Doors from "@/app/public/images/Doors.webp";
-import apartements1 from "@/app/public/images/apartements3_104px.jpg";
-import dacha1 from "@/app/public/images/dacha1_104px.jpeg";
+import Front_small_2 from "@/public/images/Front_small_2.webp";
+import Front_small_3 from "@/public/images/Front_small_3.webp";
+import House from "@/public/images/House.webp";
+import Doors from "@/public/images/Doors.webp";
+import apartements1 from "@/public/images/apartements3_104px.jpg";
+import dacha1 from "@/public/images/dacha1_104px.jpeg";
 import { IProductionCard } from "./lib/types";
 
 export default function Home() {
