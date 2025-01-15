@@ -1,85 +1,73 @@
 "use client";
 
 import React, { useState } from "react";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
-import { Box } from "@mui/material";
+import { Card, CardActionArea, CardContent, CardMedia } from "@mui/material";
+import { IButtonImage } from "../lib/types";
 
-interface Props {
-    caption: string;
-    image: StaticImageData;
-    link?: string;
-}
-
-const ButtonImage = ({ caption, image, link = "" }: Props) => {
+const ButtonImage = ({
+    caption,
+    image,
+    link = "",
+    description,
+}: IButtonImage) => {
     const [isHovering, setIsHovered] = useState(false);
 
     return (
-        <Box width={300} height={400}>
+        <>
             <Link
                 href={link}
-                style={{
-                    textDecoration: "none",
-                }}
+                style={{ textDecoration: "none" }}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
-                <Button
-                    variant="text"
-                    size="small"
-                    style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        padding: 0,
-                        alignItems: "flex-end",
-                    }}
+                <Card
+                    sx={{ maxWidth: 300 }}
+                    square
+                    variant="elevation"
+                    elevation={6}
                 >
-                    <Box
-                        margin={0}
-                        padding={0}
-                        style={{
-                            width: "300px",
-                            height: "400px",
-                            overflow: "hidden",
-                        }}
-                    >
-                        <Image
-                            src={image.src}
-                            width={image.width}
-                            height={image.height}
-                            style={
-                                {
-                                    // position: "relative"
-                                    //     width: image.width,
-                                    //     height: "auto",
-                                }
-                            }
-                            // objectFit="contain"
-                            unoptimized
-                            alt="windows pvc"
+                    <CardActionArea>
+                        <CardMedia
+                            sx={{ height: 400 }}
+                            image={image.src}
+                            title={caption}
                         />
-                    </Box>
-                    <Typography
-                        alignSelf={"flex-end"}
-                        textTransform={"uppercase"}
-                        paddingY={0.6}
-                        marginTop={-5}
-                        letterSpacing={1.5}
-                        fontWeight={300}
-                        color={"white"}
-                        bgcolor={isHovering ? "primary.main" : "black"}
-                        align={"center"}
-                        width={"100%"}
-                        sx={{ opacity: isHovering ? 0.9 : 0.7 }}
-                        // alignSelf={"flex-end"}
-                    >
-                        {caption}
-                    </Typography>
-                </Button>
+                        <CardContent sx={{ m: 0, p: 0, border: 0 }}>
+                            {/* <Image
+                                src={image.src}
+                                width={image.width}
+                                height={image.height}
+                                unoptimized
+                                alt={caption}
+                            /> */}
+                            <Typography
+                                sx={{
+                                    textAlign: "center",
+                                    minHeight: 50,
+                                    opacity: isHovering ? 1 : 0.9,
+                                    bgcolor: isHovering
+                                        ? "primary.main"
+                                        : "black",
+                                    m: 0,
+                                    p: 0,
+                                    alignContent: "center",
+                                    color: "white",
+                                    fontWeight: 300,
+                                    letterSpacing: 1.5,
+                                    textTransform: "uppercase",
+                                }}
+                            >
+                                {caption}
+                            </Typography>
+                        </CardContent>
+                    </CardActionArea>
+                </Card>
             </Link>
-        </Box>
+            <Typography align={"center"}>{description}</Typography>
+        </>
     );
 };
 
