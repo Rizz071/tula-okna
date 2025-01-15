@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import { Card, CardActionArea, CardContent, CardMedia } from "@mui/material";
 import { IButtonImage } from "../lib/types";
-import { grey } from "@mui/material/colors";
+import { grey, red } from "@mui/material/colors";
 
 const ButtonImage = ({
     caption,
@@ -47,10 +47,11 @@ const ButtonImage = ({
                                 sx={{
                                     textAlign: "center",
                                     minHeight: 50,
-                                    opacity: isHovering ? 1 : 0.95,
+                                    // opacity: isHovering ? 1 : 0.95,
                                     bgcolor: isHovering
-                                        ? "primary.main"
-                                        : grey[900],
+                                        ? // ? "primary.main"
+                                          red[700]
+                                        : red[500],
                                     m: 0,
                                     p: 0,
                                     alignContent: "center",
