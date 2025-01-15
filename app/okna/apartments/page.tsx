@@ -248,8 +248,8 @@ export default function Page() {
                             Выберите параметры помещения
                         </Typography>
                     </Grid>
-                    <Grid item xs={12} sm={3} md={3}>
-                        <Box>
+                    <Grid item xs={12} md={3}>
+                        <Box sx={{ width: { xs: "auto", lg: 300 } }}>
                             <FormControl fullWidth variant="filled">
                                 <InputLabel id="heating-select-input-label">
                                     Этаж
@@ -271,8 +271,8 @@ export default function Page() {
                         </Box>
                     </Grid>
 
-                    <Grid item xs={12} sm={3} md={3}>
-                        <Box>
+                    <Grid item xs={12} md={3}>
+                        <Box sx={{ width: { xs: "auto", lg: 300 } }}>
                             <FormControl fullWidth variant="filled">
                                 <InputLabel id="heating-select-input-label">
                                     Отопление
@@ -295,8 +295,8 @@ export default function Page() {
                         </Box>
                     </Grid>
 
-                    <Grid item xs={12} sm={3} md={3}>
-                        <Box>
+                    <Grid item xs={12} md={3}>
+                        <Box sx={{ width: { xs: "auto", lg: 300 } }}>
                             <FormControl fullWidth variant="filled">
                                 <InputLabel id="output-air-select-label">
                                     Уличный шум
