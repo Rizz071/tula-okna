@@ -2,10 +2,10 @@
 
 import React, { useState } from "react";
 import Typography from "@mui/material/Typography";
-import Image from "next/image";
 import Link from "next/link";
 import { Card, CardActionArea, CardContent, CardMedia } from "@mui/material";
 import { IButtonImage } from "../lib/types";
+import { grey } from "@mui/material/colors";
 
 const ButtonImage = ({
     caption,
@@ -35,7 +35,7 @@ const ButtonImage = ({
                             image={image.src}
                             title={caption}
                         />
-                        <CardContent sx={{ m: 0, p: 0, border: 0 }}>
+                        <CardContent sx={{ m: 0, p: 0 }}>
                             {/* <Image
                                 src={image.src}
                                 width={image.width}
@@ -47,10 +47,10 @@ const ButtonImage = ({
                                 sx={{
                                     textAlign: "center",
                                     minHeight: 50,
-                                    opacity: isHovering ? 1 : 0.9,
+                                    opacity: isHovering ? 1 : 0.95,
                                     bgcolor: isHovering
                                         ? "primary.main"
-                                        : "black",
+                                        : grey[900],
                                     m: 0,
                                     p: 0,
                                     alignContent: "center",

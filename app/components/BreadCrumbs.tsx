@@ -20,6 +20,8 @@ const BreadCrumbs = () => {
                 return "в частный дом";
             case "apartments":
                 return "в квартиру";
+            case "balkony":
+                return "балконы и лоджии";
             default:
                 return name;
         }

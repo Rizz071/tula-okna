@@ -12,7 +12,7 @@ export default function Page() {
             }
             buttonsArray={[
                 {
-                    caption: "Холодное остекление балкона",
+                    caption: "Холодное остекление",
                     image: coldImg,
                     link: "/okna/apartments",
                     description: (
@@ -24,7 +24,7 @@ export default function Page() {
                 },
 
                 {
-                    caption: "Тёплое остекление балкона",
+                    caption: "Тёплое остекление",
                     image: coldImg,
                     link: "/okna/cottage",
                     description: (
