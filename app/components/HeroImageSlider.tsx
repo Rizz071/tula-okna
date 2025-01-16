@@ -11,6 +11,7 @@ import {
     List,
     ListItem,
     Divider,
+    Stack,
 } from "@mui/material";
 // import slideImage1 from "../../public/images/slide1.webp";
 // import slideImage2 from "../../public/images/slide2.webp";
@@ -75,10 +76,10 @@ function HeroImageSlider() {
                 position="relative"
                 marginBottom={"auto"}
                 left={{ sm: "1%", md: "-5%" }}
-                top={{ sm: "-40px" }}
+                top={{ sm: "-120px", md: "-40px" }}
                 sx={{ transform: `translate(-50%, 50%)` }}
             >
-                <Card sx={{ minWidth: 275, maxWidth: 300 }}>
+                <Card sx={{ maxWidth: 280 }}>
                     <CardContent>
                         <Box
                             display={"flex"}
@@ -88,95 +89,55 @@ function HeroImageSlider() {
                         >
                             <SecuritySharpIcon
                                 fontSize="large"
-                                sx={{ color: "DodgerBlue" }}
+                                sx={{ color: "secondary.main" }}
                             />
                             <Typography
-                                alignSelf={"flex-end"}
-                                variant="sliderFont"
+                                alignSelf={"center"}
+                                variant="h6"
                                 fontSize={{ xs: "1.2rem", lg: "1.5rem" }}
-                                component="div"
-                                fontWeight={"700"}
-                                color={"DodgerBlue"}
+                                color={"secondary.main"}
                             >
-                                Настоящая гарантия
+                                Наша гарантия
                             </Typography>
                         </Box>
-                        <List>
-                            <ListItem>
-                                <Box
-                                    display={"flex"}
-                                    columnGap={1}
-                                    alignItems={"flex-start"}
-                                >
-                                    <Typography
-                                        fontWeight={500}
-                                        marginTop={0}
-                                        lineHeight={"1.5rem"}
-                                        fontSize={{
-                                            sm: "0.8rem",
-                                            md: "0.9rem",
-                                            lg: "1rem",
-                                        }}
-                                    >
-                                        Непрерывно выполняем гарантийные
-                                        обязательства более{" "}
-                                        {new Date().getFullYear() - 1998} лет
-                                    </Typography>
-                                </Box>
-                            </ListItem>
-                            <ListItem>
-                                <Box
-                                    display={"flex"}
-                                    columnGap={1}
-                                    alignItems={"flex-start"}
-                                >
-                                    <Typography
-                                        marginTop={0}
-                                        fontWeight={500}
-                                        lineHeight={"1.5rem"}
-                                        fontSize={{
-                                            sm: "0.8rem",
-                                            md: "0.9rem",
-                                            lg: "1rem",
-                                        }}
-                                    >
-                                        70% клиентов обращаются к нам по
-                                        рекомендации
-                                    </Typography>
-                                </Box>
-                            </ListItem>
-                            <ListItem>
-                                <Box
-                                    display={"flex"}
-                                    columnGap={1}
-                                    alignItems={"flex-start"}
-                                >
-                                    <Typography
-                                        marginTop={0}
-                                        fontWeight={500}
-                                        lineHeight={"1.5rem"}
-                                        fontSize={{
-                                            sm: "0.8rem",
-                                            md: "0.9rem",
-                                            lg: "1rem",
-                                        }}
-                                    >
-                                        Решаем ваши задачи, а не продаём
-                                        &quot;дешёвые&quot; окна
-                                    </Typography>
-                                </Box>
-                            </ListItem>
-                        </List>
+                        <Stack direction={"column"}>
+                            <Typography
+                                sx={{
+                                    ml: 2,
+                                    mr: 1,
+                                    fontWeight: 500,
+                                    fontSize: "medium",
+                                }}
+                            >
+                                Непрерывно выполняем гарантийные обязательства
+                                более {new Date().getFullYear() - 1998} лет
+                            </Typography>
+                            <Typography
+                                sx={{
+                                    ml: 2,
+                                    mr: 1,
+                                    fontWeight: 500,
+                                    fontSize: "medium",
+                                }}
+                            >
+                                70% клиентов обращаются к нам снова
+                            </Typography>
+                            <Typography
+                                sx={{
+                                    ml: 2,
+                                    mr: 1,
+                                    fontWeight: 500,
+                                    fontSize: "medium",
+                                }}
+                            >
+                                Решаем ваши задачи, а не продаём
+                                &quot;дешёвые&quot; окна
+                            </Typography>
+                        </Stack>
                     </CardContent>
                 </Card>
             </Box>
         </Box>
-
-        // <Carousel {...DefaultSettingsT} sx={{ display: { xs: "flex" } }}>
-        //     {items.map((item, i) => (
-        //         <Item key={i} item={item} />
-        //     ))}
-        // </Carousel>
     );
 }
 

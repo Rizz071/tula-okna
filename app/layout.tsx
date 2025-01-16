@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import "./globals.css";
 import { ThemeProvider } from "@mui/material/styles";
-import theme from "./components/theme";
+import theme from "./lib/theme";
 import Navbar from "./components/Navbar";
 import OfferRequest from "./components/OfferRequest";
 

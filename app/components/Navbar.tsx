@@ -15,6 +15,7 @@ import DrawerMobileMenu from "./DrawerMobileMenu";
 import { Container } from "@mui/material";
 import Link from "next/link";
 import BreadCrumbs from "./BreadCrumbs";
+import { red } from "@mui/material/colors";
 
 const Navbar = () => {
     const [isContactsVisible, setIsContactsVisible] =
@@ -68,7 +69,7 @@ const Navbar = () => {
                                     <Image
                                         src={logoImage}
                                         height={128}
-                                        alt="Site logo"
+                                        alt="Company logo"
                                     />
                                 </Box>
                                 <Box
@@ -107,7 +108,7 @@ const Navbar = () => {
                         >
                             <Button
                                 sx={{
-                                    color: "#e74f21",
+                                    color: "primary",
                                     paddingY: "3px",
                                     mr: "auto",
                                 }}
@@ -121,7 +122,7 @@ const Navbar = () => {
                                 }
                             >
                                 <Typography
-                                    color="#e74f21"
+                                    color={"primary"}
                                     fontWeight={"light"}
                                     fontSize={"large"}
                                     margin={0}
@@ -132,7 +133,7 @@ const Navbar = () => {
                             </Button>
                             <Button
                                 sx={{
-                                    color: "#e74f21",
+                                    color: "primary",
                                     paddingY: "3px",
                                     mr: "auto",
                                 }}
@@ -146,7 +147,7 @@ const Navbar = () => {
                                 }
                             >
                                 <Typography
-                                    color="#e74f21"
+                                    color="primary"
                                     fontWeight={"light"}
                                     sx={{ textTransform: "none" }}
                                     fontSize={"large"}
@@ -158,7 +159,7 @@ const Navbar = () => {
 
                             <Button
                                 sx={{
-                                    color: "#e74f21",
+                                    color: "primary",
                                     paddingY: "3px",
                                     mr: "auto",
                                 }}
@@ -172,7 +173,7 @@ const Navbar = () => {
                                 }
                             >
                                 <Typography
-                                    color="#e74f21"
+                                    color="primary"
                                     fontWeight={"light"}
                                     sx={{ textTransform: "none" }}
                                     fontSize={"large"}
@@ -191,13 +192,13 @@ const Navbar = () => {
                         >
                             <Button
                                 variant={"contained"}
-                                color="success"
+                                color="secondary"
                                 sx={{
                                     display: isContactsVisible
                                         ? "none"
                                         : "block",
                                     mt: 0,
-                                    // height: 50,
+                                    fontWeight: 400,
                                 }}
                                 onClick={() => {
                                     setIsContactsVisible(!isContactsVisible);
@@ -223,7 +224,7 @@ const Navbar = () => {
                                 </Typography>
                                 <Typography
                                     fontSize={"0.9rem"}
-                                    color="#e74f21"
+                                    color="primary"
                                     margin={0}
                                 >
                                     Почта: 385391@mail.ru

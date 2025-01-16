@@ -1,5 +1,6 @@
 'use client';
 import { Roboto, Roboto_Condensed, Inter, Inter_Tight, Noto_Sans, Noto_Serif, Montserrat, Rubik } from 'next/font/google';
+import { red, blue } from '@mui/material/colors';
 
 import { createTheme } from '@mui/material/styles';
 
@@ -103,9 +104,21 @@ const theme = createTheme({
     },
     palette: {
         primary: {
-            main: "#e74f21"
+            // light: '#f6685e',
+            main: red[500], //#f44336
+            // dark: '#aa2e25',
+        },
+        secondary: {
+            // light: '#5eebf6',
+            // not bad            main: "#1F939C",
+
+            main: blue[700],
+            // dark: '#25a1aa',
+            contrastText: '#fff',
         }
+
     },
+
 
     // components: {
     //     MuiTypography: {

@@ -48,15 +48,14 @@ const ButtonImage = ({
                                     textAlign: "center",
                                     minHeight: 50,
                                     // opacity: isHovering ? 1 : 0.95,
-                                    bgcolor: isHovering
-                                        ? // ? "primary.main"
-                                          red[700]
-                                        : red[500],
+                                    bgcolor: !isHovering
+                                        ? "primary.main"
+                                        : "primary.dark",
                                     m: 0,
                                     p: 0,
                                     alignContent: "center",
                                     color: "white",
-                                    fontWeight: 300,
+                                    fontWeight: 400,
                                     letterSpacing: 1.5,
                                     textTransform: "uppercase",
                                 }}
