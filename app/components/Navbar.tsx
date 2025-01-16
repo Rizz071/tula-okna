@@ -1,21 +1,17 @@
 "use client";
 
 import * as React from "react";
+import { Container, Box, Toolbar, Typography, Button } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import Image from "next/image";
 import logoImage from "../../public/images/Logo1.svg";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 import CalculateOutlinedIcon from "@mui/icons-material/CalculateOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import DrawerMobileMenu from "./DrawerMobileMenu";
-import { Container } from "@mui/material";
 import Link from "next/link";
 import BreadCrumbs from "./BreadCrumbs";
-import { red } from "@mui/material/colors";
+import PhoneMailButton from "./PhoneMainButton";
 
 const Navbar = () => {
     const [isContactsVisible, setIsContactsVisible] =
@@ -183,64 +179,11 @@ const Navbar = () => {
                                 </Typography>
                             </Button>
                         </Box>
-                        <Box
-                            sx={{ display: { xs: "none", sm: "flex" } }}
-                            flexDirection={"column"}
-                            alignSelf={"center"}
-                            justifyContent={"flex-end"}
-                            textAlign={"right"}
-                        >
-                            <Button
-                                variant={"contained"}
-                                color="secondary"
-                                sx={{
-                                    display: isContactsVisible
-                                        ? "none"
-                                        : "block",
-                                    mt: 0,
-                                    fontWeight: 400,
-                                }}
-                                onClick={() => {
-                                    setIsContactsVisible(!isContactsVisible);
-                                }}
-                            >
-                                Показать телефон и почту
-                            </Button>
-                            <Box
-                                sx={{
-                                    display: isContactsVisible
-                                        ? "block"
-                                        : "none",
-                                }}
-                            >
-                                <Typography
-                                    fontSize={"0.9rem"}
-                                    lineHeight={"1.2rem"}
-                                >
-                                    Телефон в г.Туле
-                                </Typography>
-                                <Typography variant="h5">
-                                    +7 (4872) 38-55-50
-                                </Typography>
-                                <Typography
-                                    fontSize={"0.9rem"}
-                                    color="primary"
-                                    margin={0}
-                                >
-                                    Почта: 385391@mail.ru
-                                </Typography>
 
-                                <Typography
-                                    fontSize={"0.9rem"}
-                                    lineHeight={"1.2rem"}
-                                    fontWeight={"light"}
-                                >
-                                    Пн - Пт 9:00 - 19:00
-                                    <br />
-                                    Сб 10.00 - 15.00
-                                </Typography>
-                            </Box>
-                        </Box>
+                        <PhoneMailButton
+                            isContactsVisible={isContactsVisible}
+                            setIsContactsVisible={setIsContactsVisible}
+                        />
                     </Toolbar>
                     <Toolbar
                         sx={{
