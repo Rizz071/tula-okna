@@ -26,11 +26,11 @@ const PhoneMailButton = ({
         >
             <Button
                 variant={"outlined"}
-                color="primary"
                 sx={{
                     display: isContactsVisible ? "none" : "block",
                     mt: 0,
                     fontWeight: 400,
+                    color: "primary",
                 }}
                 onClick={() => {
                     setIsContactsVisible(!isContactsVisible);

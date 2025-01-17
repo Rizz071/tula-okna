@@ -1,15 +1,13 @@
-// "use client";
-
 import React from "react";
 import { Box, Typography, Card, CardContent, Stack } from "@mui/material";
-
-import slideImage from "../../public/images/slides/MainSlide_6k_sharp.jpg";
-
 import SecuritySharpIcon from "@mui/icons-material/SecuritySharp";
-
 import Image, { StaticImageData } from "next/image";
 
-function HeroImageSlider() {
+interface Props {
+    sliderImage: StaticImageData;
+}
+
+function HeroImageSlider({ sliderImage }: Props) {
     return (
         <Box
             sx={{
@@ -22,7 +20,7 @@ function HeroImageSlider() {
             }}
         >
             <Image
-                src={slideImage}
+                src={sliderImage}
                 alt="Slider hero image"
                 sizes={"100vw"}
                 quality={85}
@@ -71,8 +69,8 @@ function HeroImageSlider() {
                                 </>,
                                 <>70% клиентов обращаются к нам снова</>,
                                 <>
-                                    Решаем ваши задачи, а не продаём
-                                    &quot;дешёвые&quot; окна
+                                    Предлагаем надёжное решение задачи, а не
+                                    &quot;дешёвую&quot; цену
                                 </>,
                             ].map((item, index) => {
                                 return (

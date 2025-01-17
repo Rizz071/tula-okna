@@ -13,16 +13,12 @@ const ProductionCard = ({ imgSrc, caption, link }: Props) => {
             direction={{ xs: "column", sm: "column", lg: "row" }}
             alignItems={"center"}
         >
-            {/* <Paper elevation={10}>
-                <Box margin={1}> */}
             <Image
                 src={imgSrc.src}
                 width={imgSrc.width}
                 height={104}
                 alt={caption}
             />
-            {/* </Box>
-            </Paper> */}
             <Box
                 display={"flex"}
                 flexDirection={"column"}

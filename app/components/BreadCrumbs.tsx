@@ -22,6 +22,12 @@ const BreadCrumbs = () => {
                 return "в квартиру";
             case "balkony":
                 return "балконы и лоджии";
+            case "cold":
+                return "холодное остекление";
+            case "warm":
+                return "тёплое остекление";
+            case "interior":
+                return "внутренняя отделка";
             default:
                 return name;
         }

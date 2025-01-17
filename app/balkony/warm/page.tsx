@@ -28,7 +28,7 @@ import veka_70 from "@/public/images/profiles/veka_70_2.jpg";
 import veka_82 from "@/public/images/profiles/veka_82_1.jpg";
 import isoterma1 from "@/public/images/slides/profile_compare_house_1.jpg";
 import veka_compare_1 from "@/public/images/profiles/veka_compare_2_800px.jpg";
-import slideImage from "@/public/images/balkoni/BalcFront1.jpg";
+import slide from "@/public/images/balkoni/BalcFront1.jpg";
 import steklopaket from "@/public/images/slides/steklopaket_1.jpg";
 import lamination_1 from "@/public/images/slides/lamination_1.jpg";
 import glued from "@/public/images/slides/glued.jpg";
@@ -45,12 +45,11 @@ import ProductionCardsContainer from "../../components/ProductionCardsContainer"
 
 import polnoves_provedal from "@/public/images/balkoni/Polnoves_provedal.jpg";
 import oblegch_provedal from "@/public/images/balkoni/Oblegch_provedal.jpg";
-import HeroImageSlider from "@/app/components/HeroImageSlider";
 
 const cardsArray: IProductionCard[] = [
     {
         image: cold_ostekl,
-        caption: "Особенности наших рам",
+        caption: "Какие окна ПВХ подойдут?",
         link: "/okna/apartments",
     },
     {
@@ -83,7 +82,126 @@ const cardsArray: IProductionCard[] = [
 export default function Page() {
     return (
         <>
-            <HeroImageSlider sliderImage={slideImage} />
+            <Box
+                display={"flex"}
+                width="100%"
+                maxHeight="610px"
+                minHeight={{ xs: "250px", sm: "410px", md: "610px" }}
+                justifyContent={"center"}
+                sx={{ position: "relative" }}
+            >
+                <Image
+                    src={slide}
+                    alt="Windows for houses slider"
+                    sizes="100vw"
+                    style={{ zIndex: "1", objectFit: "cover" }}
+                    priority
+                    quality={100}
+                    fill
+                    // unoptimized={true}
+                />
+                <Box
+                    display={{ xs: "none", sm: "flex" }}
+                    position="relative"
+                    marginBottom={"auto"}
+                    left={{ sm: "1%", md: "-12%" }}
+                    top={{ sm: "-40px" }}
+                    sx={{ zIndex: "50", transform: `translate(-50%, 50%)` }}
+                >
+                    <Card sx={{ minWidth: 275, maxWidth: 300 }}>
+                        <CardContent>
+                            <Box
+                                display={"flex"}
+                                columnGap={1}
+                                alignItems={"flex-start"}
+                                paddingLeft={0}
+                            >
+                                <SecuritySharpIcon
+                                    fontSize="large"
+                                    sx={{ color: "DodgerBlue" }}
+                                />
+                                <Typography
+                                    alignSelf={"flex-end"}
+                                    variant="sliderFont"
+                                    fontSize={{ xs: "1.2rem", lg: "1.5rem" }}
+                                    component="div"
+                                    fontWeight={"700"}
+                                    color={"DodgerBlue"}
+                                >
+                                    Настоящая гарантия
+                                </Typography>
+                            </Box>
+                            <List>
+                                <ListItem>
+                                    <Box
+                                        display={"flex"}
+                                        columnGap={1}
+                                        alignItems={"flex-start"}
+                                    >
+                                        <Typography
+                                            fontWeight={500}
+                                            marginTop={0}
+                                            lineHeight={"1.5rem"}
+                                            fontSize={{
+                                                sm: "0.8rem",
+                                                md: "0.9rem",
+                                                lg: "1rem",
+                                            }}
+                                        >
+                                            Непрерывно выполняем гарантийные
+                                            обязательства более{" "}
+                                            {new Date().getFullYear() - 1998}{" "}
+                                            лет
+                                        </Typography>
+                                    </Box>
+                                </ListItem>
+                                <ListItem>
+                                    <Box
+                                        display={"flex"}
+                                        columnGap={1}
+                                        alignItems={"flex-start"}
+                                    >
+                                        <Typography
+                                            marginTop={0}
+                                            fontWeight={500}
+                                            lineHeight={"1.5rem"}
+                                            fontSize={{
+                                                sm: "0.8rem",
+                                                md: "0.9rem",
+                                                lg: "1rem",
+                                            }}
+                                        >
+                                            70% клиентов обращаются к нам по
+                                            рекомендации
+                                        </Typography>
+                                    </Box>
+                                </ListItem>
+                                <ListItem>
+                                    <Box
+                                        display={"flex"}
+                                        columnGap={1}
+                                        alignItems={"flex-start"}
+                                    >
+                                        <Typography
+                                            marginTop={0}
+                                            fontWeight={500}
+                                            lineHeight={"1.5rem"}
+                                            fontSize={{
+                                                sm: "0.8rem",
+                                                md: "0.9rem",
+                                                lg: "1rem",
+                                            }}
+                                        >
+                                            Решаем ваши задачи, а не продаём
+                                            &quot;дешёвые&quot; окна
+                                        </Typography>
+                                    </Box>
+                                </ListItem>
+                            </List>
+                        </CardContent>
+                    </Card>
+                </Box>
+            </Box>
 
             <ProductionCardsContainer title={""} cardsArray={cardsArray} />
 

@@ -38,6 +38,7 @@ import preim_8 from "../public/images/eco.webp";
 import kaleva_sert_1 from "../public/images/certificates/kaleva_sert_1.jpg";
 import veka_sert_1 from "../public/images/certificates/veka_sert_1.jpg";
 import rehau_sert_1 from "../public/images/certificates/rehau_cert1.jpg";
+import slideImage from "@/public/images/slides/MainSlide_6k_sharp.jpg";
 
 import Front_small_2 from "@/public/images/Front_small_2.webp";
 import Front_small_3 from "@/public/images/Front_small_3.webp";
@@ -67,7 +68,7 @@ export default function Home() {
         },
         {
             image: dacha1,
-            caption: "Остекление дач",
+            caption: "Остекление дач и беседок",
             link: "6 000",
         },
         {
@@ -84,7 +85,7 @@ export default function Home() {
 
     return (
         <>
-            <HeroImageSlider />
+            <HeroImageSlider sliderImage={slideImage} />
             <ProductionCardsContainer title={""} cardsArray={cardsArray} />
             <Container maxWidth="lg">
                 <Grid

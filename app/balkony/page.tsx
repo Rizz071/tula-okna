@@ -1,6 +1,7 @@
 import React from "react";
 import coldImg from "@/public/images/balkoni/5_balcon_11_1.jpg";
-import dachaImg from "@/public/images/dacha1_tmblr.jpeg";
+import warmImg from "@/public/images/balkoni/warm_glazing_tmblr_2.jpg";
+import otdelkaImg from "@/public/images/balkoni/otdelka_tmblr_1.jpg";
 import ContainerButtonImages from "../components/ContainerButtonImages";
 
 export default function Page() {
@@ -8,13 +9,13 @@ export default function Page() {
         <ContainerButtonImages
             mainTitle={"Выберите цель остекления"}
             mainTitleDescription={
-                "Для каждого объекта мы предлагаем свои варианты оконных блоков"
+                "Остекление балкона бывает быть холодным и тёплым. Внутреннее пространство можно оставить как есть или же превратить в дополнительную комнату. Туда можно установить шкафы-купе, лиану для сушки белья, а также провести свет."
             }
             buttonsArray={[
                 {
                     caption: "Холодное остекление",
                     image: coldImg,
-                    link: "/okna/apartments",
+                    link: "/balkony/cold",
                     description: (
                         <>
                             Холодное раздвижное остекление защитит от осадков,
@@ -25,8 +26,8 @@ export default function Page() {
 
                 {
                     caption: "Тёплое остекление",
-                    image: coldImg,
-                    link: "/okna/cottage",
+                    image: warmImg,
+                    link: "/balkony/warm",
                     description: (
                         <>
                             Пластиковая рама позволит превратить лоджию или
@@ -37,7 +38,7 @@ export default function Page() {
 
                 {
                     caption: "Внутренняя отделка",
-                    image: dachaImg,
+                    image: otdelkaImg,
                     link: "/okna/apartments",
                     description: (
                         <>

@@ -25,6 +25,7 @@ import FileUploadOutlined from "@mui/icons-material/FileUploadOutlined";
 import { useState, useRef } from "react";
 import { sendMail } from "../lib/mail";
 import { UploadFileOutlined } from "@mui/icons-material";
+import PhoneMailButton from "./PhoneMainButton";
 
 const OfferRequest = () => {
     const [isContactsVisible, setContactsVisible] = useState<boolean>(false);
@@ -379,77 +380,13 @@ const OfferRequest = () => {
                                 }}
                                 lineHeight={"1.5rem"}
                             >
-                                Вы всегда можете пообщаться с нашим специалистом
-                                или написать нам письмо (мы отвечаем на все
-                                запросы):
+                                Звоните или пишите! Мы отвечаем на все запросы:
                             </Typography>
-                            <Button
-                                fullWidth={isSmallScreen}
-                                variant={"contained"}
-                                color="success"
-                                sx={{
-                                    display: isContactsVisible
-                                        ? "none"
-                                        : "block",
-                                    mt: 2,
-                                }}
-                                onClick={() => {
-                                    setContactsVisible(!isContactsVisible);
-                                }}
-                            >
-                                Показать телефон и почту
-                            </Button>
-                            <Box
-                                sx={{
-                                    display: isContactsVisible
-                                        ? "block"
-                                        : "none",
-                                }}
-                                marginTop={2}
-                                padding={1}
-                                bgcolor={"white"}
-                                border={1}
-                                borderColor={"lightgrey"}
-                                borderRadius={2}
-                            >
-                                <Typography
-                                    fontSize={{
-                                        xs: "1rem",
-                                        sm: "1.2rem",
-                                        md: "1.3rem",
-                                        xl: "1.5rem",
-                                    }}
-                                    margin={0}
-                                    fontWeight={500}
-                                    align="right"
-                                >
-                                    Тел: +7 (4872) 38-55-50
-                                </Typography>
-                                <Typography
-                                    align="right"
-                                    variant={"subtitle1"}
-                                    fontSize={{
-                                        xs: "1rem",
-                                    }}
-                                    fontWeight={400}
-                                >
-                                    Пн-Пт: 9.00 - 19:00
-                                    <br />
-                                    Сб: 10.00 - 15.00
-                                </Typography>
-                                <Typography
-                                    align="right"
-                                    variant={"subtitle1"}
-                                    fontSize={{
-                                        xs: "1rem",
-                                    }}
-                                    fontWeight={400}
-                                >
-                                    Почта:{" "}
-                                    <a href="mailto:385391@mail.ru">
-                                        385391@mail.ru
-                                    </a>
-                                </Typography>
+                            <Box sx={{ my: 1 }}>
+                                <PhoneMailButton
+                                    isContactsVisible={isContactsVisible}
+                                    setIsContactsVisible={setContactsVisible}
+                                />
                             </Box>
                         </Grid>
                     </Grid>
