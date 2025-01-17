@@ -5,10 +5,7 @@ import {
     Typography,
     Grid,
     Divider,
-    List,
-    ListItem,
     Stack,
-    Paper,
 } from "@mui/material";
 
 import Card from "@mui/material/Card";
