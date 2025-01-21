@@ -32,7 +32,7 @@ const BreadCrumbs = () => {
                 return name;
         }
     });
-    console.log(paths);
+
     return (
         paths !== "/" && (
             <Breadcrumbs

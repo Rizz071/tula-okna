@@ -3,7 +3,7 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import "./globals.css";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./lib/theme";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import OfferRequest from "./components/OfferRequest";
 
 export const metadata: Metadata = {

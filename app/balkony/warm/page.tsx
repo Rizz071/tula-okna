@@ -41,7 +41,7 @@ import shkaf_tmblr from "@/public/images/balkoni/shkaf_tmblr.jpg";
 import burglar_1 from "@/public/images/slides/burglar_1.jpg";
 import SecuritySharpIcon from "@mui/icons-material/SecuritySharp";
 import { IProductionCard } from "../../lib/types";
-import ProductionCardsContainer from "../../components/ProductionCardsContainer";
+import ProductionCardsContainer from "../../components/ProductionCards/ProductionCardsContainer";
 
 import polnoves_provedal from "@/public/images/balkoni/Polnoves_provedal.jpg";
 import oblegch_provedal from "@/public/images/balkoni/Oblegch_provedal.jpg";

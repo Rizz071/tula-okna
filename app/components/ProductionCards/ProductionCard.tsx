@@ -16,8 +16,10 @@ const ProductionCard = ({ imgSrc, caption, link }: Props) => {
             <Image
                 src={imgSrc.src}
                 width={imgSrc.width}
-                height={104}
+                height={imgSrc.height}
+                // height={104}
                 alt={caption}
+                // style={{ width: "auto" }}
             />
             <Box
                 display={"flex"}

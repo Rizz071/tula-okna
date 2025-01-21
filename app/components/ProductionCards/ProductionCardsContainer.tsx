@@ -2,7 +2,7 @@ import { Paper, Container, Box, Divider, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 
 import ProductionCard from "./ProductionCard";
-import { IProductionCard } from "../lib/types";
+import { IProductionCard } from "../../lib/types";
 
 interface Props {
     title: string;

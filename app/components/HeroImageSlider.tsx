@@ -35,7 +35,7 @@ function HeroImageSlider({ sliderImage }: Props) {
                     position: "relative",
                     mb: "auto",
                     left: { sm: "1%", md: "-5%" },
-                    top: { sm: "-120px", md: "-40px" },
+                    top: { sm: "-160px", md: "-85px" },
                     transform: `translate(-50%, 50%)`,
                 }}
             >

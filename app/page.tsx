@@ -46,248 +46,251 @@ import House from "@/public/images/House.webp";
 import Doors from "@/public/images/Doors.webp";
 import apartements1 from "@/public/images/apartements3_104px.jpg";
 import dacha1 from "@/public/images/dacha1_104px.jpeg";
-import { IProductionCard } from "./lib/types";
-import ProductionCardsContainer from "./components/ProductionCardsContainer";
+import { ImageSide } from "./lib/types";
+import ProductionCardsContainer from "./components/ProductionCards/ProductionCardsContainer";
+import ArticlesContainer from "./components/Article/ArticlesContainer";
 
 export default function Home() {
-    const cardsArray: IProductionCard[] = [
-        {
-            image: apartements1,
-            caption: "Остекление квартир",
-            link: "/okna/apartments",
-        },
-        {
-            image: Front_small_2,
-            caption: "Остекление и отделка балконов",
-            link: "/balkony",
-        },
-        {
-            image: House,
-            caption: "Остекление домов",
-            link: "/okna/cottage",
-        },
-        {
-            image: dacha1,
-            caption: "Остекление дач и беседок",
-            link: "6 000",
-        },
-        {
-            image: Doors,
-            caption: "Входные двери для предприятий",
-            link: "15 000",
-        },
-        {
-            image: Front_small_3,
-            caption: "Раздвижные двери-порталы",
-            link: "59 000",
-        },
-    ];
-
     return (
         <>
             <HeroImageSlider sliderImage={slideImage} />
-            <ProductionCardsContainer title={""} cardsArray={cardsArray} />
-            <Container maxWidth="lg">
-                <Grid
-                    container
-                    marginTop={10}
-                    columnSpacing={6}
-                    rowSpacing={10}
-                    direction="row"
-                    alignItems={"flex-start"}
-                    justifyContent={"space-between"}
-                >
-                    <Grid size={{ xs: 12 }}>
-                        <Typography variant="h1">
-                            Производитель окон с 1998 года
-                        </Typography>
-                    </Grid>
-                    <Grid size={{ xs: 12, md: 6 }}>
-                        <Box
-                            display={"flex"}
-                            flexDirection="column"
-                            justifyContent={"center"}
-                            alignItems={"center"}
-                        >
-                            <Image
-                                src={worker_plant_1}
-                                alt={"worker at our old plant"}
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                style={{
-                                    border: "1px solid grey",
-                                    width: "100%",
-                                    height: "auto",
-                                }}
-                                unoptimized
-                            />
-                            <Typography variant="subtitle2">
-                                Мы собирали окна и двери на собственном
-                                производстве c 1998 по 2019 г.
-                            </Typography>
-                        </Box>
-                    </Grid>
+            <ProductionCardsContainer
+                title={""}
+                cardsArray={[
+                    {
+                        image: apartements1,
+                        caption: "Остекление квартир",
+                        link: "/okna/apartments",
+                    },
+                    {
+                        image: Front_small_2,
+                        caption: "Остекление и отделка балконов",
+                        link: "/balkony",
+                    },
+                    {
+                        image: House,
+                        caption: "Остекление домов",
+                        link: "/okna/cottage",
+                    },
+                    {
+                        image: dacha1,
+                        caption: "Остекление дач и беседок",
+                        link: "6 000",
+                    },
+                    {
+                        image: Doors,
+                        caption: "Входные двери для предприятий",
+                        link: "15 000",
+                    },
+                    {
+                        image: Front_small_3,
+                        caption: "Раздвижные двери-порталы",
+                        link: "59 000",
+                    },
+                ]}
+            />
 
-                    <Grid size={{ xs: 12, md: 6 }}>
-                        <Typography variant="h2">
-                            Собственное производство в Туле
-                        </Typography>
+            <ArticlesContainer
+                mainTitle={"Производитель окон с 1998 года"}
+                articles={[
+                    {
+                        imageSide: ImageSide.LEFT,
+                        articleTitle: "Собственное производство в Туле",
+                        articleParagraphsJSX: [
+                            <>
+                                Мы начинали как производители. Первый
+                                производственный цех был открыт нами в Туле в
+                                1998 году.
+                            </>,
+                            <>
+                                Сначала мы изготавливали деревянные окна, затем
+                                евроокна из сосны, потом алюминиевые раздвижки,
+                                а после этого открыли производство окон и дверей
+                                ПВХ. Позже у нас в ассортименте появился
+                                фасадный алюминий с окнами и входными группами.
+                            </>,
+                            <>
+                                В своих цехах мы наладили полный техпроцесс
+                                производства.
+                            </>,
+                        ],
+                        articlesAccordion: [
+                            {
+                                accordionTitle:
+                                    "Откуда вообще берётся тонкий профиль?",
+                                accordionParagraphs: [
+                                    "Заводы выпускают облегчённый профиль для изготовления маленьких рам. Например, он хорошо подходит для изготовления шкафов-купе, окон раздачи в учреждениях питания и т.д.",
+                                    "Однако, пользуясь тем, что потребитель не различает полновесный профиль от низкосортного, недобросовестные монтажнные организации применяют его буквально везде.",
+                                    "В итоге потребитель платит немного меньше при заказе такой продукции, но через некоторое время сталкивается с негативными последствиями.",
+                                ],
+                            },
+                        ],
+                        articleImageJSX: (
+                            <>
+                                <Image
+                                    src={worker_plant_1}
+                                    alt={"worker at our old plant"}
+                                    width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                    style={{
+                                        border: "1px solid grey",
+                                        width: "100%",
+                                        height: "auto",
+                                    }}
+                                    unoptimized
+                                />
+                                <Typography
+                                    variant="subtitle2"
+                                    sx={{ textAlign: "center", mt: 0 }}
+                                >
+                                    Мы собирали окна и двери на собственном
+                                    производстве c 1998 по 2019 г.
+                                </Typography>
+                            </>
+                        ),
+                    },
 
-                        <Typography>
-                            Мы начинали как производители. Первый
-                            производственный цех был открыт нами в Туле в 1998
-                            году.
-                        </Typography>
-                        <Typography>
-                            Сначала мы изготавливали деревянные окна, затем
-                            евроокна из сосны, потом алюминиевые раздвижки, а
-                            после этого открыли производство окон и дверей ПВХ.
-                            Позже у нас в ассортименте появился фасадный
-                            алюминий с окнами и входными группами.
-                        </Typography>
-                        <Typography>
-                            В своих цехах мы наладили полный техпроцесс
-                            производства.
-                        </Typography>
-                    </Grid>
+                    {
+                        imageSide: ImageSide.RIGHT,
+                        articleTitle:
+                            "Автоматизированное производство в Москве",
+                        articleParagraphsJSX: [
+                            <>
+                                С появлением на оконном рынке крупных заводов
+                                иметь своё маленькое производство стало не
+                                выгодно. С 2019 года мы начали работать с
+                                заводами ЗАО &quot;ГЛАССПРОМ&quot; и АО
+                                &quot;СОФОС&quot; на партнёрских условиях.
+                            </>,
+                            <>
+                                Сейчас мы, как и раньше, проектируем окна и
+                                двери сами, а затем отправляем заказ напрямую на
+                                автоматизированное производство нашего партнёра
+                                в Москву.
+                            </>,
+                            <>
+                                Там наш проект дополнительно проверяется
+                                технологами, а готовая продукция на выходе
+                                проверяется отделом технического контроля.
+                            </>,
+                        ],
+                        articlesAccordion: [
+                            {
+                                accordionTitle:
+                                    "Откуда вообще берётся тонкий профиль?",
+                                accordionParagraphs: [
+                                    "Заводы выпускают облегчённый профиль для изготовления маленьких рам. Например, он хорошо подходит для изготовления шкафов-купе, окон раздачи в учреждениях питания и т.д.",
+                                    "Однако, пользуясь тем, что потребитель не различает полновесный профиль от низкосортного, недобросовестные монтажнные организации применяют его буквально везде.",
+                                    "В итоге потребитель платит немного меньше при заказе такой продукции, но через некоторое время сталкивается с негативными последствиями.",
+                                ],
+                            },
+                        ],
+                        articleImageJSX: (
+                            <>
+                                <Image
+                                    src={glassprom1}
+                                    alt={"worker at our old plant"}
+                                    width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                    style={{
+                                        border: "1px solid grey",
+                                        width: "100%",
+                                        height: "auto",
+                                    }}
+                                    unoptimized
+                                />
+                                <Typography
+                                    variant="subtitle2"
+                                    sx={{ textAlign: "center", mt: 0 }}
+                                >
+                                    Производственный цех нашего партнёра ЗСК
+                                    ГЛАССПРОМ
+                                </Typography>
+                            </>
+                        ),
+                    },
 
-                    <Grid size={{ xs: 12 }}>
-                        <Divider />
-                    </Grid>
-
-                    <Grid size={{ xs: 12, md: 6 }}>
-                        <Typography variant="h2">
-                            Автоматизированное производство в Москве
-                        </Typography>
-                        <Typography>
-                            С появлением на оконном рынке крупных заводов иметь
-                            своё маленькое производство стало не выгодно. С 2019
-                            года мы начали работать с заводами ЗАО
-                            &quot;ГЛАССПРОМ&quot; и АО &quot;СОФОС&quot; на
-                            партнёрских условиях.
-                        </Typography>
-                        <Typography>
-                            Сейчас мы, как и раньше, проектируем окна и двери
-                            сами, а затем отправляем заказ напрямую на
-                            автоматизированное производство нашего партнёра в
-                            Москву.
-                        </Typography>
-                        <Typography>
-                            Там наш проект дополнительно проверяется
-                            технологами, а готовая продукция на выходе
-                            проверяется отделом технического контроля.
-                        </Typography>
-                    </Grid>
-
-                    <Grid size={{ xs: 12, md: 6 }}>
-                        <Box
-                            display={"flex"}
-                            flexDirection="column"
-                            justifyContent={"center"}
-                            alignItems={"center"}
-                        >
-                            <Image
-                                src={glassprom1}
-                                alt={"worker at our old plant"}
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                style={{
-                                    // border: "1px solid black",
-                                    width: "100%",
-                                    height: "auto",
-                                }}
-                            />
-                            <Typography variant="subtitle2">
-                                Производственный цех нашего партнёра ЗСК
-                                ГЛАССПРОМ
-                            </Typography>
-                        </Box>
-                    </Grid>
-
-                    <Grid size={{ xs: 12 }}>
-                        <Divider />
-                    </Grid>
-
-                    <Grid
-                        size={{ xs: 12, md: 6 }}
-                        alignItems="center"
-                        justifyContent="center"
-                    >
-                        <Box
-                            display={"flex"}
-                            flexDirection={"column"}
-                            alignItems={"center"}
-                            justifyContent={"center"}
-                        >
-                            <Image
-                                src={profile_compare_img}
-                                alt={"Example of our work"}
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                style={{
-                                    // border: "1px solid black",
-                                    width: "100%",
-                                    height: "auto",
-                                }}
-                            />
-
-                            <Typography variant="subtitle2">
-                                Широкий ассортимент оконной и дверной продукции
-                            </Typography>
-                        </Box>
-                    </Grid>
-
-                    <Grid size={{ xs: 12, md: 6 }}>
-                        <Typography variant="h2">
-                            Своим клиентам мы предлагаем:
-                        </Typography>
-                        <List sx={{ listStyleType: "disc" }}>
-                            <ListItemText sx={{ display: "list-item" }}>
+                    {
+                        imageSide: ImageSide.LEFT,
+                        articleTitle: "Своим клиентам мы предлагаем:",
+                        articleParagraphsJSX: [
+                            <>
                                 <strong>
-                                    широкий выбор конструкций окон ПВХ под любые
+                                    Широкий выбор конструкций окон ПВХ под любые
                                     задачи:
                                 </strong>{" "}
                                 профильные системы VEKA, REHAU и KALEVA с
                                 безупречной репутацией для квартиры, дома, дачи,
                                 производственного помещения
-                            </ListItemText>
-                            <ListItemText sx={{ display: "list-item" }}>
+                            </>,
+                            <>
                                 <strong>
-                                    гарантированное качество сборки продукции
+                                    Гарантированное качество сборки продукции
                                 </strong>
                                 , подтвержденное протоколами государственных
                                 испытаний и специальным гарантийным сроком
-                            </ListItemText>
-                            <ListItemText sx={{ display: "list-item" }}>
-                                <strong>качественный монтаж</strong> с
+                            </>,
+                            <>
+                                <strong>Качественный монтаж</strong> с
                                 использованием самых современных материалов,
                                 соответствующих требованиям ГОСТ
-                            </ListItemText>
-                            <ListItemText sx={{ display: "list-item" }}>
-                                <strong>фурнитуру премиум сегмента</strong> от
+                            </>,
+                            <>
+                                <strong>Фурнитуру премиум сегмента</strong> от
                                 немецких производителей{" "}
                                 <strong>Gretsch-Unitas</strong> и{" "}
                                 <strong>ROTO Frank Fenster</strong>
-                            </ListItemText>
-                            <ListItemText sx={{ display: "list-item" }}>
-                                <strong>фурнитуру экономичного сегмента</strong>{" "}
+                            </>,
+                            <>
+                                <strong>Фурнитуру экономичного сегмента</strong>
                                 <strong>REZE</strong> - от ведущего
                                 производителя Турции
-                            </ListItemText>
-                        </List>
-                    </Grid>
-                </Grid>
-            </Container>
+                            </>,
+                        ],
+                        articlesAccordion: [
+                            {
+                                accordionTitle:
+                                    "Откуда вообще берётся тонкий профиль?",
+                                accordionParagraphs: [
+                                    "Заводы выпускают облегчённый профиль для изготовления маленьких рам. Например, он хорошо подходит для изготовления шкафов-купе, окон раздачи в учреждениях питания и т.д.",
+                                    "Однако, пользуясь тем, что потребитель не различает полновесный профиль от низкосортного, недобросовестные монтажнные организации применяют его буквально везде.",
+                                    "В итоге потребитель платит немного меньше при заказе такой продукции, но через некоторое время сталкивается с негативными последствиями.",
+                                ],
+                            },
+                        ],
+                        articleImageJSX: (
+                            <>
+                                <Image
+                                    src={profile_compare_img}
+                                    alt={"Example of our work"}
+                                    width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                    style={{
+                                        border: "0px solid grey",
+                                        width: "100%",
+                                        height: "auto",
+                                    }}
+                                    unoptimized
+                                />
+                                <Typography
+                                    variant="subtitle2"
+                                    sx={{ textAlign: "center", mt: 0 }}
+                                ></Typography>
+                            </>
+                        ),
+                    },
+                ]}
+            />
 
             <Box
                 width={"100%"}
                 bgcolor="lightgoldenrodyellow"
                 textAlign={"center"}
                 paddingY={2}
-                marginY={16}
+                // marginY={16}
                 lineHeight={2}
             >
                 {[
@@ -310,68 +313,89 @@ export default function Home() {
                 })}
             </Box>
 
+            <ArticlesContainer
+                mainTitle={""}
+                articles={[
+                    {
+                        imageSide: ImageSide.LEFT,
+                        articleTitle: "Настоящая гарантия",
+                        articleParagraphsJSX: [
+                            <>
+                                Гарантийный срок — это единственная
+                                характеристика надежности производителя,
+                                показатель его отношения к своему клиенту.
+                            </>,
+                            <>
+                                Наша гарантия на окна составляет:{" "}
+                                <strong>
+                                    3 года на изделие и 5 лет на монтажные
+                                    работы
+                                </strong>
+                                . В течение этого периода «Тульские Окна»
+                                обязуются бесплатно устранять любые неполадки,
+                                выполнять все необходимые регулировки.
+                            </>,
+                            <>
+                                Гарантия распространяется на дефекты, связанные
+                                с механизмом фурнитуры, герметичностью
+                                стеклопакетов, стабильностью цвета профиля,
+                                работоспособностью резинового уплотнителя,
+                                целостностью откосов из сэндвич-панелей.
+                            </>,
+                        ],
+                        articlesAccordion: [
+                            {
+                                accordionTitle:
+                                    "Откуда вообще берётся тонкий профиль?",
+                                accordionParagraphs: [
+                                    "Заводы выпускают облегчённый профиль для изготовления маленьких рам. Например, он хорошо подходит для изготовления шкафов-купе, окон раздачи в учреждениях питания и т.д.",
+                                    "Однако, пользуясь тем, что потребитель не различает полновесный профиль от низкосортного, недобросовестные монтажнные организации применяют его буквально везде.",
+                                    "В итоге потребитель платит немного меньше при заказе такой продукции, но через некоторое время сталкивается с негативными последствиями.",
+                                ],
+                            },
+                        ],
+                        articleImageJSX: (
+                            <>
+                                <Box
+                                    display="flex"
+                                    flexDirection={"column"}
+                                    alignItems="center"
+                                    justifyContent="center"
+                                    bgcolor={"#f0f0f0"}
+                                    border={"1px solid"}
+                                    padding={2}
+                                >
+                                    <Image
+                                        src={besedka}
+                                        alt={"Example of our work"}
+                                        width={0}
+                                        height={0}
+                                        sizes="100vw"
+                                        style={{
+                                            width: "100%",
+                                            height: "auto",
+                                        }}
+                                    />
+
+                                    <Typography
+                                        variant="subtitle2"
+                                        fontWeight={"light"}
+                                        textAlign={"left"}
+                                        alignSelf={"flex-start"}
+                                    >
+                                        <strong>Остекление беседки</strong>
+                                        <br />
+                                        Образец нашей работы
+                                    </Typography>
+                                </Box>
+                            </>
+                        ),
+                    },
+                ]}
+            />
+
             <Container maxWidth="lg">
                 <Grid container columnSpacing={8} rowSpacing={10}>
-                    <Grid
-                        size={{ xs: 12, md: 6 }}
-                        alignItems="center"
-                        justifyContent="center"
-                    >
-                        <Box
-                            display="flex"
-                            flexDirection={"column"}
-                            alignItems="center"
-                            justifyContent="center"
-                            bgcolor={"#f0f0f0"}
-                            border={"1px solid"}
-                            padding={2}
-                        >
-                            <Image
-                                src={besedka}
-                                alt={"Example of our work"}
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                style={{ width: "100%", height: "auto" }}
-                            />
-
-                            <Typography
-                                variant="subtitle2"
-                                fontWeight={"light"}
-                                textAlign={"left"}
-                                alignSelf={"flex-start"}
-                            >
-                                <strong>Остекление беседки</strong>
-                                <br />
-                                Образец нашей работы
-                            </Typography>
-                        </Box>
-                    </Grid>
-                    <Grid size={{ xs: 12, md: 6 }}>
-                        <Typography variant="h2">Настоящая гарантия</Typography>
-                        <Typography>
-                            Гарантийный срок — это единственная характеристика
-                            надежности производителя, показатель его отношения к
-                            своему клиенту.
-                        </Typography>
-                        <Typography>
-                            Наша гарантия на окна составляет:{" "}
-                            <strong>
-                                3 года на изделие и 5 лет на монтажные работы
-                            </strong>
-                            . В течение этого периода «Тульские Окна» обязуются
-                            бесплатно устранять любые неполадки, выполнять все
-                            необходимые регулировки.
-                        </Typography>
-                        <Typography>
-                            Гарантия распространяется на дефекты, связанные с
-                            механизмом фурнитуры, герметичностью стеклопакетов,
-                            стабильностью цвета профиля, работоспособностью
-                            резинового уплотнителя, целостностью откосов из
-                            сэндвич-панелей.
-                        </Typography>
-                    </Grid>
-
                     <Grid size={{ xs: 12 }}>
                         <Divider />
                     </Grid>
@@ -771,68 +795,154 @@ export default function Home() {
                     <Grid size={{ xs: 12 }}>
                         <Divider />
                     </Grid>
-                    <Grid size={{ xs: 12 }} marginY={0}>
-                        <Typography variant="h1">
-                            Уникальные отличия окон VEKA
-                        </Typography>
-                    </Grid>
-                    <Grid size={{ xs: 12 }}>
-                        <Divider />
-                    </Grid>
 
-                    <Grid size={{ xs: 12, md: 6 }}>
-                        <Typography variant="h2">
-                            Квадратное армирование в раме
-                        </Typography>
-                        <Typography>
-                            Важнейшее преимущество оконных систем VEKA и WHS -
-                            замкнутое армирование в раме уже в стандартной
-                            комплектации.
-                        </Typography>
-                        <Typography>
-                            Крепить оконный блок за тонкую пластиковую стенку
-                            запрещено по нормам ГОСТ. К сожалению, это самый
-                            распространённый способ монтажа в РФ. Вызвано это
-                            тем, что так закрепить окно в проёме легче всего.
-                            Оконная рама прижимается нагелем в пластиковую
-                            стенку профиля, а не в металл.
-                        </Typography>
-                        <Typography fontWeight={"bold"}>
-                            Окна VEKA и WHS просто не получится закрепить
-                            неправильно - этого не позволит сделать сама
-                            конструкция окна.
-                        </Typography>
-                        <Typography fontWeight={"bold"} textAlign={"left"}>
-                            Выгода потребителя:
-                            <br />
-                            &nbsp;- Окна VEKA и WHS by VEKA всегда закреплены по
-                            ГОСТ.
-                            <br />
-                            &nbsp;- При установке окон на монтажную пластину
-                            исключён люфт профиля.
-                        </Typography>
-                    </Grid>
-                    <Grid size={{ xs: 12, md: 6 }}>
-                        <Box
-                            display="flex"
-                            flexDirection={"column"}
-                            alignItems="center"
-                            justifyContent="center"
-                            // bgcolor={"#f0f0f0"}
-                            // border={"1px solid lightgray"}
-                            padding={2}
-                        >
-                            <Image
-                                src={AllVsVeka}
-                                alt={"Example of our work"}
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                style={{ width: "100%", height: "auto" }}
-                                unoptimized
-                            />
+                    <ArticlesContainer
+                        mainTitle={"Уникальные отличия окон VEKA"}
+                        articles={[
+                            {
+                                imageSide: ImageSide.RIGHT,
+                                articleTitle: "Квадратное армирование в раме",
+                                articleParagraphsJSX: [
+                                    <>
+                                        Важнейшее преимущество оконных систем
+                                        VEKA и WHS - замкнутое армирование в
+                                        раме уже в стандартной комплектации.
+                                    </>,
+                                    <>
+                                        Крепить оконный блок за тонкую
+                                        пластиковую стенку запрещено по нормам
+                                        ГОСТ. К сожалению, это самый
+                                        распространённый способ монтажа в РФ.
+                                        Вызвано это тем, что так закрепить окно
+                                        в проёме легче всего. Оконная рама
+                                        прижимается нагелем в пластиковую стенку
+                                        профиля, а не в металл.
+                                    </>,
+                                    <>
+                                        Окна VEKA и WHS просто не получится
+                                        закрепить неправильно - этого не
+                                        позволит сделать сама конструкция окна.
+                                    </>,
+                                    <>
+                                        Выгода потребителя:
+                                        <br />
+                                        &nbsp;- Окна VEKA и WHS by VEKA всегда
+                                        закреплены по ГОСТ.
+                                        <br />
+                                        &nbsp;- При установке окон на монтажную
+                                        пластину исключён люфт профиля.
+                                    </>,
+                                ],
+                                articlesAccordion: [
+                                    {
+                                        accordionTitle:
+                                            "Откуда вообще берётся тонкий профиль?",
+                                        accordionParagraphs: [
+                                            "Заводы выпускают облегчённый профиль для изготовления маленьких рам. Например, он хорошо подходит для изготовления шкафов-купе, окон раздачи в учреждениях питания и т.д.",
+                                            "Однако, пользуясь тем, что потребитель не различает полновесный профиль от низкосортного, недобросовестные монтажнные организации применяют его буквально везде.",
+                                            "В итоге потребитель платит немного меньше при заказе такой продукции, но через некоторое время сталкивается с негативными последствиями.",
+                                        ],
+                                    },
+                                ],
+                                articleImageJSX: (
+                                    <Box
+                                        display="flex"
+                                        flexDirection={"column"}
+                                        alignItems="center"
+                                        justifyContent="center"
+                                        padding={2}
+                                    >
+                                        <Image
+                                            src={AllVsVeka}
+                                            alt={"Example of our work"}
+                                            width={0}
+                                            height={0}
+                                            sizes="100vw"
+                                            style={{
+                                                width: "100%",
+                                                height: "auto",
+                                            }}
+                                            unoptimized
+                                        />
+                                    </Box>
+                                ),
+                            },
 
-                            {/* <Typography
+                            {
+                                imageSide: ImageSide.LEFT,
+                                articleTitle:
+                                    "Толщина стенки по евро стандарту",
+                                articleParagraphsJSX: [
+                                    <>
+                                        Профиль VEKA имеет одну из самых толстых
+                                        стенок на рынке, потому что
+                                        изготавливается не по российскому ГОСТ,
+                                        а по более строгому европейскому DIN.
+                                    </>,
+                                    <>
+                                        Выгода потребителя:
+                                        <br />
+                                        &nbsp;- Высокая прочность сварного шва
+                                        на углах. Нет трещин.
+                                        <br />
+                                        &nbsp;- Створки не провисают, все режимы
+                                        открывания, откидывания и закрывания
+                                        функционируют исправно.
+                                    </>,
+                                    <>
+                                        На рынке много оконных брендов, однако,
+                                        из каких именно профилей будут
+                                        изготовлены окна, которые попадутся
+                                        потребителю - никто сказать не может.
+                                        Это уж как повезет.
+                                    </>,
+                                    <>
+                                        Почему? Потому что на практике – более
+                                        80% всех окон в России производятся из
+                                        профилей класса Б. Оптимизированных,
+                                        адаптированных, урезанных и сокращенных.
+                                        Под звучными немецкими названиями – но
+                                        класса Б. С хлипкой наружной стенкой,
+                                        низким сроком службы и высокими
+                                        эксплуатационными рисками.
+                                    </>,
+                                ],
+                                articlesAccordion: [
+                                    {
+                                        accordionTitle:
+                                            "Откуда вообще берётся тонкий профиль?",
+                                        accordionParagraphs: [
+                                            "Заводы выпускают облегчённый профиль для изготовления маленьких рам. Например, он хорошо подходит для изготовления шкафов-купе, окон раздачи в учреждениях питания и т.д.",
+                                            "Однако, пользуясь тем, что потребитель не различает полновесный профиль от низкосортного, недобросовестные монтажнные организации применяют его буквально везде.",
+                                            "В итоге потребитель платит немного меньше при заказе такой продукции, но через некоторое время сталкивается с негативными последствиями.",
+                                        ],
+                                    },
+                                ],
+                                articleImageJSX: (
+                                    <Box
+                                        display="flex"
+                                        flexDirection={"column"}
+                                        alignItems="center"
+                                        justifyContent="center"
+                                        // bgcolor={"#f0f0f0"}
+                                        // border={"1px solid"}
+                                        padding={2}
+                                    >
+                                        <Image
+                                            src={veka_profil_ugol}
+                                            alt={"Example of our work"}
+                                            // height={600}
+                                            width={0}
+                                            height={0}
+                                            sizes="100vw"
+                                            style={{
+                                                width: "70%",
+                                                height: "auto",
+                                            }}
+                                            unoptimized
+                                        />
+
+                                        {/* <Typography
                                 variant="subtitle2"
                                 fontWeight={"light"}
                                 textAlign={"left"}
@@ -844,84 +954,11 @@ export default function Home() {
                                 <br />
                                 Преимущество систем VEKA
                             </Typography> */}
-                        </Box>
-                    </Grid>
-                    <Grid size={{ xs: 12 }}>
-                        <Divider />
-                    </Grid>
-                    <Grid
-                        size={{ xs: 12, md: 6 }}
-                        // padding={2}
-                        alignItems="center"
-                        justifyContent="center"
-                    >
-                        <Box
-                            display="flex"
-                            flexDirection={"column"}
-                            alignItems="center"
-                            justifyContent="center"
-                            // bgcolor={"#f0f0f0"}
-                            // border={"1px solid"}
-                            padding={2}
-                        >
-                            <Image
-                                src={veka_profil_ugol}
-                                alt={"Example of our work"}
-                                // height={600}
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                style={{ width: "70%", height: "auto" }}
-                                unoptimized
-                            />
-
-                            {/* <Typography
-                                variant="subtitle2"
-                                fontWeight={"light"}
-                                textAlign={"left"}
-                                alignSelf={"flex-start"}
-                            >
-                                <strong>
-                                    Схема крепления оконной рамы в проём
-                                </strong>
-                                <br />
-                                Преимущество систем VEKA
-                            </Typography> */}
-                        </Box>
-                    </Grid>
-                    <Grid size={{ xs: 12, md: 6 }}>
-                        <Typography variant="h2">
-                            Толщина стенки по евро стандарту
-                        </Typography>
-                        <Typography>
-                            Профиль VEKA имеет одну из самых толстых стенок на
-                            рынке, потому что изготавливается не по российскому
-                            ГОСТ, а по более строгому европейскому DIN.
-                        </Typography>
-                        <Typography fontWeight={"bold"} textAlign={"left"}>
-                            Выгода потребителя:
-                            <br />
-                            &nbsp;- Высокая прочность сварного шва на углах. Нет
-                            трещин.
-                            <br />
-                            &nbsp;- Створки не провисают, все режимы открывания,
-                            откидывания и закрывания функционируют исправно.
-                        </Typography>
-                        <Typography>
-                            На рынке много оконных брендов, однако, из каких
-                            именно профилей будут изготовлены окна, которые
-                            попадутся потребителю - никто сказать не может. Это
-                            уж как повезет.
-                        </Typography>
-                        <Typography>
-                            Почему? Потому что на практике – более 80% всех окон
-                            в России производятся из профилей класса Б.
-                            Оптимизированных, адаптированных, урезанных и
-                            сокращенных. Под звучными немецкими названиями – но
-                            класса Б. С хлипкой наружной стенкой, низким сроком
-                            службы и высокими эксплуатационными рисками.
-                        </Typography>
-                    </Grid>
+                                    </Box>
+                                ),
+                            },
+                        ]}
+                    />
 
                     <Grid size={{ xs: 12 }}>
                         <Divider />

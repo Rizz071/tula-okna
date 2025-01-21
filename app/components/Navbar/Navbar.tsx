@@ -4,14 +4,14 @@ import * as React from "react";
 import { Container, Box, Toolbar, Typography, Button } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Image from "next/image";
-import logoImage from "../../public/images/Logo1.svg";
+import logoImage from "@/public/images/Logo1.svg";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 import CalculateOutlinedIcon from "@mui/icons-material/CalculateOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import DrawerMobileMenu from "./DrawerMobileMenu";
 import Link from "next/link";
 import BreadCrumbs from "./BreadCrumbs";
-import PhoneMailButton from "./PhoneMainButton";
+import PhoneMailButton from "../PhoneMainButton";
 
 const Navbar = () => {
     const [isContactsVisible, setIsContactsVisible] =

@@ -13,3 +13,26 @@ export interface IButtonImage {
     link?: string;
     description?: ReactElement;
 }
+
+export interface Article {
+    articleTitle: string;
+    articleParagraphsJSX: ReactElement[];
+    articlesAccordion: ArticleDetailsAccordion[];
+    articleImageJSX: ReactElement;
+    imageSide: ImageSide;
+}
+
+export interface ArticleDetailsAccordion {
+    accordionTitle: string;
+    accordionParagraphs: string[];
+}
+
+export interface articlesContainer {
+    mainTitle: string;
+    articles: Article[];
+}
+
+export enum ImageSide {
+    LEFT,
+    RIGHT,
+}
