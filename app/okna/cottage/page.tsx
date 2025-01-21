@@ -32,12 +32,12 @@ import lamination_1 from "@/public/images/slides/lamination_1.jpg";
 import glued from "@/public/images/slides/glued.jpg";
 import windows_1 from "@/public/images/slides/windows_1.jpg";
 import burglar_1 from "@/public/images/slides/burglar_1.jpg";
-import HeroImageSlider from "@/app/components/HeroImageSlider";
+import HeroImageSlider from "@/app/components/HeaderSlider";
 
 export default function Page() {
     return (
         <>
-            <HeroImageSlider sliderImage={slideImage} />
+            <HeroImageSlider sliderImage={slideImage} isCardVisible={true} />
 
             <Container>
                 <Paper

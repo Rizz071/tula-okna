@@ -17,13 +17,13 @@ import { ImageSide } from "../../lib/types";
 import ProductionCardsContainer from "../../components/ProductionCards/ProductionCardsContainer";
 import polnoves_provedal from "@/public/images/balkoni/Polnoves_provedal.jpg";
 import oblegch_provedal from "@/public/images/balkoni/Oblegch_provedal.jpg";
-import HeroImageSlider from "@/app/components/HeroImageSlider";
+import HeroImageSlider from "@/app/components/HeaderSlider";
 import ArticlesContainer from "@/app/components/Article/ArticlesContainer";
 
 export default function Page() {
     return (
         <>
-            <HeroImageSlider sliderImage={slideImage} />
+            <HeroImageSlider sliderImage={slideImage} isCardVisible={true} />
 
             <ProductionCardsContainer
                 title={""}

@@ -1,4 +1,4 @@
-import HeroImageSlider from "./components/HeroImageSlider";
+import HeroImageSlider from "./components/HeaderSlider";
 import {
     Container,
     Box,
@@ -39,7 +39,6 @@ import kaleva_sert_1 from "../public/images/certificates/kaleva_sert_1.jpg";
 import veka_sert_1 from "../public/images/certificates/veka_sert_1.jpg";
 import rehau_sert_1 from "../public/images/certificates/rehau_cert1.jpg";
 import slideImage from "@/public/images/slides/MainSlide_6k_sharp.jpg";
-
 import Front_small_2 from "@/public/images/Front_small_2.webp";
 import Front_small_3 from "@/public/images/Front_small_3.webp";
 import House from "@/public/images/House.webp";
@@ -53,7 +52,7 @@ import ArticlesContainer from "./components/Article/ArticlesContainer";
 export default function Home() {
     return (
         <>
-            <HeroImageSlider sliderImage={slideImage} />
+            <HeroImageSlider sliderImage={slideImage} isCardVisible={true} />
             <ProductionCardsContainer
                 title={""}
                 cardsArray={[
@@ -144,8 +143,9 @@ export default function Home() {
                                     variant="subtitle2"
                                     sx={{ textAlign: "center", mt: 0 }}
                                 >
-                                    Мы собирали окна и двери на собственном
-                                    производстве c 1998 по 2019 г.
+                                    Благодаря производственному опыту, мы знаем
+                                    точно, какими должны быть качественно
+                                    собранные окна.
                                 </Typography>
                             </>
                         ),
@@ -287,24 +287,25 @@ export default function Home() {
 
             <Box
                 width={"100%"}
-                bgcolor="lightgoldenrodyellow"
+                bgcolor="#f7f7f7"
                 textAlign={"center"}
-                paddingY={2}
+                padding={2}
                 // marginY={16}
                 lineHeight={2}
             >
                 {[
-                    "Используем полновесное армирование по ГОСТ - толщиной от 1.5 до 2.5мм",
-                    "Для больших конструкций применяем технологию вклейки стеклопакета в створку",
-                    "Устанавливаем немецкую фурнитуру Gretsch Unitas и ROTO",
+                    "Мы не предлагаем дорогие или дешёвые окна. ",
+                    "Мы предлагаем окна, подходящие к вашим условиям эксплуатации, в соответствии со строительными нормами.",
                 ].map((item, index) => {
                     return (
                         <Typography
                             key={index}
-                            fontSize={{ xs: "1.7rem", sm: "30px" }}
-                            fontWeight={"light"}
-                            textAlign={"center"}
-                            bgcolor={"lightgoldenrodyellow"}
+                            sx={{
+                                fontSize: { xs: "1.7rem", sm: "26px" },
+                                fontWeight: 300,
+                                textAlign: "center",
+                                bgcolor: "#f7f7f7",
+                            }}
                             gutterBottom
                         >
                             {item}
@@ -924,14 +925,11 @@ export default function Home() {
                                         flexDirection={"column"}
                                         alignItems="center"
                                         justifyContent="center"
-                                        // bgcolor={"#f0f0f0"}
-                                        // border={"1px solid"}
                                         padding={2}
                                     >
                                         <Image
                                             src={veka_profil_ugol}
                                             alt={"Example of our work"}
-                                            // height={600}
                                             width={0}
                                             height={0}
                                             sizes="100vw"
@@ -941,19 +939,6 @@ export default function Home() {
                                             }}
                                             unoptimized
                                         />
-
-                                        {/* <Typography
-                                variant="subtitle2"
-                                fontWeight={"light"}
-                                textAlign={"left"}
-                                alignSelf={"flex-start"}
-                            >
-                                <strong>
-                                    Схема крепления оконной рамы в проём
-                                </strong>
-                                <br />
-                                Преимущество систем VEKA
-                            </Typography> */}
                                     </Box>
                                 ),
                             },
@@ -1108,13 +1093,6 @@ export default function Home() {
                                         <Image
                                             src={image}
                                             alt={"Профессионально"}
-                                            style={
-                                                {
-                                                    // width: "30%",
-                                                    // maxWidth: "100%",
-                                                    // maxHeight: "100px",
-                                                }
-                                            }
                                         />
                                     </Box>
                                     <Typography
