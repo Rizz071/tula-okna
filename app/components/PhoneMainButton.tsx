@@ -18,7 +18,7 @@ const PhoneMailButton = ({
 }: Props) => {
     return (
         <Box
-            sx={{ display: { xs: "none", sm: "flex" } }}
+            sx={{ display: { xs: "flex", sm: "flex" } }}
             flexDirection={"column"}
             alignSelf={"center"}
             justifyContent={"flex-end"}

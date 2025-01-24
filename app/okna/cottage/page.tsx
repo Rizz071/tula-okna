@@ -26,18 +26,18 @@ import veka_70 from "@/public/images/profiles/veka_70_2.jpg";
 import veka_82 from "@/public/images/profiles/veka_82_1.jpg";
 import isoterma1 from "@/public/images/slides/profile_compare_house_1.jpg";
 import veka_compare_1 from "@/public/images/profiles/veka_compare_2_800px.jpg";
-import slideImage from "@/public/images/slides/house_slide_2.jpg";
+import slideImage from "@/public/images/slides/cottage_slide_1_export_2.jpg";
 import steklopaket from "@/public/images/slides/steklopaket_1.jpg";
 import lamination_1 from "@/public/images/slides/lamination_1.jpg";
 import glued from "@/public/images/slides/glued.jpg";
 import windows_1 from "@/public/images/slides/windows_1.jpg";
 import burglar_1 from "@/public/images/slides/burglar_1.jpg";
-import HeroImageSlider from "@/app/components/HeaderSlider";
+import HeaderSlider from "@/app/components/HeaderSlider";
 
 export default function Page() {
     return (
         <>
-            <HeroImageSlider sliderImage={slideImage} isCardVisible={true} />
+            <HeaderSlider sliderImage={slideImage} isCardVisible={false} />
 
             <Container>
                 <Paper

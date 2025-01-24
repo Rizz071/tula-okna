@@ -18,15 +18,16 @@ const Navbar = () => {
         React.useState<boolean>(false);
 
     return (
-        <Container maxWidth="lg">
+        <Container sx={{ maxWidth: { md: "lg" }, p: 0 }}>
             <Box sx={{ flexGrow: 1 }}>
                 <AppBar
                     position="static"
                     sx={{
                         bgcolor: "white",
                         color: "black",
+                        zIndex: 200,
+                        boxShadow: { xs: "0 8px 20px -2px gray", sm: 0 },
                     }}
-                    elevation={0}
                 >
                     <Toolbar
                         sx={{
@@ -40,7 +41,7 @@ const Navbar = () => {
                                 display: "flex",
                                 justifyContent: "space-between",
                                 alignContent: "center",
-                                width: { xs: "100%", sm: "auto" },
+                                width: { xs: "100%", md: "auto" },
                             }}
                         >
                             <Box
@@ -54,12 +55,17 @@ const Navbar = () => {
                                 }}
                             >
                                 <DrawerMobileMenu />
+                                <PhoneMailButton
+                                    isContactsVisible={isContactsVisible}
+                                    setIsContactsVisible={setIsContactsVisible}
+                                />
                             </Box>
                             <Link href={"/"} style={{ textDecoration: "none" }}>
                                 <Box
                                     sx={{
-                                        display: { xs: "none", sm: "block" },
-                                        mt: 1,
+                                        // display: { sm: "block" },
+                                        my: 1,
+                                        height: "130px",
                                     }}
                                 >
                                     <Image
@@ -67,20 +73,6 @@ const Navbar = () => {
                                         height={128}
                                         alt="Company logo"
                                     />
-                                </Box>
-                                <Box
-                                    sx={{
-                                        display: { xs: "block", sm: "none" },
-                                        my: "auto",
-                                        textAlign: "center",
-                                    }}
-                                >
-                                    <Typography variant="h5">
-                                        ТУЛЬСКИЕ ОКНА
-                                    </Typography>
-                                    <Typography variant="caption">
-                                        светопрозрачные конструкции
-                                    </Typography>
                                 </Box>
                             </Link>
                         </Box>

@@ -72,20 +72,10 @@ declare module '@mui/material/Typography' {
 
 const theme = createTheme({
     typography: {
-        // fontFamily: 'var(--font-roboto)',
-        // sliderFont: {
-        //     fontFamily: roboto_condensed.style.fontFamily,
-        //     fontWeight: 300,
-        //     // fontFamily: roboto_condensed.style.fontFamily,
-        //     //// fontFamily: noto_serif.style.fontFamily,
-        //     display: "block",
-        //     // lineHeight: "1.5rem"
-        // },
         body1: {
             fontFamily: roboto.style.fontFamily,
             fontSize: "larger",
             fontWeight: 300,
-            // lineHeight: "30px", 
             textAlign: "justify",
             marginTop: "1.5rem"
         },
@@ -98,6 +88,12 @@ const theme = createTheme({
         h2: {
             fontFamily: roboto.style.fontFamily,
             fontSize: "2rem",
+            textAlign: "left",
+            fontWeight: 300
+        },
+        h3: {
+            fontFamily: roboto.style.fontFamily,
+            fontSize: "1.75rem",
             textAlign: "left",
             fontWeight: 300
         },

@@ -13,7 +13,7 @@ const ProductionCardsContainer = ({ title, cardsArray }: Props) => {
     return (
         <Container>
             <Paper
-                elevation={4}
+                elevation={8}
                 square={false}
                 color="white"
                 sx={{
@@ -35,13 +35,13 @@ const ProductionCardsContainer = ({ title, cardsArray }: Props) => {
                 {title && (
                     <Box>
                         <Typography
-                            fontWeight={"light"}
-                            paddingY={3}
+                            fontWeight={300}
+                            paddingY={2}
                             align="center"
                             sx={{
                                 fontSize: {
-                                    xs: "1rem",
-                                    sm: "1.2rem",
+                                    xs: "1.5rem",
+                                    sm: "1.5rem",
                                     md: "1.5rem",
                                     lg: "2rem",
                                 },
@@ -64,8 +64,7 @@ const ProductionCardsContainer = ({ title, cardsArray }: Props) => {
                                 <Grid
                                     size={{
                                         xs: 12,
-                                        sm: 5,
-                                        md: 4,
+                                        sm: 4,
                                     }}
                                     key={index}
                                 >

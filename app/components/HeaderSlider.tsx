@@ -18,6 +18,7 @@ function HeaderSlider({ sliderImage, isCardVisible }: Props) {
                 minHeight: { xs: "250px", sm: "410px", md: "610px" },
                 justifyContent: "center",
                 position: "relative",
+                // top: { xs: "130px", sm: 0 },
             }}
         >
             <Image

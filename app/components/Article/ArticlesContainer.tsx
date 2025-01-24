@@ -9,73 +9,71 @@ import ArticleImage from "./ArticleImage";
 const ArticlesContainer = ({ mainTitle, articles }: articlesContainer) => {
     return (
         <Container maxWidth={"lg"}>
-            <Box
+            <Grid
+                container
                 sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    paddingY: 6,
+                    justifyContent: "space-around",
+                    mt: { xs: 6, sm: 10 },
                 }}
+                columnSpacing={6}
+                rowSpacing={{ xs: 4, sm: 10 }}
             >
-                <Grid
-                    container
-                    sx={{
-                        justifyContent: "space-around",
-                        mt: 2,
-                    }}
-                    columnSpacing={6}
-                    rowSpacing={10}
-                >
-                    <Grid size={{ xs: 12 }}>
-                        <Typography variant="h1">{mainTitle}</Typography>
-                    </Grid>
-
-                    {articles.map((article, index) => (
-                        <Grid
-                            container
-                            columnSpacing={6}
-                            rowSpacing={10}
-                            key={index}
-                        >
-                            <Grid
-                                size={{ xs: 12, md: 6 }}
-                                sx={{ alignSelf: "center" }}
-                                order={{
-                                    xs: 2,
-                                    md:
-                                        article.imageSide == ImageSide.RIGHT
-                                            ? 1
-                                            : 2,
-                                }}
-                            >
-                                <ArticleText article={article} />
-                                <ArticleDetails article={article} />
-                            </Grid>
-
-                            <Grid
-                                size={{ xs: 12, md: 6 }}
-                                order={{
-                                    xs: 1,
-                                    md:
-                                        article.imageSide == ImageSide.RIGHT
-                                            ? 2
-                                            : 1,
-                                }}
-                            >
-                                <Box sx={{ alignSelf: "center" }}>
-                                    <ArticleImage article={article} />
-                                </Box>
-                            </Grid>
-
-                            {articles.length !== index && index !== 0 && (
-                                <Grid size={{ xs: 12 }}>
-                                    <Divider />
-                                </Grid>
-                            )}
-                        </Grid>
-                    ))}
+                <Grid size={{ xs: 12 }}>
+                    <Typography
+                        variant="h2"
+                        sx={{
+                            textAlign: "center",
+                        }}
+                    >
+                        {mainTitle}
+                    </Typography>
                 </Grid>
-            </Box>
+
+                {articles.map((article, index) => (
+                    <Grid
+                        container
+                        columnSpacing={6}
+                        rowSpacing={{ xs: 8, sm: 8 }}
+                        key={index}
+                    >
+                        <Grid
+                            size={{ xs: 12, sm: 7, md: 6 }}
+                            sx={{ alignSelf: "center" }}
+                            order={{
+                                xs: 2,
+                                sm:
+                                    article.imageSide == ImageSide.RIGHT
+                                        ? 1
+                                        : 2,
+                            }}
+                        >
+                            <ArticleText article={article} />
+                            <ArticleDetails article={article} />
+                        </Grid>
+
+                        <Grid
+                            size={{ xs: 12, sm: 5, md: 6 }}
+                            order={{
+                                xs: 1,
+                                sm:
+                                    article.imageSide == ImageSide.RIGHT
+                                        ? 2
+                                        : 1,
+                            }}
+                        >
+                            <Box sx={{ alignSelf: "center" }}>
+                                <ArticleImage article={article} />
+                            </Box>
+                        </Grid>
+
+                        {articles.length !== index && index !== 0 && (
+                            <Grid size={{ xs: 12 }}>
+                                <Divider />
+                            </Grid>
+                        )}
+                    </Grid>
+                ))}
+            </Grid>
         </Container>
     );
 };

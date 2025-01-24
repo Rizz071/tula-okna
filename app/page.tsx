@@ -1,4 +1,4 @@
-import HeroImageSlider from "./components/HeaderSlider";
+import HeaderSlider from "./components/HeaderSlider";
 import {
     Container,
     Box,
@@ -43,7 +43,7 @@ import Front_small_2 from "@/public/images/Front_small_2.webp";
 import Front_small_3 from "@/public/images/Front_small_3.webp";
 import House from "@/public/images/House.webp";
 import Doors from "@/public/images/Doors.webp";
-import apartements1 from "@/public/images/apartements3_104px.jpg";
+import apartements1 from "@/public/images/footer-okno_tmblr.jpg";
 import dacha1 from "@/public/images/dacha1_104px.jpeg";
 import { ImageSide } from "./lib/types";
 import ProductionCardsContainer from "./components/ProductionCards/ProductionCardsContainer";
@@ -52,9 +52,9 @@ import ArticlesContainer from "./components/Article/ArticlesContainer";
 export default function Home() {
     return (
         <>
-            <HeroImageSlider sliderImage={slideImage} isCardVisible={true} />
+            <HeaderSlider sliderImage={slideImage} isCardVisible={true} />
             <ProductionCardsContainer
-                title={""}
+                title={"Продукция и услуги"}
                 cardsArray={[
                     {
                         image: apartements1,
@@ -90,7 +90,7 @@ export default function Home() {
             />
 
             <ArticlesContainer
-                mainTitle={"Производитель окон с 1998 года"}
+                mainTitle={"НАША ИСТОРИЯ"}
                 articles={[
                     {
                         imageSide: ImageSide.LEFT,
@@ -214,7 +214,7 @@ export default function Home() {
 
                     {
                         imageSide: ImageSide.LEFT,
-                        articleTitle: "Своим клиентам мы предлагаем:",
+                        articleTitle: "Сегодня своим клиентам мы предлагаем:",
                         articleParagraphsJSX: [
                             <>
                                 <strong>
@@ -957,132 +957,100 @@ export default function Home() {
                             image: preim_1,
                             title_text: "профессионально",
                             descr_text: (
-                                <Typography
-                                    fontWeight={300}
-                                    fontSize={"1.2rem"}
-                                    lineHeight={"normal"}
-                                >
+                                <>
                                     Индивидуально подберем окна, подходящие к
                                     типу вашего помещения.
                                     <br />
                                     <strong>
                                         Доверьте подбор окон специалистам!
                                     </strong>
-                                </Typography>
+                                </>
                             ),
                         },
                         {
                             image: preim_2,
                             title_text: "способ оплаты",
                             descr_text: (
-                                <Typography
-                                    fontWeight={300}
-                                    fontSize={"1.2rem"}
-                                    lineHeight={"normal"}
-                                >
+                                <>
                                     Все варианты оплаты - наличными, картой,
                                     переводом на счёт. В офисе или удалённо.
                                     Работаем с НДС.
-                                </Typography>
+                                </>
                             ),
                         },
                         {
                             image: preim_3,
                             title_text: "договор на дому",
                             descr_text: (
-                                <Typography
-                                    fontWeight={300}
-                                    fontSize={"1.2rem"}
-                                    lineHeight={"normal"}
-                                >
+                                <>
                                     Заключение договора на дому{" "}
                                     <strong>в удобное время</strong>. Разгрузку
                                     и подъем оконных конструкций к месту монтажа
                                     выполняют сотрудники нашей компании.
-                                </Typography>
+                                </>
                             ),
                         },
                         {
                             image: preim_4,
                             title_text: "надёжно",
                             descr_text: (
-                                <Typography
-                                    fontWeight={300}
-                                    fontSize={"1.2rem"}
-                                    lineHeight={"normal"}
-                                >
+                                <>
                                     <strong>Доставка спецтранспортом</strong>.
                                     Надежное крепление и упаковка предотвращают
                                     повреждения.
                                     <br />
                                     Реальная долгосрочная гарантия.
-                                </Typography>
+                                </>
                             ),
                         },
                         {
                             image: preim_5,
                             title_text: "честно",
                             descr_text: (
-                                <Typography
-                                    fontWeight={300}
-                                    fontSize={"1.2rem"}
-                                    lineHeight={"normal"}
-                                >
+                                <>
                                     Максимально точный расчет цены в день
                                     обращения. Перед подписанием договора Вы
                                     будете знать точную стоимость и конфигурацию
                                     заказа
-                                </Typography>
+                                </>
                             ),
                         },
                         {
                             image: preim_6,
                             title_text: "быстро",
                             descr_text: (
-                                <Typography
-                                    fontWeight={300}
-                                    fontSize={"1.2rem"}
-                                    lineHeight={"normal"}
-                                >
+                                <>
                                     От замера объекта до монтажа всех
                                     конструкций в соответствии с заказом пройдет
                                     не более 10 дней
-                                </Typography>
+                                </>
                             ),
                         },
                         {
                             image: preim_7,
                             title_text: "качественно",
                             descr_text: (
-                                <Typography
-                                    fontWeight={300}
-                                    fontSize={"1.2rem"}
-                                    lineHeight={"normal"}
-                                >
+                                <>
                                     Регулярная сертификация окон по ГОСТ. Монтаж
                                     производится квалифицированными бригадами в
                                     соответствии с нормами ГОСТ.
-                                </Typography>
+                                </>
                             ),
                         },
                         {
                             image: preim_8,
                             title_text: "экологично",
                             descr_text: (
-                                <Typography
-                                    fontWeight={300}
-                                    fontSize={"1.2rem"}
-                                    lineHeight={"normal"}
-                                >
+                                <>
                                     Наши окна не содержат в своём составе
                                     свинец! Они абсолютно безопасны для
                                     здоровья.
-                                </Typography>
+                                </>
                             ),
                         },
                     ].map(({ image, title_text, descr_text }, index) => {
                         return (
-                            <Grid size={{ xs: 6, md: 3 }} key={index}>
+                            <Grid size={{ xs: 6, md: 4, lg: 3 }} key={index}>
                                 <Box
                                     display={"flex"}
                                     flexDirection="column"
@@ -1098,15 +1066,34 @@ export default function Home() {
                                     <Typography
                                         sx={{
                                             fontWeight: 500,
-                                            letterSpacing: 2,
+                                            letterSpacing: { xs: 1, md: 2 },
+                                            textAlign: "left",
                                             textTransform: "uppercase",
-                                            marginTop: 2,
-                                            marginBottom: 0,
+                                            mt: 2,
+                                            mb: 0,
+                                            fontSize: {
+                                                xs: "small",
+                                                sm: "medium",
+                                                md: "medium",
+                                            },
                                         }}
                                     >
                                         {title_text}
                                     </Typography>
-                                    {descr_text}
+                                    <Typography
+                                        sx={{
+                                            fontWeight: 300,
+                                            lineHeight: "normal",
+                                            fontSize: {
+                                                xs: "small",
+                                                sm: "medium",
+                                                md: "medium",
+                                                lg: "large",
+                                            },
+                                        }}
+                                    >
+                                        {descr_text}
+                                    </Typography>
                                 </Box>
                             </Grid>
                         );
