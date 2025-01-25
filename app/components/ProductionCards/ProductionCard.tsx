@@ -10,7 +10,7 @@ interface Props {
 const ProductionCard = ({ imgSrc, caption, link }: Props) => {
     return (
         <Stack
-            direction={{ xs: "column", lg: "row" }}
+            direction={{ xs: "row", sm: "column", lg: "row" }}
             alignItems={"center"}
             sx={{
                 justifyContent: "space-between",
@@ -30,7 +30,11 @@ const ProductionCard = ({ imgSrc, caption, link }: Props) => {
             <Stack
                 direction={"column"}
                 sx={{
-                    alignItems: { xs: "center", lg: "flex-start" },
+                    alignItems: {
+                        xs: "flex-start",
+                        sm: "center",
+                        lg: "flex-start",
+                    },
                     ml: { xs: 0, lg: 3 },
                     height: "100%",
                     justifyContent: "space-between",
@@ -43,7 +47,7 @@ const ProductionCard = ({ imgSrc, caption, link }: Props) => {
                     sx={{
                         fontSize: { xs: "large", md: "larger" },
                         fontWeight: 300,
-                        textAlign: { xs: "center", lg: "left" },
+                        textAlign: { xs: "left", sm: "center", lg: "left" },
                         mt: { xs: 1, lg: 0 },
                     }}
                 >
