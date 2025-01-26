@@ -18,7 +18,6 @@ function HeaderSlider({ sliderImage, isCardVisible }: Props) {
                 minHeight: { xs: "250px", sm: "410px", md: "610px" },
                 justifyContent: "center",
                 position: "relative",
-                // top: { xs: "130px", sm: 0 },
             }}
         >
             <Image
@@ -42,7 +41,7 @@ function HeaderSlider({ sliderImage, isCardVisible }: Props) {
                         transform: `translate(-50%, 50%)`,
                     }}
                 >
-                    <Card sx={{ maxWidth: 280 }}>
+                    <Card sx={{ maxWidth: 280 }} square>
                         <CardContent>
                             <Stack direction={"column"}>
                                 <Stack direction={"row"}>
