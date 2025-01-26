@@ -27,14 +27,14 @@ import worker_plant_1 from "../public/images/slides/worker_plant_1.jpg";
 import veka_profil_ugol from "../public/images/slides/Softline_70_verh-niz_2.png";
 import real_economy_1 from "../public/images/slides/real_economy_1.jpg";
 import profile_compare_img from "../public/images/slides/profile_compare_house_1.jpg";
-import preim_1 from "../public/images/prof.webp";
-import preim_2 from "../public/images/vigodno.webp";
-import preim_3 from "../public/images/udobno.webp";
-import preim_4 from "../public/images/nadejno.webp";
-import preim_5 from "../public/images/chestno.webp";
-import preim_6 from "../public/images/bistro.webp";
-import preim_7 from "../public/images/quality.webp";
-import preim_8 from "../public/images/eco.webp";
+import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
+import AddCardOutlinedIcon from "@mui/icons-material/AddCardOutlined";
+import OtherHousesOutlinedIcon from "@mui/icons-material/OtherHousesOutlined";
+import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
+import CalculateOutlinedIcon from "@mui/icons-material/CalculateOutlined";
+import ScheduleSendOutlinedIcon from "@mui/icons-material/ScheduleSendOutlined";
+import WorkspacePremiumOutlinedIcon from "@mui/icons-material/WorkspacePremiumOutlined";
+import RecyclingOutlinedIcon from "@mui/icons-material/RecyclingOutlined";
 import kaleva_sert_1 from "../public/images/certificates/kaleva_sert_1.jpg";
 import veka_sert_1 from "../public/images/certificates/veka_sert_1.jpg";
 import rehau_sert_1 from "../public/images/certificates/rehau_cert1.jpg";
@@ -48,6 +48,8 @@ import dacha1 from "@/public/images/dacha1_104px.jpeg";
 import { ImageSide } from "./lib/types";
 import ProductionCardsContainer from "./components/ProductionCards/ProductionCardsContainer";
 import ArticlesContainer from "./components/Article/ArticlesContainer";
+import ResponsiveHeader_H1 from "./components/Article/ResponsiveHeader_H1";
+import AdvantagesContainer from "./components/AdvantagesContainer";
 
 export default function Home() {
     return (
@@ -287,26 +289,34 @@ export default function Home() {
 
             <Box
                 width={"100%"}
-                bgcolor="#f7f7f7"
+                bgcolor="#333"
                 textAlign={"center"}
-                padding={2}
-                // marginY={16}
-                lineHeight={2}
+                padding={4}
+                marginTop={12}
             >
                 {[
-                    "Мы не предлагаем дорогие или дешёвые окна. ",
-                    "Мы предлагаем окна, подходящие к вашим условиям эксплуатации, в соответствии со строительными нормами.",
+                    <>НАШ ПРИНЦИП РАБОТЫ:</>,
+                    <>
+                        Мы не предлагаем &quot;дорогие&quot; или
+                        &quot;дешёвые&quot; окна и двери.
+                    </>,
+                    <>
+                        Мы предлагаем окна и двери, подходящие к вашим условиям
+                        эксплуатации.
+                    </>,
                 ].map((item, index) => {
                     return (
                         <Typography
                             key={index}
                             sx={{
                                 fontSize: { xs: "1.7rem", sm: "26px" },
-                                fontWeight: 300,
+                                fontWeight: 400,
                                 textAlign: "center",
-                                bgcolor: "#f7f7f7",
+                                bgcolor: "#333",
+                                color: "white",
+                                m: 0,
+                                p: 0,
                             }}
-                            gutterBottom
                         >
                             {item}
                         </Typography>
@@ -402,9 +412,9 @@ export default function Home() {
                     </Grid>
 
                     <Grid size={{ xs: 12 }} marginY={0}>
-                        <Typography variant="h1" gutterBottom>
-                            Краткое сравнение нашей продукции
-                        </Typography>
+                        <ResponsiveHeader_H1
+                            text={"Краткое сравнение нашей продукции"}
+                        />
 
                         <TableContainer component={Paper} elevation={12}>
                             <Table
@@ -948,156 +958,112 @@ export default function Home() {
                     <Grid size={{ xs: 12 }}>
                         <Divider />
                     </Grid>
-                    <Grid size={{ xs: 12 }} marginY={0}>
-                        <Typography variant="h1">Наши преимущества</Typography>
+                    <Grid size={{ xs: 12 }} sx={{ my: 0 }}>
+                        <ResponsiveHeader_H1 text={"Наши преимущества"} />
                     </Grid>
 
-                    {[
-                        {
-                            image: preim_1,
-                            title_text: "профессионально",
-                            descr_text: (
-                                <>
-                                    Индивидуально подберем окна, подходящие к
-                                    типу вашего помещения.
-                                    <br />
-                                    <strong>
-                                        Доверьте подбор окон специалистам!
-                                    </strong>
-                                </>
-                            ),
-                        },
-                        {
-                            image: preim_2,
-                            title_text: "способ оплаты",
-                            descr_text: (
-                                <>
-                                    Все варианты оплаты - наличными, картой,
-                                    переводом на счёт. В офисе или удалённо.
-                                    Работаем с НДС.
-                                </>
-                            ),
-                        },
-                        {
-                            image: preim_3,
-                            title_text: "договор на дому",
-                            descr_text: (
-                                <>
-                                    Заключение договора на дому{" "}
-                                    <strong>в удобное время</strong>. Разгрузку
-                                    и подъем оконных конструкций к месту монтажа
-                                    выполняют сотрудники нашей компании.
-                                </>
-                            ),
-                        },
-                        {
-                            image: preim_4,
-                            title_text: "надёжно",
-                            descr_text: (
-                                <>
-                                    <strong>Доставка спецтранспортом</strong>.
-                                    Надежное крепление и упаковка предотвращают
-                                    повреждения.
-                                    <br />
-                                    Реальная долгосрочная гарантия.
-                                </>
-                            ),
-                        },
-                        {
-                            image: preim_5,
-                            title_text: "честно",
-                            descr_text: (
-                                <>
-                                    Максимально точный расчет цены в день
-                                    обращения. Перед подписанием договора Вы
-                                    будете знать точную стоимость и конфигурацию
-                                    заказа
-                                </>
-                            ),
-                        },
-                        {
-                            image: preim_6,
-                            title_text: "быстро",
-                            descr_text: (
-                                <>
-                                    От замера объекта до монтажа всех
-                                    конструкций в соответствии с заказом пройдет
-                                    не более 10 дней
-                                </>
-                            ),
-                        },
-                        {
-                            image: preim_7,
-                            title_text: "качественно",
-                            descr_text: (
-                                <>
-                                    Регулярная сертификация окон по ГОСТ. Монтаж
-                                    производится квалифицированными бригадами в
-                                    соответствии с нормами ГОСТ.
-                                </>
-                            ),
-                        },
-                        {
-                            image: preim_8,
-                            title_text: "экологично",
-                            descr_text: (
-                                <>
-                                    Наши окна не содержат в своём составе
-                                    свинец! Они абсолютно безопасны для
-                                    здоровья.
-                                </>
-                            ),
-                        },
-                    ].map(({ image, title_text, descr_text }, index) => {
-                        return (
-                            <Grid size={{ xs: 6, md: 4, lg: 3 }} key={index}>
-                                <Box
-                                    display={"flex"}
-                                    flexDirection="column"
-                                    justifyContent={"left"}
-                                    alignItems={"top"}
-                                >
-                                    <Box height={"100px"}>
-                                        <Image
-                                            src={image}
-                                            alt={"Профессионально"}
-                                        />
-                                    </Box>
-                                    <Typography
-                                        sx={{
-                                            fontWeight: 500,
-                                            letterSpacing: { xs: 1, md: 2 },
-                                            textAlign: "left",
-                                            textTransform: "uppercase",
-                                            mt: 2,
-                                            mb: 0,
-                                            fontSize: {
-                                                xs: "small",
-                                                sm: "medium",
-                                                md: "medium",
-                                            },
-                                        }}
-                                    >
-                                        {title_text}
-                                    </Typography>
-                                    <Typography
-                                        sx={{
-                                            fontWeight: 300,
-                                            lineHeight: "normal",
-                                            fontSize: {
-                                                xs: "small",
-                                                sm: "medium",
-                                                md: "medium",
-                                                lg: "large",
-                                            },
-                                        }}
-                                    >
-                                        {descr_text}
-                                    </Typography>
-                                </Box>
-                            </Grid>
-                        );
-                    })}
+                    <AdvantagesContainer
+                        advantages={[
+                            {
+                                icon: WorkOutlineOutlinedIcon,
+                                title: "профессионально",
+                                description: (
+                                    <>
+                                        Индивидуально подберем окна, подходящие
+                                        к типу вашего помещения.
+                                        <br />
+                                        <strong>
+                                            Доверьте подбор окон специалистам!
+                                        </strong>
+                                    </>
+                                ),
+                            },
+                            {
+                                icon: AddCardOutlinedIcon,
+                                title: "Любая форма оплаты",
+                                description: (
+                                    <>
+                                        Все варианты оплаты - наличными, картой,
+                                        переводом на счёт. В офисе или удалённо.
+                                        Работаем с НДС.
+                                    </>
+                                ),
+                            },
+                            {
+                                icon: OtherHousesOutlinedIcon,
+                                title: "договор на дому",
+                                description: (
+                                    <>
+                                        Заключение договора на дому{" "}
+                                        <strong>в удобное время</strong>.
+                                        Разгрузку и подъем оконных конструкций к
+                                        месту монтажа выполняют сотрудники нашей
+                                        компании.
+                                    </>
+                                ),
+                            },
+                            {
+                                icon: LocalShippingOutlinedIcon,
+                                title: "надёжно",
+                                description: (
+                                    <>
+                                        <strong>
+                                            Доставка спецтранспортом
+                                        </strong>
+                                        . Надежное крепление и упаковка
+                                        предотвращают повреждения.
+                                        <br />
+                                        Реальная долгосрочная гарантия.
+                                    </>
+                                ),
+                            },
+                            {
+                                icon: CalculateOutlinedIcon,
+                                title: "честно",
+                                description: (
+                                    <>
+                                        Максимально точный расчет цены в день
+                                        обращения. Перед подписанием договора Вы
+                                        будете знать точную стоимость и
+                                        конфигурацию заказа
+                                    </>
+                                ),
+                            },
+                            {
+                                icon: ScheduleSendOutlinedIcon,
+                                title: "быстро",
+                                description: (
+                                    <>
+                                        От замера объекта до монтажа всех
+                                        конструкций в соответствии с заказом
+                                        пройдет не более 30 дней
+                                    </>
+                                ),
+                            },
+                            {
+                                icon: WorkspacePremiumOutlinedIcon,
+                                title: "качественно",
+                                description: (
+                                    <>
+                                        Регулярная сертификация окон по ГОСТ.
+                                        Монтаж производится квалифицированными
+                                        бригадами в соответствии с нормами ГОСТ.
+                                    </>
+                                ),
+                            },
+                            {
+                                icon: RecyclingOutlinedIcon,
+                                title: "экологично",
+                                description: (
+                                    <>
+                                        Наши окна не содержат в своём составе
+                                        свинец! Они абсолютно безопасны для
+                                        здоровья.
+                                    </>
+                                ),
+                            },
+                        ]}
+                    />
 
                     <Grid size={{ xs: 12 }}>
                         <Divider />
@@ -1126,10 +1092,10 @@ export default function Home() {
                     <Grid size={{ xs: 12 }}>
                         <Divider />
                     </Grid>
-                    <Grid size={{ xs: 12 }} marginY={0}>
-                        <Typography variant="h1">
-                            Установка пластиковых окон
-                        </Typography>
+                    <Grid size={{ xs: 12 }}>
+                        <ResponsiveHeader_H1
+                            text={"Установка пластиковых окон"}
+                        />
                     </Grid>
                     <Grid size={{ xs: 12 }}>
                         <Typography>
@@ -1175,7 +1141,10 @@ export default function Home() {
                     </Grid>
 
                     <Grid size={{ xs: 12 }}>
-                        <Typography variant="h1">
+                        <Typography
+                            variant="h1"
+                            sx={{ typography: { xs: "h5", md: "h1" } }}
+                        >
                             Как заказать окна Kaleva, Veka и Rehau в Туле и
                             области
                         </Typography>
@@ -1317,7 +1286,10 @@ export default function Home() {
                     </Grid>
 
                     <Grid size={{ xs: 12 }}>
-                        <Typography variant="h1">
+                        <Typography
+                            variant="h1"
+                            sx={{ typography: { xs: "h5", md: "h1" } }}
+                        >
                             Сертификаты соответствия ГОСТ Р
                         </Typography>
                     </Grid>

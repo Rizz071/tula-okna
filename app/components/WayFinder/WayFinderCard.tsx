@@ -4,10 +4,10 @@ import React, { useState } from "react";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import { Card, CardActionArea, CardContent, CardMedia } from "@mui/material";
-import { IButtonImage } from "../lib/types";
+import { IButtonImage } from "../../lib/types";
 import { grey, red } from "@mui/material/colors";
 
-const ButtonImage = ({
+const WayFinderCard = ({
     caption,
     image,
     link = "",
@@ -71,4 +71,4 @@ const ButtonImage = ({
     );
 };
 
-export default ButtonImage;
+export default WayFinderCard;

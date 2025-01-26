@@ -28,7 +28,7 @@ import GraphicEqSharpIcon from "@mui/icons-material/GraphicEqSharp";
 import CurrencyRubleSharpIcon from "@mui/icons-material/CurrencyRubleSharp";
 import ExpandMoreSharpIcon from "@mui/icons-material/ExpandMoreSharp";
 
-import ButtonImage from "./ButtonImage";
+import ButtonImage from "./WayFinder/WayFinderCard";
 
 import kaleva_profi from "@/public/images/klv_profi_tumblr_1.jpg";
 import kaleva_standart from "@/public/images/klv_standart_tumblr_1.jpg";

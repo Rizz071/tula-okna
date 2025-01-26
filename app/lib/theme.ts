@@ -2,7 +2,7 @@
 import { Roboto, Roboto_Condensed, Inter, Inter_Tight, Noto_Sans, Noto_Serif, Montserrat, Rubik } from 'next/font/google';
 import { red, blue } from '@mui/material/colors';
 
-import { createTheme } from '@mui/material/styles';
+import { createTheme, responsiveFontSizes, Breakpoints } from '@mui/material/styles';
 
 const inter = Inter({
     weight: ['300', '400', '500', '700'],
@@ -70,14 +70,14 @@ declare module '@mui/material/Typography' {
     }
 }
 
-const theme = createTheme({
+let theme = createTheme({
     typography: {
         body1: {
             fontFamily: roboto.style.fontFamily,
             fontSize: "larger",
             fontWeight: 300,
             textAlign: "justify",
-            marginTop: "1.5rem"
+            marginTop: "1.5rem",
         },
         h1: {
             fontFamily: roboto.style.fontFamily,
@@ -95,7 +95,8 @@ const theme = createTheme({
             fontFamily: roboto.style.fontFamily,
             fontSize: "1.75rem",
             textAlign: "left",
-            fontWeight: 300
+            fontWeight: 300,
+
         },
     },
     palette: {
@@ -128,5 +129,8 @@ const theme = createTheme({
     // },
 
 });
+
+// theme = responsiveFontSizes(theme);
+
 
 export default theme;

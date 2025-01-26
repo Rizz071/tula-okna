@@ -52,32 +52,34 @@ const ProductionCardsContainer = ({ title, cardsArray }: Props) => {
                         <Divider />
                     </Box>
                 )}
-                <Box padding={6}>
-                    <Grid
-                        container
-                        rowSpacing={7}
-                        columnSpacing={4}
-                        justifyContent={"space-evenly"}
-                    >
-                        {cardsArray.map((card, index) => {
-                            return (
-                                <Grid
-                                    size={{
-                                        xs: 12,
-                                        sm: 4,
-                                    }}
-                                    key={index}
-                                >
-                                    <ProductionCard
-                                        imgSrc={card.image}
-                                        caption={card.caption}
-                                        link={card.link}
-                                    />
-                                </Grid>
-                            );
-                        })}
-                    </Grid>
-                </Box>
+                <Grid
+                    container
+                    rowSpacing={7}
+                    columnSpacing={4}
+                    sx={{
+                        p: 6,
+                        justifyContent: "space-evenly",
+                    }}
+                    padding={6}
+                >
+                    {cardsArray.map((card, index) => {
+                        return (
+                            <Grid
+                                size={{
+                                    xs: 12,
+                                    sm: 4,
+                                }}
+                                key={index}
+                            >
+                                <ProductionCard
+                                    imgSrc={card.image}
+                                    caption={card.caption}
+                                    link={card.link}
+                                />
+                            </Grid>
+                        );
+                    })}
+                </Grid>
             </Paper>
         </Container>
     );

@@ -5,6 +5,7 @@ import { articlesContainer, ImageSide } from "@/app/lib/types";
 import ArticleText from "./ArticleText";
 import ArticleDetails from "./ArticleDetails";
 import ArticleImage from "./ArticleImage";
+import ResponsiveHeader_H1 from "./ResponsiveHeader_H1";
 
 const ArticlesContainer = ({ mainTitle, articles }: articlesContainer) => {
     return (
@@ -19,14 +20,7 @@ const ArticlesContainer = ({ mainTitle, articles }: articlesContainer) => {
                 rowSpacing={{ xs: 4, sm: 10 }}
             >
                 <Grid size={{ xs: 12 }}>
-                    <Typography
-                        variant="h2"
-                        sx={{
-                            textAlign: "center",
-                        }}
-                    >
-                        {mainTitle}
-                    </Typography>
+                    <ResponsiveHeader_H1 text={mainTitle} />
                 </Grid>
 
                 {articles.map((article, index) => (

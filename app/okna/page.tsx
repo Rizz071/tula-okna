@@ -2,11 +2,11 @@ import React from "react";
 import apartmentsImg from "@/public/images/apartmements2_tmblr.jpeg";
 import cottageImg from "@/public/images/dom3_tmblr.jpg";
 import dachaImg from "@/public/images/dacha1_tmblr.jpeg";
-import ContainerButtonImages from "../components/ContainerButtonImages";
+import WayFinderContainer from "../components/WayFinder/WayFinderContainer";
 
 export default function Page() {
     return (
-        <ContainerButtonImages
+        <WayFinderContainer
             mainTitle={"Выберите цель остекления"}
             mainTitleDescription={
                 "Для каждого объекта мы предлагаем свои варианты оконных блоков"

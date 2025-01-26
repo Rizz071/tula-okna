@@ -22,13 +22,25 @@ const ArticleDetails = ({ article }: { article: Article }) => {
                 </Typography>
             </AccordionSummary>
             <AccordionDetails>
-                <Box bgcolor={"lightyellow"} padding={2}>
+                <Box
+                    sx={{
+                        p: 2,
+                        color: "white",
+                        bgcolor: "#333",
+                        borderRadius: "10px",
+                    }}
+                >
                     {article.articlesAccordion.map(
                         (accordionArticle, index) => (
                             <Fragment key={index}>
                                 <Typography
                                     variant="h6"
-                                    sx={{ mt: 2 }}
+                                    sx={{
+                                        mt: 2,
+                                        color: "white",
+                                        bgcolor: "#333",
+                                        textTransform: "uppercase",
+                                    }}
                                     gutterBottom
                                 >
                                     {accordionArticle.accordionTitle}
@@ -39,6 +51,11 @@ const ArticleDetails = ({ article }: { article: Article }) => {
                                         <Typography
                                             variant="subtitle1"
                                             key={index}
+                                            sx={{
+                                                color: "white",
+                                                bgcolor: "#333",
+                                                fontWeight: 300,
+                                            }}
                                             gutterBottom
                                         >
                                             {accordionParagraph}

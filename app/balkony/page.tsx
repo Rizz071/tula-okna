@@ -2,11 +2,11 @@ import React from "react";
 import coldImg from "@/public/images/balkoni/5_balcon_11_1.jpg";
 import warmImg from "@/public/images/balkoni/warm_glazing_tmblr_2.jpg";
 import otdelkaImg from "@/public/images/balkoni/otdelka_tmblr_1.jpg";
-import ContainerButtonImages from "../components/ContainerButtonImages";
+import WayFinderContainer from "../components/WayFinder/WayFinderContainer";
 
 export default function Page() {
     return (
-        <ContainerButtonImages
+        <WayFinderContainer
             mainTitle={"Выберите цель остекления"}
             mainTitleDescription={
                 "Остекление балкона бывает быть холодным и тёплым. Внутреннее пространство можно оставить как есть или же превратить в дополнительную комнату. Туда можно установить шкафы-купе, лиану для сушки белья, а также провести свет."

@@ -31,7 +31,7 @@ const DrawerMobileMenu = () => {
                 aria-label="menu"
                 onClick={toggleDrawer(true)}
             >
-                <MenuIcon sx={{ fontSize: 45 }} />
+                <MenuIcon sx={{ fontSize: 45, p: 0, m: 0 }} />
             </IconButton>
 
             <Drawer open={open} onClose={toggleDrawer(false)}>
@@ -41,7 +41,7 @@ const DrawerMobileMenu = () => {
                     onClick={toggleDrawer(false)}
                 >
                     <List>
-                        {["Inbox", "Starred", "Send email", "Drafts"].map(
+                        {["Главная", "Окна", "Send email", "Drafts"].map(
                             (text, index) => (
                                 <ListItem key={text} disablePadding>
                                     <ListItemButton>
