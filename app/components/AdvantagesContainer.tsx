@@ -6,9 +6,7 @@ import SvgIcon, { SvgIconTypeMap } from "@mui/material/SvgIcon";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 
 interface IAdvantage {
-    icon: OverridableComponent<SvgIconTypeMap<{}, "svg">> & {
-        muiName: string;
-    };
+    icon: OverridableComponent<SvgIconTypeMap<{}, "svg">> & { muiName: string };
     title: string;
     description: ReactElement;
 }

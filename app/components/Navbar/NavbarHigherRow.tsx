@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Toolbar, Box, Button, Typography, Stack } from "@mui/material";
 import Link from "next/link";
 import PhoneMailButton from "../PhoneMainButton";
-import DrawerMobileMenu from "./DrawerMobileMenu";
+import MobileMenu from "./MobileMenu";
 import logoImage from "@/public/images/Logo1_horiz_3.svg";
 import Image from "next/image";
 import CalculateOutlinedIcon from "@mui/icons-material/CalculateOutlined";
@@ -136,7 +136,7 @@ const NavbarHigherRow = () => {
                     },
                 }}
             >
-                <DrawerMobileMenu />
+                <MobileMenu />
             </Box>
         </Toolbar>
     );

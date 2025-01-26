@@ -5,12 +5,12 @@ const NavbarLowerRow = () => {
     return (
         <Toolbar
             sx={{
-                display: { xs: "none", md: "flex" },
+                display: { xs: "none", sm: "flex" },
                 flexDirection: "row",
                 justifyContent: "space-between",
-                letterSpacing: { md: ".2rem" },
+                letterSpacing: { sm: ".2rem" },
                 textAlign: "center",
-                gap: { md: 4 },
+                gap: { sm: 2, md: 4 },
                 mb: 2,
             }}
         >
@@ -33,9 +33,6 @@ const NavbarLowerRow = () => {
             <Typography fontWeight={400} color="black" letterSpacing={1.5}>
                 ФАСАДНОЕ ОСТЕКЛЕНИЕ
             </Typography>
-            {/* <Typography fontWeight={400} color="black" letterSpacing={1.5}>
-                ЦЕНЫ
-            </Typography> */}
             <Typography fontWeight={400} color="black">
                 ПОРТФОЛИО
             </Typography>

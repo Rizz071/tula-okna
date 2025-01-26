@@ -5,7 +5,6 @@ import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import { Card, CardActionArea, CardContent, CardMedia } from "@mui/material";
 import { IButtonImage } from "../../lib/types";
-import { grey, red } from "@mui/material/colors";
 
 const WayFinderCard = ({
     caption,
@@ -36,18 +35,10 @@ const WayFinderCard = ({
                             title={caption}
                         />
                         <CardContent sx={{ m: 0, p: 0 }}>
-                            {/* <Image
-                                src={image.src}
-                                width={image.width}
-                                height={image.height}
-                                unoptimized
-                                alt={caption}
-                            /> */}
                             <Typography
                                 sx={{
                                     textAlign: "center",
                                     minHeight: 50,
-                                    // opacity: isHovering ? 1 : 0.95,
                                     bgcolor: !isHovering
                                         ? "primary.main"
                                         : "primary.dark",
