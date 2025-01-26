@@ -132,7 +132,7 @@ const NavbarHigherRow = () => {
                 sx={{
                     display: {
                         xs: "flex",
-                        md: "none",
+                        sm: "none",
                     },
                 }}
             >

@@ -1,7 +1,5 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
 
-import VisibilitySharpIcon from "@mui/icons-material/VisibilitySharp";
-import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import SupportAgentOutlinedIcon from "@mui/icons-material/SupportAgentOutlined";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import MailIcon from "@mui/icons-material/Mail";
@@ -18,7 +16,7 @@ const PhoneMailButton = ({
 }: Props) => {
     return (
         <Box
-            sx={{ display: { xs: "none", md: "flex" } }}
+            sx={{ display: { xs: "none", sm: "flex" } }}
             flexDirection={"column"}
             alignSelf={"center"}
             justifyContent={"flex-end"}
