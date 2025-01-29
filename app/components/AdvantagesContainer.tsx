@@ -1,8 +1,6 @@
 import { Grid2 as Grid, Typography, Stack } from "@mui/material";
-import { StaticImageData } from "next/image";
-import Image from "next/image";
 import { ReactElement } from "react";
-import SvgIcon, { SvgIconTypeMap } from "@mui/material/SvgIcon";
+import { SvgIconTypeMap } from "@mui/material/SvgIcon";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 
 interface IAdvantage {

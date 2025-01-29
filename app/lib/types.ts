@@ -1,3 +1,5 @@
+import { SvgIconTypeMap } from "@mui/material";
+import { OverridableComponent } from "@mui/material/OverridableComponent";
 import { StaticImageData } from "next/image";
 import { ReactElement } from "react";
 
@@ -12,6 +14,12 @@ export interface IButtonImage {
     image: StaticImageData;
     link?: string;
     description?: ReactElement;
+}
+
+export interface IMainMenuItem {
+    name: string;
+    link: string;
+    icon?: OverridableComponent<SvgIconTypeMap<{}, "svg">> & { muiName: string };
 }
 
 export interface Article {

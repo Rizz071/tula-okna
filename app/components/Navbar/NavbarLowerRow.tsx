@@ -1,7 +1,8 @@
+import { IMainMenuItem } from "@/app/lib/types";
 import { Toolbar, Typography } from "@mui/material";
 import Link from "next/link";
 
-const NavbarLowerRow = () => {
+const NavbarLowerRow = ({ menuItems }: { menuItems: IMainMenuItem[] }) => {
     return (
         <Toolbar
             sx={{
@@ -10,32 +11,29 @@ const NavbarLowerRow = () => {
                 justifyContent: "space-between",
                 letterSpacing: { sm: ".2rem" },
                 textAlign: "center",
-                gap: { sm: 2, md: 4 },
-                mb: 2,
+                gap: { sm: 1, md: 4 },
+                mb: { sm: 1, md: 2 },
             }}
         >
-            <Link href={"/okna"} style={{ textDecoration: "none" }}>
-                <Typography fontWeight={400} color="black" letterSpacing={1.5}>
-                    ОКНА
-                </Typography>
-            </Link>
-            <Typography fontWeight={400} color="black" letterSpacing={1.5}>
-                ДВЕРИ
-            </Typography>
-            <Link href={"/balkony"} style={{ textDecoration: "none" }}>
-                <Typography fontWeight={400} color="black" letterSpacing={1.5}>
-                    БАЛКОНЫ
-                </Typography>
-            </Link>
-            <Typography fontWeight={400} color="black" letterSpacing={1.5}>
-                ПОРТАЛЫ
-            </Typography>
-            <Typography fontWeight={400} color="black" letterSpacing={1.5}>
-                ФАСАДНОЕ ОСТЕКЛЕНИЕ
-            </Typography>
-            <Typography fontWeight={400} color="black">
-                ПОРТФОЛИО
-            </Typography>
+            {menuItems.map((item, index) => {
+                return (
+                    <Link
+                        href={item.link}
+                        style={{ textDecoration: "none" }}
+                        key={index}
+                    >
+                        <Typography
+                            fontSize={{ md: "1.1rem", lg: "1.2rem" }}
+                            fontWeight={400}
+                            color="black"
+                            letterSpacing={1.5}
+                            textTransform={"uppercase"}
+                        >
+                            {item.name}
+                        </Typography>
+                    </Link>
+                );
+            })}
         </Toolbar>
     );
 };

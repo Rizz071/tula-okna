@@ -2,13 +2,14 @@ import { useState } from "react";
 import { Toolbar, Box, Button, Typography, Stack } from "@mui/material";
 import Link from "next/link";
 import PhoneMailButton from "../PhoneMainButton";
-import MobileMenu from "./MobileMenu";
+import Hamburger from "./Hamburger";
 import logoImage from "@/public/images/Logo1_horiz_3.svg";
 import Image from "next/image";
 import CalculateOutlinedIcon from "@mui/icons-material/CalculateOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import { IMainMenuItem } from "@/app/lib/types";
 
-const NavbarHigherRow = () => {
+const NavbarHigherRow = ({ menuItems }: { menuItems: IMainMenuItem[] }) => {
     const [isContactsVisible, setIsContactsVisible] = useState<boolean>(false);
 
     const DESKTOP_HIGH_ROW_HEIGHT = "90px";
@@ -20,19 +21,16 @@ const NavbarHigherRow = () => {
                 justifyContent: "space-between",
                 fontWeight: "light",
                 mt: 1,
-                mb: { xs: 1, md: 0 },
                 height: {
                     xs: MOBILE_HIGH_ROW_HEIGHT,
                     sm: DESKTOP_HIGH_ROW_HEIGHT,
                 },
                 columnGap: 2,
-                px: { xs: 1, sm: 2 },
             }}
         >
             <Stack
                 direction={"column"}
                 sx={{
-                    position: "relative",
                     height: {
                         xs: MOBILE_HIGH_ROW_HEIGHT,
                         sm: DESKTOP_HIGH_ROW_HEIGHT,
@@ -136,7 +134,7 @@ const NavbarHigherRow = () => {
                     },
                 }}
             >
-                <MobileMenu />
+                <Hamburger menuItems={menuItems} />
             </Box>
         </Toolbar>
     );
