@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="354.79575"
+   height="104.56839"
+   viewBox="0 0 354.79574 104.56839"
+   sodipodi:docname="VEKA_LOGOS.pdf"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4">
+      <path
+         d="M 0,595.28 H 841.89 V 0 H 0 Z"
+         transform="translate(-320.08181,-431.48491)"
+         id="path4" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath6">
+      <path
+         d="M 0,595.28 H 841.89 V 0 H 0 Z"
+         transform="translate(-467.05401,-433.65091)"
+         id="path6" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath8">
+      <path
+         d="M 0,595.28 H 841.89 V 0 H 0 Z"
+         transform="translate(-514.98761,-420.54451)"
+         id="path8" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="354.79575"
+       height="104.56839"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <g
+     id="layer-MC0"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1"
+     transform="translate(-383.86215,-165.0224)">
+    <path
+       id="path2"
+       d="m 0,0 v 0 -78.426 h 51.096 v 18.521 H 22.964 v 11.95 h 23.335 v 18.508 H 22.964 v 10.939 H 51.096 V 0 Z"
+       style="fill:#176fc1;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(1.3333333,0,0,-1.3333333,482.42027,165.0224)" />
+    <path
+       id="path3"
+       d="m 0,0 h -0.233 c -0.903,6.334 -7.875,40.028 -7.875,40.028 h -24.077 l 19.471,-78.426 H 10.684 L 33.755,40.028 H 8.881 C 8.881,40.028 1.006,6.334 0,0"
+       style="fill:#176fc1;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(1.3333333,0,0,-1.3333333,426.77573,218.39347)"
+       clip-path="url(#clipPath4)" />
+    <path
+       id="path5"
+       d="M 0,0 18.35,37.862 H -5.835 l -12.802,-27.565 -0.571,27.565 h -22.305 v -78.426 h 22.305 v 30.412 l 15.059,-30.412 h 24.602 z"
+       style="fill:#176fc1;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(1.3333333,0,0,-1.3333333,622.73867,215.50547)"
+       clip-path="url(#clipPath6)" />
+    <path
+       id="path7"
+       d="M 0,0 6.501,33.44 12.352,0 Z M 20.997,50.968 H -7.021 L -27.48,-27.457 h 23.719 l 1.914,10.087 h 15.411 l 1.696,-10.087 h 23.746 z"
+       style="fill:#176fc1;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(1.3333333,0,0,-1.3333333,686.65013,232.98067)"
+       clip-path="url(#clipPath8)" />
+  </g>
+</svg>

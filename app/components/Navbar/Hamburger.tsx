@@ -9,15 +9,7 @@ import {
     Typography,
 } from "@mui/material";
 import Link from "next/link";
-import MobileMenuItem from "./MobileMenuItem";
 import MenuIcon from "@mui/icons-material/Menu";
-import WindowSharpIcon from "@mui/icons-material/WindowSharp";
-import HomeSharpIcon from "@mui/icons-material/HomeSharp";
-import MeetingRoomSharpIcon from "@mui/icons-material/MeetingRoomSharp";
-import ViewArraySharpIcon from "@mui/icons-material/ViewArraySharp";
-import DoorSlidingSharpIcon from "@mui/icons-material/DoorSlidingSharp";
-import AppsSharpIcon from "@mui/icons-material/AppsSharp";
-import ImageSearchSharpIcon from "@mui/icons-material/ImageSearchSharp";
 import { IMainMenuItem } from "@/app/lib/types";
 
 const Hamburger = ({ menuItems }: { menuItems: IMainMenuItem[] }) => {

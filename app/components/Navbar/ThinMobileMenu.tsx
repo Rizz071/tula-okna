@@ -6,7 +6,7 @@ import Image from "next/image";
 import { IMainMenuItem } from "@/app/lib/types";
 
 const ThinMobileMenu = ({ menuItems }: { menuItems: IMainMenuItem[] }) => {
-    const trigger = useScrollTrigger();
+    const trigger = useScrollTrigger({ disableHysteresis: true });
 
     const THIN_MOBILE_HIGH_ROW_HEIGHT = "40px";
 

@@ -23,11 +23,17 @@ const NavbarLowerRow = ({ menuItems }: { menuItems: IMainMenuItem[] }) => {
                         key={index}
                     >
                         <Typography
-                            fontSize={{ md: "1.1rem", lg: "1.2rem" }}
-                            fontWeight={400}
-                            color="black"
-                            letterSpacing={1.5}
-                            textTransform={"uppercase"}
+                            fontSize={{
+                                sm: "0.8rem",
+                                md: "1.0rem",
+                                lg: "1.1rem",
+                            }}
+                            sx={{
+                                fontWeight: 400,
+                                color: "black",
+                                letterSpacing: { md: "3px" },
+                                textTransform: "uppercase",
+                            }}
                         >
                             {item.name}
                         </Typography>

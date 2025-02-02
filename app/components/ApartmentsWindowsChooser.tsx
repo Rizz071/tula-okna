@@ -90,7 +90,7 @@ const ApartmentsWindowsChooser = () => {
             {
                 system_title: "VEKA Softline 70",
                 image: veka_softline_70_1,
-                link: "",
+                link: "/okna/veka_softline_70",
                 floor: 2,
                 heating: 1,
                 street_noise: 1,

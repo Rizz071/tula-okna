@@ -6,6 +6,7 @@ import ArticleText from "./ArticleText";
 import ArticleDetails from "./ArticleDetails";
 import ArticleImage from "./ArticleImage";
 import ResponsiveHeader_H1 from "./ResponsiveHeader_H1";
+import ResponsiveHeader_H2 from "./ResponsiveHeader_H2";
 
 const ArticlesContainer = ({ mainTitle, articles }: articlesContainer) => {
     return (
@@ -41,6 +42,7 @@ const ArticlesContainer = ({ mainTitle, articles }: articlesContainer) => {
                                         : 2,
                             }}
                         >
+                            <ResponsiveHeader_H2 text={article.articleTitle} />
                             <ArticleText article={article} />
                             <ArticleDetails article={article} />
                         </Grid>

@@ -21,6 +21,7 @@ const NavbarHigherRow = ({ menuItems }: { menuItems: IMainMenuItem[] }) => {
                 justifyContent: "space-between",
                 fontWeight: "light",
                 mt: 1,
+                mb: 1,
                 height: {
                     xs: MOBILE_HIGH_ROW_HEIGHT,
                     sm: DESKTOP_HIGH_ROW_HEIGHT,

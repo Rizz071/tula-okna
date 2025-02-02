@@ -1,8 +1,10 @@
 "use client";
 
 import React from "react";
-import slideImage from "@/public/images/slides/apartment_slide_1_cropped.jpg";
-import HeroImageSlider from "@/app/components/HeaderSlider";
+// import slideImage from "@/public/images/slides/apartment_slide_1_cropped.jpg";
+import slideImage from "@/public/images/slides/apartments_whs_2.jpg";
+
+import HeaderSlider from "@/app/components/HeaderSlider";
 import Front_small_2 from "@/public/images/Front_small_2.webp";
 import Front_small_3 from "@/public/images/Front_small_3.webp";
 import House from "@/public/images/House.webp";
@@ -21,14 +23,14 @@ import maximum_light from "@/public/images/slides/steklopaket_1.jpg";
 export default function Page() {
     return (
         <>
-            <HeroImageSlider sliderImage={slideImage} isCardVisible={false} />
+            <HeaderSlider sliderImage={slideImage} isCardVisible={false} />
             <ProductionCardsContainer
                 title={"Окна в городскую квартиру"}
                 cardsArray={[
                     {
                         image: apartements1,
                         caption: "Стеклопакет для городского окна",
-                        link: "/okna/apartments",
+                        link: "/okna/veka_softline_70",
                     },
                     {
                         image: Front_small_2,
@@ -42,6 +44,8 @@ export default function Page() {
                     },
                 ]}
             />
+
+            <ApartmentsWindowsChooser />
 
             <ArticlesContainer
                 mainTitle={"Составляющие отличного окна в кваритире"}
@@ -236,8 +240,6 @@ export default function Page() {
                     },
                 ]}
             />
-
-            <ApartmentsWindowsChooser />
         </>
     );
 }
