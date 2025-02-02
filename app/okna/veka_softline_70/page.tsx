@@ -76,7 +76,7 @@ export default function Page() {
                                                 container
                                                 sx={{ width: "100%" }}
                                             >
-                                                <Grid size={{ xs: 2 }}>
+                                                <Grid size={{ xs: 3 }}>
                                                     <Box
                                                         sx={{
                                                             position:
@@ -101,7 +101,7 @@ export default function Page() {
                                                             color: "white",
                                                             fontSize: {
                                                                 xs: "1.2rem",
-                                                                md: "2rem",
+                                                                md: "1.5rem",
                                                                 lg: "2.0rem",
                                                             },
                                                             letterSpacing: {
@@ -121,7 +121,7 @@ export default function Page() {
                                                         sx={{
                                                             fontSize: {
                                                                 xs: "0.8rem",
-                                                                md: "1rem",
+                                                                md: "0.9rem",
                                                                 lg: "1rem",
                                                             },
                                                             m: 0,
