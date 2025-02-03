@@ -13,7 +13,6 @@ import {
     Grid2 as Grid,
     Paper,
     Stack,
-    SvgIcon,
     Table,
     TableBody,
     TableCell,
@@ -22,6 +21,8 @@ import {
     TableRow,
     Tooltip,
     Typography,
+    useMediaQuery,
+    useTheme,
 } from "@mui/material";
 import HeaderSlider from "@/app/components/HeaderSlider";
 import ResponsiveHeader_H1 from "@/app/components/Article/ResponsiveHeader_H1";
@@ -97,7 +98,8 @@ export default function Page() {
                                                     <Typography
                                                         variant="h1"
                                                         sx={{
-                                                            p: 1,
+                                                            px: 0,
+                                                            py: 1,
                                                             color: "white",
                                                             fontSize: {
                                                                 xs: "1.2rem",
@@ -105,9 +107,13 @@ export default function Page() {
                                                                 lg: "2.0rem",
                                                             },
                                                             letterSpacing: {
+                                                                xs: "1px",
                                                                 lg: "2px",
                                                             },
-                                                            textAlign: "center",
+                                                            textAlign: {
+                                                                xs: "right",
+                                                                md: "center",
+                                                            },
                                                             fontWeight: {
                                                                 xs: 400,
                                                                 sm: 300,
@@ -120,7 +126,7 @@ export default function Page() {
                                                     <Typography
                                                         sx={{
                                                             fontSize: {
-                                                                xs: "0.8rem",
+                                                                xs: "0.7rem",
                                                                 md: "0.9rem",
                                                                 lg: "1rem",
                                                             },
@@ -134,7 +140,10 @@ export default function Page() {
                                                                 xs: "1px",
                                                                 lg: "2px",
                                                             },
-                                                            textAlign: "center",
+                                                            textAlign: {
+                                                                xs: "right",
+                                                                md: "center",
+                                                            },
                                                         }}
                                                     >
                                                         Особенности нашей сборки
@@ -188,26 +197,37 @@ export default function Page() {
                                                 bgcolor: "lightgreen",
                                             }}
                                         >
-                                            <Tooltip title="Немецкий стандарт RAL превосходит требования ГОСТ РФ по толщине стенок профиля">
-                                                <>
-                                                    <Typography
-                                                        variant="overline"
-                                                        sx={{
-                                                            lineHeight:
-                                                                "1.2rem",
-                                                        }}
-                                                    >
-                                                        Класс А по RAL
-                                                    </Typography>
-                                                    <InfoOutlinedIcon
-                                                        sx={{
-                                                            ml: 1,
-                                                            fontSize: "medium",
-                                                            color: "primary.main",
-                                                        }}
-                                                    />
-                                                </>
-                                            </Tooltip>
+                                            <>
+                                                <Typography
+                                                    sx={{
+                                                        typography: "overline",
+                                                        m: 0,
+                                                        p: 0,
+                                                        fontSize: {
+                                                            xs: "0.7rem",
+                                                            md: "0.8rem",
+                                                        },
+                                                        fontWeight: 500,
+                                                        lineHeight: "1.2rem",
+                                                    }}
+                                                >
+                                                    Класс А по RAL
+                                                </Typography>
+                                                <Typography
+                                                    sx={{
+                                                        typography: "overline",
+                                                        mt: 1,
+                                                        p: 0,
+                                                        fontSize: {
+                                                            xs: "0.5rem",
+                                                            sm: "0.6rem",
+                                                        },
+                                                        lineHeight: "1rem",
+                                                    }}
+                                                >
+                                                    не менее 3.0 мм
+                                                </Typography>
+                                            </>
                                         </TableCell>
                                     </TableRow>
                                     <TableRow>
@@ -224,13 +244,72 @@ export default function Page() {
 
                                         <TableCell align="left">
                                             <Typography
-                                                variant="overline"
                                                 sx={{
+                                                    typography: "overline",
+                                                    m: 0,
+                                                    p: 0,
+                                                    fontSize: {
+                                                        xs: "0.7rem",
+                                                        md: "0.8rem",
+                                                    },
+                                                    fontWeight: 500,
                                                     lineHeight: "1.2rem",
                                                 }}
                                             >
                                                 5
                                             </Typography>
+                                        </TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                        <TableCell sx={{ height: "3.0rem" }}>
+                                            <Typography
+                                                variant="overline"
+                                                sx={{
+                                                    lineHeight: "1.2rem",
+                                                }}
+                                            >
+                                                Стеклопакет
+                                            </Typography>
+                                        </TableCell>
+
+                                        <TableCell align="left">
+                                            <Typography
+                                                sx={{
+                                                    typography: "overline",
+                                                    m: 0,
+                                                    p: 0,
+                                                    fontSize: {
+                                                        xs: "0.7rem",
+                                                        md: "0.8rem",
+                                                    },
+                                                    fontWeight: 500,
+                                                    lineHeight: "1.2rem",
+                                                    // wordWrap: "break-word",
+                                                    overflowWrap: "break-word",
+                                                    hyphens: "auto",
+                                                    hyphenateCharacter: "-",
+                                                }}
+                                            >
+                                                Мульти
+                                                <wbr />
+                                                функциональный
+                                            </Typography>
+                                            <Typography
+                                                sx={{
+                                                    typography: "overline",
+                                                    mt: 1,
+                                                    p: 0,
+                                                    fontSize: {
+                                                        xs: "0.5rem",
+                                                        sm: "0.6rem",
+                                                    },
+                                                    lineHeight: "1rem",
+                                                }}
+                                            >
+                                                зимой сохраняет тепло,
+                                                <br />
+                                                летом - не пропускает жару
+                                            </Typography>{" "}
                                         </TableCell>
                                     </TableRow>
                                     <TableRow>
@@ -252,12 +331,19 @@ export default function Page() {
                                             }}
                                         >
                                             <Typography
-                                                variant="overline"
                                                 sx={{
+                                                    typography: "overline",
+                                                    mt: 0,
+                                                    fontSize: {
+                                                        xs: "0.7rem",
+                                                        md: "0.8rem",
+                                                    },
+                                                    fontWeight: 500,
                                                     lineHeight: "1.2rem",
+                                                    textAlign: "left",
                                                 }}
                                             >
-                                                Замкнутый квадрат
+                                                Замкнутое
                                             </Typography>
                                         </TableCell>
                                     </TableRow>
@@ -275,12 +361,35 @@ export default function Page() {
 
                                         <TableCell align="left">
                                             <Typography
-                                                variant="overline"
+                                                gutterBottom
                                                 sx={{
+                                                    typography: "overline",
+                                                    mt: 0,
+                                                    fontSize: {
+                                                        xs: "0.7rem",
+                                                        md: "0.8rem",
+                                                    },
+                                                    fontWeight: 500,
                                                     lineHeight: "1.2rem",
+                                                    textAlign: "left",
                                                 }}
                                             >
-                                                2 контура протянутого уплотнения
+                                                2 контура
+                                            </Typography>
+                                            <Typography
+                                                sx={{
+                                                    typography: "overline",
+                                                    mt: 1,
+                                                    p: 0,
+                                                    fontSize: {
+                                                        xs: "0.5rem",
+                                                        sm: "0.6rem",
+                                                    },
+                                                    lineHeight: "1rem",
+                                                }}
+                                            >
+                                                Уплотнение вставлено в паз,
+                                                допускает быструю замену
                                             </Typography>
                                         </TableCell>
                                     </TableRow>
@@ -297,7 +406,20 @@ export default function Page() {
                                         </TableCell>
 
                                         <TableCell align="left">
-                                            <Typography variant="overline">
+                                            <Typography
+                                                sx={{
+                                                    typography: "overline",
+                                                    m: 0,
+                                                    p: 0,
+                                                    fontSize: {
+                                                        xs: "0.7rem",
+                                                        md: "0.8rem",
+                                                    },
+                                                    fontWeight: 500,
+                                                    lineHeight: "1.2rem",
+                                                    textAlign: "left",
+                                                }}
+                                            >
                                                 7 мм
                                             </Typography>
                                         </TableCell>
@@ -316,9 +438,17 @@ export default function Page() {
 
                                         <TableCell align="left">
                                             <Typography
-                                                variant="overline"
                                                 sx={{
+                                                    typography: "overline",
+                                                    m: 0,
+                                                    p: 0,
+                                                    fontSize: {
+                                                        xs: "0.7rem",
+                                                        md: "0.8rem",
+                                                    },
+                                                    fontWeight: 500,
                                                     lineHeight: "1.2rem",
+                                                    textAlign: "left",
                                                 }}
                                             >
                                                 8 мм
@@ -339,9 +469,17 @@ export default function Page() {
 
                                         <TableCell align="left">
                                             <Typography
-                                                variant="overline"
                                                 sx={{
+                                                    typography: "overline",
+                                                    m: 0,
+                                                    p: 0,
+                                                    fontSize: {
+                                                        xs: "0.7rem",
+                                                        md: "0.8rem",
+                                                    },
+                                                    fontWeight: 500,
                                                     lineHeight: "1.2rem",
+                                                    textAlign: "left",
                                                 }}
                                             >
                                                 16 мм
@@ -350,40 +488,96 @@ export default function Page() {
                                     </TableRow>
                                     <TableRow>
                                         <TableCell sx={{ height: "3.0rem" }}>
-                                            <Tooltip title="ПВХ-профиль + армирование + уплотнение">
-                                                <Typography
-                                                    variant="overline"
-                                                    sx={{
-                                                        lineHeight: "1.2rem",
-                                                    }}
-                                                >
-                                                    Коэффициент сопротивления
-                                                    теплопередаче
-                                                </Typography>
-                                            </Tooltip>
+                                            <Typography
+                                                variant="overline"
+                                                sx={{
+                                                    lineHeight: "1.2rem",
+                                                }}
+                                            >
+                                                Сопротивление теплопередаче
+                                                профиля с армированием
+                                            </Typography>
                                         </TableCell>
 
                                         <TableCell align="left">
-                                            <Tooltip title="ПВХ-профиль + армирование + уплотнение">
-                                                <>
-                                                    <Typography
-                                                        variant="overline"
-                                                        sx={{
-                                                            lineHeight:
-                                                                "1.2rem",
-                                                        }}
-                                                    >
-                                                        0,79 м2°С/Вт
-                                                    </Typography>
-                                                    <InfoOutlinedIcon
-                                                        sx={{
-                                                            ml: 1,
-                                                            fontSize: "medium",
-                                                            color: "primary.main",
-                                                        }}
-                                                    />
-                                                </>
-                                            </Tooltip>
+                                            <Typography
+                                                sx={{
+                                                    typography: "overline",
+                                                    m: 0,
+                                                    p: 0,
+                                                    fontSize: {
+                                                        xs: "0.7rem",
+                                                        md: "0.8rem",
+                                                    },
+                                                    fontWeight: 500,
+                                                    lineHeight: "1.2rem",
+                                                    textAlign: "left",
+                                                }}
+                                            >
+                                                0,79 м<sup>2</sup>°С/Вт
+                                            </Typography>
+                                            <Typography
+                                                sx={{
+                                                    typography: "overline",
+                                                    mt: 1,
+                                                    p: 0,
+                                                    fontSize: {
+                                                        xs: "0.5rem",
+                                                        sm: "0.6rem",
+                                                    },
+                                                    lineHeight: "1rem",
+                                                }}
+                                            >
+                                                Должно быть не менее 0,63 по
+                                                СНиП 23-02-2003
+                                            </Typography>
+                                        </TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                        <TableCell sx={{ height: "3.0rem" }}>
+                                            <Typography
+                                                variant="overline"
+                                                sx={{
+                                                    lineHeight: "1.2rem",
+                                                }}
+                                            >
+                                                Сопротивление теплопередаче
+                                                стеклопакета
+                                            </Typography>
+                                        </TableCell>
+
+                                        <TableCell align="left">
+                                            <Typography
+                                                sx={{
+                                                    typography: "overline",
+                                                    m: 0,
+                                                    p: 0,
+                                                    fontSize: {
+                                                        xs: "0.7rem",
+                                                        md: "0.8rem",
+                                                    },
+                                                    fontWeight: 500,
+                                                    lineHeight: "150%",
+                                                    textAlign: "left",
+                                                }}
+                                            >
+                                                1,15 м<sup>2</sup>°С/Вт
+                                            </Typography>
+                                            <Typography
+                                                sx={{
+                                                    typography: "overline",
+                                                    mt: 1,
+                                                    p: 0,
+                                                    fontSize: {
+                                                        xs: "0.5rem",
+                                                        sm: "0.6rem",
+                                                    },
+                                                    lineHeight: "1rem",
+                                                }}
+                                            >
+                                                Должно быть не менее 0,63 по
+                                                СНиП 23-02-2003
+                                            </Typography>
                                         </TableCell>
                                     </TableRow>
                                     <TableRow>
@@ -395,10 +589,17 @@ export default function Page() {
 
                                         <TableCell align="left">
                                             <Typography
-                                                variant="overline"
                                                 sx={{
                                                     typography: "overline",
+                                                    m: 0,
+                                                    p: 0,
+                                                    fontSize: {
+                                                        xs: "0.7rem",
+                                                        md: "0.8rem",
+                                                    },
+                                                    fontWeight: 500,
                                                     lineHeight: "1.2rem",
+                                                    textAlign: "left",
                                                 }}
                                             >
                                                 Средняя
@@ -420,20 +621,32 @@ export default function Page() {
                                         <TableCell align="left">
                                             <Typography
                                                 sx={{
+                                                    typography: "overline",
                                                     m: 0,
                                                     p: 0,
-                                                    typography: "overline",
+                                                    fontSize: {
+                                                        xs: "0.7rem",
+                                                        md: "0.8rem",
+                                                    },
+                                                    fontWeight: 500,
                                                     lineHeight: "1.2rem",
+                                                    textAlign: "left",
                                                 }}
                                             >
                                                 Gretsch-Unitas (Германия)
                                             </Typography>
                                             <Typography
                                                 sx={{
+                                                    typography: "overline",
                                                     m: 0,
                                                     p: 0,
-                                                    typography: "overline",
+                                                    fontSize: {
+                                                        xs: "0.7rem",
+                                                        md: "0.8rem",
+                                                    },
+                                                    fontWeight: 500,
                                                     lineHeight: "1.2rem",
+                                                    textAlign: "left",
                                                 }}
                                             >
                                                 ROTO (Германия)
@@ -454,9 +667,17 @@ export default function Page() {
 
                                         <TableCell align="left">
                                             <Typography
-                                                variant="overline"
                                                 sx={{
+                                                    typography: "overline",
+                                                    m: 0,
+                                                    p: 0,
+                                                    fontSize: {
+                                                        xs: "0.7rem",
+                                                        md: "0.8rem",
+                                                    },
+                                                    fontWeight: 500,
                                                     lineHeight: "1.2rem",
+                                                    textAlign: "left",
                                                 }}
                                             >
                                                 Средняя
@@ -468,12 +689,12 @@ export default function Page() {
                         </TableContainer>
                     </Grid>
 
-                    <Grid size={{ xs: 12, md: 6 }}></Grid>
+                    <Grid size={{ xs: 12, lg: 6 }}></Grid>
                     <Grid
-                        size={{ xs: 12, md: 6 }}
+                        size={{ xs: 12, lg: 6 }}
                         sx={{
                             position: "relative",
-                            mt: { xs: 0, md: -30, lg: -30 },
+                            mt: { xs: 0, lg: -6 },
                         }}
                     >
                         <TableContainer component={Paper} elevation={12}>

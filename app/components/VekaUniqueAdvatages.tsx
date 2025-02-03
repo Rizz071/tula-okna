@@ -62,6 +62,8 @@ const VekaUniqueAdvatages = () => {
                                         style={{
                                             width: "100%",
                                             height: "auto",
+                                            padding: "10px",
+                                            border: "solid 1px #333",
                                         }}
                                         alt={"Thickness of VEKA windows"}
                                     />
@@ -153,7 +155,12 @@ const VekaUniqueAdvatages = () => {
                             </Box>
 
                             <Box alignSelf={"center"}>
-                                <Box padding={0} sx={{ textAlign: "center" }}>
+                                <Box
+                                    padding={0}
+                                    sx={{
+                                        textAlign: "center",
+                                    }}
+                                >
                                     <Image
                                         src={veka_armir}
                                         sizes={"30vw"}
@@ -161,6 +168,8 @@ const VekaUniqueAdvatages = () => {
                                             width: "100%",
                                             height: "auto",
                                             maxWidth: "300px",
+                                            padding: "10px",
+                                            border: "solid 1px #333",
                                         }}
                                         alt={"Light in apartments"}
                                     />

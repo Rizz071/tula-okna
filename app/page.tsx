@@ -135,7 +135,8 @@ export default function Home() {
                                     height={0}
                                     sizes="100vw"
                                     style={{
-                                        border: "1px solid grey",
+                                        padding: "10px",
+                                        border: "solid 1px #333",
                                         width: "100%",
                                         height: "auto",
                                     }}
@@ -197,7 +198,8 @@ export default function Home() {
                                     height={0}
                                     sizes="100vw"
                                     style={{
-                                        border: "1px solid grey",
+                                        padding: "10px",
+                                        border: "solid 1px #333",
                                         width: "100%",
                                         height: "auto",
                                     }}
