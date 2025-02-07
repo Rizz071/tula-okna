@@ -44,3 +44,25 @@ export enum ImageSide {
     LEFT,
     RIGHT,
 }
+
+export interface IProfilePage {
+    profileSystemName: string;
+    profileMainImage: StaticImageData;
+    profileSystemLogo: StaticImageData;
+    profileSystemProperties: ProfileTableLine[];
+
+    recommendedUse: ReactElement;
+    profileSections: ProfileDrawSection[];
+}
+
+interface ProfileTableLine {
+    propertyName: string;
+    propertyText: ReactElement;
+    additionalDescriptionText: ReactElement[];
+    accent?: boolean,
+}
+
+interface ProfileDrawSection {
+    name: string;
+    image: StaticImageData;
+}
