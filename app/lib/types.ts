@@ -49,6 +49,7 @@ export interface IProfilePage {
     profileSystemName: string;
     profileMainImage: StaticImageData;
     profileSystemLogo: StaticImageData;
+
     profileSystemProperties: ProfileTableLine[];
 
     recommendedUse: ReactElement;
