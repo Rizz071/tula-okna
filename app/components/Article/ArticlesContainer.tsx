@@ -33,7 +33,6 @@ const ArticlesContainer = ({ mainTitle, articles }: articlesContainer) => {
                     >
                         <Grid
                             size={{ xs: 12, sm: 7, md: 6 }}
-                            sx={{ alignSelf: "center" }}
                             order={{
                                 xs: 2,
                                 sm:

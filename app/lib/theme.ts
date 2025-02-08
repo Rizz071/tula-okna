@@ -81,21 +81,21 @@ let theme = createTheme({
         },
         h1: {
             fontFamily: roboto.style.fontFamily,
-            fontSize: "3rem",
-            fontWeight: 300,
+            fontSize: "2.5rem",
+            fontWeight: 400,
             textAlign: "center",
         },
         h2: {
             fontFamily: roboto.style.fontFamily,
             fontSize: "2rem",
             textAlign: "left",
-            fontWeight: 300
+            fontWeight: 400
         },
         h3: {
             fontFamily: roboto.style.fontFamily,
             fontSize: "1.75rem",
             textAlign: "left",
-            fontWeight: 300,
+            fontWeight: 400,
 
         },
     },
