@@ -67,3 +67,13 @@ interface ProfileDrawSection {
     name: string;
     image: StaticImageData;
 }
+
+export interface IInfoCard {
+    title: string;
+    infoCardLines: IInfoCardLine[];
+}
+
+interface IInfoCardLine {
+    leftProperty: string;
+    rightProperty: ReactElement;
+}

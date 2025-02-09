@@ -1,5 +1,4 @@
 import React from "react";
-import ResponsiveHeader_H1 from "../components/Article/ResponsiveHeader_H1";
 import {
     Box,
     Container,
@@ -16,6 +15,7 @@ import {
 import Link from "next/link";
 import HeaderSlider from "../components/HeaderSlider";
 import slide from "@/public/images/slides/HS_portal_1.jpg";
+import InfoCard from "../components/InfoCard";
 
 export default function Page() {
     return (
@@ -28,10 +28,13 @@ export default function Page() {
                     spacing={6}
                     sx={{
                         position: "relative",
-                        mt: -20,
+                        mt: { xs: -9, md: -20 },
                     }}
                 >
-                    <Grid size={{ xs: 12, md: 8 }} order={{ xs: 3, sm: 0 }}>
+                    <Grid
+                        size={{ xs: 12, md: 8 }}
+                        order={{ xs: 3, sm: 3, md: 1 }}
+                    >
                         <TableContainer
                             component={Paper}
                             elevation={12}
@@ -86,69 +89,23 @@ export default function Page() {
                             </Table>
                         </TableContainer>
                     </Grid>
+
                     <Grid
                         container
-                        size={{ xs: 12, sm: 4 }}
-                        order={{ sx: 1, sm: 2 }}
-                        direction={"column"}
+                        size={{ xs: 12, sm: 12, md: 4 }}
+                        order={{ sx: 1, md: 2 }}
+                        direction={{ xs: "column", sm: "row", md: "column" }}
                         spacing={6}
                     >
-                        <Grid>
-                            <TableContainer component={Paper} elevation={12}>
-                                <Table
-                                    size="small"
-                                    style={{ tableLayout: "fixed" }}
-                                >
-                                    <TableHead sx={{ bgcolor: "#333" }}>
-                                        <TableRow>
-                                            <TableCell colSpan={2}>
-                                                <Typography
-                                                    sx={{
-                                                        m: 1,
-                                                        p: 0,
-                                                        color: "white",
-                                                        fontWeight: 300,
-                                                        textTransform:
-                                                            "uppercase",
-                                                        letterSpacing: "3px",
-                                                        textAlign: "center",
-                                                    }}
-                                                >
-                                                    Связь с Компанией
-                                                </Typography>
-                                            </TableCell>
-                                        </TableRow>
-                                    </TableHead>
-                                    <TableBody>
-                                        <TableRow sx={{ verticalAlign: "top" }}>
-                                            <TableCell
-                                                sx={{ height: "3.0rem" }}
-                                            >
-                                                <Typography
-                                                    variant="overline"
-                                                    sx={{
-                                                        lineHeight: "1.2rem",
-                                                    }}
-                                                >
-                                                    Телефон офиса
-                                                </Typography>
-                                            </TableCell>
-
-                                            <TableCell align="left">
-                                                <Typography
-                                                    sx={{
-                                                        typography: "overline",
-                                                        m: 0,
-                                                        p: 0,
-                                                        fontSize: {
-                                                            xs: "0.8rem",
-                                                            md: "0.8rem",
-                                                        },
-                                                        fontWeight: 500,
-                                                        lineHeight: "1.2rem",
-                                                        textAlign: "left",
-                                                    }}
-                                                >
+                        <Grid size={{ xs: 12, sm: 6, md: 12 }}>
+                            <InfoCard
+                                infoCard={{
+                                    title: "Связь с Компанией",
+                                    infoCardLines: [
+                                        {
+                                            leftProperty: "Телефон",
+                                            rightProperty: (
+                                                <>
                                                     <Link
                                                         href={
                                                             "tel:+74872385550"
@@ -158,40 +115,34 @@ export default function Page() {
                                                                 "none",
                                                         }}
                                                     >
-                                                        +7 (4872) 38-55-50
+                                                        <Typography
+                                                            sx={{
+                                                                typography:
+                                                                    "overline",
+                                                                m: 0,
+                                                                p: 0,
+                                                                fontSize: {
+                                                                    xs: "1.0rem",
+                                                                    md: "0.9rem",
+                                                                },
+                                                                fontWeight: 500,
+                                                                textAlign: {
+                                                                    xs: "center",
+                                                                    lg: "left",
+                                                                },
+                                                                color: "black",
+                                                            }}
+                                                        >
+                                                            +7 (4872) 38-55-50
+                                                        </Typography>
                                                     </Link>
-                                                </Typography>
-                                            </TableCell>
-                                        </TableRow>
-                                        <TableRow sx={{ verticalAlign: "top" }}>
-                                            <TableCell
-                                                sx={{ height: "3.0rem" }}
-                                            >
-                                                <Typography
-                                                    variant="overline"
-                                                    sx={{
-                                                        lineHeight: "1.2rem",
-                                                    }}
-                                                >
-                                                    Электронная почта
-                                                </Typography>
-                                            </TableCell>
-
-                                            <TableCell align="left">
-                                                <Typography
-                                                    sx={{
-                                                        typography: "overline",
-                                                        m: 0,
-                                                        p: 0,
-                                                        fontSize: {
-                                                            xs: "0.8rem",
-                                                            md: "0.8rem",
-                                                        },
-                                                        fontWeight: 500,
-                                                        lineHeight: "1.2rem",
-                                                        textAlign: "left",
-                                                    }}
-                                                >
+                                                </>
+                                            ),
+                                        },
+                                        {
+                                            leftProperty: "Электронная почта",
+                                            rightProperty: (
+                                                <>
                                                     <Link
                                                         href={
                                                             "mailto:385391@mail.ru"
@@ -201,19 +152,41 @@ export default function Page() {
                                                                 "none",
                                                         }}
                                                     >
-                                                        385391@mail.ru
+                                                        <Typography
+                                                            sx={{
+                                                                typography:
+                                                                    "overline",
+                                                                m: 0,
+                                                                p: 0,
+                                                                fontSize: {
+                                                                    xs: "1.0rem",
+                                                                    md: "0.9rem",
+                                                                },
+                                                                fontWeight: 500,
+                                                                textAlign: {
+                                                                    xs: "center",
+                                                                    lg: "left",
+                                                                },
+                                                                color: "black",
+                                                            }}
+                                                        >
+                                                            385391@mail.ru
+                                                        </Typography>
                                                     </Link>
-                                                </Typography>
-                                            </TableCell>
-                                        </TableRow>
-                                    </TableBody>
-                                </Table>
-                            </TableContainer>
+                                                </>
+                                            ),
+                                        },
+                                    ],
+                                }}
+                            />
                         </Grid>
-                        <Grid>
+
+                        <Grid
+                            size={{ xs: 12, sm: 6, md: 12 }}
+                            order={{ xs: 2, md: 0 }}
+                        >
                             <TableContainer component={Paper} elevation={12}>
                                 <Table
-                                    aria-label="Profile comapament table"
                                     size="small"
                                     style={{ tableLayout: "fixed" }}
                                 >
