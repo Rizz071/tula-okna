@@ -56,7 +56,7 @@ export default function Home() {
         <>
             <HeaderSlider sliderImage={slideImage} isCardVisible={true} />
             <ProductionCardsContainer
-                title={"Продукция и услуги"}
+                title={""}
                 cardsArray={[
                     {
                         image: apartements1,

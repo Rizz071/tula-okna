@@ -10,7 +10,7 @@ interface Props {
 const ProductionCard = ({ imgSrc, caption, link }: Props) => {
     return (
         <Grid container>
-            <Grid size={{ xs: 12, sm: 12, lg: 5 }}>
+            <Grid size={{ xs: 8, sm: 12, lg: 5 }}>
                 <Image
                     src={imgSrc.src}
                     width={imgSrc.width}
@@ -20,16 +20,16 @@ const ProductionCard = ({ imgSrc, caption, link }: Props) => {
                     alt={caption}
                 />
             </Grid>
-            <Grid size={{ xs: 12, sm: 12, lg: 7 }}>
+            <Grid size={{ xs: 4, sm: 12, lg: 7 }}>
                 <Stack
                     direction={"column"}
                     sx={{
                         alignItems: {
-                            xs: "center",
+                            xs: "flex-start",
                             sm: "center",
                             lg: "flex-start",
                         },
-                        ml: { xs: 0, lg: 3 },
+                        ml: { xs: 1, sm: 0, lg: 3 },
                         height: "100%",
                         justifyContent: "space-between",
                         gap: 1,
@@ -42,7 +42,7 @@ const ProductionCard = ({ imgSrc, caption, link }: Props) => {
                             fontSize: { xs: "large", md: "larger" },
                             fontWeight: 300,
                             textAlign: {
-                                xs: "center",
+                                xs: "left",
                                 sm: "center",
                                 lg: "left",
                             },
