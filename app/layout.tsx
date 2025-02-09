@@ -4,7 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./lib/theme";
 import Navbar from "./components/Navbar/Navbar";
-import OfferRequest from "./components/OfferRequest";
+import FooterContainer from "./components/Footer/FooterContainer";
 
 export const metadata: Metadata = {
     title: "Пластиковые окна в Туле от производителя!",
@@ -26,7 +26,7 @@ export default function RootLayout({
                         </header>
                         <main>{children}</main>
                         <footer>
-                            <OfferRequest />
+                            <FooterContainer />
                         </footer>
                     </ThemeProvider>
                 </AppRouterCacheProvider>

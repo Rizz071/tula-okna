@@ -67,6 +67,7 @@ const PhoneMailButton = ({
             </Button>
             <Box
                 sx={{
+                    maxWidth: "300px",
                     mt: 1,
                     px: 1,
                     display: isContactsVisible ? "block" : "none",
