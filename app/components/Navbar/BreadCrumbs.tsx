@@ -30,6 +30,8 @@ const BreadCrumbs = () => {
                 return "внутренняя отделка";
             case "veka_softline_70":
                 return "ВЕКА СОФТЛАЙН 70";
+            case "contacts":
+                return "контакты";
             default:
                 return name;
         }

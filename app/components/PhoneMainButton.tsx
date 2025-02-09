@@ -4,6 +4,7 @@ import SupportAgentOutlinedIcon from "@mui/icons-material/SupportAgentOutlined";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import MailIcon from "@mui/icons-material/Mail";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
+import Link from "next/link";
 
 interface Props {
     isContactsVisible: boolean;
@@ -22,49 +23,51 @@ const PhoneMailButton = ({
             justifyContent={"flex-end"}
             textAlign={"right"}
         >
-            <Button
-                variant={"outlined"}
-                sx={{
-                    display: isContactsVisible ? "none" : "block",
-                    mt: 0,
-                    fontWeight: 400,
-                    color: "primary",
-                }}
-                onClick={() => {
-                    setIsContactsVisible(!isContactsVisible);
-                }}
-            >
-                <Stack direction={"row"}>
-                    <SupportAgentOutlinedIcon
-                        sx={{
-                            mr: 2,
-                            fontSize: "2.5rem",
-                            alignSelf: "center",
-                        }}
-                    />
-                    <Stack
-                        direction={"column"}
-                        sx={{ justifyContent: "flex-start" }}
-                    >
-                        <Typography
-                            variant="button"
-                            sx={{ fontWeight: 700, textAlign: "left" }}
-                        >
-                            телефон и почта
-                        </Typography>
-                        <Typography
-                            variant="caption"
+            <Link href="/contacts" style={{ textDecoration: "none" }}>
+                <Button
+                    variant={"outlined"}
+                    sx={{
+                        display: isContactsVisible ? "none" : "block",
+                        mt: 0,
+                        fontWeight: 400,
+                        color: "primary",
+                    }}
+                    // onClick={() => {
+                    //     setIsContactsVisible(!isContactsVisible);
+                    // }}
+                >
+                    <Stack direction={"row"}>
+                        <SupportAgentOutlinedIcon
                             sx={{
-                                fontWeight: 400,
-                                fontSize: "0.6rem",
-                                textAlign: "left",
+                                mr: 2,
+                                fontSize: "2.5rem",
+                                alignSelf: "center",
                             }}
+                        />
+                        <Stack
+                            direction={"column"}
+                            sx={{ justifyContent: "flex-start" }}
                         >
-                            нажмите для просмотра
-                        </Typography>
+                            <Typography
+                                variant="button"
+                                sx={{ fontWeight: 700, textAlign: "left" }}
+                            >
+                                телефон и почта
+                            </Typography>
+                            <Typography
+                                variant="caption"
+                                sx={{
+                                    fontWeight: 400,
+                                    fontSize: "0.6rem",
+                                    textAlign: "left",
+                                }}
+                            >
+                                нажмите для просмотра
+                            </Typography>
+                        </Stack>
                     </Stack>
-                </Stack>
-            </Button>
+                </Button>
+            </Link>
             <Box
                 sx={{
                     maxWidth: "300px",
