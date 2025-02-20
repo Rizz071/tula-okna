@@ -5,7 +5,7 @@ import {
     Container,
     Box,
     Typography,
-    Grid,
+    Grid2 as Grid,
     Paper,
     TableContainer,
     Table,
@@ -28,10 +28,11 @@ import GraphicEqSharpIcon from "@mui/icons-material/GraphicEqSharp";
 import CurrencyRubleSharpIcon from "@mui/icons-material/CurrencyRubleSharp";
 import ExpandMoreSharpIcon from "@mui/icons-material/ExpandMoreSharp";
 
-import ButtonImage from "./WayFinder/WayFinderCard";
+import WayFinderCard from "./WayFinder/WayFinderCard";
 
 import kaleva_profi from "@/public/images/klv_profi_tumblr_1.jpg";
 import kaleva_standart from "@/public/images/klv_standart_tumblr_1.jpg";
+import veka_euroline_1 from "@/public/images/el_0_1.png";
 import veka_softline_70_1 from "@/public/images/veka_softline_70_tmblr_1.jpg";
 import veka_softline_82_1 from "@/public/images/veka_softline_80_tmblr_1.jpg";
 import { StaticImageData } from "next/image";
@@ -88,6 +89,15 @@ const ApartmentsWindowsChooser = () => {
                 price: 0,
             },
             {
+                system_title: "VEKA Euroline 58",
+                image: veka_euroline_1,
+                link: "/okna/veka_euroline",
+                floor: 0,
+                heating: 2,
+                street_noise: 2,
+                price: 1,
+            },
+            {
                 system_title: "VEKA Softline 70",
                 image: veka_softline_70_1,
                 link: "/okna/veka_softline_70",
@@ -99,7 +109,7 @@ const ApartmentsWindowsChooser = () => {
             {
                 system_title: "VEKA Softline 82",
                 image: veka_softline_82_1,
-                link: "",
+                link: "/okna/veka_softline_82",
                 floor: 3,
                 heating: 0,
                 street_noise: 0,
@@ -196,14 +206,14 @@ const ApartmentsWindowsChooser = () => {
             <Container maxWidth={"lg"}>
                 <Grid
                     container
-                    marginTop={0}
+                    marginTop={8}
                     columnSpacing={1}
                     rowSpacing={10}
                     direction={"row"}
                     alignItems={"flex-start"}
                     justifyContent={"space-evenly"}
                 >
-                    <Grid item xs={12}>
+                    {/* <Grid size={{ xs: 12 }}>
                         <Typography variant="h1">Окна в квартиру</Typography>
                         <Typography gutterBottom>
                             Основные критерии при подборе окон в квартиру это:
@@ -217,15 +227,16 @@ const ApartmentsWindowsChooser = () => {
                             покрытиями для предотвращения
                             &quot;запотевания&quot; окна.
                         </Typography>
-                    </Grid>
+                    </Grid> */}
 
                     <Grid
                         container
                         direction={"row"}
                         alignItems={"flex-start"}
-                        justifyContent={"space-evenly"}
+                        justifyContent={"space-between"}
+                        rowGap={2}
                     >
-                        <Grid item xs={12}>
+                        <Grid size={{ xs: 12 }}>
                             <Typography
                                 variant="h2"
                                 align="center"
@@ -235,8 +246,8 @@ const ApartmentsWindowsChooser = () => {
                                 Выберите параметры помещения
                             </Typography>
                         </Grid>
-                        <Grid item xs={12} md={3}>
-                            <Box sx={{ width: { xs: "auto", lg: 300 } }}>
+                        <Grid size={{ xs: 12, md: 3 }}>
+                            <Box sx={{ maxWidth: { xs: "auto", lg: 300 } }}>
                                 <FormControl fullWidth variant="filled">
                                     <InputLabel id="heating-select-input-label">
                                         Этаж
@@ -262,8 +273,8 @@ const ApartmentsWindowsChooser = () => {
                             </Box>
                         </Grid>
 
-                        <Grid item xs={12} md={3}>
-                            <Box sx={{ width: { xs: "auto", lg: 300 } }}>
+                        <Grid size={{ xs: 12, md: 3 }}>
+                            <Box sx={{ maxWidth: { xs: "auto", lg: 300 } }}>
                                 <FormControl fullWidth variant="filled">
                                     <InputLabel id="heating-select-input-label">
                                         Отопление
@@ -292,8 +303,8 @@ const ApartmentsWindowsChooser = () => {
                             </Box>
                         </Grid>
 
-                        <Grid item xs={12} md={3}>
-                            <Box sx={{ width: { xs: "auto", lg: 300 } }}>
+                        <Grid size={{ xs: 12, md: 3 }}>
+                            <Box sx={{ maxWidth: { xs: "auto", lg: 300 } }}>
                                 <FormControl fullWidth variant="filled">
                                     <InputLabel id="output-air-select-label">
                                         Уличный шум
@@ -337,10 +348,10 @@ const ApartmentsWindowsChooser = () => {
                             index
                         ) => {
                             return (
-                                <Grid item marginY={0} key={index}>
+                                <Grid sx={{ my: 0 }} key={index}>
                                     <Paper square elevation={6}>
                                         <Box>
-                                            <ButtonImage
+                                            <WayFinderCard
                                                 caption={system_title}
                                                 image={image}
                                                 link={link}
@@ -351,38 +362,32 @@ const ApartmentsWindowsChooser = () => {
                                             component={Paper}
                                             sx={{ width: "300px" }}
                                         >
-                                            <Table>
+                                            <Table size="small">
                                                 <TableHead>
                                                     <TableRow>
                                                         <TableCell
                                                             colSpan={2}
                                                             align="center"
                                                             sx={{
-                                                                paddingBottom: 0,
+                                                                pt: 0,
+                                                                pb: 0,
                                                             }}
                                                         >
                                                             <Typography
                                                                 variant="button"
-                                                                marginX={0}
+                                                                sx={{
+                                                                    mx: 0,
+                                                                }}
                                                             >
-                                                                Помещение для
-                                                                установки
+                                                                Условия
+                                                                эксплуатации
                                                             </Typography>
                                                             <Typography
-                                                                fontSize={
-                                                                    "larger"
-                                                                }
                                                                 marginY={0}
                                                                 padding={0}
                                                                 align="center"
                                                             >
-                                                                <ExpandMoreSharpIcon
-                                                                    fontSize="large"
-                                                                    // sx={{
-                                                                    //     transform:
-                                                                    //         "scale(1.5)",
-                                                                    // }}
-                                                                />
+                                                                <ExpandMoreSharpIcon />
                                                             </Typography>
                                                         </TableCell>
                                                     </TableRow>
@@ -403,9 +408,10 @@ const ApartmentsWindowsChooser = () => {
                                                                     gap={0.5}
                                                                     alignItems="center"
                                                                 >
-                                                                    <ApartmentSharpIcon fontSize="large" />
+                                                                    <ApartmentSharpIcon />
 
                                                                     <Typography
+                                                                        variant="subtitle1"
                                                                         sx={{
                                                                             my: 0,
                                                                         }}
@@ -427,6 +433,7 @@ const ApartmentsWindowsChooser = () => {
                                                                 }
                                                             >
                                                                 <Typography
+                                                                    variant="subtitle1"
                                                                     sx={{
                                                                         my: 0,
                                                                     }}
@@ -453,8 +460,9 @@ const ApartmentsWindowsChooser = () => {
                                                                     gap={0.5}
                                                                     alignItems="center"
                                                                 >
-                                                                    <FireplaceSharpIcon fontSize="large" />
+                                                                    <FireplaceSharpIcon />
                                                                     <Typography
+                                                                        variant="subtitle1"
                                                                         sx={{
                                                                             my: 0,
                                                                         }}
@@ -476,6 +484,7 @@ const ApartmentsWindowsChooser = () => {
                                                                 }
                                                             >
                                                                 <Typography
+                                                                    variant="subtitle1"
                                                                     sx={{
                                                                         my: 0,
                                                                     }}
@@ -502,8 +511,9 @@ const ApartmentsWindowsChooser = () => {
                                                                     gap={0.5}
                                                                     alignItems="center"
                                                                 >
-                                                                    <GraphicEqSharpIcon fontSize="large" />
+                                                                    <GraphicEqSharpIcon />
                                                                     <Typography
+                                                                        variant="subtitle1"
                                                                         lineHeight={
                                                                             1
                                                                         }
@@ -529,6 +539,7 @@ const ApartmentsWindowsChooser = () => {
                                                                 }
                                                             >
                                                                 <Typography
+                                                                    variant="subtitle1"
                                                                     sx={{
                                                                         my: 0,
                                                                     }}
@@ -555,8 +566,9 @@ const ApartmentsWindowsChooser = () => {
                                                                     gap={0.5}
                                                                     alignItems="center"
                                                                 >
-                                                                    <CurrencyRubleSharpIcon fontSize="large" />
+                                                                    <CurrencyRubleSharpIcon />
                                                                     <Typography
+                                                                        variant="subtitle1"
                                                                         sx={{
                                                                             my: 0,
                                                                         }}
@@ -578,6 +590,7 @@ const ApartmentsWindowsChooser = () => {
                                                                 }
                                                             >
                                                                 <Typography
+                                                                    variant="subtitle1"
                                                                     sx={{
                                                                         my: 0,
                                                                     }}

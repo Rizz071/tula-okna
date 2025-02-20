@@ -1,8 +1,8 @@
 import React from "react";
 import slideImage from "@/public/images/slides/Artline-82-Interior-01.jpg";
-import slide_1 from "@/public/images/Sofltine_crop.png";
-import cut_1 from "@/public/images/sl_13.png";
-import cut_2 from "@/public/images/sl_18.png";
+import slide_1 from "@/public/images/Euroline_crop.png";
+import cut_1 from "@/public/images/sl82_12.png";
+import cut_2 from "@/public/images/sl82_17.png";
 import veka_logo_light from "@/public/images/veka_logo_light.svg";
 
 import { Container } from "@mui/material";
@@ -18,7 +18,7 @@ export default function Page() {
             <Container maxWidth={"lg"} sx={{ mt: 8 }}>
                 <TemplateProfileSystem
                     profilePage={{
-                        profileSystemName: "VEKA SOFTLINE 70",
+                        profileSystemName: "VEKA SOFTLINE 82",
                         profileMainImage: slide_1,
                         profileSystemLogo: veka_logo_light,
                         profileSystemProperties: [
@@ -31,8 +31,14 @@ export default function Page() {
                                 ],
                             },
                             {
+                                accent: true,
                                 propertyName: "Количество камер",
-                                propertyText: <>5</>,
+                                propertyText: (
+                                    <>
+                                        Рама - 7<br />
+                                        Створка/Импост - 6
+                                    </>
+                                ),
                                 additionalDescriptionText: [],
                             },
                             {
@@ -61,9 +67,14 @@ export default function Page() {
                                 additionalDescriptionText: [],
                             },
                             {
+                                accent: true,
                                 propertyName: "Система уплотнений",
-                                propertyText: <>2 контура</>,
+                                propertyText: <>3 контура</>,
                                 additionalDescriptionText: [
+                                    <>
+                                        Даже при очень сильном ветре не
+                                        продуваются верхние петли
+                                    </>,
                                     <>
                                         Уплотнение вставлено в паз, допускает
                                         быструю замену
@@ -72,7 +83,7 @@ export default function Page() {
                             },
                             {
                                 propertyName: "Нахлест уплотнений снаружи",
-                                propertyText: <>7 мм</>,
+                                propertyText: <>6 мм</>,
                                 additionalDescriptionText: [],
                             },
                             {
@@ -82,7 +93,7 @@ export default function Page() {
                             },
                             {
                                 propertyName: "Глубина посадки стеклопакета",
-                                propertyText: <>16 мм</>,
+                                propertyText: <>15 мм</>,
                                 additionalDescriptionText: [],
                             },
                             {
@@ -90,10 +101,11 @@ export default function Page() {
                                     "Сопротивление теплопередаче профиля с армированием",
                                 propertyText: (
                                     <>
-                                        0,79 м<sup>2</sup>°С/Вт
+                                        1,08 м<sup>2</sup>°С/Вт
                                     </>
                                 ),
                                 additionalDescriptionText: [
+                                    <>ПВХ-профиль + армирование + уплотнение</>,
                                     <>
                                         Должно быть не менее 0,63 по СНиП
                                         23-02-2003
@@ -101,11 +113,12 @@ export default function Page() {
                                 ],
                             },
                             {
+                                accent: true,
                                 propertyName:
                                     "Сопротивление теплопередаче стеклопакета",
                                 propertyText: (
                                     <>
-                                        1,15 м<sup>2</sup>°С/Вт
+                                        1,44 м<sup>2</sup>°С/Вт
                                     </>
                                 ),
                                 additionalDescriptionText: [
@@ -132,25 +145,25 @@ export default function Page() {
                             },
                             {
                                 propertyName: "Сравнительная стоимость",
-                                propertyText: <>Средняя</>,
+                                propertyText: <>Высокая</>,
                                 additionalDescriptionText: [],
                             },
                         ],
                         recommendedUse: [
-                            <>Загородные дома для круглогодичного проживания</>,
                             <>
-                                Городские квартиры: на оживлённой улице, с
-                                недостаточным отоплением, на высоких этажах
+                                Пассивные дома со сверхмалым энергопотреблением
                             </>,
+                            <>Городские квартиры выше 17 этажа</>,
+                            <>Городские квартиры на очень шумной улице</>,
                             <>Крупногабаритные окна и двери</>,
                         ],
                         profileSections: [
                             {
-                                name: "Рама арт.101208 - Створка арт.103232",
+                                name: "Рама арт.101290 - Створка арт.103341",
                                 image: cut_1,
                             },
                             {
-                                name: "Створка Z-образная арт.103232 - Импост арт.102214",
+                                name: "Створка арт.103341 - Импост арт.102320",
                                 image: cut_2,
                             },
                         ],

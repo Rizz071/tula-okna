@@ -15,16 +15,17 @@ import ProductionCardsContainer from "@/app/components/ProductionCards/Productio
 import ApartmentsWindowsChooser from "@/app/components/ApartmentsWindowsChooser";
 import ArticlesContainer from "@/app/components/Article/ArticlesContainer";
 import { ImageSide } from "@/app/lib/types";
-import { Stack, Box, Typography } from "@mui/material";
+import { Stack, Box, Typography, Paper, Container } from "@mui/material";
 import Image from "next/image";
 
 import maximum_light from "@/public/images/slides/steklopaket_1.jpg";
+import ResponsiveHeader_H1 from "@/app/components/Article/ResponsiveHeader_H1";
 
 export default function Page() {
     return (
         <>
             <HeaderSlider sliderImage={slideImage} isCardVisible={false} />
-            <ProductionCardsContainer
+            {/* <ProductionCardsContainer
                 title={"Окна в городскую квартиру"}
                 cardsArray={[
                     {
@@ -43,7 +44,35 @@ export default function Page() {
                         link: "6 000",
                     },
                 ]}
-            />
+            /> */}
+            <Container maxWidth={"lg"}>
+                <Paper
+                    elevation={8}
+                    color="white"
+                    sx={{
+                        position: "relative",
+                        zIndex: "100",
+                        p: 6,
+                        textAlign: "center",
+                        mt: {
+                            xs: -5,
+                            sm: -5,
+                            md: -5,
+                            lg: -5,
+                            xl: -5,
+                        },
+                        transform: "translate(-50%, 0%)",
+                        left: "50%",
+                        maxWidth: "lg",
+                    }}
+                >
+                    <ResponsiveHeader_H1 text={"Окна в квартиру"} />
+
+                    <Typography gutterBottom sx={{ textAlign: "center" }}>
+                        Подберите подходящие окна с помощью конфигуратора.
+                    </Typography>
+                </Paper>
+            </Container>
 
             <ApartmentsWindowsChooser />
 

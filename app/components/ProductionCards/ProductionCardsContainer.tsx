@@ -52,7 +52,8 @@ const ProductionCardsContainer = ({ title, cardsArray }: Props) => {
                     rowSpacing={7}
                     columnSpacing={4}
                     sx={{
-                        p: 6,
+                        px: { xs: 0, sm: 6 },
+                        py: 6,
                         justifyContent: "space-evenly",
                     }}
                     padding={6}

@@ -169,7 +169,13 @@ const TemplateProfileSystem = ({
                                     return (
                                         <TableRow key={index}>
                                             <TableCell
-                                                sx={{ height: "3.0rem" }}
+                                                sx={{
+                                                    height: "3.0rem",
+                                                    boxShadow:
+                                                        propertyTableLine.accent
+                                                            ? "inset 4px 0px 0px 0px red"
+                                                            : "inset 0px 0px 0px 0px white",
+                                                }}
                                             >
                                                 <Typography
                                                     variant="overline"
@@ -183,15 +189,7 @@ const TemplateProfileSystem = ({
                                                 </Typography>
                                             </TableCell>
 
-                                            <TableCell
-                                                align="left"
-                                                sx={{
-                                                    bgcolor:
-                                                        propertyTableLine.accent
-                                                            ? "lightgreen"
-                                                            : "white",
-                                                }}
-                                            >
+                                            <TableCell align="left">
                                                 <Typography
                                                     sx={{
                                                         typography: "overline",
@@ -252,20 +250,9 @@ const TemplateProfileSystem = ({
             </Grid>
 
             <Grid size={{ xs: 12, lg: 6 }}></Grid>
-            <Grid
-                size={{ xs: 12, lg: 6 }}
-                sx={{
-                    position: "relative",
-                    mt: { xs: 0, lg: -6 },
-                }}
-            >
+            <Grid size={{ xs: 12, lg: 6 }}>
                 <TableContainer component={Paper} elevation={12}>
-                    <Table
-                        // sx={{ minWidth: 650 }}
-                        aria-label="Profile comapament table"
-                        size="small"
-                        style={{ tableLayout: "fixed" }}
-                    >
+                    <Table size="small" style={{ tableLayout: "fixed" }}>
                         <TableHead sx={{ bgcolor: "#333" }}>
                             <TableRow>
                                 <TableCell colSpan={2}>
@@ -288,47 +275,24 @@ const TemplateProfileSystem = ({
                         <TableBody>
                             <TableRow sx={{ verticalAlign: "top" }}>
                                 <TableCell colSpan={2}>
-                                    <Typography
-                                        sx={{
-                                            fontWeight: 400,
-                                            textTransform: "uppercase",
-                                            letterSpacing: "3px",
-                                            textAlign: "center",
-                                        }}
-                                    ></Typography>
-                                    <Typography
-                                        sx={{
-                                            mx: { xs: 2, md: 4 },
-                                            my: 2,
-                                            typography: "button",
-                                            lineHeight: "1.5rem",
-                                        }}
-                                    >
-                                        Загородные дома для круглогодичного
-                                        проживания
-                                    </Typography>
-                                    <Typography
-                                        sx={{
-                                            mx: { xs: 2, md: 4 },
-                                            my: 2,
-                                            typography: "button",
-                                            lineHeight: "1.5rem",
-                                        }}
-                                    >
-                                        Городские квартиры: на оживлённой улице,
-                                        с недостаточным отоплением, на высоких
-                                        этажах
-                                    </Typography>
-                                    <Typography
-                                        sx={{
-                                            mx: { xs: 2, md: 4 },
-                                            my: 2,
-                                            typography: "button",
-                                            lineHeight: "1.5rem",
-                                        }}
-                                    >
-                                        Крупногабаритные окна и двери
-                                    </Typography>
+                                    {profilePage.recommendedUse.map(
+                                        (useCase, index) => {
+                                            return (
+                                                <Typography
+                                                    sx={{
+                                                        mx: { xs: 2, md: 4 },
+                                                        my: 2,
+                                                        typography: "button",
+                                                        lineHeight: "1.5rem",
+                                                        textAlign: "left",
+                                                    }}
+                                                    key={index}
+                                                >
+                                                    {useCase}
+                                                </Typography>
+                                            );
+                                        }
+                                    )}
                                 </TableCell>
                             </TableRow>
                         </TableBody>

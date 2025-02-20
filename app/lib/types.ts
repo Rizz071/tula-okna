@@ -52,7 +52,7 @@ export interface IProfilePage {
 
     profileSystemProperties: ProfileTableLine[];
 
-    recommendedUse: ReactElement;
+    recommendedUse: ReactElement[];
     profileSections: ProfileDrawSection[];
 }
 

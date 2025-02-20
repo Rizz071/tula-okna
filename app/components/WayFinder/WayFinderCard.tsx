@@ -3,8 +3,9 @@
 import React, { useState } from "react";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
-import { Card, CardActionArea, CardContent, CardMedia } from "@mui/material";
+import { Card, CardActionArea, CardContent } from "@mui/material";
 import { IButtonImage } from "../../lib/types";
+import Image from "next/image";
 
 const WayFinderCard = ({
     caption,
@@ -28,11 +29,22 @@ const WayFinderCard = ({
                     variant="elevation"
                     elevation={6}
                 >
-                    <CardActionArea>
-                        <CardMedia
+                    <CardActionArea sx={{ textAlign: "center" }}>
+                        {/* <CardMedia
                             sx={{ height: 400 }}
                             image={image.src}
                             title={caption}
+                        /> */}
+                        <Image
+                            src={image}
+                            width={0}
+                            height={0}
+                            alt={caption}
+                            quality={95}
+                            style={{
+                                height: 400,
+                                width: "auto",
+                            }}
                         />
                         <CardContent sx={{ m: 0, p: 0 }}>
                             <Typography
