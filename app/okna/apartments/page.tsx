@@ -150,33 +150,16 @@ export default function Page() {
                                 ],
                             },
                         ],
-                        articleImageJSX: (
-                            <Stack direction={"column"} rowGap={6}>
-                                <Box alignSelf={"center"}>
-                                    <Box padding={0}>
-                                        <Image
-                                            src={energosber_1}
-                                            sizes={"50vw"}
-                                            style={{
-                                                width: "100%",
-                                                height: "auto",
-                                            }}
-                                            alt={"Light in apartments"}
-                                        />
-                                    </Box>
-                                    <Typography
-                                        align={"center"}
-                                        variant="body2"
-                                        fontWeight={500}
-                                    >
-                                        В окна для квартир мы всегда
-                                        устанавливаем два энергосберегающих
-                                        покрытия - на наружное и внутреннее
-                                        стекло.
-                                    </Typography>
-                                </Box>
-                            </Stack>
-                        ),
+                        articleImage: {
+                            imageSrc: energosber_1,
+                            imageCaption: (
+                                <>
+                                    В окна для квартир мы всегда устанавливаем
+                                    два энергосберегающих покрытия - на наружное
+                                    и внутреннее стекло.
+                                </>
+                            ),
+                        },
                     },
 
                     {
@@ -223,31 +206,15 @@ export default function Page() {
                                 ],
                             },
                         ],
-                        articleImageJSX: (
-                            <Stack direction={"column"} rowGap={6}>
-                                <Box alignSelf={"center"}>
-                                    <Box padding={0}>
-                                        <Image
-                                            src={furniture_1}
-                                            sizes={"50vw"}
-                                            style={{
-                                                width: "100%",
-                                                height: "auto",
-                                            }}
-                                            alt={"Light in apartments"}
-                                        />
-                                    </Box>
-                                    <Typography
-                                        align={"center"}
-                                        variant="body2"
-                                        fontWeight={500}
-                                    >
-                                        Комплект поворотно-откидной фурнитуры
-                                        G-U Euro-Jet
-                                    </Typography>
-                                </Box>
-                            </Stack>
-                        ),
+                        articleImage: {
+                            imageSrc: furniture_1,
+                            imageCaption: (
+                                <>
+                                    Комплект поворотно-откидной фурнитуры G-U
+                                    Euro-Jet
+                                </>
+                            ),
+                        },
                     },
 
                     {
@@ -313,35 +280,15 @@ export default function Page() {
                                 ],
                             },
                         ],
-                        articleImageJSX: (
-                            <Stack direction={"column"}>
-                                <Box alignSelf={"center"}>
-                                    <Box padding={0}>
-                                        <Image
-                                            src={otkos_1}
-                                            sizes={"50vw"}
-                                            style={{
-                                                width: "100%",
-                                                height: "auto",
-                                            }}
-                                            alt={"Light in apartments"}
-                                        />
-                                    </Box>
-                                    <Typography
-                                        variant="body2"
-                                        sx={{
-                                            textAlign: "center",
-                                            fontWeight: 500,
-                                            mt: 4,
-                                        }}
-                                    >
-                                        Оптимальное обустройство тёплого откоса
-                                        в квартирах с использованием
-                                        сэндвич-панели
-                                    </Typography>
-                                </Box>
-                            </Stack>
-                        ),
+                        articleImage: {
+                            imageSrc: otkos_1,
+                            imageCaption: (
+                                <>
+                                    Оптимальное обустройство тёплого откоса в
+                                    квартирах с использованием сэндвич-панели
+                                </>
+                            ),
+                        },
                     },
 
                     {
@@ -403,32 +350,15 @@ export default function Page() {
                                 ],
                             },
                         ],
-                        articleImageJSX: (
-                            <Stack direction={"column"} rowGap={6}>
-                                <Box alignSelf={"center"}>
-                                    <Box padding={0}>
-                                        <Image
-                                            src={PSUL_lenta_butil_1}
-                                            sizes={"50vw"}
-                                            style={{
-                                                width: "80%",
-                                                height: "auto",
-                                            }}
-                                            alt={"Light in apartments"}
-                                        />
-                                    </Box>
-                                    <Typography
-                                        align={"center"}
-                                        variant="body2"
-                                        fontWeight={500}
-                                    >
-                                        Предварительно сжатая уплотнительная
-                                        лента и полнобутиловая мембрана. Монтаж
-                                        по ГОСТ.
-                                    </Typography>
-                                </Box>
-                            </Stack>
-                        ),
+                        articleImage: {
+                            imageSrc: PSUL_lenta_butil_1,
+                            imageCaption: (
+                                <>
+                                    Предварительно сжатая уплотнительная лента и
+                                    полнобутиловая мембрана. Монтаж по ГОСТ.
+                                </>
+                            ),
+                        },
                     },
                 ]}
             />

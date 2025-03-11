@@ -26,7 +26,7 @@ export interface Article {
     articleTitle: string;
     articleParagraphsJSX: ReactElement[];
     articlesAccordion: ArticleDetailsAccordion[];
-    articleImageJSX: ReactElement;
+    articleImage: ArticleImage;
     imageSide: ImageSide;
     anchor?: string;
 }
@@ -34,6 +34,12 @@ export interface Article {
 export interface ArticleDetailsAccordion {
     accordionTitle: string;
     accordionParagraphs: string[];
+}
+
+export interface ArticleImage {
+    imageSrc: StaticImageData;
+    imageCaption?: ReactElement;
+    border?: boolean;
 }
 
 export interface articlesContainer {

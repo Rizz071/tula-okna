@@ -21,10 +21,8 @@ import {
 import Grid from "@mui/material/Grid2";
 import Image from "next/image";
 import glassprom1 from "../public/images/glassprom1.jpg";
-import besedka from "../public/images/besedka.webp";
-import AllVsVeka from "../public/images/slides/AllVsVeka.png";
+import besedka from "../public/images/besedka.jpg";
 import worker_plant_1 from "../public/images/slides/worker_plant_1.jpg";
-import veka_profil_ugol from "../public/images/slides/Softline_70_verh-niz_2.png";
 import real_economy_1 from "../public/images/slides/real_economy_1.jpg";
 import profile_compare_img from "../public/images/slides/profile_compare_house_1.jpg";
 import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
@@ -91,8 +89,6 @@ export default function Home() {
                 ]}
             />
 
-            {/* <TemplateAdvertisment /> */}
-
             <ArticlesContainer
                 mainTitle={"НАША ИСТОРИЯ"}
                 articles={[
@@ -128,32 +124,17 @@ export default function Home() {
                                 ],
                             },
                         ],
-                        articleImageJSX: (
-                            <>
-                                <Image
-                                    src={worker_plant_1}
-                                    alt={"worker at our old plant"}
-                                    width={0}
-                                    height={0}
-                                    sizes="100vw"
-                                    style={{
-                                        padding: "10px",
-                                        border: "solid 1px #333",
-                                        width: "100%",
-                                        height: "auto",
-                                    }}
-                                    unoptimized
-                                />
-                                <Typography
-                                    variant="subtitle2"
-                                    sx={{ textAlign: "center", mt: 0 }}
-                                >
+                        articleImage: {
+                            imageSrc: worker_plant_1,
+                            imageCaption: (
+                                <>
                                     Благодаря производственному опыту, мы знаем
                                     точно, какими должны быть качественно
                                     собранные окна.
-                                </Typography>
-                            </>
-                        ),
+                                </>
+                            ),
+                            border: true,
+                        },
                     },
 
                     {
@@ -191,31 +172,16 @@ export default function Home() {
                                 ],
                             },
                         ],
-                        articleImageJSX: (
-                            <>
-                                <Image
-                                    src={glassprom1}
-                                    alt={"worker at our old plant"}
-                                    width={0}
-                                    height={0}
-                                    sizes="100vw"
-                                    style={{
-                                        padding: "10px",
-                                        border: "solid 1px #333",
-                                        width: "100%",
-                                        height: "auto",
-                                    }}
-                                    unoptimized
-                                />
-                                <Typography
-                                    variant="subtitle2"
-                                    sx={{ textAlign: "center", mt: 0 }}
-                                >
+                        articleImage: {
+                            imageSrc: glassprom1,
+                            imageCaption: (
+                                <>
                                     Производственный цех нашего партнёра ЗСК
                                     ГЛАССПРОМ
-                                </Typography>
-                            </>
-                        ),
+                                </>
+                            ),
+                            border: true,
+                        },
                     },
 
                     {
@@ -266,27 +232,9 @@ export default function Home() {
                                 ],
                             },
                         ],
-                        articleImageJSX: (
-                            <>
-                                <Image
-                                    src={profile_compare_img}
-                                    alt={"Example of our work"}
-                                    width={0}
-                                    height={0}
-                                    sizes="100vw"
-                                    style={{
-                                        border: "0px solid grey",
-                                        width: "100%",
-                                        height: "auto",
-                                    }}
-                                    unoptimized
-                                />
-                                <Typography
-                                    variant="subtitle2"
-                                    sx={{ textAlign: "center", mt: 0 }}
-                                ></Typography>
-                            </>
-                        ),
+                        articleImage: {
+                            imageSrc: profile_compare_img,
+                        },
                     },
                 ]}
             />
@@ -369,42 +317,16 @@ export default function Home() {
                                 ],
                             },
                         ],
-                        articleImageJSX: (
-                            <>
-                                <Box
-                                    display="flex"
-                                    flexDirection={"column"}
-                                    alignItems="center"
-                                    justifyContent="center"
-                                    bgcolor={"#f0f0f0"}
-                                    border={"1px solid"}
-                                    padding={2}
-                                >
-                                    <Image
-                                        src={besedka}
-                                        alt={"Example of our work"}
-                                        width={0}
-                                        height={0}
-                                        sizes="100vw"
-                                        style={{
-                                            width: "100%",
-                                            height: "auto",
-                                        }}
-                                    />
-
-                                    <Typography
-                                        variant="subtitle2"
-                                        fontWeight={"light"}
-                                        textAlign={"left"}
-                                        alignSelf={"flex-start"}
-                                    >
-                                        <strong>Остекление беседки</strong>
-                                        <br />
-                                        Образец нашей работы
-                                    </Typography>
-                                </Box>
-                            </>
-                        ),
+                        articleImage: {
+                            imageSrc: besedka,
+                            imageCaption: (
+                                <>
+                                    Холодное остекление беседки. Образец нашей
+                                    работы.
+                                </>
+                            ),
+                            border: true,
+                        },
                     },
                 ]}
             />
