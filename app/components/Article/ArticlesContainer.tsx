@@ -32,6 +32,7 @@ const ArticlesContainer = ({ mainTitle, articles }: articlesContainer) => {
                         key={index}
                     >
                         <Grid
+                            id={article.anchor}
                             size={{ xs: 12, sm: 7, md: 6 }}
                             order={{
                                 xs: 2,

@@ -71,6 +71,15 @@ declare module '@mui/material/Typography' {
 }
 
 let theme = createTheme({
+    breakpoints: {
+        values: {
+            xs: 0,
+            sm: 700,
+            md: 900,
+            lg: 1200,
+            xl: 1536,
+        },
+    },
     typography: {
         body1: {
             fontFamily: roboto.style.fontFamily,

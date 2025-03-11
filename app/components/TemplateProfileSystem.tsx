@@ -24,32 +24,110 @@ const TemplateProfileSystem = ({
         <Grid container columnSpacing={10} rowSpacing={6}>
             <Grid
                 size={{ xs: 12, sm: 6, md: 6 }}
+                order={{ xs: 1, sm: 0 }}
                 sx={{
                     position: "relative",
-                    display: { xs: "none", sm: "block" },
+                    mt: { sm: -25, md: -50, lg: -48 },
                 }}
             >
-                <Image
-                    src={profilePage.profileMainImage}
-                    alt={`${profilePage.profileSystemName} image`}
-                    sizes={"50vw"}
-                    width={0}
-                    height={0}
-                    quality={85}
-                    priority
-                    style={{
-                        width: "100%",
-                        height: "auto",
+                <Grid
+                    container
+                    direction="column"
+                    rowSpacing={6}
+                    sx={{
+                        height: "100%",
+                        justifyContent: { sm: "flex-end", md: "flex-end" },
                     }}
-                />
+                >
+                    <Grid
+                        sx={{
+                            display: {
+                                xs: "none",
+                                sm: "block",
+                            },
+                        }}
+                    >
+                        <Image
+                            src={profilePage.profileMainImage}
+                            alt={`${profilePage.profileSystemName} image`}
+                            sizes={"50vw"}
+                            width={0}
+                            height={0}
+                            quality={85}
+                            priority
+                            style={{
+                                width: "100%",
+                                height: "auto",
+                            }}
+                        />
+                    </Grid>
+                    <Grid sx={{ verticalAlign: "bottom" }}>
+                        <TableContainer component={Paper} elevation={12}>
+                            <Table
+                                size="small"
+                                style={{ tableLayout: "fixed" }}
+                            >
+                                <TableHead sx={{ bgcolor: "#333" }}>
+                                    <TableRow>
+                                        <TableCell colSpan={2}>
+                                            <Typography
+                                                sx={{
+                                                    m: 1,
+                                                    p: 0,
+                                                    color: "white",
+                                                    fontWeight: 300,
+                                                    textTransform: "uppercase",
+                                                    letterSpacing: "3px",
+                                                    textAlign: "center",
+                                                }}
+                                            >
+                                                Рекомендованное применение
+                                            </Typography>
+                                        </TableCell>
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    <TableRow sx={{ verticalAlign: "top" }}>
+                                        <TableCell colSpan={2}>
+                                            {profilePage.recommendedUse.map(
+                                                (useCase, index) => {
+                                                    return (
+                                                        <Typography
+                                                            sx={{
+                                                                mx: {
+                                                                    xs: 2,
+                                                                    md: 4,
+                                                                },
+                                                                my: 2,
+                                                                typography:
+                                                                    "button",
+                                                                lineHeight:
+                                                                    "1.5rem",
+                                                                textAlign:
+                                                                    "left",
+                                                            }}
+                                                            key={index}
+                                                        >
+                                                            {useCase}
+                                                        </Typography>
+                                                    );
+                                                }
+                                            )}
+                                        </TableCell>
+                                    </TableRow>
+                                </TableBody>
+                            </Table>
+                        </TableContainer>
+                    </Grid>
+                </Grid>
             </Grid>
-            <Grid size={{ xs: 12, sm: 6, md: 6 }}>
+            <Grid size={{ xs: 12, sm: 6, md: 6 }} order={{ xs: 0, sm: 1 }}>
                 <TableContainer
                     component={Paper}
                     elevation={12}
                     sx={{
                         position: "relative",
-                        mt: { xs: -13, sm: -15 },
+                        mt: { xs: -13, sm: -15, md: -15, lg: -15 },
                     }}
                 >
                     <Table
@@ -249,64 +327,68 @@ const TemplateProfileSystem = ({
                 </TableContainer>
             </Grid>
 
-            <Grid size={{ xs: 12, lg: 6 }}></Grid>
-            <Grid size={{ xs: 12, lg: 6 }}>
-                <TableContainer component={Paper} elevation={12}>
-                    <Table size="small" style={{ tableLayout: "fixed" }}>
-                        <TableHead sx={{ bgcolor: "#333" }}>
-                            <TableRow>
-                                <TableCell colSpan={2}>
-                                    <Typography
-                                        sx={{
-                                            m: 1,
-                                            p: 0,
-                                            color: "white",
-                                            fontWeight: 300,
-                                            textTransform: "uppercase",
-                                            letterSpacing: "3px",
-                                            textAlign: "center",
-                                        }}
-                                    >
-                                        Рекомендованное применение
-                                    </Typography>
-                                </TableCell>
-                            </TableRow>
-                        </TableHead>
-                        <TableBody>
-                            <TableRow sx={{ verticalAlign: "top" }}>
-                                <TableCell colSpan={2}>
-                                    {profilePage.recommendedUse.map(
-                                        (useCase, index) => {
-                                            return (
-                                                <Typography
-                                                    sx={{
-                                                        mx: { xs: 2, md: 4 },
-                                                        my: 2,
-                                                        typography: "button",
-                                                        lineHeight: "1.5rem",
-                                                        textAlign: "left",
-                                                    }}
-                                                    key={index}
-                                                >
-                                                    {useCase}
-                                                </Typography>
-                                            );
-                                        }
-                                    )}
-                                </TableCell>
-                            </TableRow>
-                        </TableBody>
-                    </Table>
-                </TableContainer>
-            </Grid>
+            {/* <Grid size={{ xs: 12, lg: 6 }}></Grid>
+                <Grid size={{ xs: 12, lg: 6 }}>
+                    <TableContainer component={Paper} elevation={12}>
+                        <Table size="small" style={{ tableLayout: "fixed" }}>
+                            <TableHead sx={{ bgcolor: "#333" }}>
+                                <TableRow>
+                                    <TableCell colSpan={2}>
+                                        <Typography
+                                            sx={{
+                                                m: 1,
+                                                p: 0,
+                                                color: "white",
+                                                fontWeight: 300,
+                                                textTransform: "uppercase",
+                                                letterSpacing: "3px",
+                                                textAlign: "center",
+                                            }}
+                                        >
+                                            Рекомендованное применение
+                                        </Typography>
+                                    </TableCell>
+                                </TableRow>
+                            </TableHead>
+                            <TableBody>
+                                <TableRow sx={{ verticalAlign: "top" }}>
+                                    <TableCell colSpan={2}>
+                                        {profilePage.recommendedUse.map(
+                                            (useCase, index) => {
+                                                return (
+                                                    <Typography
+                                                        sx={{
+                                                            mx: { xs: 2, md: 4 },
+                                                            my: 2,
+                                                            typography: "button",
+                                                            lineHeight: "1.5rem",
+                                                            textAlign: "left",
+                                                        }}
+                                                        key={index}
+                                                    >
+                                                        {useCase}
+                                                    </Typography>
+                                                );
+                                            }
+                                        )}
+                                    </TableCell>
+                                </TableRow>
+                            </TableBody>
+                        </Table>
+                    </TableContainer>
+                </Grid> */}
 
-            <Grid size={{ xs: 12 }} sx={{ mt: 6 }}>
+            <Grid size={{ xs: 12 }} sx={{ mt: 6 }} order={{ xs: 3 }}>
                 <ResponsiveHeader_H1 text={"Комбинация профилей"} />
             </Grid>
 
             {profilePage.profileSections.map((section, index) => {
                 return (
-                    <Grid size={{ xs: 12, sm: 6 }} key={index}>
+                    <Grid
+                        size={{ xs: 12, sm: 6 }}
+                        key={index}
+                        order={{ xs: 4 + index }}
+                    >
                         <TableContainer component={Paper} elevation={12}>
                             <Table
                                 aria-label="Profile comapament table"

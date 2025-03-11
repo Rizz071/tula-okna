@@ -1,8 +1,8 @@
 import React from "react";
 import slideImage from "@/public/images/slides/Artline-82-Interior-01.jpg";
 import slide_1 from "@/public/images/Euroline_crop.png";
-import cut_1 from "@/public/images/sl82_12.png";
-import cut_2 from "@/public/images/sl82_17.png";
+import cut_1 from "@/public/images/el_10.png";
+import cut_2 from "@/public/images/el_15.png";
 import veka_logo_light from "@/public/images/veka_logo_light.svg";
 
 import { Container } from "@mui/material";
@@ -18,7 +18,7 @@ export default function Page() {
             <Container maxWidth={"lg"} sx={{ mt: 8 }}>
                 <TemplateProfileSystem
                     profilePage={{
-                        profileSystemName: "VEKA SOFTLINE 82",
+                        profileSystemName: "VEKA EUROLINE 58",
                         profileMainImage: slide_1,
                         profileSystemLogo: veka_logo_light,
                         profileSystemProperties: [
@@ -31,32 +31,24 @@ export default function Page() {
                                 ],
                             },
                             {
-                                accent: true,
                                 propertyName: "Количество камер",
-                                propertyText: (
-                                    <>
-                                        Рама - 7<br />
-                                        Створка/Импост - 6
-                                    </>
-                                ),
+                                propertyText: <>3</>,
                                 additionalDescriptionText: [],
                             },
                             {
                                 propertyName: "Стеклопакет",
                                 propertyText: (
                                     <>
-                                        Мульти
-                                        <wbr />
-                                        функциональный или энерго
+                                        Энерго
                                         <wbr />
                                         сберегающий
                                     </>
                                 ),
                                 additionalDescriptionText: [
+                                    <>зимой сохраняет тепло</>,
                                     <>
-                                        зимой сохраняет тепло,
-                                        <br />
-                                        летом - не пропускает жару
+                                        СПД32 <wbr />
+                                        (4И-10-4-10-4И)
                                     </>,
                                 ],
                             },
@@ -67,14 +59,9 @@ export default function Page() {
                                 additionalDescriptionText: [],
                             },
                             {
-                                accent: true,
                                 propertyName: "Система уплотнений",
-                                propertyText: <>3 контура</>,
+                                propertyText: <>2 контура</>,
                                 additionalDescriptionText: [
-                                    <>
-                                        Даже при очень сильном ветре не
-                                        продуваются верхние петли
-                                    </>,
                                     <>
                                         Уплотнение вставлено в паз, допускает
                                         быструю замену
@@ -93,7 +80,7 @@ export default function Page() {
                             },
                             {
                                 propertyName: "Глубина посадки стеклопакета",
-                                propertyText: <>15 мм</>,
+                                propertyText: <>13 мм</>,
                                 additionalDescriptionText: [],
                             },
                             {
@@ -101,7 +88,7 @@ export default function Page() {
                                     "Сопротивление теплопередаче профиля с армированием",
                                 propertyText: (
                                     <>
-                                        1,08 м<sup>2</sup>°С/Вт
+                                        0,64 м<sup>2</sup>°С/Вт
                                     </>
                                 ),
                                 additionalDescriptionText: [
@@ -113,12 +100,11 @@ export default function Page() {
                                 ],
                             },
                             {
-                                accent: true,
                                 propertyName:
                                     "Сопротивление теплопередаче стеклопакета",
                                 propertyText: (
                                     <>
-                                        1,44 м<sup>2</sup>°С/Вт
+                                        0,95 м<sup>2</sup>°С/Вт
                                     </>
                                 ),
                                 additionalDescriptionText: [
@@ -159,11 +145,11 @@ export default function Page() {
                         ],
                         profileSections: [
                             {
-                                name: "Рама арт.101290 - Створка арт.103341",
+                                name: "Рама арт.101213 - Створка арт.103213",
                                 image: cut_1,
                             },
                             {
-                                name: "Створка арт.103341 - Импост арт.102320",
+                                name: "Створка арт.103213 - Импост арт.102103",
                                 image: cut_2,
                             },
                         ],

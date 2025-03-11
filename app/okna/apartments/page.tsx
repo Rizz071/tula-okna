@@ -1,17 +1,9 @@
-"use client";
+// "use client";
 
 import React from "react";
-// import slideImage from "@/public/images/slides/apartment_slide_1_cropped.jpg";
 import slideImage from "@/public/images/slides/apartments_whs_2.jpg";
 
 import HeaderSlider from "@/app/components/HeaderSlider";
-import Front_small_2 from "@/public/images/Front_small_2.webp";
-import Front_small_3 from "@/public/images/Front_small_3.webp";
-import House from "@/public/images/House.webp";
-import Doors from "@/public/images/Doors.webp";
-import apartements1 from "@/public/images/apartements3_104px.jpg";
-import dacha1 from "@/public/images/dacha1_104px.jpeg";
-import ProductionCardsContainer from "@/app/components/ProductionCards/ProductionCardsContainer";
 import ApartmentsWindowsChooser from "@/app/components/ApartmentsWindowsChooser";
 import ArticlesContainer from "@/app/components/Article/ArticlesContainer";
 import { ImageSide } from "@/app/lib/types";
@@ -19,33 +11,61 @@ import { Stack, Box, Typography, Paper, Container } from "@mui/material";
 import Image from "next/image";
 
 import maximum_light from "@/public/images/slides/steklopaket_1.jpg";
-import ResponsiveHeader_H1 from "@/app/components/Article/ResponsiveHeader_H1";
+import ProductionCardsContainer from "@/app/components/ProductionCards/ProductionCardsContainer";
+import furniture_1 from "@/public/images/furniture_1.png";
+import otkos_tmblr_1 from "@/public/images/otkos_tmblr.png";
+import otkos_1 from "@/public/images/otkos_sandwich_1.png";
+import lenta_butil_1 from "@/public/images/lenta_butil_1.png";
+import PSUL_lenta_butil_1 from "@/public/images/PSUL_lenta_butil_1.png";
+import vetrov_nagr_1 from "@/public/images/vetrov_nagr_1.png";
+import energosber_1 from "@/public/images/energosber_1.png";
+
+import apartements1 from "@/public/images/footer-okno_tmblr.jpg";
+import dacha1 from "@/public/images/dacha1_104px.jpeg";
+import Front_small_2 from "@/public/images/Front_small_2.webp";
 
 export default function Page() {
     return (
         <>
             <HeaderSlider sliderImage={slideImage} isCardVisible={false} />
-            {/* <ProductionCardsContainer
-                title={"Окна в городскую квартиру"}
+
+            <ProductionCardsContainer
+                title={"Комплектация наших окон для городской квартиры"}
                 cardsArray={[
                     {
-                        image: apartements1,
-                        caption: "Стеклопакет для городского окна",
-                        link: "/okna/veka_softline_70",
+                        image: maximum_light,
+                        caption: "Двойная защита от запотевания",
+                        link: "#zapot",
                     },
                     {
-                        image: Front_small_2,
-                        caption: "Дополнительная защита от шума",
+                        image: lenta_butil_1,
+                        caption: "Монтаж по ГОСТ для любого окна",
+                        link: "#lenta",
+                    },
+                    {
+                        image: otkos_tmblr_1,
+                        caption: "Тёплые откосы из сэндвич-панели",
+                        link: "#otkos",
+                    },
+
+                    {
+                        image: furniture_1,
+                        caption: "Только немецкая фурнитура G-U и ROTO",
+                        link: "#furniture",
+                    },
+                    {
+                        image: vetrov_nagr_1,
+                        caption: "Подбор профиля в зависимости от этажа",
                         link: "/balkony",
                     },
                     {
                         image: dacha1,
-                        caption: "Регулируемое проветривание",
+                        caption: "Микропроветривание всегда включено",
                         link: "6 000",
                     },
                 ]}
-            /> */}
-            <Container maxWidth={"lg"}>
+            />
+            {/* <Container maxWidth={"lg"}>
                 <Paper
                     elevation={8}
                     color="white"
@@ -72,47 +92,57 @@ export default function Page() {
                         Подберите подходящие окна с помощью конфигуратора.
                     </Typography>
                 </Paper>
-            </Container>
+            </Container> */}
 
             <ApartmentsWindowsChooser />
 
             <ArticlesContainer
-                mainTitle={"Составляющие отличного окна в кваритире"}
+                mainTitle={"Комплектация наших окон для квартир"}
                 articles={[
                     {
+                        anchor: "zapot",
                         imageSide: ImageSide.RIGHT,
-                        articleTitle: "Выбор правильного стеклопакета",
+                        articleTitle: "Двойная защита от запотевания",
                         articleParagraphsJSX: [
                             <>
-                                В средней полосе России довольно много пасмурных
-                                дней в году, и сохранение светового потока
-                                жизненно необходимо для хорошего самочувствия.
+                                &quot;Запотевание&quot; стекла - крайне вредный
+                                эффект. Вода стекает по стеклу на подоконник и
+                                приводит к образованию плесени на откосах.
                             </>,
                             <>
-                                Стеклопакет городского окна в общем случае
-                                должен состоять из трёх стекол. Это обеспечит
-                                приемлемую шумоизоляцию и не сильно сократит
-                                поток поступающего света. Стеклопакет из двух
-                                стекол будет слишком хорошо пропускать уличный
-                                шум.
+                                Чем теплее внутренняя поверхность стекла - тем
+                                меньше вероятность возникновения конденсата.
+                                Нагреть стекло можно либо увеличив приток
+                                тёплого воздуха от радиатора, либо установив
+                                более &quot;тёплый&quot; стеклопакет.
                             </>,
                             <>
-                                Простые энергосберегающие покрытия (не
-                                мультифункциональные) практически не уменьшают
-                                световой поток, поступающий через окно.
+                                Наш опыт показывает, что &quot;тёплый&quot;
+                                стеклопакет - отлично справляется с конденсатом,
+                                даже если отопление недостаточное.
                             </>,
                             <>
-                                Кроме того, такие профильные системы как{" "}
-                                <strong>REHAU Blitz</strong> и{" "}
-                                <strong>REHAU Grazio</strong> специально имеют
-                                заниженную высоту узла створка/рама, что
-                                приводит к увеличению светового потока.
+                                <strong>
+                                    Благодаря двойному энергосберегающему
+                                    покрытию значительно увеличивается стойкость
+                                    окна к запотеванию.
+                                </strong>
+                            </>,
+                            <>
+                                Кроме того,{" "}
+                                <strong>энергосберегающие покрытия</strong> (не
+                                мультифункциональные){" "}
+                                <strong>
+                                    практически не уменьшают световой поток
+                                </strong>
+                                , поступающий через окно. Это особенно важно в
+                                средней полосе России, где очень много пасмурных
+                                дней в году.
                             </>,
                         ],
                         articlesAccordion: [
                             {
-                                accordionTitle:
-                                    "Откуда вообще берётся тонкий профиль?",
+                                accordionTitle: "ПРО ТОЧКУ РОСЫ ПОДРОБНО",
                                 accordionParagraphs: [
                                     "Заводы выпускают облегчённый профиль для изготовления маленьких рам. Например, он хорошо подходит для изготовления шкафов-купе, окон раздачи в учреждениях питания и т.д.",
                                     "Однако, пользуясь тем, что потребитель не различает полновесный профиль от низкосортного, недобросовестные монтажнные организации применяют его буквально везде.",
@@ -125,8 +155,8 @@ export default function Page() {
                                 <Box alignSelf={"center"}>
                                     <Box padding={0}>
                                         <Image
-                                            src={maximum_light}
-                                            sizes={"30vw"}
+                                            src={energosber_1}
+                                            sizes={"50vw"}
                                             style={{
                                                 width: "100%",
                                                 height: "auto",
@@ -139,9 +169,10 @@ export default function Page() {
                                         variant="body2"
                                         fontWeight={500}
                                     >
-                                        Полновесный профиль раздвижной рамы.
-                                        <br />
-                                        Вес - 0,79 кг/пог.м.
+                                        В окна для квартир мы всегда
+                                        устанавливаем два энергосберегающих
+                                        покрытия - на наружное и внутреннее
+                                        стекло.
                                     </Typography>
                                 </Box>
                             </Stack>
@@ -149,25 +180,37 @@ export default function Page() {
                     },
 
                     {
+                        anchor: "furniture",
                         imageSide: ImageSide.LEFT,
-                        articleTitle: "Дополнительная защита от шума",
+                        articleTitle: "Только немецкая фурнитура G-U и ROTO",
                         articleParagraphsJSX: [
                             <>
-                                В средней полосе России довольно много пасмурных
-                                дней в году и сохранение светового потока
-                                (инсоляции комнаты) жизненно необходимо.
+                                Фурнитура - это механизм, который работает в
+                                окне ежедневно. Срок службы фурнитуры зависит от
+                                степени запылённости улицы и от ежегодной смазки
+                                деталей пользователем. Для надёжной фурнитуры он
+                                составляет от 10 лет и больше.
                             </>,
                             <>
-                                Энергосберегающие покрытия практически не
-                                уменьшают световой поток, поступающий через
-                                окно.
+                                К сожалению, не вся фурнитура служит более 10
+                                лет. Экономия на механизме может быть совершенно
+                                незначительной, а его ремонт через пару лет
+                                может обойтись дорого и не всегда приведёт к
+                                полному восстановлению функциональности.
+                                Сложностей там очень много, т.к. много деталей
+                                механизма привязано к конкретному оконному
+                                профилю и универсальных запчастей нет.
                             </>,
                             <>
-                                Потери света при установке мультифуционального
-                                покрытия значительно выше чем у
-                                энергосберегающего, поэтому в общем случая его
-                                применение в квартире нецелесообразно.
+                                <strong>
+                                    Для наших окон мы используем только немецкую
+                                    фурнитуру марок G-U и Roto. Эти механизмы
+                                    выпускаются на рынке довольно долго,
+                                    качество деталей не &quot;скачет&quot; от
+                                    плохого к хорошему. Оно всегда отличное.
+                                </strong>
                             </>,
+                            <></>,
                         ],
                         articlesAccordion: [
                             {
@@ -185,8 +228,8 @@ export default function Page() {
                                 <Box alignSelf={"center"}>
                                     <Box padding={0}>
                                         <Image
-                                            src={maximum_light}
-                                            sizes={"30vw"}
+                                            src={furniture_1}
+                                            sizes={"50vw"}
                                             style={{
                                                 width: "100%",
                                                 height: "auto",
@@ -199,9 +242,8 @@ export default function Page() {
                                         variant="body2"
                                         fontWeight={500}
                                     >
-                                        Полновесный профиль раздвижной рамы.
-                                        <br />
-                                        Вес - 0,79 кг/пог.м.
+                                        Комплект поворотно-откидной фурнитуры
+                                        G-U Euro-Jet
                                     </Typography>
                                 </Box>
                             </Stack>
@@ -209,25 +251,146 @@ export default function Page() {
                     },
 
                     {
+                        anchor: "otkos",
                         imageSide: ImageSide.RIGHT,
-                        articleTitle: "Регулируемое проветривание",
+                        articleTitle: "Только тёплые откосы",
                         articleParagraphsJSX: [
                             <>
-                                В средней полосе России довольно много пасмурных
-                                дней в году и сохранение светового потока
-                                (инсоляции комнаты) жизненно необходимо.
+                                Есть много способов обустроить внутренний откос.
+                                По нашему опыту из них самый надёжный - сэндвич
+                                панель.
                             </>,
                             <>
-                                Энергосберегающие покрытия практически не
-                                уменьшают световой поток, поступающий через
-                                окно.
+                                Сэндвич-панель имеет аккуратный внешний вид,
+                                легко моется, является утеплителем и имеет
+                                свойство пароизоляции, что сильно улучшает
+                                качество этого узла.
                             </>,
                             <>
-                                Потери света при установке мультифуционального
-                                покрытия значительно выше чем у
-                                энергосберегающего, поэтому в общем случая его
-                                применение в квартире нецелесообразно.
+                                <strong>
+                                    Откос из сэндвич-панели не проводит холод и
+                                    всегда тёплый!
+                                </strong>{" "}
+                                В то время как штукатурный откос без внутреннего
+                                утепления очень часто промерзает. Также
+                                промерзает и пластиковая пустотелая панель,
+                                которую часто устанавливают ради мнимой
+                                экономии.
                             </>,
+                            <>
+                                <strong>
+                                    Не все сэндвич-панели подходят для откоса.
+                                </strong>{" "}
+                                Во-первых, сэндвич-панель должна иметь толщину
+                                не менее 9мм, чтобы надёжно держаться в
+                                стартовом профиле. Во-вторых, наружный
+                                пластиковый слой сэндвич-панели должен быть не
+                                менее 0,5мм толщиной, чтобы сквозь него не
+                                просвечивались внутренние стыки вспененного
+                                полистирола.
+                            </>,
+                            <>
+                                К сожалению, рынок наводнён панелями
+                                эконом-класса. Их толщина 8мм и менее,
+                                пластиковая облицовка 0,4мм и менее. Такие
+                                сэндвич-панели очень плохо подходят для
+                            </>,
+                            <>
+                                <strong>
+                                    Мы используем сэндвичи надлежащей толщины, с
+                                    качественной пластиковой облицовкой.
+                                </strong>
+                            </>,
+                        ],
+                        articlesAccordion: [
+                            {
+                                accordionTitle:
+                                    "Откуда вообще берётся тонкий профиль?",
+                                accordionParagraphs: [
+                                    "Заводы выпускают облегчённый профиль для изготовления маленьких рам. Например, он хорошо подходит для изготовления шкафов-купе, окон раздачи в учреждениях питания и т.д.",
+                                    "Однако, пользуясь тем, что потребитель не различает полновесный профиль от низкосортного, недобросовестные монтажнные организации применяют его буквально везде.",
+                                    "В итоге потребитель платит немного меньше при заказе такой продукции, но через некоторое время сталкивается с негативными последствиями.",
+                                ],
+                            },
+                        ],
+                        articleImageJSX: (
+                            <Stack direction={"column"}>
+                                <Box alignSelf={"center"}>
+                                    <Box padding={0}>
+                                        <Image
+                                            src={otkos_1}
+                                            sizes={"50vw"}
+                                            style={{
+                                                width: "100%",
+                                                height: "auto",
+                                            }}
+                                            alt={"Light in apartments"}
+                                        />
+                                    </Box>
+                                    <Typography
+                                        variant="body2"
+                                        sx={{
+                                            textAlign: "center",
+                                            fontWeight: 500,
+                                            mt: 4,
+                                        }}
+                                    >
+                                        Оптимальное обустройство тёплого откоса
+                                        в квартирах с использованием
+                                        сэндвич-панели
+                                    </Typography>
+                                </Box>
+                            </Stack>
+                        ),
+                    },
+
+                    {
+                        anchor: "lenta",
+                        imageSide: ImageSide.LEFT,
+                        articleTitle:
+                            "Монтаж окна по ГОСТ - входит в стоимость",
+                        articleParagraphsJSX: [
+                            <>
+                                <strong>
+                                    Окна должны всегда устанавливаться в
+                                    соответствии с ГОСТ.
+                                </strong>{" "}
+                                Это подразумевает защиту монтажной пены с улицы
+                                и со стороны помещения.
+                            </>,
+                            <>
+                                Со стороны улицы мы устанавливаем ПСУЛ
+                                (предварительно сжатую уплотнительную ленту).
+                                Она позволяет лишней влаге выходить из монтажной
+                                пены, одновременно защищая пену от солнечных
+                                лучей, которые разрушают её.
+                            </>,
+                            <>
+                                Со стороны помещения мы устанавливаем
+                                полнобутиловую пароизоляционную ленту. Она не
+                                даёт влаге из помещения попасть в слой с
+                                монтажной пеной. Если этого не сделать, то в
+                                пене могут начаться дегенеративные процессы.
+                            </>,
+                            <>
+                                <strong>
+                                    Очень важно использовать для пароизоляции
+                                    именно полнобутиловую мембрану.
+                                </strong>{" "}
+                                Наш опыт показывает, что стандартные ленты часто
+                                отслаиваются от стены уже в первые несколько
+                                суток после монтажа. Иногда прямо во время
+                                монтажа!
+                            </>,
+                            <>
+                                <strong>
+                                    В стоимость наших окон для квартир входит
+                                    как ПСУЛ с уличной стороны, так и
+                                    пароизоляция изнутри помещения. Таким
+                                    образом мы всегда выполняем монтаж по ГОСТ.
+                                </strong>
+                            </>,
+                            <></>,
                         ],
                         articlesAccordion: [
                             {
@@ -245,10 +408,10 @@ export default function Page() {
                                 <Box alignSelf={"center"}>
                                     <Box padding={0}>
                                         <Image
-                                            src={maximum_light}
-                                            sizes={"30vw"}
+                                            src={PSUL_lenta_butil_1}
+                                            sizes={"50vw"}
                                             style={{
-                                                width: "100%",
+                                                width: "80%",
                                                 height: "auto",
                                             }}
                                             alt={"Light in apartments"}
@@ -259,9 +422,9 @@ export default function Page() {
                                         variant="body2"
                                         fontWeight={500}
                                     >
-                                        Полновесный профиль раздвижной рамы.
-                                        <br />
-                                        Вес - 0,79 кг/пог.м.
+                                        Предварительно сжатая уплотнительная
+                                        лента и полнобутиловая мембрана. Монтаж
+                                        по ГОСТ.
                                     </Typography>
                                 </Box>
                             </Stack>

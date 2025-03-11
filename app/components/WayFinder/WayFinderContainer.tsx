@@ -32,8 +32,7 @@ const WayFinderContainer = ({
                     <ResponsiveHeader_H1 text={mainTitle} />
                     <Typography
                         sx={{
-                            textAlign: { xs: "justify", md: "center" },
-                            typography: { xs: "body2", md: "body1" },
+                            textAlign: "center",
                         }}
                     >
                         {mainTitleDescription}

@@ -7,6 +7,7 @@ import {
     Paper,
     Divider,
 } from "@mui/material";
+import Link from "next/link";
 
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -1222,7 +1223,8 @@ export default function Page() {
                                     "Фурнитура Gretsch-Unitas или ROTO на выбор",
                                     "Стандартная гарантия - 3 года",
                                 ],
-                                "Российская оконная система, созданная по образцу известной немецкой марки. Остекление будет экономичным, но при этом также полностью соответствовать требованиям для остекления дома круглогодичного проживания."
+                                "Российская оконная система, созданная по образцу известной немецкой марки. Остекление будет экономичным, но при этом также полностью соответствовать требованиям для остекления дома круглогодичного проживания.",
+                                ""
                             )}
                             {CardProfileSystem(
                                 veka_70,
@@ -1235,7 +1237,8 @@ export default function Page() {
                                     "Фурнитура Gretsch-Unitas или ROTO на выбор",
                                     "Расширенная гарантия - 5 лет",
                                 ],
-                                "Наиболее качественная оконная система на рынке РФ (наряду с Rehau Brillant). Больше пластика в профиле, надёжнее соединения рам и створок. Переплата в 10-20% по сравнению с аналогами окупится высочайшим уровнем комфорта при эксплуатации и отсутствием проблем с регулировкой на долгие годы вперёд."
+                                "Наиболее качественная оконная система на рынке РФ (наряду с Rehau Brillant). Больше пластика в профиле, надёжнее соединения рам и створок. Переплата в 10-20% по сравнению с аналогами окупится высочайшим уровнем комфорта при эксплуатации и отсутствием проблем с регулировкой на долгие годы вперёд.",
+                                "/okna/veka_softline_70"
                             )}
                             {CardProfileSystem(
                                 veka_82,
@@ -1248,7 +1251,8 @@ export default function Page() {
                                     "Фурнитура Gretsch-Unitas или ROTO на выбор",
                                     "Расширенная гарантия - 5 лет",
                                 ],
-                                "Система созданна для применения в пассивном доме. Невероятное сочетание теплосбережения и надёжности."
+                                "Система созданна для применения в пассивном доме. Невероятное сочетание теплосбережения и надёжности.",
+                                "/okna/veka_softline_82"
                             )}
                         </Box>
                     </Box>
@@ -1263,7 +1267,8 @@ function CardProfileSystem(
     imgPadding: number,
     title: string,
     descriptionText: string[],
-    finalDescription: string
+    finalDescription: string,
+    link: string
 ) {
     return (
         <Card sx={{ maxWidth: 345 }}>
@@ -1300,7 +1305,9 @@ function CardProfileSystem(
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">Подробнее</Button>
+                <Link href={link} style={{ textDecoration: "none" }}>
+                    <Button size="small">Подробнее</Button>
+                </Link>
             </CardActions>
         </Card>
     );

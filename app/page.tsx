@@ -91,6 +91,8 @@ export default function Home() {
                 ]}
             />
 
+            {/* <TemplateAdvertisment /> */}
+
             <ArticlesContainer
                 mainTitle={"НАША ИСТОРИЯ"}
                 articles={[
@@ -415,7 +417,7 @@ export default function Home() {
 
                     <Grid size={{ xs: 12 }} marginY={0}>
                         <ResponsiveHeader_H1
-                            text={"Краткое сравнение нашей продукции"}
+                            text={"Краткое сравнение нашей оконной продукции"}
                         />
 
                         <TableContainer component={Paper} elevation={12}>

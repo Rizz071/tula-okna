@@ -36,8 +36,8 @@ const ProductionCardsContainer = ({ title, cardsArray }: Props) => {
                     <Box>
                         <Typography
                             align="center"
+                            variant="h5"
                             sx={{
-                                fontWeight: 300,
                                 py: 2,
                                 textTransform: "uppercase",
                             }}

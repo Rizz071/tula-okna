@@ -28,6 +28,7 @@ export interface Article {
     articlesAccordion: ArticleDetailsAccordion[];
     articleImageJSX: ReactElement;
     imageSide: ImageSide;
+    anchor?: string;
 }
 
 export interface ArticleDetailsAccordion {
