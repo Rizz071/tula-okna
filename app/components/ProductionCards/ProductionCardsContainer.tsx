@@ -14,7 +14,7 @@ const ProductionCardsContainer = ({ title, cardsArray }: Props) => {
         <Container>
             <Paper
                 elevation={8}
-                square={true}
+                // square={true}
                 color="white"
                 sx={{
                     position: "relative",
@@ -33,13 +33,21 @@ const ProductionCardsContainer = ({ title, cardsArray }: Props) => {
                 }}
             >
                 {title && (
-                    <Box>
+                    <Box
+                        sx={{
+                            bgcolor: "#333",
+                            borderRadius: "4px 4px 0 0",
+                        }}
+                    >
                         <Typography
                             align="center"
                             variant="h5"
                             sx={{
                                 py: 2,
                                 textTransform: "uppercase",
+                                color: "white",
+                                fontWeight: 400,
+                                letterSpacing: "2px",
                             }}
                         >
                             {title}

@@ -52,33 +52,40 @@ const VekaUniqueAdvatages = () => {
                             ],
                         },
                     ],
-                    articleImageJSX: (
-                        <Stack direction={"column"} rowGap={6}>
-                            <Box alignSelf={"center"}>
-                                <Box padding={0}>
-                                    <Image
-                                        src={veka_thickness}
-                                        sizes={"50vw"}
-                                        style={{
-                                            width: "100%",
-                                            height: "auto",
-                                            padding: "10px",
-                                            border: "solid 1px #333",
-                                        }}
-                                        alt={"Thickness of VEKA windows"}
-                                    />
-                                </Box>
-                                <Typography
-                                    align={"center"}
-                                    variant="body2"
-                                    fontWeight={500}
-                                >
-                                    Профиль VEKA Euroline 58 в разрезе. Обратите
-                                    внимание на толщину стенок.
-                                </Typography>
-                            </Box>
-                        </Stack>
-                    ),
+                    articleImage: {
+                        imageSrc: veka_thickness,
+                        imageCaption: (
+                            <>
+                                Профиль VEKA Euroline 58 в разрезе. Обратите
+                                внимание на толщину стенок.
+                            </>
+                        ),
+                        border: true,
+                    },
+                    // (
+                    //     <Stack direction={"column"} rowGap={6}>
+                    //         <Box alignSelf={"center"}>
+                    //             <Box padding={0}>
+                    //                 <Image
+                    //                     src={veka_thickness}
+                    //                     sizes={"50vw"}
+                    //                     style={{
+                    //                         width: "100%",
+                    //                         height: "auto",
+                    //                         padding: "10px",
+                    //                         border: "solid 1px #333",
+                    //                     }}
+                    //                     alt={"Thickness of VEKA windows"}
+                    //                 />
+                    //             </Box>
+                    //             <Typography
+                    //                 align={"center"}
+                    //                 variant="body2"
+                    //                 fontWeight={500}
+                    //             ></Typography>
+                    //         </Box>
+                    //     </Stack>
+                    // ),
                 },
 
                 {
@@ -135,56 +142,59 @@ const VekaUniqueAdvatages = () => {
                             ],
                         },
                     ],
-                    articleImageJSX: (
-                        <Stack direction={"column"} rowGap={6}>
-                            <Box alignSelf={"center"}>
-                                <Box padding={0}>
-                                    <Image
-                                        src={veka_armir_2}
-                                        alt={"Example of our work"}
-                                        width={0}
-                                        height={0}
-                                        sizes="50vw"
-                                        style={{
-                                            width: "100%",
-                                            height: "auto",
-                                        }}
-                                        unoptimized
-                                    />
-                                </Box>
-                            </Box>
+                    articleImage: {
+                        imageSrc: veka_armir_2,
+                    },
+                    // (
+                    //     <Stack direction={"column"} rowGap={6}>
+                    //         <Box alignSelf={"center"}>
+                    //             <Box padding={0}>
+                    //                 <Image
+                    //                     src={veka_armir_2}
+                    //                     alt={"Example of our work"}
+                    //                     width={0}
+                    //                     height={0}
+                    //                     sizes="50vw"
+                    //                     style={{
+                    //                         width: "100%",
+                    //                         height: "auto",
+                    //                     }}
+                    //                     unoptimized
+                    //                 />
+                    //             </Box>
+                    //         </Box>
 
-                            <Box alignSelf={"center"}>
-                                <Box
-                                    padding={0}
-                                    sx={{
-                                        textAlign: "center",
-                                    }}
-                                >
-                                    <Image
-                                        src={veka_armir}
-                                        sizes={"30vw"}
-                                        style={{
-                                            width: "100%",
-                                            height: "auto",
-                                            maxWidth: "300px",
-                                            padding: "10px",
-                                            border: "solid 1px #333",
-                                        }}
-                                        alt={"Light in apartments"}
-                                    />
-                                </Box>
-                                <Typography
-                                    align={"center"}
-                                    variant="body2"
-                                    fontWeight={500}
-                                >
-                                    Профиль VEKA Euroline 58 в разрезе. В рамном
-                                    профиле видно квадратное армирование.
-                                </Typography>
-                            </Box>
-                        </Stack>
-                    ),
+                    //         <Box alignSelf={"center"}>
+                    //             <Box
+                    //                 padding={0}
+                    //                 sx={{
+                    //                     textAlign: "center",
+                    //                 }}
+                    //             >
+                    //                 <Image
+                    //                     src={veka_armir}
+                    //                     sizes={"30vw"}
+                    //                     style={{
+                    //                         width: "100%",
+                    //                         height: "auto",
+                    //                         maxWidth: "300px",
+                    //                         padding: "10px",
+                    //                         border: "solid 1px #333",
+                    //                     }}
+                    //                     alt={"Light in apartments"}
+                    //                 />
+                    //             </Box>
+                    //             <Typography
+                    //                 align={"center"}
+                    //                 variant="body2"
+                    //                 fontWeight={500}
+                    //             >
+                    //                 Профиль VEKA Euroline 58 в разрезе. В рамном
+                    //                 профиле видно квадратное армирование.
+                    //             </Typography>
+                    //         </Box>
+                    //     </Stack>
+                    // ),
                 },
             ]}
         />

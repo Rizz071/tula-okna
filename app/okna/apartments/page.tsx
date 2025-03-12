@@ -7,8 +7,6 @@ import HeaderSlider from "@/app/components/HeaderSlider";
 import ApartmentsWindowsChooser from "@/app/components/ApartmentsWindowsChooser";
 import ArticlesContainer from "@/app/components/Article/ArticlesContainer";
 import { ImageSide } from "@/app/lib/types";
-import { Stack, Box, Typography, Paper, Container } from "@mui/material";
-import Image from "next/image";
 
 import maximum_light from "@/public/images/slides/steklopaket_1.jpg";
 import ProductionCardsContainer from "@/app/components/ProductionCards/ProductionCardsContainer";
@@ -19,10 +17,15 @@ import lenta_butil_1 from "@/public/images/lenta_butil_1.png";
 import PSUL_lenta_butil_1 from "@/public/images/PSUL_lenta_butil_1.png";
 import vetrov_nagr_1 from "@/public/images/vetrov_nagr_1.png";
 import energosber_1 from "@/public/images/energosber_1.png";
+import micro_1 from "@/public/images/micro_1.png";
+import micro_2 from "@/public/images/micro_2.png";
+import psul_lenta_3 from "@/public/images/psul_lenta_3.png";
+import veter_1 from "@/public/images/veter_1.png";
 
 import apartements1 from "@/public/images/footer-okno_tmblr.jpg";
 import dacha1 from "@/public/images/dacha1_104px.jpeg";
 import Front_small_2 from "@/public/images/Front_small_2.webp";
+import { Box, List, ListItemText, Typography } from "@mui/material";
 
 export default function Page() {
     return (
@@ -30,7 +33,7 @@ export default function Page() {
             <HeaderSlider sliderImage={slideImage} isCardVisible={false} />
 
             <ProductionCardsContainer
-                title={"Комплектация наших окон для городской квартиры"}
+                title={"НАШИ ОКНА В КВАРТИРУ"}
                 cardsArray={[
                     {
                         image: maximum_light,
@@ -39,29 +42,28 @@ export default function Page() {
                     },
                     {
                         image: lenta_butil_1,
-                        caption: "Монтаж по ГОСТ для любого окна",
+                        caption: "Монтаж по ГОСТ входит в цену",
                         link: "#lenta",
+                    },
+                    {
+                        image: furniture_1,
+                        caption: "Только немецкая фурнитура",
+                        link: "#furniture",
                     },
                     {
                         image: otkos_tmblr_1,
                         caption: "Тёплые откосы из сэндвич-панели",
                         link: "#otkos",
                     },
-
-                    {
-                        image: furniture_1,
-                        caption: "Только немецкая фурнитура G-U и ROTO",
-                        link: "#furniture",
-                    },
                     {
                         image: vetrov_nagr_1,
-                        caption: "Подбор профиля в зависимости от этажа",
-                        link: "/balkony",
+                        caption: "Учёт ветровой и шумовой нагрузки",
+                        link: "#veter",
                     },
                     {
-                        image: dacha1,
-                        caption: "Микропроветривание всегда включено",
-                        link: "6 000",
+                        image: micro_1,
+                        caption: "Микропроветривание в комплекте",
+                        link: "#micro",
                     },
                 ]}
             />
@@ -165,7 +167,7 @@ export default function Page() {
                     {
                         anchor: "furniture",
                         imageSide: ImageSide.LEFT,
-                        articleTitle: "Только немецкая фурнитура G-U и ROTO",
+                        articleTitle: "Только немецкая фурнитура",
                         articleParagraphsJSX: [
                             <>
                                 Фурнитура - это механизм, который работает в
@@ -337,7 +339,6 @@ export default function Page() {
                                     образом мы всегда выполняем монтаж по ГОСТ.
                                 </strong>
                             </>,
-                            <></>,
                         ],
                         articlesAccordion: [
                             {
@@ -351,11 +352,177 @@ export default function Page() {
                             },
                         ],
                         articleImage: {
-                            imageSrc: PSUL_lenta_butil_1,
+                            imageSrc: psul_lenta_3,
                             imageCaption: (
                                 <>
-                                    Предварительно сжатая уплотнительная лента и
-                                    полнобутиловая мембрана. Монтаж по ГОСТ.
+                                    <Typography
+                                        component={"span"}
+                                        variant="body2"
+                                        sx={{
+                                            display: "inline-block",
+                                            textAlign: "left",
+                                            fontWeight: 500,
+                                        }}
+                                    >
+                                        Схема монтажного шва с системой 3-х
+                                        слойной изоляции по ГОСТ.
+                                        <br />
+                                        Наш стандартный способ монтажа.
+                                    </Typography>
+
+                                    <Typography
+                                        component={"span"}
+                                        variant="body2"
+                                        sx={{
+                                            display: "inline-block",
+                                            textAlign: "left",
+                                            fontWeight: 400,
+                                        }}
+                                    >
+                                        <br />I — наружный водоизоляционный
+                                        паропроницаемый слой
+                                        <br />
+                                        II — центральный теплоизоляционный слой
+                                        <br />
+                                        III — внутренний пароизоляционный слой
+                                        <br />
+                                        III* — дополнительный гидроизоляционный
+                                        слой
+                                    </Typography>
+                                </>
+                            ),
+                        },
+                    },
+
+                    {
+                        anchor: "veter",
+                        imageSide: ImageSide.RIGHT,
+                        articleTitle: "Учитываем ветровую и шумовую нагрузки",
+                        articleParagraphsJSX: [
+                            <>
+                                <strong>
+                                    Чем выше этаж установки окна - тем сильнее
+                                    ветровая нагрузка.
+                                </strong>{" "}
+                                Наш опыт показывает, что с увеличением этажности
+                                необходимо увеличивать толщину оконного профиля,
+                                даже если это напрямую не требуется по расчёту
+                                ветрового давления.
+                            </>,
+                            <>
+                                <u>
+                                    Мы настоятельно рекомендуем устанавливать:
+                                </u>
+                                <br />
+                                &nbsp;&mdash;&nbsp;профиль 60мм - только до 5го
+                                этажа
+                                <br />
+                                &nbsp;&mdash;&nbsp;профиль 70мм - до 17 этажа
+                                <br />
+                                &nbsp;&mdash;&nbsp;профиль 82мм - от 18го этажа
+                                и выше
+                            </>,
+                            <>
+                                Кроме того, следует учитывать шумовое
+                                загрязнение улицы. Чем больше в профиле камер,
+                                тем лучше он глушит шум.{" "}
+                                <strong>
+                                    Если окна выходят на оживлённую улицу, то
+                                    рекомендуем выбирать оконный профиль от 5
+                                    камер и более
+                                </strong>
+                                .
+                            </>,
+                            <>
+                                Этажность установки и шумовую нагрузку легко
+                                можно учесть в нашем оконном конфигураторе.
+                            </>,
+                        ],
+                        articlesAccordion: [
+                            {
+                                accordionTitle:
+                                    "Откуда вообще берётся тонкий профиль?",
+                                accordionParagraphs: [
+                                    "Заводы выпускают облегчённый профиль для изготовления маленьких рам. Например, он хорошо подходит для изготовления шкафов-купе, окон раздачи в учреждениях питания и т.д.",
+                                    "Однако, пользуясь тем, что потребитель не различает полновесный профиль от низкосортного, недобросовестные монтажнные организации применяют его буквально везде.",
+                                    "В итоге потребитель платит немного меньше при заказе такой продукции, но через некоторое время сталкивается с негативными последствиями.",
+                                ],
+                            },
+                        ],
+                        articleImage: {
+                            imageSrc: veter_1,
+                            imageCaption: (
+                                <>
+                                    Так выглядит схема прочностного расчёта для
+                                    окна 1200 х 1500 (h).
+                                    <br />
+                                    Мы выполняем такой расчёт для любой
+                                    нестандартной конструкции.
+                                </>
+                            ),
+                        },
+                    },
+
+                    {
+                        anchor: "micro",
+                        imageSide: ImageSide.LEFT,
+                        articleTitle: "Микропроветривание в комплекте",
+                        articleParagraphsJSX: [
+                            <>
+                                <strong>
+                                    Чем выше этаж установки окна - тем сильнее
+                                    ветровая нагрузка.
+                                </strong>{" "}
+                                Наш опыт показывает, что с увеличением этажности
+                                необходимо увеличивать толщину оконного профиля,
+                                даже если это напрямую не требуется по расчёту
+                                ветрового давления.
+                            </>,
+                            <>
+                                Мы настоятельно рекомендуем устанавливать
+                                профиль 60мм - с 1го по 5ый этаж, профиль 70мм -
+                                до 17 этажа, а всё что выше - только профиль
+                                82мм с дополнительным контуром уплотнения.
+                            </>,
+                            <>
+                                Мы настоятельно рекомендуем устанавливать
+                                профиль 60мм - с 1го по 5ый этаж, профиль 70мм -
+                                до 17 этажа, а всё что выше - только профиль
+                                82мм с дополнительным контуром уплотнения.
+                            </>,
+                            <>
+                                Кроме того, мы учитываем шумовое загрязнение
+                                улицы.{" "}
+                                <strong>
+                                    Если окна выходят на оживлённую улицу, то
+                                    рекомендуем выбирать оконный профиль от 5
+                                    камер и более
+                                </strong>
+                                .
+                            </>,
+                            <>
+                                Этажность установки и шумовую рнагрузку легко
+                                можно учесть в нашем оконном конфигураторе.
+                            </>,
+                        ],
+                        articlesAccordion: [
+                            {
+                                accordionTitle:
+                                    "Откуда вообще берётся тонкий профиль?",
+                                accordionParagraphs: [
+                                    "Заводы выпускают облегчённый профиль для изготовления маленьких рам. Например, он хорошо подходит для изготовления шкафов-купе, окон раздачи в учреждениях питания и т.д.",
+                                    "Однако, пользуясь тем, что потребитель не различает полновесный профиль от низкосортного, недобросовестные монтажнные организации применяют его буквально везде.",
+                                    "В итоге потребитель платит немного меньше при заказе такой продукции, но через некоторое время сталкивается с негативными последствиями.",
+                                ],
+                            },
+                        ],
+                        articleImage: {
+                            imageSrc: micro_2,
+                            imageCaption: (
+                                <>
+                                    Специальная деталь для микропроветривания
+                                    обеспечивает постоянный приток свежего
+                                    воздуха от уровня середины створки и выше
                                 </>
                             ),
                         },

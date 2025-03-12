@@ -48,9 +48,9 @@ interface ICardDescriptionTable {
 }
 
 const ApartmentsWindowsChooser = () => {
-    const [floor, setFloor] = React.useState<string>("10");
-    const [heating, setHeating] = React.useState<string>("10");
-    const [streetNoise, setStreetNoise] = React.useState<string>("10");
+    const [floor, setFloor] = React.useState<string>("0");
+    const [heating, setHeating] = React.useState<string>("2");
+    const [streetNoise, setStreetNoise] = React.useState<string>("2");
     const [apartmentWindowsList, setApartmentWindowsList] = React.useState<
         ICardDescriptionTable[]
     >([]);
@@ -247,10 +247,27 @@ const ApartmentsWindowsChooser = () => {
                             </Typography>
                         </Grid>
                         <Grid size={{ xs: 12, md: 3 }}>
-                            <Box sx={{ maxWidth: { xs: "auto", lg: 300 } }}>
+                            <Box
+                                sx={{
+                                    maxWidth: { xs: "auto", lg: 300 },
+                                }}
+                            >
                                 <FormControl fullWidth variant="filled">
-                                    <InputLabel id="heating-select-input-label">
-                                        Этаж
+                                    <InputLabel
+                                        id="heating-select-input-label"
+                                        sx={{
+                                            fontWeight: 500,
+                                            color: "black",
+                                            fontSize: "larger",
+                                        }}
+                                    >
+                                        <ApartmentSharpIcon
+                                            sx={{
+                                                verticalAlign: "bottom",
+                                                fontSize: "1.8rem",
+                                            }}
+                                        />
+                                        &nbsp;Этаж
                                     </InputLabel>
                                     <Select
                                         labelId="floor-select-label"
@@ -258,13 +275,20 @@ const ApartmentsWindowsChooser = () => {
                                         value={floor}
                                         label="Floor"
                                         onChange={handleChangeFloor}
+                                        sx={{ pt: 1 }}
                                     >
                                         <MenuItem value={"10"}>
                                             Не выбрано
                                         </MenuItem>
-                                        <MenuItem value={"0"}>1 - 5</MenuItem>
-                                        <MenuItem value={"1"}>6 - 12</MenuItem>
-                                        <MenuItem value={"2"}>13 - 17</MenuItem>
+                                        <MenuItem value={"0"}>
+                                            с 1го по 5ый
+                                        </MenuItem>
+                                        <MenuItem value={"1"}>
+                                            6-ой &#8212; 12-ый
+                                        </MenuItem>
+                                        <MenuItem value={"2"}>
+                                            13-ый &#8212; 17-ый
+                                        </MenuItem>
                                         <MenuItem value={"3"}>
                                             18 и выше
                                         </MenuItem>
@@ -276,8 +300,21 @@ const ApartmentsWindowsChooser = () => {
                         <Grid size={{ xs: 12, md: 3 }}>
                             <Box sx={{ maxWidth: { xs: "auto", lg: 300 } }}>
                                 <FormControl fullWidth variant="filled">
-                                    <InputLabel id="heating-select-input-label">
-                                        Отопление
+                                    <InputLabel
+                                        id="heating-select-input-label"
+                                        sx={{
+                                            fontWeight: 500,
+                                            color: "black",
+                                            fontSize: "larger",
+                                        }}
+                                    >
+                                        <FireplaceSharpIcon
+                                            sx={{
+                                                verticalAlign: "bottom",
+                                                fontSize: "1.8rem",
+                                            }}
+                                        />
+                                        &nbsp;Отопление
                                     </InputLabel>
                                     <Select
                                         labelId="heating-select-label"
@@ -285,6 +322,7 @@ const ApartmentsWindowsChooser = () => {
                                         value={heating}
                                         label="Heating"
                                         onChange={handleChangeHeating}
+                                        sx={{ pt: 1 }}
                                     >
                                         <MenuItem value={"10"}>
                                             Не выбрано
@@ -306,8 +344,21 @@ const ApartmentsWindowsChooser = () => {
                         <Grid size={{ xs: 12, md: 3 }}>
                             <Box sx={{ maxWidth: { xs: "auto", lg: 300 } }}>
                                 <FormControl fullWidth variant="filled">
-                                    <InputLabel id="output-air-select-label">
-                                        Уличный шум
+                                    <InputLabel
+                                        id="output-air-select-label"
+                                        sx={{
+                                            fontWeight: 500,
+                                            color: "black",
+                                            fontSize: "larger",
+                                        }}
+                                    >
+                                        <GraphicEqSharpIcon
+                                            sx={{
+                                                verticalAlign: "bottom",
+                                                fontSize: "1.8rem",
+                                            }}
+                                        />
+                                        &nbsp;Уличный шум
                                     </InputLabel>
                                     <Select
                                         labelId="output-air-select-label"
@@ -315,6 +366,7 @@ const ApartmentsWindowsChooser = () => {
                                         value={streetNoise}
                                         label="streetNoise"
                                         onChange={handleChangeStreetNoise}
+                                        sx={{ pt: 1 }}
                                     >
                                         <MenuItem value={"10"}>
                                             Не выбрано
