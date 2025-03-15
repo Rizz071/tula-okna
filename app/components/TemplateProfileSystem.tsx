@@ -40,7 +40,11 @@ const TemplateProfileSystem = ({
                     rowSpacing={6}
                     sx={{
                         height: "100%",
-                        justifyContent: { sm: "flex-end", md: "flex-end" },
+                        justifyContent: {
+                            xs: "flex-end",
+                            sm: "center",
+                            md: "flex-end",
+                        },
                     }}
                 >
                     <Grid
@@ -157,6 +161,7 @@ const TemplateProfileSystem = ({
                                                 sx={{
                                                     position: "relative",
                                                     height: "100%",
+                                                    // mr: 4,
                                                 }}
                                             >
                                                 <Image
@@ -178,7 +183,7 @@ const TemplateProfileSystem = ({
                                                     fontSize: {
                                                         xs: "1.2rem",
                                                         md: "1.5rem",
-                                                        lg: "2.0rem",
+                                                        lg: "1.8rem",
                                                     },
                                                     letterSpacing: {
                                                         xs: "1px",
@@ -186,7 +191,7 @@ const TemplateProfileSystem = ({
                                                     },
                                                     textAlign: {
                                                         xs: "right",
-                                                        md: "center",
+                                                        md: "right",
                                                     },
                                                     fontWeight: {
                                                         xs: 400,
@@ -216,7 +221,7 @@ const TemplateProfileSystem = ({
                                                     },
                                                     textAlign: {
                                                         xs: "right",
-                                                        md: "center",
+                                                        md: "right",
                                                     },
                                                 }}
                                             >

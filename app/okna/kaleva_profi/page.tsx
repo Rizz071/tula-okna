@@ -3,7 +3,7 @@ import slideImage from "@/public/images/slides/Artline-82-Interior-01.jpg";
 import slide_1 from "@/public/images/profi_10_1.png";
 import cut_1 from "@/public/images/klv_profi_cut_1.png";
 import cut_2 from "@/public/images/klv_profi_cut_2.png";
-import veka_logo_light from "@/public/images/veka_logo_light.svg";
+import logo from "@/public/images/kaleva_logo_4_light.svg";
 
 import { Container } from "@mui/material";
 import HeaderSlider from "@/app/components/HeaderSlider";
@@ -20,8 +20,13 @@ export default function Page() {
                     profilePage={{
                         profileSystemName: "KALEVA PROFI 60",
                         profileMainImage: slide_1,
-                        profileSystemLogo: veka_logo_light,
+                        profileSystemLogo: logo,
                         profileSystemProperties: [
+                            {
+                                propertyName: "Ширина профиля",
+                                propertyText: <>60 мм</>,
+                                additionalDescriptionText: [<></>],
+                            },
                             {
                                 propertyName: "Толщина стенок",
                                 propertyText: <>Класс Б по ГОСТ</>,

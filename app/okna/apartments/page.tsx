@@ -2,6 +2,7 @@
 
 import React from "react";
 import slideImage from "@/public/images/slides/apartments_whs_2.jpg";
+import { Typography } from "@mui/material";
 
 import HeaderSlider from "@/app/components/HeaderSlider";
 import ApartmentsWindowsChooser from "@/app/components/ApartmentsWindowsChooser";
@@ -14,18 +15,12 @@ import furniture_1 from "@/public/images/furniture_1.png";
 import otkos_tmblr_1 from "@/public/images/otkos_tmblr.png";
 import otkos_1 from "@/public/images/otkos_sandwich_1.png";
 import lenta_butil_1 from "@/public/images/lenta_butil_1.png";
-import PSUL_lenta_butil_1 from "@/public/images/PSUL_lenta_butil_1.png";
 import vetrov_nagr_1 from "@/public/images/vetrov_nagr_1.png";
 import energosber_1 from "@/public/images/energosber_1.png";
 import micro_1 from "@/public/images/micro_1.png";
 import micro_2 from "@/public/images/micro_2.png";
 import psul_lenta_3 from "@/public/images/psul_lenta_3.png";
 import veter_1 from "@/public/images/veter_1.png";
-
-import apartements1 from "@/public/images/footer-okno_tmblr.jpg";
-import dacha1 from "@/public/images/dacha1_104px.jpeg";
-import Front_small_2 from "@/public/images/Front_small_2.webp";
-import { Box, List, ListItemText, Typography } from "@mui/material";
 
 export default function Page() {
     return (
@@ -67,39 +62,11 @@ export default function Page() {
                     },
                 ]}
             />
-            {/* <Container maxWidth={"lg"}>
-                <Paper
-                    elevation={8}
-                    color="white"
-                    sx={{
-                        position: "relative",
-                        zIndex: "100",
-                        p: 6,
-                        textAlign: "center",
-                        mt: {
-                            xs: -5,
-                            sm: -5,
-                            md: -5,
-                            lg: -5,
-                            xl: -5,
-                        },
-                        transform: "translate(-50%, 0%)",
-                        left: "50%",
-                        maxWidth: "lg",
-                    }}
-                >
-                    <ResponsiveHeader_H1 text={"Окна в квартиру"} />
-
-                    <Typography gutterBottom sx={{ textAlign: "center" }}>
-                        Подберите подходящие окна с помощью конфигуратора.
-                    </Typography>
-                </Paper>
-            </Container> */}
 
             <ApartmentsWindowsChooser />
 
             <ArticlesContainer
-                mainTitle={"Комплектация наших окон для квартир"}
+                mainTitle={"Подробнее о комплектации наших окон для квартир"}
                 articles={[
                     {
                         anchor: "zapot",

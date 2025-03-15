@@ -23,6 +23,11 @@ export default function Page() {
                         profileSystemLogo: veka_logo_light,
                         profileSystemProperties: [
                             {
+                                propertyName: "Ширина профиля",
+                                propertyText: <>70 мм</>,
+                                additionalDescriptionText: [<></>],
+                            },
+                            {
                                 accent: true,
                                 propertyName: "Толщина стенок",
                                 propertyText: <>Класс А по RAL</>,
@@ -68,7 +73,13 @@ export default function Page() {
                                 accent: true,
                                 propertyName: "Армирование в раме",
                                 propertyText: <>Замкнутое</>,
-                                additionalDescriptionText: [],
+                                additionalDescriptionText: [
+                                    <>
+                                        повышенная жесткость рамы,
+                                        <br />
+                                        надёжное крепление в проёме
+                                    </>,
+                                ],
                             },
                             {
                                 propertyName: "Система уплотнений",

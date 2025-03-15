@@ -1,9 +1,9 @@
 import React from "react";
 import slideImage from "@/public/images/slides/Artline-82-Interior-01.jpg";
-import slide_1 from "@/public/images/profi_10_1.png";
-import cut_1 from "@/public/images/klv_profi_cut_1.png";
-import cut_2 from "@/public/images/klv_profi_cut_2.png";
-import veka_logo_light from "@/public/images/veka_logo_light.svg";
+import slide_1 from "@/public/images/standart_1.png";
+import cut_1 from "@/public/images/klv_standart_cut_1.png";
+import cut_2 from "@/public/images/klv_standart_cut_2.png";
+import logo from "@/public/images/kaleva_logo_4_light.svg";
 
 import { Container } from "@mui/material";
 import HeaderSlider from "@/app/components/HeaderSlider";
@@ -20,8 +20,13 @@ export default function Page() {
                     profilePage={{
                         profileSystemName: "KALEVA STANDART 70",
                         profileMainImage: slide_1,
-                        profileSystemLogo: veka_logo_light,
+                        profileSystemLogo: logo,
                         profileSystemProperties: [
+                            {
+                                propertyName: "Ширина профиля",
+                                propertyText: <>70 мм</>,
+                                additionalDescriptionText: [<></>],
+                            },
                             {
                                 propertyName: "Толщина стенок",
                                 propertyText: <>Класс Б по ГОСТ</>,
@@ -150,29 +155,29 @@ export default function Page() {
                         ],
                         recommendedUse: [
                             <>
-                                Самое доступное решение c современными
-                                параметрами эксплуатации
+                                За счет увеличенной глубины профиля, окна КАЛЕВА
+                                СТАНДАРТ обладают повышенной
+                                энергоэффективностью и усиленной прочностью
                             </>,
                             <>
-                                Подходит для остекления:
+                                Подходят для остекления:
                                 <br />
-                                &emsp;•&emsp;квартир до 5 этажа включительно
+                                &emsp;•&emsp;квартир до 9 этажа включительно
                                 <br />
-                                &emsp;•&emsp;летних дач
+                                &emsp;•&emsp;загородных домов
                                 <br />
-                                &emsp;•&emsp;балконов и лоджий
+                                &emsp;•&emsp;отапливаемых балконов и лоджий
                                 <br />
-                                &emsp;•&emsp;офисных и производственных
-                                помещений
+                                &emsp;•&emsp;офисных помещений
                             </>,
                         ],
                         profileSections: [
                             {
-                                name: "Рама арт.701961 - Створка арт.703962",
+                                name: "Рама арт.701901 - Створка арт.703938",
                                 image: cut_1,
                             },
                             {
-                                name: "Створка арт.703962 - Импост арт.702963",
+                                name: "Створка арт.703938 - Импост арт.702903",
                                 image: cut_2,
                             },
                         ],

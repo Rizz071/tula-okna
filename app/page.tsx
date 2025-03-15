@@ -130,7 +130,7 @@ export default function Home() {
                                 <>
                                     Благодаря производственному опыту, мы знаем
                                     точно, какими должны быть качественно
-                                    собранные окна.
+                                    собранные окна
                                 </>
                             ),
                             border: true,
@@ -333,7 +333,7 @@ export default function Home() {
 
             <Container maxWidth="lg">
                 <Grid container columnSpacing={8} rowSpacing={10}>
-                    <Grid size={{ xs: 12 }}>
+                    {/* <Grid size={{ xs: 12 }}>
                         <Divider />
                     </Grid>
 
@@ -727,7 +727,7 @@ export default function Home() {
                             Просим оценивать по данной таблице только нашу
                             продукцию и не применять её к чужим изделиям.
                         </Typography>
-                    </Grid>
+                    </Grid> */}
 
                     <Grid size={{ xs: 12 }}>
                         <Divider />

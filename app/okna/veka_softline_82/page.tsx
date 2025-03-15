@@ -24,6 +24,12 @@ export default function Page() {
                         profileSystemProperties: [
                             {
                                 accent: true,
+                                propertyName: "Ширина профиля",
+                                propertyText: <>82 мм</>,
+                                additionalDescriptionText: [<></>],
+                            },
+                            {
+                                accent: true,
                                 propertyName: "Толщина стенок",
                                 propertyText: <>Класс А по RAL</>,
                                 additionalDescriptionText: [
@@ -71,7 +77,13 @@ export default function Page() {
                                 accent: true,
                                 propertyName: "Армирование в раме",
                                 propertyText: <>Замкнутое</>,
-                                additionalDescriptionText: [],
+                                additionalDescriptionText: [
+                                    <>
+                                        повышенная жесткость рамы,
+                                        <br />
+                                        надёжное крепление в проёме
+                                    </>,
+                                ],
                             },
                             {
                                 accent: true,

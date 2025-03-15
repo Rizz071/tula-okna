@@ -73,7 +73,7 @@ const ApartmentsWindowsChooser = () => {
             {
                 system_title: "калева профи 60",
                 image: kaleva_profi,
-                link: "",
+                link: "/okna/kaleva_profi",
                 floor: 0,
                 heating: 2,
                 street_noise: 2,
@@ -82,7 +82,7 @@ const ApartmentsWindowsChooser = () => {
             {
                 system_title: "калева стандарт 70",
                 image: kaleva_standart,
-                link: "",
+                link: "/okna/kaleva_standart",
                 floor: 1,
                 heating: 1,
                 street_noise: 2,
