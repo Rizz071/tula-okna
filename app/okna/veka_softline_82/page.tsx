@@ -55,9 +55,11 @@ export default function Page() {
                                 additionalDescriptionText: [
                                     <>
                                         зимой сохраняет тепло,
-                                        <>защищает о конденсата</>,
                                         <br />
-                                        летом - не пропускает жару
+                                        защищает от конденсата,
+                                        <br />
+                                        <br />
+                                        летом не пропускает жару
                                     </>,
                                     <>
                                         СПД52 <wbr />
@@ -143,6 +145,7 @@ export default function Page() {
                                 propertyText: (
                                     <>
                                         <>Gretsch-Unitas (Германия)</>
+                                        <br />
                                         <>ROTO (Германия)</>
                                     </>
                                 ),

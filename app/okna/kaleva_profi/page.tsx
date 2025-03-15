@@ -45,8 +45,12 @@ export default function Page() {
                                     </>
                                 ),
                                 additionalDescriptionText: [
-                                    <>зимой сохраняет тепло</>,
-                                    <>защищает о конденсата</>,
+                                    <>
+                                        зимой сохраняет тепло,
+                                        <br />
+                                        защищает от конденсата,
+                                        <br />
+                                    </>,
                                     <>
                                         СПД32 <wbr />
                                         (4И-10-4-10-4И)
@@ -126,6 +130,7 @@ export default function Page() {
                                 propertyText: (
                                     <>
                                         <>Gretsch-Unitas (Германия)</>
+                                        <br />
                                         <>ROTO (Германия)</>
                                     </>
                                 ),
@@ -146,11 +151,11 @@ export default function Page() {
                             <>
                                 Подходит для остекления:
                                 <br />
-                                &emsp;•&emsp;квартир до 5 этажа включительно,
+                                &emsp;•&emsp;квартир до 5 этажа включительно
                                 <br />
-                                &emsp;•&emsp;летних дач,
+                                &emsp;•&emsp;летних дач
                                 <br />
-                                &emsp;•&emsp;балконов и лоджий,
+                                &emsp;•&emsp;балконов и лоджий
                                 <br />
                                 &emsp;•&emsp;офисных и производственных
                                 помещений
