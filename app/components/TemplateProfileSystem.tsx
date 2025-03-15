@@ -27,7 +27,11 @@ const TemplateProfileSystem = ({
                 order={{ xs: 1, sm: 0 }}
                 sx={{
                     position: "relative",
-                    mt: { sm: -25, md: -50, lg: -48 },
+                    mt: {
+                        sm: -25,
+                        md: -50,
+                        lg: -48,
+                    },
                 }}
             >
                 <Grid
@@ -47,19 +51,28 @@ const TemplateProfileSystem = ({
                             },
                         }}
                     >
-                        <Image
-                            src={profilePage.profileMainImage}
-                            alt={`${profilePage.profileSystemName} image`}
-                            sizes={"50vw"}
-                            width={0}
-                            height={0}
-                            quality={85}
-                            priority
-                            style={{
+                        <Box
+                            sx={{
                                 width: "100%",
-                                height: "auto",
+                                height: "100%",
+                                textAlign: "center",
                             }}
-                        />
+                        >
+                            <Image
+                                src={profilePage.profileMainImage}
+                                alt={`${profilePage.profileSystemName} image`}
+                                // sizes={"50vw"}
+                                width={0}
+                                height={0}
+                                quality={90}
+                                priority
+                                style={{
+                                    maxWidth: "100%",
+                                    width: profilePage.profileMainImage.width,
+                                    height: "auto",
+                                }}
+                            />
+                        </Box>
                     </Grid>
                     <Grid sx={{ verticalAlign: "bottom" }}>
                         <TableContainer component={Paper} elevation={12}>
@@ -251,7 +264,7 @@ const TemplateProfileSystem = ({
                                                     height: "3.0rem",
                                                     boxShadow:
                                                         propertyTableLine.accent
-                                                            ? "inset 4px 0px 0px 0px red"
+                                                            ? "inset 6px 0px 0px 0px #00A36C"
                                                             : "inset 0px 0px 0px 0px white",
                                                 }}
                                             >

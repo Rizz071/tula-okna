@@ -1,14 +1,14 @@
 import React from "react";
 import slideImage from "@/public/images/slides/Artline-82-Interior-01.jpg";
-import slide_1 from "@/public/images/Sofltine_crop.png";
-import cut_1 from "@/public/images/sl_13.png";
-import cut_2 from "@/public/images/sl_18.png";
+import slide_1 from "@/public/images/profi_10_1.png";
+import cut_1 from "@/public/images/klv_profi_cut_1.png";
+import cut_2 from "@/public/images/klv_profi_cut_2.png";
 import veka_logo_light from "@/public/images/veka_logo_light.svg";
 
 import { Container } from "@mui/material";
 import HeaderSlider from "@/app/components/HeaderSlider";
-import VekaUniqueAdvatages from "@/app/components/VekaUniqueAdvatages";
 import TemplateProfileSystem from "@/app/components/TemplateProfileSystem";
+import KalevaUniqueAdvatages from "@/app/components/KalevaUniqueAdvatages";
 
 export default function Page() {
     return (
@@ -18,54 +18,44 @@ export default function Page() {
             <Container maxWidth={"lg"} sx={{ mt: 8 }}>
                 <TemplateProfileSystem
                     profilePage={{
-                        profileSystemName: "VEKA SOFTLINE 70",
+                        profileSystemName: "KALEVA PROFI 60",
                         profileMainImage: slide_1,
                         profileSystemLogo: veka_logo_light,
                         profileSystemProperties: [
                             {
-                                accent: true,
                                 propertyName: "Толщина стенок",
-                                propertyText: <>Класс А по RAL</>,
+                                propertyText: <>Класс Б по ГОСТ</>,
                                 additionalDescriptionText: [
-                                    <>не менее 3.0 мм</>,
+                                    <>не менее 2.7 мм</>,
                                 ],
                             },
                             {
+                                accent: true,
                                 propertyName: "Количество камер",
-                                propertyText: <>5</>,
+                                propertyText: <>4</>,
                                 additionalDescriptionText: [],
                             },
                             {
                                 propertyName: "Стеклопакет",
                                 propertyText: (
                                     <>
-                                        Мульти
-                                        <wbr />
-                                        функциональный или энерго
+                                        Энерго
                                         <wbr />
                                         сберегающий
                                     </>
                                 ),
                                 additionalDescriptionText: [
+                                    <>зимой сохраняет тепло</>,
+                                    <>защищает о конденсата</>,
                                     <>
-                                        зимой сохраняет тепло,
-                                        <>защищает о конденсата</>,
-                                        <br />
-                                        летом - не пропускает жару
-                                    </>,
-                                    <>
-                                        СПД40 <wbr />
-                                        (4МФ-14-4-14-4И)
-                                        <br />
-                                        СПД40 <wbr />
-                                        (4И-14-4-14-4И)
+                                        СПД32 <wbr />
+                                        (4И-10-4-10-4И)
                                     </>,
                                 ],
                             },
                             {
-                                accent: true,
                                 propertyName: "Армирование в раме",
-                                propertyText: <>Замкнутое</>,
+                                propertyText: <>П-образное</>,
                                 additionalDescriptionText: [],
                             },
                             {
@@ -79,8 +69,9 @@ export default function Page() {
                                 ],
                             },
                             {
+                                accent: true,
                                 propertyName: "Нахлест уплотнений снаружи",
-                                propertyText: <>7 мм</>,
+                                propertyText: <>8 мм</>,
                                 additionalDescriptionText: [],
                             },
                             {
@@ -89,8 +80,9 @@ export default function Page() {
                                 additionalDescriptionText: [],
                             },
                             {
+                                accent: true,
                                 propertyName: "Глубина посадки стеклопакета",
-                                propertyText: <>16 мм</>,
+                                propertyText: <>15 мм</>,
                                 additionalDescriptionText: [],
                             },
                             {
@@ -98,10 +90,11 @@ export default function Page() {
                                     "Сопротивление теплопередаче профиля с армированием",
                                 propertyText: (
                                     <>
-                                        0,79 м<sup>2</sup>°С/Вт
+                                        0,7 м<sup>2</sup>°С/Вт
                                     </>
                                 ),
                                 additionalDescriptionText: [
+                                    <>ПВХ-профиль + армирование + уплотнение</>,
                                     <>
                                         Должно быть не менее 0,63 по СНиП
                                         23-02-2003
@@ -113,7 +106,7 @@ export default function Page() {
                                     "Сопротивление теплопередаче стеклопакета",
                                 propertyText: (
                                     <>
-                                        1,15 м<sup>2</sup>°С/Вт
+                                        0,95 м<sup>2</sup>°С/Вт
                                     </>
                                 ),
                                 additionalDescriptionText: [
@@ -139,33 +132,44 @@ export default function Page() {
                                 additionalDescriptionText: [],
                             },
                             {
+                                accent: true,
                                 propertyName: "Сравнительная стоимость",
-                                propertyText: <>Средняя</>,
+                                propertyText: <>Низкая</>,
                                 additionalDescriptionText: [],
                             },
                         ],
                         recommendedUse: [
-                            <>Загородные дома для круглогодичного проживания</>,
                             <>
-                                Городские квартиры: на оживлённой улице, с
-                                недостаточным отоплением, на высоких этажах
+                                Самое доступное решение c современными
+                                параметрами эксплуатации
                             </>,
-                            <>Крупногабаритные окна и двери</>,
+                            <>
+                                Подходит для остекления:
+                                <br />
+                                &emsp;•&emsp;квартир до 5 этажа включительно,
+                                <br />
+                                &emsp;•&emsp;летних дач,
+                                <br />
+                                &emsp;•&emsp;балконов и лоджий,
+                                <br />
+                                &emsp;•&emsp;офисных и производственных
+                                помещений
+                            </>,
                         ],
                         profileSections: [
                             {
-                                name: "Рама арт.101208 - Створка арт.103232",
+                                name: "Рама арт.701961 - Створка арт.703962",
                                 image: cut_1,
                             },
                             {
-                                name: "Створка Z-образная арт.103232 - Импост арт.102214",
+                                name: "Створка арт.703962 - Импост арт.702963",
                                 image: cut_2,
                             },
                         ],
                     }}
                 />
 
-                <VekaUniqueAdvatages />
+                <KalevaUniqueAdvatages />
             </Container>
         </>
     );

@@ -61,6 +61,8 @@ export interface IProfilePage {
 
     recommendedUse: ReactElement[];
     profileSections: ProfileDrawSection[];
+
+
 }
 
 interface ProfileTableLine {

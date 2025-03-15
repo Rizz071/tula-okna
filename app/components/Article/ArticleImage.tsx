@@ -5,9 +5,14 @@ import Image from "next/image";
 const ArticleImage = ({ article }: { article: Article }) => {
     return (
         <Stack direction={"column"}>
-            <Box alignSelf={"center"} sx={{ m: 0, p: 0 }}>
+            <Box
+                alignSelf={"center"}
+                sx={{ m: 0, p: 0, width: "100%", height: "100%" }}
+            >
                 <Box
                     sx={{
+                        width: "100%",
+                        height: "100%",
                         display: "block",
                         p: article.articleImage.border ? "10px" : 0,
                         border: article.articleImage.border
@@ -23,7 +28,7 @@ const ArticleImage = ({ article }: { article: Article }) => {
                             width: "100%",
                             height: "auto",
                         }}
-                        alt={"Light in apartments"}
+                        alt={""}
                     />
                 </Box>
             </Box>

@@ -55,6 +55,7 @@ export default function Page() {
                                 additionalDescriptionText: [
                                     <>
                                         зимой сохраняет тепло,
+                                        <>защищает о конденсата</>,
                                         <br />
                                         летом - не пропускает жару
                                     </>,

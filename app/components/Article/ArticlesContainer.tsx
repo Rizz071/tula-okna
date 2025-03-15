@@ -42,9 +42,15 @@ const ArticlesContainer = ({ mainTitle, articles }: articlesContainer) => {
                                         : 2,
                             }}
                         >
-                            <ResponsiveHeader_H2 text={article.articleTitle} />
+                            {article.articleTitle && (
+                                <ResponsiveHeader_H2
+                                    text={article.articleTitle}
+                                />
+                            )}
                             <ArticleText article={article} />
-                            <ArticleDetails article={article} />
+                            {article.articlesAccordion.length > 0 && (
+                                <ArticleDetails article={article} />
+                            )}
                         </Grid>
 
                         <Grid

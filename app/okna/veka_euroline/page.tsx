@@ -46,6 +46,7 @@ export default function Page() {
                                 ),
                                 additionalDescriptionText: [
                                     <>зимой сохраняет тепло</>,
+                                    <>защищает о конденсата</>,
                                     <>
                                         СПД32 <wbr />
                                         (4И-10-4-10-4И)

@@ -104,55 +104,65 @@ export default function Page() {
                                 ],
                             },
                         ],
-                        articleImageJSX: (
-                            <Stack direction={"column"} rowGap={6}>
-                                <Box alignSelf={"center"}>
-                                    <Box padding={0}>
-                                        <Image
-                                            src={polnoves_provedal}
-                                            sizes={"30vw"}
-                                            style={{
-                                                width: "100%",
-                                                height: "auto",
-                                            }}
-                                            alt={"Полновесный профиль Provedal"}
-                                        />
-                                    </Box>
-                                    <Typography
-                                        align={"center"}
-                                        variant="body2"
-                                        fontWeight={500}
-                                    >
-                                        Полновесный профиль раздвижной рамы.
-                                        <br />
-                                        Вес - 0,79 кг/пог.м.
-                                    </Typography>
-                                </Box>
-                                <Box alignSelf={"center"}>
-                                    <Box padding={4}>
-                                        <Image
-                                            src={oblegch_provedal}
-                                            sizes={"30vw"}
-                                            style={{
-                                                width: "100%",
-                                                height: "auto",
-                                            }}
-                                            alt={"Облегчённый профиль Provedal"}
-                                        />
-                                    </Box>
-                                    <Typography
-                                        align={"center"}
-                                        variant="body2"
-                                        fontWeight={500}
-                                    >
-                                        Облегчённый эконом-профиль раздвижной
-                                        рамы.
-                                        <br />
-                                        Вес - 0,564 кг/пог.м. и менее...
-                                    </Typography>
-                                </Box>
-                            </Stack>
-                        ),
+                        articleImage: {
+                            imageSrc: polnoves_provedal,
+                            imageCaption: (
+                                <>
+                                    Полновесный профиль раздвижной рамы.
+                                    <br />
+                                    Вес - 0,79 кг/пог.м.
+                                </>
+                            ),
+                        },
+                        // (
+                        //     <Stack direction={"column"} rowGap={6}>
+                        //         <Box alignSelf={"center"}>
+                        //             <Box padding={0}>
+                        //                 <Image
+                        //                     src={polnoves_provedal}
+                        //                     sizes={"30vw"}
+                        //                     style={{
+                        //                         width: "100%",
+                        //                         height: "auto",
+                        //                     }}
+                        //                     alt={"Полновесный профиль Provedal"}
+                        //                 />
+                        //             </Box>
+                        //             <Typography
+                        //                 align={"center"}
+                        //                 variant="body2"
+                        //                 fontWeight={500}
+                        //             >
+                        //                 Полновесный профиль раздвижной рамы.
+                        //                 <br />
+                        //                 Вес - 0,79 кг/пог.м.
+                        //             </Typography>
+                        //         </Box>
+                        //         <Box alignSelf={"center"}>
+                        //             <Box padding={4}>
+                        //                 <Image
+                        //                     src={oblegch_provedal}
+                        //                     sizes={"30vw"}
+                        //                     style={{
+                        //                         width: "100%",
+                        //                         height: "auto",
+                        //                     }}
+                        //                     alt={"Облегчённый профиль Provedal"}
+                        //                 />
+                        //             </Box>
+                        //             <Typography
+                        //                 align={"center"}
+                        //                 variant="body2"
+                        //                 fontWeight={500}
+                        //             >
+                        //                 Облегчённый эконом-профиль раздвижной
+                        //                 рамы.
+                        //                 <br />
+                        //                 Вес - 0,564 кг/пог.м. и менее...
+                        //             </Typography>
+                        //         </Box>
+                        //     </Stack>
+                        // ),
                     },
                 ]}
             />
