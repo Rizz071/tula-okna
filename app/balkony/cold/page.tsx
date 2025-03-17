@@ -5,20 +5,25 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
-import Image, { StaticImageData } from "next/image";
+import { StaticImageData } from "next/image";
 import kaleva_70 from "@/public/images/profiles/kaleva_70_3.jpg";
 import veka_70 from "@/public/images/profiles/veka_70_2.jpg";
 import veka_82 from "@/public/images/profiles/veka_82_1.jpg";
 import slideImage from "@/public/images/balkoni/BalcFront1.jpg";
 import cold_ostekl from "@/public/images/balkoni/cold_ostekl_tmblr.jpg";
 import tepl_ostekl from "@/public/images/balkoni/tepl_ostek_tmblr.jpg";
-import otdelka from "@/public/images/balkoni/otdelka_tmblr.jpg";
-import { ImageSide } from "../../lib/types";
+import otdelka from "@/public/images/story3.jpg";
+import { ImageSide } from "@/app/lib/types";
 import ProductionCardsContainer from "../../components/ProductionCards/ProductionCardsContainer";
 import polnoves_provedal from "@/public/images/balkoni/Polnoves_provedal.jpg";
+import provedal_compare_1 from "@/public/images/balkoni/provedal_compare_1.png";
 import oblegch_provedal from "@/public/images/balkoni/Oblegch_provedal.jpg";
 import HeroImageSlider from "@/app/components/HeaderSlider";
 import ArticlesContainer from "@/app/components/Article/ArticlesContainer";
+import provedal_tmblr_1 from "@/public/images/balkoni/Provedal_banner.jpg";
+import provedal_1 from "@/public/images/balkoni/provedal_1.png";
+import provedal_2 from "@/public/images/balkoni/provedal_2.png";
+import provedal_3 from "@/public/images/balkoni/provedal3-2_crop.jpg";
 
 export default function Page() {
     return (
@@ -26,47 +31,138 @@ export default function Page() {
             <HeroImageSlider sliderImage={slideImage} isCardVisible={true} />
 
             <ProductionCardsContainer
-                title={""}
+                title={"АЛЮМИНИЕВЫЕ РАЗДВИЖНЫЕ РАМЫ"}
                 cardsArray={[
                     {
-                        image: cold_ostekl,
-                        caption: "Особенности наших рам",
-                        link: "/okna/apartments",
+                        image: provedal_tmblr_1,
+                        caption: "Для чего используются?",
+                        link: "#for_what",
                     },
                     {
-                        image: tepl_ostekl,
-                        caption: "Стоимость остекления",
-                        link: "/balkony",
+                        image: provedal_3,
+                        caption: "Насколько они надёжны?",
+                        link: "#stability",
                     },
                     {
-                        image: otdelka,
-                        caption: "Примеры работ",
-                        link: "/okna/cottage",
+                        image: polnoves_provedal,
+                        caption: "Особенность наших рам",
+                        link: "#difference",
                     },
                 ]}
             />
 
             <ArticlesContainer
-                mainTitle={"Остекление балконов в Туле"}
+                mainTitle={"Холодное остекление балконов и лоджий в Туле"}
                 articles={[
                     {
+                        anchor: "for_what",
                         imageSide: ImageSide.RIGHT,
-                        articleTitle:
-                            "Особенность наших холодных раздвижных балконных рам",
+                        articleTitle: "Для чего используется?",
                         articleParagraphsJSX: [
                             <>
+                                Раздвижные рамы системы &quot;ПРОВЕДАЛ&quot;
+                                &mdash;{" "}
                                 <strong>
-                                    Кратко: на надёжности нельзя экономить.
+                                    наиболее экономичный на сегодняшний день
+                                    вариант остекления балкона или лоджии
                                 </strong>
+                                , а для старого балкона с ветхой несущей плитой
+                                &mdash; и единственно возможное решение, потому
+                                что пластиковые рамы будут слишком тяжелы.
                             </>,
                             <>
+                                Если стоит задача просто закрыть лоджию от
+                                осадков, звуков, пыли &mdash; целесообразно
+                                использовать именно раздвижную систему
+                                &quot;ПРОВЕДАЛ&quot;.
+                            </>,
+                            <>
+                                Холодное ограждение балконов понижает уровень
+                                теплопотерь и шума - шумоизоляция увеличивается.
+                            </>,
+                            <>
+                                По нашему опыту, монтаж раздвижек из профиля
+                                Provedal обеспечивает прекрасную защиту от пыли
+                                и осадков - на балконе постоянно будет сухо и
+                                чисто.
+                            </>,
+                        ],
+                        articlesAccordion: [],
+                        articleImage: {
+                            imageSrc: provedal_1,
+                            imageCaption: (
+                                <>
+                                    Холодное остекление балкона с &quot;выносом
+                                    рамы вперёд&quot;
+                                </>
+                            ),
+                            border: true,
+                        },
+                    },
+
+                    {
+                        anchor: "stability",
+                        imageSide: ImageSide.LEFT,
+                        articleTitle: "Надёжность алюминиевых рам",
+                        articleParagraphsJSX: [
+                            <>
+                                Профиль выпонен из специального сплава АД31 на
+                                основе алюминия, который стоек к осадкам и
+                                перепадам температур.
+                            </>,
+                            <>
+                                Рамы выпускаются белого и коричневого цвета, а
+                                также окрашиваются порошковым способом в любой
+                                цвет по палитре RAL.
+                            </>,
+                            <>
+                                <strong>
+                                    Раздвижные рамы системы &quot;ПРОВЕДАЛ&quot;
+                                    - это лучшее сочетание стоимости и качества
+                                    для остекления балконов.
+                                </strong>{" "}
+                                Их свойства соответствуют всем требованиям
+                                пожаробезопасности и экологичности.
+                            </>,
+                            <>
+                                Они не окисляются, не скручиваются, не
+                                трескаются, устойчивы к деформации, коррозии,
+                                вредным действиям окружающей среды, имеют низкий
+                                удельный вес.{" "}
+                                <strong>
+                                    Долговечность таких конструкций составляет
+                                    более 80 лет.
+                                </strong>
+                            </>,
+                        ],
+                        articlesAccordion: [],
+                        articleImage: {
+                            imageSrc: provedal_2,
+                            imageCaption: (
+                                <>
+                                    Холодное остекление балкона &quot;с плиты на
+                                    плиту&quot;
+                                </>
+                            ),
+                            border: true,
+                        },
+                    },
+
+                    {
+                        anchor: "difference",
+                        imageSide: ImageSide.RIGHT,
+                        articleTitle: "Особенность наших рам ПРОВЕДАЛ",
+                        articleParagraphsJSX: [
+                            <>
                                 Алюминиевые рамы не подпадают под действие ни
-                                одного ГОСТа. Из-за этого рынок наводнён
+                                одного ГОСТ. Из-за этого наш рынок наводнён
                                 низкокачественной продукцией.
                             </>,
                             <>
-                                Главное отличие качественной рамы &ndash;
-                                толщина стенок алюминиевого профиля.
+                                <strong>
+                                    Главное отличие надёжной рамы &mdash;
+                                    толщина стенок алюминиевого профиля.
+                                </strong>
                             </>,
                             <>
                                 Настоящий алюминиевый профиль имеет толщину
@@ -105,126 +201,12 @@ export default function Page() {
                             },
                         ],
                         articleImage: {
-                            imageSrc: polnoves_provedal,
-                            imageCaption: (
-                                <>
-                                    Полновесный профиль раздвижной рамы.
-                                    <br />
-                                    Вес - 0,79 кг/пог.м.
-                                </>
-                            ),
+                            imageSrc: provedal_compare_1,
+                            imageCaption: <></>,
                         },
-                        // (
-                        //     <Stack direction={"column"} rowGap={6}>
-                        //         <Box alignSelf={"center"}>
-                        //             <Box padding={0}>
-                        //                 <Image
-                        //                     src={polnoves_provedal}
-                        //                     sizes={"30vw"}
-                        //                     style={{
-                        //                         width: "100%",
-                        //                         height: "auto",
-                        //                     }}
-                        //                     alt={"Полновесный профиль Provedal"}
-                        //                 />
-                        //             </Box>
-                        //             <Typography
-                        //                 align={"center"}
-                        //                 variant="body2"
-                        //                 fontWeight={500}
-                        //             >
-                        //                 Полновесный профиль раздвижной рамы.
-                        //                 <br />
-                        //                 Вес - 0,79 кг/пог.м.
-                        //             </Typography>
-                        //         </Box>
-                        //         <Box alignSelf={"center"}>
-                        //             <Box padding={4}>
-                        //                 <Image
-                        //                     src={oblegch_provedal}
-                        //                     sizes={"30vw"}
-                        //                     style={{
-                        //                         width: "100%",
-                        //                         height: "auto",
-                        //                     }}
-                        //                     alt={"Облегчённый профиль Provedal"}
-                        //                 />
-                        //             </Box>
-                        //             <Typography
-                        //                 align={"center"}
-                        //                 variant="body2"
-                        //                 fontWeight={500}
-                        //             >
-                        //                 Облегчённый эконом-профиль раздвижной
-                        //                 рамы.
-                        //                 <br />
-                        //                 Вес - 0,564 кг/пог.м. и менее...
-                        //             </Typography>
-                        //         </Box>
-                        //     </Stack>
-                        // ),
                     },
                 ]}
             />
-
-            <Box>
-                <Container maxWidth={"lg"}>
-                    <Box
-                        display={"flex"}
-                        flexDirection={"column"}
-                        alignItems={"center"}
-                        paddingY={6}
-                    >
-                        <Box
-                            display={"flex"}
-                            flexWrap={"wrap"}
-                            justifyContent={"space-around"}
-                            width={"100%"}
-                            rowGap={6}
-                        >
-                            {CardProfileSystem(
-                                kaleva_70,
-                                5,
-                                "КАЛЕВА Стандарт 70мм",
-                                [
-                                    "Происхождение - Россия",
-                                    "Толщина стенки - не менее 2.5мм",
-                                    "3 стекла с энергосберегающим покрытием",
-                                    "Фурнитура Gretsch-Unitas или ROTO на выбор",
-                                    "Стандартная гарантия - 3 года",
-                                ],
-                                "Российская оконная система, созданная по образцу известной немецкой марки. Остекление будет экономичным, но при этом также полностью соответствовать требованиям для остекления дома круглогодичного проживания."
-                            )}
-                            {CardProfileSystem(
-                                veka_70,
-                                0,
-                                "VEKA SOFTLINE 70mm",
-                                [
-                                    "Происхождение - Германия",
-                                    "Толщина стенки - не менее 3мм",
-                                    "3 стекла с мультифункциональным покрытием",
-                                    "Фурнитура Gretsch-Unitas или ROTO на выбор",
-                                    "Расширенная гарантия - 5 лет",
-                                ],
-                                "Наиболее качественная оконная система на рынке РФ (наряду с Rehau Brillant). Больше пластика в профиле, надёжнее соединения рам и створок. Переплата в 10-20% по сравнению с аналогами окупится высочайшим уровнем комфорта при эксплуатации и отсутствием проблем с регулировкой на долгие годы вперёд."
-                            )}
-                            {CardProfileSystem(
-                                veka_82,
-                                0,
-                                "VEKA SOFTLINE 82mm",
-                                [
-                                    "Происхождение - Германия",
-                                    "Толщина стенки - не менее 3мм",
-                                    "3 стекла с мультифункциональным покрытием",
-                                    "Фурнитура Gretsch-Unitas или ROTO на выбор",
-                                    "Расширенная гарантия - 5 лет",
-                                ],
-                                "Система созданна для применения в пассивном доме. Невероятное сочетание теплосбережения и надёжности."
-                            )}
-                        </Box>
-                    </Box>
-                </Container>
-            </Box>
         </>
     );
 }

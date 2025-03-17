@@ -44,6 +44,7 @@ const WayFinderCard = ({
                             style={{
                                 height: 400,
                                 width: "auto",
+                                verticalAlign: "bottom",
                             }}
                         />
                         <CardContent sx={{ m: 0, p: 0 }}>
