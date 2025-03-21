@@ -77,7 +77,8 @@ export default function Page() {
                     {
                         anchor: "for_what",
                         imageSide: ImageSide.LEFT,
-                        articleTitle: "Минусы тёплого остекления лоджии",
+                        articleTitle:
+                            "Технические ограничения для тёплого остекления лоджии",
                         articleParagraphsJSX: [
                             <>
                                 К минусам подобного остекления можно отнести
@@ -107,7 +108,12 @@ export default function Page() {
                         articlesAccordion: [],
                         articleImage: {
                             imageSrc: balc_3,
-                            imageCaption: <>Утепленное остекление балкона</>,
+                            imageCaption: (
+                                <>
+                                    Пример тёплого остекления и отделки прямой
+                                    лоджии
+                                </>
+                            ),
                             border: true,
                         },
                     },
