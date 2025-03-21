@@ -191,11 +191,11 @@ const ApartmentsWindowsChooser = () => {
     const renderStreetNoise = (street_noise: number): string => {
         switch (street_noise) {
             case 0:
-                return "Сильный";
+                return "Сильная";
             case 1:
-                return "Средний";
+                return "Средняя";
             case 2:
-                return "Слабый";
+                return "Слабая";
             default:
                 return "";
         }
@@ -281,13 +281,13 @@ const ApartmentsWindowsChooser = () => {
                                             Не выбрано
                                         </MenuItem>
                                         <MenuItem value={"0"}>
-                                            с 1го по 5ый
+                                            1 &mdash; 5
                                         </MenuItem>
                                         <MenuItem value={"1"}>
-                                            6-ой &#8212; 12-ый
+                                            6 &mdash; 12
                                         </MenuItem>
                                         <MenuItem value={"2"}>
-                                            13-ый &#8212; 17-ый
+                                            13 &mdash; 17
                                         </MenuItem>
                                         <MenuItem value={"3"}>
                                             18 и выше
@@ -573,8 +573,7 @@ const ApartmentsWindowsChooser = () => {
                                                                             my: 0,
                                                                         }}
                                                                     >
-                                                                        Уличный
-                                                                        шум
+                                                                        Шумоизоляция
                                                                     </Typography>
                                                                 </Stack>
                                                             </Tooltip>

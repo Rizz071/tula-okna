@@ -1,33 +1,13 @@
 import React from "react";
-import { Container, Box, Typography, Stack } from "@mui/material";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
-import { StaticImageData } from "next/image";
-import kaleva_70 from "@/public/images/profiles/kaleva_70_3.jpg";
-import veka_70 from "@/public/images/profiles/veka_70_2.jpg";
-import veka_82 from "@/public/images/profiles/veka_82_1.jpg";
 import slideImage from "@/public/images/balkoni/BalcFront1.jpg";
-import cold_ostekl from "@/public/images/balkoni/cold_ostekl_tmblr.jpg";
-import tepl_ostekl from "@/public/images/balkoni/tepl_ostek_tmblr.jpg";
-import otdelka from "@/public/images/story3.jpg";
 import { ImageSide } from "@/app/lib/types";
 import ProductionCardsContainer from "../../components/ProductionCards/ProductionCardsContainer";
-import polnoves_provedal from "@/public/images/balkoni/Polnoves_provedal.jpg";
-import provedal_compare_1 from "@/public/images/balkoni/provedal_compare_1.png";
-import oblegch_provedal from "@/public/images/balkoni/Oblegch_provedal.jpg";
 import HeroImageSlider from "@/app/components/HeaderSlider";
 import ArticlesContainer from "@/app/components/Article/ArticlesContainer";
-import provedal_tmblr_1 from "@/public/images/balkoni/Provedal_banner.jpg";
 import balc_1 from "@/public/images/BalcPVC.jpg";
 import balc_2 from "@/public/images/Sovmesh2.jpg";
-import provedal_3 from "@/public/images/balkoni/provedal3-2_crop.jpg";
-import main_bg from "@/public/images/main-bg.webp";
-import kaleva_profi_img from "@/public/images/profi_10_1.png";
-import kaleva_standart_img from "@/public/images/standart_1.png";
-import ApartmentsWindowsChooser from "@/app/components/ApartmentsWindowsChooser";
+import balc_3 from "@/public/images/balkoni/20160717_151629-2.png";
+
 import WarmBalkonyChooser from "@/app/components/WarmBalkonyChooser";
 
 export default function Page() {
@@ -40,17 +20,17 @@ export default function Page() {
                 cardsArray={[
                     {
                         image: balc_1,
-                        caption: "Когда оно необходимо?",
+                        caption: "Когда нужны тёплые окна?",
                         link: "#for_what",
                     },
                     {
-                        image: balc_2,
-                        caption: "Как совместить с комнатой?",
-                        link: "#stability",
+                        image: balc_3,
+                        caption: "Ограничения для установки",
+                        link: "#minus",
                     },
                     {
-                        image: polnoves_provedal,
-                        caption: "Какие рамы ПВХ подойдут?",
+                        image: balc_2,
+                        caption: "Совмещение с комнатой",
                         link: "#difference",
                     },
                 ]}
@@ -65,25 +45,25 @@ export default function Page() {
                         articleTitle: "Для чего используется?",
                         articleParagraphsJSX: [
                             <>
-                                Оно нужно только в том случае, если на балконе
-                                планируется подерживать тепло зимой. Если этого
-                                не требуется, то гораздо практичнее будет
-                                установить алюминиевые раздвижные рамы
-                                &quot;ПРОВЕДАЛ&quot;.
-                            </>,
-                            <>
                                 Утепленное остекление балкона или лоджии
                                 подразумевает прежде всего установку на балкон
                                 или лоджию пластиковых оконных рам.
                             </>,
                             <>
-                                Так можно сделать балкон более теплым зимой, по
-                                сравнению с балконом, остекленным алюминиевым
-                                профилем. На лоджии станет теплее улицы примерно
-                                на 5-10 градусов. Совместить лоджию с комнатой,
-                                смонтировав специальные энергоэффективные
-                                оконные блоки, а также источник тепла
-                                (радиаторы).
+                                <strong>
+                                    Оно нужно только в том случае, если на
+                                    балконе планируется поддерживать тепло
+                                    зимой.
+                                </strong>{" "}
+                                Если это не требуется, то гораздо практичнее
+                                будет установить алюминиевые раздвижные рамы.
+                            </>,
+
+                            <>
+                                Если же отопление на лоджии не планируется, то
+                                там станет теплее улицы примерно на 5-10
+                                градусов за счёт того тепла, которое будет
+                                поступать от жилой комнаты.
                             </>,
                         ],
                         articlesAccordion: [],
@@ -97,7 +77,7 @@ export default function Page() {
                     {
                         anchor: "for_what",
                         imageSide: ImageSide.LEFT,
-                        articleTitle: "Для чего используется?",
+                        articleTitle: "Минусы тёплого остекления лоджии",
                         articleParagraphsJSX: [
                             <>
                                 К минусам подобного остекления можно отнести
@@ -113,11 +93,11 @@ export default function Page() {
                                 <br />
                                 &emsp;&#8226;&emsp;Ветхий, аварийный балкон —
                                 подойдут только раздвижные легкие рамы
-                                «Проведал»
+                                &quot;ПРОВЕДАЛ&quot;
                                 <br />
                                 &emsp;&#8226;&emsp;Не планируется отопление
                                 балкона или лоджии зимой — лучше подойдут
-                                алюминиевые рамы «Проведал»
+                                алюминиевые рамы &quot;ПРОВЕДАЛ&quot;
                                 <br />
                                 &emsp;&#8226;&emsp;Во всех остальных случаях –
                                 предпочтительнее смонтировать теплое остекление
@@ -126,15 +106,15 @@ export default function Page() {
                         ],
                         articlesAccordion: [],
                         articleImage: {
-                            imageSrc: balc_1,
+                            imageSrc: balc_3,
                             imageCaption: <>Утепленное остекление балкона</>,
                             border: true,
                         },
                     },
 
                     {
-                        anchor: "stability",
-                        imageSide: ImageSide.LEFT,
+                        anchor: "minus",
+                        imageSide: ImageSide.RIGHT,
                         articleTitle: "Совмещение балкона с комнатой",
                         articleParagraphsJSX: [
                             <>
@@ -143,19 +123,24 @@ export default function Page() {
                                 привнести в помещение больше солнечного света.
                             </>,
                             <>
-                                Однако, необходимо учесть важный момент - при
-                                совмещении жилой площади с лоджией или балконом
-                                в обязательном порядке необходимо использовать
-                                энергоэффективные окна ПВХ с выносом отопления
-                                непосредственно под оконный проем.Также
-                                необходимо максимально утеплить стены, пол и
-                                потолок балкона или лоджии.
+                                Однако, необходимо учесть важный момент: при
+                                совмещении жилой площади с лоджией или балконом{" "}
+                                <strong>
+                                    в обязательном порядке необходимо
+                                    использовать энергоэффективные окна ПВХ с
+                                    выносом отопления непосредственно под
+                                    оконный проем.
+                                </strong>{" "}
+                            </>,
+                            <>
+                                Также необходимо максимально утеплить стены, пол
+                                и потолок балкона или лоджии.
                             </>,
                             <>
                                 <strong>
-                                    Только таким образом Вы сможете избежать
-                                    обильного выпадения конденсата в зимний
-                                    период!
+                                    Только при этих условиях вы сможете избежать
+                                    обильного выпадения конденсата на стекле в
+                                    зимний период!
                                 </strong>
                             </>,
                         ],
@@ -169,64 +154,6 @@ export default function Page() {
                                 </>
                             ),
                             border: true,
-                        },
-                    },
-
-                    {
-                        anchor: "difference",
-                        imageSide: ImageSide.RIGHT,
-                        articleTitle: "Особенность наших рам ПРОВЕДАЛ",
-                        articleParagraphsJSX: [
-                            <>
-                                Алюминиевые рамы не подпадают под действие ни
-                                одного ГОСТ. Из-за этого наш рынок наводнён
-                                низкокачественной продукцией.
-                            </>,
-                            <>
-                                <strong>
-                                    Главное отличие надёжной рамы &mdash;
-                                    толщина стенок алюминиевого профиля.
-                                </strong>
-                            </>,
-                            <>
-                                Настоящий алюминиевый профиль имеет толщину
-                                стенки &ndash; не менее 1мм, в нём также
-                                присутствуют все рёбра жесткости,
-                                предусмотренные авторами системы.
-                            </>,
-                            <>
-                                Цель использования тонкого профиля одна &ndash;
-                                сэкономить деньги на стоимости рамы, то есть
-                                предложить потребителю более низкую цену.
-                            </>,
-                            <>
-                                Последствия установки таких &quot;хлипких&quot;
-                                рам хорошо известны - лёгкие створки выпадают от
-                                сильного ветра, рамы гнутся от малейшей
-                                нагрузки.
-                            </>,
-                            <>
-                                <strong>
-                                    Мы производим наши алюминиевые рамы на
-                                    мощностях АО СОФОС только из полновесного
-                                    профиля.
-                                </strong>
-                            </>,
-                        ],
-                        articlesAccordion: [
-                            {
-                                accordionTitle:
-                                    "Откуда вообще берётся тонкий профиль?",
-                                accordionParagraphs: [
-                                    "Заводы выпускают облегчённый профиль для изготовления маленьких рам. Например, он хорошо подходит для изготовления шкафов-купе, окон раздачи в учреждениях питания и т.д.",
-                                    "Однако, пользуясь тем, что потребитель не различает полновесный профиль от низкосортного, недобросовестные монтажнные организации применяют его буквально везде.",
-                                    "В итоге потребитель платит немного меньше при заказе такой продукции, но через некоторое время сталкивается с негативными последствиями.",
-                                ],
-                            },
-                        ],
-                        articleImage: {
-                            imageSrc: provedal_compare_1,
-                            imageCaption: <></>,
                         },
                     },
                 ]}

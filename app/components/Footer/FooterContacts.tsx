@@ -16,10 +16,8 @@ const FooterContacts = () => {
                     m: 0,
                 }}
             >
-                <i>
-                    Работаем для Вас вот уже более{" "}
-                    {new Date().getFullYear() - 1998} лет
-                </i>
+                Работаем для Вас вот уже более {new Date().getFullYear() - 1998}{" "}
+                лет.
             </Typography>
             <Typography
                 sx={{
