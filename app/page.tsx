@@ -17,8 +17,8 @@ import {
     Step,
     StepLabel,
     StepContent,
+    Grid2 as Grid,
 } from "@mui/material";
-import Grid from "@mui/material/Grid2";
 import Image from "next/image";
 import glassprom1 from "../public/images/glassprom1.jpg";
 import besedka from "../public/images/besedka.jpg";
@@ -1090,25 +1090,25 @@ export default function Home() {
                         }
                     )}
 
-                    {/* <Grid item xs={12}>
+                    <Grid size={12}>
                         <Divider />
                     </Grid>
-                    <Grid item xs={12} marginY={0}>
+                    <Grid size={12} marginY={0}>
                         <Typography variant="h1">
                             Как сэкономить на остеклении
                         </Typography>
-                    </Grid> */}
-                    {/* <Grid item xs={12}>
+                    </Grid>
+                    <Grid size={12}>
                         <Divider />
-                    </Grid> */}
+                    </Grid>
 
-                    {/* <Grid item xs={12}>
+                    <Grid size={12}>
                         <Grid
                             container
                             marginTop={0}
                             justifyContent={"space-between"}
                         >
-                            <Grid item xs={5}>
+                            <Grid size={5}>
                                 <Typography variant="h2" align="center">
                                     Правильно:
                                 </Typography>
@@ -1126,7 +1126,7 @@ export default function Home() {
                                     переплаты за ненужные опции
                                 </Typography>
                             </Grid>
-                            <Grid item xs={5}>
+                            <Grid size={5}>
                                 <Typography variant="h2" align="center">
                                     Неправильно:
                                 </Typography>
@@ -1153,7 +1153,7 @@ export default function Home() {
                             marginTop={10}
                             justifyContent={"space-between"}
                         >
-                            <Grid item xs={5}>
+                            <Grid size={5}>
                                 <Typography variant="h2" align="center">
                                     Правильно:
                                 </Typography>
@@ -1170,7 +1170,7 @@ export default function Home() {
                                     платной регулировке (за 10 окон).
                                 </Typography>
                             </Grid>
-                            <Grid item xs={5}>
+                            <Grid size={5}>
                                 <Typography variant="h2" align="center">
                                     Неправильно:
                                 </Typography>
@@ -1198,7 +1198,7 @@ export default function Home() {
                             marginTop={10}
                             justifyContent={"space-between"}
                         >
-                            <Grid item xs={5}>
+                            <Grid size={5}>
                                 <Typography variant="h2" align="center">
                                     Правильно:
                                 </Typography>
@@ -1218,7 +1218,7 @@ export default function Home() {
                                 </Typography>
                             </Grid>
 
-                            <Grid item xs={5}>
+                            <Grid size={5}>
                                 <Typography variant="h2" align="center">
                                     Неправильно:
                                 </Typography>
@@ -1245,7 +1245,7 @@ export default function Home() {
                             marginTop={10}
                             justifyContent={"space-between"}
                         >
-                            <Grid item xs={5}>
+                            <Grid size={5}>
                                 <Typography variant="h2" align="center">
                                     Правильно:
                                 </Typography>
@@ -1262,10 +1262,10 @@ export default function Home() {
                                     отпугнёт большинство преступников.
                                 </Typography>
                             </Grid>
-                            {/* <Grid item xs={1}>
+                            <Grid size={1}>
                                 <Divider orientation="vertical" />
-                            </Grid> */}
-                    {/* <Grid item xs={5}>
+                            </Grid>
+                            <Grid size={5}>
                                 <Typography variant="h2" align="center">
                                     Неправильно:
                                 </Typography>
@@ -1284,13 +1284,13 @@ export default function Home() {
                                     открываются каждый сезон под новыми
                                     юридическими названиями.
                                 </Typography>
-                            </Grid> 
-                        </Grid> 
-                    </Grid> */}
+                            </Grid>
+                        </Grid>
+                    </Grid>
                 </Grid>
             </Container>
 
-            {/* <FirstPageComparement /> */}
+            {/* <FirstPageComparement />  */}
         </>
     );
 }

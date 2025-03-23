@@ -27,6 +27,11 @@ const Navbar = () => {
         { name: "балконы", link: "/balkony", icon: ViewArraySharpIcon },
         { name: "порталы", link: "/", icon: DoorSlidingSharpIcon },
         { name: "фасадное остекление", link: "/", icon: AppsSharpIcon },
+        {
+            name: "цены",
+            link: "/ceny/stoimost-tipovyh-okon",
+            icon: AppsSharpIcon,
+        },
     ];
 
     return (

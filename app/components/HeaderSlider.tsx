@@ -36,13 +36,8 @@ function HeaderSlider({ sliderImage, isCardVisible }: Props) {
                         display: { xs: "flex", sm: "flex" },
                         position: "relative",
                         mb: "auto",
-                        left: { xs: "30%", sm: "-5%", md: "-5%" },
+                        left: { xs: "33%", sm: "-5%", md: "-5%" },
                         top: { xs: "-75px", sm: "-115px", md: "-160px" },
-                        // transform: {
-                        //     xs: `translate(-50%, 8%)`,
-                        //     sm: `translate(-50%, 65%)`,
-                        //     md: `translate(-50%, 35%)`,
-                        // },
                         transform: `translate(-50%, 50%)`,
                     }}
                 >
@@ -86,7 +81,7 @@ function HeaderSlider({ sliderImage, isCardVisible }: Props) {
 
                                 {[
                                     <>
-                                        Непрерывно выполняем гарантийные
+                                        Непрерывно выполняем свои гарантийные
                                         обязательства более{" "}
                                         {new Date().getFullYear() - 1998} лет
                                     </>,

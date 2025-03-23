@@ -9,7 +9,7 @@ import { Container } from "@mui/material";
 import HeaderSlider from "@/app/components/HeaderSlider";
 import TemplateProfileSystem from "@/app/components/TemplateProfileSystem";
 import KalevaUniqueAdvatages from "@/app/components/KalevaUniqueAdvatages";
-import Pricer from "@/app/components/Pricer";
+import Pricer from "@/app/components/PriceComponents/Pricer";
 
 export default function Page() {
     return (

@@ -13,7 +13,9 @@ import {
 import Image from "next/image";
 import ResponsiveHeader_H1 from "./Article/ResponsiveHeader_H1";
 import { IProfilePage } from "../lib/types";
-import Pricer from "./Pricer";
+
+import Pricer from "./PriceComponents/Pricer";
+import PriceNotesBox from "./PriceComponents/PriceNotesBox";
 
 const TemplateProfileSystem = ({
     profilePage,
