@@ -1090,7 +1090,7 @@ export default function Home() {
                         }
                     )}
 
-                    <Grid size={12}>
+                    {/* <Grid size={12}>
                         <Divider />
                     </Grid>
                     <Grid size={12} marginY={0}>
@@ -1100,9 +1100,9 @@ export default function Home() {
                     </Grid>
                     <Grid size={12}>
                         <Divider />
-                    </Grid>
+                    </Grid> */}
 
-                    <Grid size={12}>
+                    {/* <Grid size={12}>
                         <Grid
                             container
                             marginTop={0}
@@ -1286,7 +1286,7 @@ export default function Home() {
                                 </Typography>
                             </Grid>
                         </Grid>
-                    </Grid>
+                    </Grid> */}
                 </Grid>
             </Container>
 

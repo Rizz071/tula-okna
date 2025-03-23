@@ -47,7 +47,7 @@ const ProductionCardsContainer = ({ title, cardsArray }: Props) => {
                                 py: 2,
                                 textTransform: "uppercase",
                                 color: "white",
-                                fontWeight: 400,
+                                fontWeight: 300,
                                 letterSpacing: "2px",
                             }}
                         >

@@ -94,6 +94,7 @@ const NavbarHigherRow = ({ menuItems }: { menuItems: IMainMenuItem[] }) => {
                 </Button>
 
                 <Button
+                    href={"/contacts"}
                     sx={{
                         color: "primary",
                         paddingY: "3px",

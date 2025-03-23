@@ -38,6 +38,10 @@ const BreadCrumbs = () => {
                 return "ВЕКА СОФТЛАЙН 70";
             case "veka_softline_82":
                 return "ВЕКА СОФТЛАЙН 82";
+            case "ceny":
+                return "цены";
+            case "stoimost-tipovyh-okon":
+                return "типовые окна в квартиру";
             case "contacts":
                 return "контакты";
             default:
