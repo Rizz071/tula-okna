@@ -22,7 +22,7 @@ interface Props {
 const Pricer = ({ filterByProductName }: Props) => {
     return (
         <TableContainer component={Paper} elevation={12}>
-            <Table size="small" style={{ tableLayout: "fixed" }}>
+            <Table size="small">
                 <TableHead sx={{ bgcolor: "#333" }}>
                     <TableRow>
                         <TableCell>
@@ -45,7 +45,7 @@ const Pricer = ({ filterByProductName }: Props) => {
                 </TableHead>
                 <TableBody>
                     <TableRow sx={{ verticalAlign: "top" }}>
-                        <TableCell>
+                        <TableCell sx={{ borderBottom: "none" }}>
                             <Grid
                                 container
                                 justifyContent={"space-around"}
@@ -234,7 +234,7 @@ const Pricer = ({ filterByProductName }: Props) => {
                         </TableCell>
                     </TableRow>
                     <TableRow>
-                        <TableCell>
+                        <TableCell sx={{ m: 0, p: 1 }}>
                             <Box
                                 sx={{
                                     m: 0,
