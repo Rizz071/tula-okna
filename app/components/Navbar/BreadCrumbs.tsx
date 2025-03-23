@@ -28,8 +28,16 @@ const BreadCrumbs = () => {
                 return "тёплое остекление";
             case "interior":
                 return "внутренняя отделка";
+            case "kaleva_profi":
+                return "КАЛЕВА 60";
+            case "kaleva_standart":
+                return "КАЛЕВА 70";
+            case "veka_euroline":
+                return "ВЕКА ЕВРОЛАЙН 58";
             case "veka_softline_70":
                 return "ВЕКА СОФТЛАЙН 70";
+            case "veka_softline_82":
+                return "ВЕКА СОФТЛАЙН 82";
             case "contacts":
                 return "контакты";
             default:
