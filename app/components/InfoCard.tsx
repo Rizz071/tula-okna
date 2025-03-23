@@ -8,7 +8,6 @@ import {
     Typography,
     TableBody,
     Grid2 as Grid,
-    Stack,
 } from "@mui/material";
 import { IInfoCard } from "../lib/types";
 

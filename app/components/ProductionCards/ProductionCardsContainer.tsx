@@ -40,9 +40,10 @@ const ProductionCardsContainer = ({ title, cardsArray }: Props) => {
                         }}
                     >
                         <Typography
-                            align="center"
-                            variant="h5"
                             sx={{
+                                typography: "h5",
+                                fontSize: { xs: "1.1rem", sm: "1.5rem" },
+                                textAlign: "center",
                                 py: 2,
                                 textTransform: "uppercase",
                                 color: "white",
