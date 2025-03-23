@@ -18,7 +18,7 @@ export default function Page() {
             <Container maxWidth={"lg"} sx={{ mt: 8 }}>
                 <TemplateProfileSystem
                     profilePage={{
-                        profileSystemName: "KALEVA STANDART 70",
+                        profileSystemName: "КАЛЕВА 70",
                         profileMainImage: slide_1,
                         profileSystemLogo: logo,
                         profileSystemProperties: [

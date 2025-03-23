@@ -9,6 +9,7 @@ import { Container } from "@mui/material";
 import HeaderSlider from "@/app/components/HeaderSlider";
 import TemplateProfileSystem from "@/app/components/TemplateProfileSystem";
 import KalevaUniqueAdvatages from "@/app/components/KalevaUniqueAdvatages";
+import Pricer from "@/app/components/Pricer";
 
 export default function Page() {
     return (
@@ -18,7 +19,7 @@ export default function Page() {
             <Container maxWidth={"lg"} sx={{ mt: 8 }}>
                 <TemplateProfileSystem
                     profilePage={{
-                        profileSystemName: "KALEVA PROFI 60",
+                        profileSystemName: "КАЛЕВА 60",
                         profileMainImage: slide_1,
                         profileSystemLogo: logo,
                         profileSystemProperties: [
@@ -160,7 +161,7 @@ export default function Page() {
                                 <br />
                                 &emsp;•&emsp;летних дач
                                 <br />
-                                &emsp;•&emsp;балконов и лоджий
+                                &emsp;•&emsp;балконов и лоджий без отопления
                                 <br />
                                 &emsp;•&emsp;офисных и производственных
                                 помещений

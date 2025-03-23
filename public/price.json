@@ -1,0 +1,162 @@
+{
+    "_comment": {
+        "type": "0-одностворчатое, 1-двустворчатое, 2-трёхстворчатое, 3-бблок 9эт, 4-бблок 5эт",
+        "floor": "0:до5, 1:до12, 2:до17, 3:выше18, бблок: 0:остеклён, 1:не остеклён, 2:премиум"
+    },
+    "date": "19.03.25",
+    "constructionTypes": [
+        {
+            "type": 0,
+            "typeImageSrc": "/images/calc_imgs/1-stv.png",
+            "additional_sash": 0,
+            "additional_mosquito": 0,
+            "without_vapor_barrier": -1500,
+            "products": [
+                {
+                    "floor": 0,
+                    "name": "Калева 60",
+                    "price_full": 24000,
+                    "price_naked": 20000
+                },
+                {
+                    "floor": 1,
+                    "name": "Калева 70",
+                    "price_full": 27700,
+                    "price_naked": 21200
+                },
+                {
+                    "floor": 2,
+                    "name": "VEKA SOFTLINE 70",
+                    "price_full": 27700,
+                    "price_naked": 21200
+                },
+                {
+                    "floor": 3,
+                    "name": "VEKA SOFTLINE 82",
+                    "price_full": 27700,
+                    "price_naked": 21200
+                }
+            ]
+        },
+        {
+            "type": 1,
+            "typeImageSrc": "/images/calc_imgs/2-stv.png",
+            "additional_sash": 5000,
+            "additional_mosquito": 1000,
+            "without_vapor_barrier": -1700,
+            "products": [
+                {
+                    "floor": 0,
+                    "name": "Калева 60",
+                    "price_full": 32000,
+                    "price_naked": 25000
+                },
+                {
+                    "floor": 1,
+                    "name": "Калева 70",
+                    "price_full": 34000,
+                    "price_naked": 27000
+                },
+                {
+                    "floor": 2,
+                    "name": "VEKA SOFTLINE 70",
+                    "price_full": 36000,
+                    "price_naked": 29000
+                },
+                {
+                    "floor": 3,
+                    "name": "VEKA SOFTLINE 82",
+                    "price_full": 44000,
+                    "price_naked": 37000
+                }
+            ]
+        },
+        {
+            "type": 2,
+            "typeImageSrc": "/images/calc_imgs/3-stv.png",
+            "additional_sash": 5000,
+            "additional_mosquito": 1000,
+            "without_vapor_barrier": -2200,
+            "products": [
+                {
+                    "floor": 0,
+                    "name": "Калева 60",
+                    "price_full": 43000,
+                    "price_naked": 34000
+                },
+                {
+                    "floor": 1,
+                    "name": "Калева 70",
+                    "price_full": 43300,
+                    "price_naked": 36400
+                },
+                {
+                    "floor": 2,
+                    "name": "VEKA SOFTLINE 70",
+                    "price_full": 48000,
+                    "price_naked": 39300
+                },
+                {
+                    "floor": 3,
+                    "name": "VEKA SOFTLINE 82",
+                    "price_full": 58800,
+                    "price_naked": 50000
+                }
+            ]
+        },
+        {
+            "type": 3,
+            "typeImageSrc": "/images/calc_imgs/bblok-9et.png",
+            "additional_sash": 6000,
+            "additional_mosquito": 1000,
+            "without_vapor_barrier": -3000,
+            "products": [
+                {
+                    "floor": 0,
+                    "name": "Калева 60",
+                    "price_full": 45800,
+                    "price_naked": 35000
+                },
+                {
+                    "floor": 1,
+                    "name": "Калева 70",
+                    "price_full": 50000,
+                    "price_naked": 39200
+                },
+                {
+                    "floor": 2,
+                    "name": "VEKA SOFTLINE 70",
+                    "price_full": 53500,
+                    "price_naked": 42500
+                }
+            ]
+        },
+        {
+            "type": 4,
+            "typeImageSrc": "/images/calc_imgs/bblok-5et.png",
+            "additional_sash": 6000,
+            "additional_mosquito": 1000,
+            "without_vapor_barrier": -3000,
+            "products": [
+                {
+                    "floor": 0,
+                    "name": "Калева 60",
+                    "price_full": 52200,
+                    "price_naked": 39600
+                },
+                {
+                    "floor": 1,
+                    "name": "Калева 70",
+                    "price_full": 57000,
+                    "price_naked": 44500
+                },
+                {
+                    "floor": 2,
+                    "name": "VEKA SOFTLINE 70",
+                    "price_full": 60800,
+                    "price_naked": 48000
+                }
+            ]
+        }
+    ]
+}

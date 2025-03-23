@@ -1,5 +1,4 @@
 import {
-    Container,
     Grid2 as Grid,
     TableContainer,
     Paper,
@@ -14,6 +13,7 @@ import {
 import Image from "next/image";
 import ResponsiveHeader_H1 from "./Article/ResponsiveHeader_H1";
 import { IProfilePage } from "../lib/types";
+import Pricer from "./Pricer";
 
 const TemplateProfileSystem = ({
     profilePage,
@@ -345,58 +345,16 @@ const TemplateProfileSystem = ({
                 </TableContainer>
             </Grid>
 
-            {/* <Grid size={{ xs: 12, lg: 6 }}></Grid>
-                <Grid size={{ xs: 12, lg: 6 }}>
-                    <TableContainer component={Paper} elevation={12}>
-                        <Table size="small" style={{ tableLayout: "fixed" }}>
-                            <TableHead sx={{ bgcolor: "#333" }}>
-                                <TableRow>
-                                    <TableCell colSpan={2}>
-                                        <Typography
-                                            sx={{
-                                                m: 1,
-                                                p: 0,
-                                                color: "white",
-                                                fontWeight: 300,
-                                                textTransform: "uppercase",
-                                                letterSpacing: "3px",
-                                                textAlign: "center",
-                                            }}
-                                        >
-                                            Рекомендованное применение
-                                        </Typography>
-                                    </TableCell>
-                                </TableRow>
-                            </TableHead>
-                            <TableBody>
-                                <TableRow sx={{ verticalAlign: "top" }}>
-                                    <TableCell colSpan={2}>
-                                        {profilePage.recommendedUse.map(
-                                            (useCase, index) => {
-                                                return (
-                                                    <Typography
-                                                        sx={{
-                                                            mx: { xs: 2, md: 4 },
-                                                            my: 2,
-                                                            typography: "button",
-                                                            lineHeight: "1.5rem",
-                                                            textAlign: "left",
-                                                        }}
-                                                        key={index}
-                                                    >
-                                                        {useCase}
-                                                    </Typography>
-                                                );
-                                            }
-                                        )}
-                                    </TableCell>
-                                </TableRow>
-                            </TableBody>
-                        </Table>
-                    </TableContainer>
-                </Grid> */}
-
             <Grid size={{ xs: 12 }} sx={{ mt: 6 }} order={{ xs: 3 }}>
+                <ResponsiveHeader_H1
+                    text={`Стоимость типовых конструкций ${profilePage.profileSystemName}`}
+                />
+            </Grid>
+            <Grid order={{ xs: 4 }}>
+                <Pricer filterByProductName={profilePage.profileSystemName} />
+            </Grid>
+
+            <Grid size={{ xs: 12 }} sx={{ mt: 6 }} order={{ xs: 5 }}>
                 <ResponsiveHeader_H1 text={"Комбинация профилей"} />
             </Grid>
 
@@ -405,7 +363,7 @@ const TemplateProfileSystem = ({
                     <Grid
                         size={{ xs: 12, sm: 6 }}
                         key={index}
-                        order={{ xs: 4 + index }}
+                        order={{ xs: 6 + index }}
                     >
                         <TableContainer component={Paper} elevation={12}>
                             <Table
