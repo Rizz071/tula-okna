@@ -51,7 +51,7 @@ const WayFinderCard = ({
                             <Typography
                                 sx={{
                                     textAlign: "center",
-                                    minHeight: 50,
+                                    minHeight: 60,
                                     bgcolor: !isHovering
                                         ? "primary.main"
                                         : "primary.dark",
@@ -62,9 +62,23 @@ const WayFinderCard = ({
                                     fontWeight: 400,
                                     letterSpacing: 1.5,
                                     textTransform: "uppercase",
+                                    lineHeight: "1.3rem",
                                 }}
                             >
                                 {caption}
+                                <br />
+                                <Typography
+                                    component={"span"}
+                                    sx={{
+                                        typography: "caption",
+                                        fontSize: "0.7rem",
+                                        m: 0,
+                                        p: 0,
+                                        // lineHeight: "1rem",
+                                    }}
+                                >
+                                    посмотреть прайслист
+                                </Typography>
                             </Typography>
                         </CardContent>
                     </CardActionArea>

@@ -267,7 +267,7 @@ const ApartmentsWindowsChooser = () => {
                                                 fontSize: "1.8rem",
                                             }}
                                         />
-                                        &nbsp;Этаж
+                                        &nbsp;Этаж установки
                                     </InputLabel>
                                     <Select
                                         labelId="floor-select-label"
@@ -314,7 +314,7 @@ const ApartmentsWindowsChooser = () => {
                                                 fontSize: "1.8rem",
                                             }}
                                         />
-                                        &nbsp;Отопление
+                                        &nbsp;Отопление в квартире
                                     </InputLabel>
                                     <Select
                                         labelId="heating-select-label"
