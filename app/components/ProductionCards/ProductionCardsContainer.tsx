@@ -23,9 +23,9 @@ const ProductionCardsContainer = ({ title, cardsArray }: Props) => {
                     mt: {
                         xs: -5,
                         sm: -5,
-                        md: -10,
+                        md: -15,
                         lg: -15,
-                        xl: -11,
+                        xl: -15,
                     },
                     transform: "translate(-50%, 0%)",
                     left: "50%",
