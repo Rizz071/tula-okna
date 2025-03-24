@@ -76,7 +76,7 @@ const PriceNotesBox = () => {
                     sx={{
                         m: 0,
                         ml: 2,
-                        p: 0,
+                        p: 1,
                         pb: 1,
                         typography: "subtitle2",
                         fontSize: "x-small",

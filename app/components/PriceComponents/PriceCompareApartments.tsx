@@ -45,12 +45,13 @@ const PriceCompareApartments = () => {
     }
 
     return (
-        <TableContainer component={Paper} elevation={12} ref={contentRef}>
+        <TableContainer component={Paper} elevation={12}>
             <Table
                 size="small"
                 sx={{
                     tableLayout: { xs: "auto", md: "fixed" },
                 }}
+                ref={contentRef}
             >
                 <TableHead sx={{ bgcolor: "#333" }}>
                     <TableRow>
