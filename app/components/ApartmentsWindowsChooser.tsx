@@ -405,6 +405,9 @@ const ApartmentsWindowsChooser = () => {
                                         <Box>
                                             <WayFinderCard
                                                 caption={system_title}
+                                                subCaption={
+                                                    "описание и стоимость"
+                                                }
                                                 image={image}
                                                 link={link}
                                             />

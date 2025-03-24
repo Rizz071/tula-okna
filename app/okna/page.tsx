@@ -14,6 +14,7 @@ export default function Page() {
             buttonsArray={[
                 {
                     caption: "Окна в квартиру",
+                    subCaption: "перейти в раздел",
                     image: apartmentsImg,
                     link: "/okna/apartments",
                     description: (
@@ -29,6 +30,7 @@ export default function Page() {
 
                 {
                     caption: "Окна в коттедж",
+                    subCaption: "перейти в раздел",
                     image: cottageImg,
                     link: "/okna/cottage",
                     description: (
@@ -41,6 +43,7 @@ export default function Page() {
 
                 {
                     caption: "Окна на дачу",
+                    subCaption: "перейти в раздел",
                     image: dachaImg,
                     link: "/okna/apartments",
                     description: (

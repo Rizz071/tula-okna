@@ -1,7 +1,11 @@
 import { ImageSide } from "../lib/types";
+
+import { Box } from "@mui/material";
+
 import ArticlesContainer from "./Article/ArticlesContainer";
 import veka_thickness from "@/public/images/veka_thickness_croped_2.jpg";
 import veka_armir_2 from "@/public/images/slides/AllVsVeka.png";
+import ResponsiveHeader_H1 from "./Article/ResponsiveHeader_H1";
 
 const VekaUniqueAdvatages = () => {
     return (

@@ -11,11 +11,13 @@ import {
     TableBody,
 } from "@mui/material";
 import Image from "next/image";
+import Player from "next-video/player";
+import BackgroundPlayer from "next-video/background-player";
+
 import ResponsiveHeader_H1 from "./Article/ResponsiveHeader_H1";
 import { IProfilePage } from "../lib/types";
 
 import Pricer from "./PriceComponents/Pricer";
-import PriceNotesBox from "./PriceComponents/PriceNotesBox";
 
 const TemplateProfileSystem = ({
     profilePage,
@@ -356,7 +358,21 @@ const TemplateProfileSystem = ({
                 <Pricer filterByProductName={profilePage.profileSystemName} />
             </Grid>
 
-            <Grid size={{ xs: 12 }} sx={{ mt: 6 }} order={{ xs: 5 }}>
+            <Grid size={{ xs: 12 }} sx={{ mt: 6 }} order={{ xs: 4 }}>
+                <ResponsiveHeader_H1 text={`О профильной системе`} />
+            </Grid>
+            <Grid order={{ xs: 5 }}>
+                <Box sx={{ width: "100%", border: "1px solid grey", p: 1 }}>
+                    <Player
+                        autoPlay
+                        muted
+                        src="/video/VEKA_gamme70_RU__VF_720p.mp4"
+                        poster="/video/VEKA_gamme70_RU__VF_720p.jpg"
+                    />
+                </Box>
+            </Grid>
+
+            <Grid size={{ xs: 12 }} sx={{ mt: 6 }} order={{ xs: 6 }}>
                 <ResponsiveHeader_H1 text={"Комбинация профилей"} />
             </Grid>
 

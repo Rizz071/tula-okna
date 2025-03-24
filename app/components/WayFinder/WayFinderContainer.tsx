@@ -48,6 +48,7 @@ const WayFinderContainer = ({
                         >
                             <WayFinderCard
                                 caption={button.caption}
+                                subCaption={button.subCaption}
                                 image={button.image}
                                 link={button.link}
                                 description={button.description}

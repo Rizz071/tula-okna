@@ -11,6 +11,7 @@ export interface IProductionCard {
 
 export interface IButtonImage {
     caption: string;
+    subCaption?: string;
     image: StaticImageData;
     link?: string;
     description?: ReactElement;
@@ -61,6 +62,11 @@ export interface IProfilePage {
 
     recommendedUse: ReactElement[];
     profileSections: ProfileDrawSection[];
+
+    promoVideo: {
+        promoVideoSrc: string;
+        promoVideoPictureSrc: string;
+    }
 
 
 }

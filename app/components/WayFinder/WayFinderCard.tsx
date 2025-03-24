@@ -9,6 +9,7 @@ import Image from "next/image";
 
 const WayFinderCard = ({
     caption,
+    subCaption,
     image,
     link = "",
     description,
@@ -66,19 +67,23 @@ const WayFinderCard = ({
                                 }}
                             >
                                 {caption}
-                                <br />
-                                <Typography
-                                    component={"span"}
-                                    sx={{
-                                        typography: "caption",
-                                        fontSize: "0.7rem",
-                                        m: 0,
-                                        p: 0,
-                                        // lineHeight: "1rem",
-                                    }}
-                                >
-                                    посмотреть прайслист
-                                </Typography>
+                                {subCaption && (
+                                    <>
+                                        <br />
+                                        <Typography
+                                            component={"span"}
+                                            sx={{
+                                                typography: "caption",
+                                                fontSize: "0.7rem",
+                                                m: 0,
+                                                p: 0,
+                                                // lineHeight: "1rem",
+                                            }}
+                                        >
+                                            {subCaption}
+                                        </Typography>
+                                    </>
+                                )}
                             </Typography>
                         </CardContent>
                     </CardActionArea>

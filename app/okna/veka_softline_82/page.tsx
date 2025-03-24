@@ -21,6 +21,12 @@ export default function Page() {
                         profileSystemName: "VEKA SOFTLINE 82",
                         profileMainImage: slide_1,
                         profileSystemLogo: veka_logo_light,
+                        promoVideo: {
+                            promoVideoSrc:
+                                "/video/VEKA_gamme70_RU__VF_720p.mp4",
+                            promoVideoPictureSrc:
+                                "/video/VEKA_gamme70_RU__VF_720p.jpg",
+                        },
                         profileSystemProperties: [
                             {
                                 accent: true,
