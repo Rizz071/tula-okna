@@ -21,6 +21,10 @@ export default function Page() {
                         profileSystemName: "КАЛЕВА 70",
                         profileMainImage: slide_1,
                         profileSystemLogo: logo,
+                        promoVideo: {
+                            promoVideoSrc: "/video/kaleva_promo_1.mp4",
+                            promoVideoPictureSrc: "/video/kaleva_promo_1.jpg",
+                        },
                         profileSystemProperties: [
                             {
                                 propertyName: "Ширина профиля",

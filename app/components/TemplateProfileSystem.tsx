@@ -366,8 +366,8 @@ const TemplateProfileSystem = ({
                     <Player
                         autoPlay
                         muted
-                        src="/video/VEKA_gamme70_RU__VF_720p.mp4"
-                        poster="/video/VEKA_gamme70_RU__VF_720p.jpg"
+                        src={profilePage.promoVideo.promoVideoSrc}
+                        poster={profilePage.promoVideo.promoVideoPictureSrc}
                     />
                 </Box>
             </Grid>
