@@ -1,7 +1,7 @@
 import React from "react";
-import apartmentsImg from "@/public/images/apartmements2_tmblr.jpeg";
-import cottageImg from "@/public/images/dom3_tmblr.jpg";
-import dachaImg from "@/public/images/dacha1_tmblr.jpeg";
+import apartmentsImg from "@/public/images/Softline-70-Exterior-01.png";
+import cottageImg from "@/public/images/Artline-82-Exterior-01.png";
+import dachaImg from "@/public/images/okna/oknodom_1.png";
 import WayFinderContainer from "../components/WayFinder/WayFinderContainer";
 
 export default function Page() {

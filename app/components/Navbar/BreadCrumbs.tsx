@@ -42,6 +42,8 @@ const BreadCrumbs = () => {
                 return "цены";
             case "stoimost-tipovyh-okon":
                 return "типовые окна в квартиру";
+            case "portaly":
+                return "раздвижные двери - порталы";
             case "contacts":
                 return "контакты";
             default:

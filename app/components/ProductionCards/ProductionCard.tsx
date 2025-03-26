@@ -1,9 +1,10 @@
 import { Typography, Button, Stack, Grid2 as Grid, Box } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
+import { ReactElement } from "react";
 
 interface Props {
     imgSrc: StaticImageData;
-    caption: string;
+    caption: ReactElement;
     link: string;
 }
 
@@ -27,7 +28,7 @@ const ProductionCard = ({ imgSrc, caption, link }: Props) => {
                         height={0}
                         quality={100}
                         unoptimized
-                        alt={caption}
+                        alt={""} //TODO alt
                         style={{
                             width: "100%",
                             height: "100%",

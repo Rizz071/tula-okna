@@ -25,7 +25,7 @@ const Navbar = () => {
         { name: "окна", link: "/okna", icon: WindowSharpIcon },
         { name: "двери", link: "/", icon: MeetingRoomSharpIcon },
         { name: "балконы", link: "/balkony", icon: ViewArraySharpIcon },
-        { name: "порталы", link: "/", icon: DoorSlidingSharpIcon },
+        { name: "порталы", link: "/portaly", icon: DoorSlidingSharpIcon },
         { name: "фасадное остекление", link: "/", icon: AppsSharpIcon },
         {
             name: "цены",

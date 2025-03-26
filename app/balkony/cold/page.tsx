@@ -35,17 +35,17 @@ export default function Page() {
                 cardsArray={[
                     {
                         image: provedal_tmblr_1,
-                        caption: "Для чего используются?",
+                        caption: <>Для чего используются?</>,
                         link: "#for_what",
                     },
                     {
                         image: provedal_3,
-                        caption: "Насколько они надёжны?",
+                        caption: <>Насколько они надёжны?</>,
                         link: "#stability",
                     },
                     {
                         image: polnoves_provedal,
-                        caption: "Особенность наших рам",
+                        caption: <>Особенность наших рам</>,
                         link: "#difference",
                     },
                 ]}

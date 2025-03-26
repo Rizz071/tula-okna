@@ -41,7 +41,7 @@ import Front_small_2 from "@/public/images/Front_small_2.webp";
 import Front_small_3 from "@/public/images/Front_small_3.webp";
 import House from "@/public/images/House.webp";
 import Doors from "@/public/images/Doors.webp";
-import apartements1 from "@/public/images/footer-okno_tmblr.jpg";
+import apartements1 from "@/public/images/window_14.png";
 import dacha1 from "@/public/images/dacha1_104px.jpeg";
 import { ImageSide } from "./lib/types";
 import ProductionCardsContainer from "./components/ProductionCards/ProductionCardsContainer";
@@ -58,32 +58,32 @@ export default function Home() {
                 cardsArray={[
                     {
                         image: apartements1,
-                        caption: "Остекление квартир",
+                        caption: <>Остекление квартир</>,
                         link: "/okna/apartments",
                     },
                     {
                         image: Front_small_2,
-                        caption: "Остекление и отделка балконов",
+                        caption: <>Остекление и отделка балконов</>,
                         link: "/balkony",
                     },
                     {
                         image: House,
-                        caption: "Остекление домов",
+                        caption: <>Остекление домов</>,
                         link: "/okna/cottage",
                     },
                     {
                         image: dacha1,
-                        caption: "Остекление дач и беседок",
+                        caption: <>Остекление дач и беседок</>,
                         link: "6 000",
                     },
                     {
                         image: Doors,
-                        caption: "Входные двери для предприятий",
+                        caption: <>Входные двери тёплые</>,
                         link: "15 000",
                     },
                     {
                         image: Front_small_3,
-                        caption: "Раздвижные двери-порталы",
+                        caption: <>Раздвижные двери-порталы</>,
                         link: "59 000",
                     },
                 ]}
@@ -693,7 +693,7 @@ export default function Home() {
                         <Divider />
                     </Grid>
 
-                    <Grid size={{ xs: 12 }} sx={{ my: 0 }}>
+                    <Grid size={{ xs: 12 }}>
                         <ResponsiveHeader_H1 text={"Наши преимущества"} />
                     </Grid>
 
@@ -800,7 +800,7 @@ export default function Home() {
                         ]}
                     />
 
-                    <Grid size={{ xs: 12 }}>
+                    {/* <Grid size={{ xs: 12 }}>
                         <Divider />
                     </Grid>
                     <Grid size={{ xs: 12 }}>
@@ -822,7 +822,7 @@ export default function Home() {
                                 style={{ width: "100%", height: "auto" }}
                             />
                         </Box>
-                    </Grid>
+                    </Grid> */}
 
                     <Grid size={{ xs: 12 }}>
                         <Divider />

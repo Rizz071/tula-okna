@@ -9,7 +9,6 @@ import {
     Typography,
     TableBody,
     Grid2 as Grid,
-    Box,
 } from "@mui/material";
 import Image from "next/image";
 

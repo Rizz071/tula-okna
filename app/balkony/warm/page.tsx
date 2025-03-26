@@ -20,17 +20,17 @@ export default function Page() {
                 cardsArray={[
                     {
                         image: balc_1,
-                        caption: "Когда нужны тёплые окна?",
+                        caption: <>Когда нужны тёплые окна?</>,
                         link: "#for_what",
                     },
                     {
                         image: balc_3,
-                        caption: "Ограничения для установки",
+                        caption: <>Ограничения для установки</>,
                         link: "#minus",
                     },
                     {
                         image: balc_2,
-                        caption: "Совмещение с комнатой",
+                        caption: <>Совмещение с комнатой</>,
                         link: "#difference",
                     },
                 ]}

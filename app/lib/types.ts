@@ -5,7 +5,7 @@ import { ReactElement } from "react";
 
 export interface IProductionCard {
     image: StaticImageData;
-    caption: string;
+    caption: ReactElement;
     link: string;
 }
 

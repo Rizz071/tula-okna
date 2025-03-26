@@ -32,32 +32,32 @@ export default function Page() {
                 cardsArray={[
                     {
                         image: maximum_light,
-                        caption: "Двойная защита от запотевания",
+                        caption: <>Двойная защита от запотевания</>,
                         link: "#zapot",
                     },
                     {
                         image: lenta_butil_1,
-                        caption: "Монтаж по ГОСТ входит в цену",
+                        caption: <>Монтаж по ГОСТ входит в цену</>,
                         link: "#lenta",
                     },
                     {
                         image: furniture_1,
-                        caption: "Только немецкая фурнитура",
+                        caption: <>Только немецкая фурнитура</>,
                         link: "#furniture",
                     },
                     {
                         image: otkos_tmblr_1,
-                        caption: "Тёплые откосы из сэндвич-панели",
+                        caption: <>Тёплые откосы из сэндвич-панели</>,
                         link: "#otkos",
                     },
                     {
                         image: vetrov_nagr_1,
-                        caption: "Учёт ветровой и шумовой нагрузки",
+                        caption: <>Учёт ветровой и шумовой нагрузки</>,
                         link: "#veter",
                     },
                     {
                         image: micro_1,
-                        caption: "Микропроветривание в комплекте",
+                        caption: <>Микропроветривание в комплекте</>,
                         link: "#micro",
                     },
                 ]}

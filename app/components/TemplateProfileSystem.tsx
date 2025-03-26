@@ -12,7 +12,6 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import Player from "next-video/player";
-import BackgroundPlayer from "next-video/background-player";
 
 import ResponsiveHeader_H1 from "./Article/ResponsiveHeader_H1";
 import { IProfilePage } from "../lib/types";
