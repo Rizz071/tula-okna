@@ -63,7 +63,6 @@ const ProductionCardsContainer = ({ title, cardsArray }: Props) => {
                     sx={{
                         px: { xs: 0, sm: 6 },
                         py: 6,
-                        justifyContent: "space-evenly",
                     }}
                     padding={6}
                 >

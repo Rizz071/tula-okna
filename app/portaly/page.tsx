@@ -9,9 +9,11 @@ import balc_2 from "@/public/images/Sovmesh2.jpg";
 import balc_3 from "@/public/images/balkoni/20160717_151629-2.png";
 import Player from "next-video/player";
 import Image from "next/image";
-import portal_0 from "@/public/images/portali/portal2.jpg";
+import portal_apartments from "@/public/images/portali/portal5.jpg";
 import portal_1 from "@/public/images/portali/portal8.jpg";
 import portal_2 from "@/public/images/portali/portal_garmoshka.jpg";
+import portal_part_1 from "@/public/images/portal_part_1.png";
+import porog_otopl_1 from "@/public/images/porog_otopl_1.png";
 
 import WarmBalkonyChooser from "@/app/components/WarmBalkonyChooser";
 import {
@@ -23,7 +25,6 @@ import {
     Typography,
 } from "@mui/material";
 import ResponsiveHeader_H1 from "../components/Article/ResponsiveHeader_H1";
-import ResponsiveHeader_H2 from "../components/Article/ResponsiveHeader_H2";
 
 export default function Page() {
     return (
@@ -34,18 +35,39 @@ export default function Page() {
                 title={"ТЁПЛЫЕ РАЗДВИЖНЫЕ ДВЕРИ - ПОРТАЛЫ"}
                 cardsArray={[
                     {
-                        image: image_1,
-                        caption: <>Выход на лоджию в квартире</>,
+                        image: portal_apartments,
+                        caption: (
+                            <>
+                                Портал - выход
+                                <br />
+                                на лоджию
+                            </>
+                        ),
                         link: "#portal_balc",
                     },
                     {
-                        image: balc_3,
-                        caption: <>Раздвижной портал в коттедж</>,
+                        image: portal_1,
+                        caption: <>Сдвижной портал в коттедж</>,
                         link: "#portal_cottage",
                     },
                     {
-                        image: balc_2,
+                        image: portal_2,
                         caption: <>Складной портал для веранды</>,
+                        link: "#difference",
+                    },
+                    {
+                        image: image_1,
+                        caption: <>Требования к отоплению</>,
+                        link: "#portal_balc",
+                    },
+                    {
+                        image: portal_part_1,
+                        caption: <>Отличия нашей сборки порталов</>,
+                        link: "#portal_cottage",
+                    },
+                    {
+                        image: porog_otopl_1,
+                        caption: <>Высота порога и отопление</>,
                         link: "#difference",
                     },
                 ]}

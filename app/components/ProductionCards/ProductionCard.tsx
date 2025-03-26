@@ -22,15 +22,15 @@ const ProductionCard = ({ imgSrc, caption, link }: Props) => {
                 >
                     <Image
                         src={imgSrc.src}
-                        // width={imgSrc.width}
-                        // height={imgSrc.height}
-                        width={0}
-                        height={0}
-                        quality={100}
-                        unoptimized
+                        width={imgSrc.width}
+                        height={imgSrc.height}
+                        // width={0}
+                        // height={0}
+                        quality={95}
+                        // unoptimized
                         alt={""} //TODO alt
                         style={{
-                            width: "100%",
+                            width: "auto",
                             height: "100%",
                             // width:  "150px",
                             // height: "100px",
@@ -53,7 +53,7 @@ const ProductionCard = ({ imgSrc, caption, link }: Props) => {
                         height: "100%",
                         gap: 1,
                         maxWidth: "250px",
-                        py: { xs: 0, lg: 1 },
+                        py: { xs: 0, lg: 0 },
                         pr: { xs: 2, sm: 0 },
                     }}
                 >

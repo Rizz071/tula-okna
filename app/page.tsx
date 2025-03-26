@@ -68,7 +68,13 @@ export default function Home() {
                     },
                     {
                         image: House,
-                        caption: <>Остекление домов</>,
+                        caption: (
+                            <>
+                                Остекление
+                                <br />
+                                домов
+                            </>
+                        ),
                         link: "/okna/cottage",
                     },
                     {
@@ -83,7 +89,7 @@ export default function Home() {
                     },
                     {
                         image: Front_small_3,
-                        caption: <>Раздвижные двери-порталы</>,
+                        caption: <>Раздвижные двери - порталы</>,
                         link: "59 000",
                     },
                 ]}
@@ -118,9 +124,8 @@ export default function Home() {
                             imageSrc: worker_plant_1,
                             imageCaption: (
                                 <>
-                                    Благодаря производственному опыту, мы знаем
-                                    точно, какими должны быть качественно
-                                    собранные окна
+                                    Мы долго сами производили окна и знаем как
+                                    сделать их качественно
                                 </>
                             ),
                             border: true,
