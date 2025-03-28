@@ -92,3 +92,16 @@ interface IInfoCardLine {
     leftProperty: string;
     rightProperty: ReactElement;
 }
+
+
+export interface IDefaultConfigurationTable {
+    sectionTitle: string;
+    sections: IDefaultConfigurationSubsection[];
+
+}
+
+interface IDefaultConfigurationSubsection {
+    image: StaticImageData;
+    title: string;
+    description: ReactElement;
+}

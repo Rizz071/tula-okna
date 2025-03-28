@@ -47,7 +47,7 @@ const BreadCrumbs = () => {
             case "contacts":
                 return "контакты";
             default:
-                return name;
+                return "404 - нет пути";
         }
     });
 

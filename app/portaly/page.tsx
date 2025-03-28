@@ -62,7 +62,7 @@ export default function Page() {
                     },
                     {
                         image: portal_part_1,
-                        caption: <>Отличия нашей сборки порталов</>,
+                        caption: <>Особенности нашей сборки</>,
                         link: "#portal_cottage",
                     },
                     {

@@ -5,13 +5,6 @@ import {
     Typography,
     Divider,
     List,
-    Paper,
-    Table,
-    TableContainer,
-    TableBody,
-    TableCell,
-    TableHead,
-    TableRow,
     ListItemText,
     Stepper,
     Step,
@@ -48,6 +41,7 @@ import ProductionCardsContainer from "./components/ProductionCards/ProductionCar
 import ArticlesContainer from "./components/Article/ArticlesContainer";
 import ResponsiveHeader_H1 from "./components/Article/ResponsiveHeader_H1";
 import AdvantagesContainer from "./components/AdvantagesContainer";
+import OurDefaultConfigurationContainer from "./components/OurDefaultConfiguration/OurDefaultConfigurationContainer";
 
 export default function Home() {
     return (
@@ -169,50 +163,54 @@ export default function Home() {
                         },
                     },
 
-                    {
-                        imageSide: ImageSide.LEFT,
-                        articleTitle: "Сегодня своим клиентам мы предлагаем:",
-                        articleParagraphsJSX: [
-                            <>
-                                <strong>
-                                    Широкий выбор конструкций окон ПВХ под любые
-                                    задачи:
-                                </strong>{" "}
-                                профильные системы VEKA, REHAU и KALEVA с
-                                безупречной репутацией для квартиры, дома, дачи,
-                                производственного помещения
-                            </>,
-                            <>
-                                <strong>
-                                    Гарантированное качество сборки продукции
-                                </strong>
-                                , подтвержденное протоколами государственных
-                                испытаний и специальным гарантийным сроком
-                            </>,
-                            <>
-                                <strong>Качественный монтаж</strong> с
-                                использованием самых современных материалов,
-                                соответствующих требованиям ГОСТ
-                            </>,
-                            <>
-                                <strong>Фурнитуру премиум сегмента</strong> от
-                                немецких производителей{" "}
-                                <strong>Gretsch-Unitas</strong> и{" "}
-                                <strong>ROTO Frank Fenster</strong>
-                            </>,
-                            <>
-                                <strong>Фурнитуру экономичного сегмента</strong>
-                                <strong>REZE</strong> - от ведущего
-                                производителя Турции
-                            </>,
-                        ],
-                        articlesAccordion: [],
-                        articleImage: {
-                            imageSrc: profile_compare_img,
-                        },
-                    },
+                    // {
+                    //     imageSide: ImageSide.LEFT,
+                    //     articleTitle: "Сегодня своим клиентам мы предлагаем:",
+                    //     articleParagraphsJSX: [
+                    //         <>
+                    //             <strong>
+                    //                 Широкий выбор конструкций окон ПВХ под любые
+                    //                 задачи:
+                    //             </strong>{" "}
+                    //             профильные системы VEKA, REHAU и KALEVA с
+                    //             безупречной репутацией для квартиры, дома, дачи,
+                    //             производственного помещения
+                    //         </>,
+                    //         <>
+                    //             <strong>
+                    //                 Гарантированное качество сборки продукции
+                    //             </strong>
+                    //             , подтвержденное протоколами государственных
+                    //             испытаний и специальным гарантийным сроком
+                    //         </>,
+                    //         <>
+                    //             <strong>Качественный монтаж</strong> с
+                    //             использованием самых современных материалов,
+                    //             соответствующих требованиям ГОСТ
+                    //         </>,
+                    //         <>
+                    //             <strong>Фурнитуру премиум сегмента</strong> от
+                    //             немецких производителей{" "}
+                    //             <strong>Gretsch-Unitas</strong> и{" "}
+                    //             <strong>ROTO Frank Fenster</strong>
+                    //         </>,
+                    //         <>
+                    //             <strong>Фурнитуру экономичного сегмента</strong>
+                    //             <strong>REZE</strong> - от ведущего
+                    //             производителя Турции
+                    //         </>,
+                    //     ],
+                    //     articlesAccordion: [],
+                    //     articleImage: {
+                    //         imageSrc: profile_compare_img,
+                    //     },
+                    // },
                 ]}
             />
+
+            <Container maxWidth={"lg"} sx={{ mt: 16 }}>
+                <OurDefaultConfigurationContainer />
+            </Container>
 
             <Box
                 width={"100%"}
@@ -694,11 +692,11 @@ export default function Home() {
                         </Typography>
                     </Grid> */}
 
-                    <Grid size={{ xs: 12 }}>
+                    {/* <Grid size={{ xs: 12 }}>
                         <Divider />
-                    </Grid>
+                    </Grid> */}
 
-                    <Grid size={{ xs: 12 }}>
+                    <Grid size={{ xs: 12 }} sx={{ mt: 16 }}>
                         <ResponsiveHeader_H1 text={"Наши преимущества"} />
                     </Grid>
 
