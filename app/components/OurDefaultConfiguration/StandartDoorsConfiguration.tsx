@@ -1,22 +1,6 @@
-import {
-    TableContainer,
-    Paper,
-    Table,
-    TableHead,
-    TableRow,
-    TableCell,
-    Typography,
-    TableBody,
-    Box,
-} from "@mui/material";
-import Image from "next/image";
-
 import image_profile from "@/public/images/dveri/VEKA/veka_doors_collage_1.png";
 import image_furniture_zamok from "@/public/images/dveri/zamok_dver_1.png";
 import image_furniture_hinges from "@/public/images/dveri/wala_hinges_1.png";
-import image_steklopaket from "@/public/images/slides/steklopaket_1.jpg";
-import image_profile_color from "@/public/images/lamination_1_crop.png";
-import image_setka from "@/public/images/polotno_ms_2.png";
 import DefaultConfigurationTemplate from "./DefaultConfigurationTemplate";
 
 const StandartDoorsConfiguration = () => {
@@ -25,7 +9,8 @@ const StandartDoorsConfiguration = () => {
             sectionTitle={"Двери"}
             sections={[
                 {
-                    image: image_profile,
+                    media: image_profile,
+                    mediaType: "IMAGE",
                     title: "Дверной профиль ПВХ",
                     description: (
                         <>
@@ -42,14 +27,15 @@ const StandartDoorsConfiguration = () => {
                             <br />
                             <br />
                             Во всех наших дверях применяется только
-                            быстрозаменяемый уплотнитель не приклееный к
-                            профилю.
+                            быстрозаменяемый уплотнитель (не приклееный к
+                            профилю).
                         </>
                     ),
                 },
 
                 {
-                    image: image_furniture_zamok,
+                    media: image_furniture_zamok,
+                    mediaType: "IMAGE",
                     title: "Дверные замки",
                     description: (
                         <>
@@ -73,7 +59,8 @@ const StandartDoorsConfiguration = () => {
                 },
 
                 {
-                    image: image_furniture_hinges,
+                    media: image_furniture_hinges,
+                    mediaType: "IMAGE",
                     title: "Дверные петли",
                     description: (
                         <>
@@ -81,13 +68,14 @@ const StandartDoorsConfiguration = () => {
                                 Дверные петли &quot;WALA&quot; (Польша).
                             </strong>
                             <br />
-                            <br />
-                            Отличный запас прочности &mdash; допустимый вес
-                            створки до 160кг, регулировка в трёх направлениях.
+                            Эти петли имеют отличный запас прочности &mdash;
+                            допустимый вес створки до 160кг. Возможна
+                            регулировка в трёх направлениях.
                             <br />
                             <br />
                             Устанавливаем всегда не меньше 3-х петель на
-                            створку. С доводчиком &mdash; 4 петли.
+                            створку.
+                            <br />С доводчиком &mdash; обязательно 4 петли.
                         </>
                     ),
                 },

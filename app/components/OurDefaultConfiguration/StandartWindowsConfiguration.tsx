@@ -1,21 +1,5 @@
-import {
-    TableContainer,
-    Paper,
-    Table,
-    TableHead,
-    TableRow,
-    TableCell,
-    Typography,
-    TableBody,
-    Box,
-} from "@mui/material";
-import Image from "next/image";
-
 import image_profile from "@/public/images/profiles/veka_compare_2_800px.jpg";
-import image_furniture from "@/public/images/uni-jet 2.0_42.png";
-import image_steklopaket from "@/public/images/slides/steklopaket_1.jpg";
-import image_profile_color from "@/public/images/lamination_1_crop.png";
-import image_setka from "@/public/images/polotno_ms_2.png";
+import video_furniture from "@/public/video/PortalPSK_2.mp4";
 import DefaultConfigurationTemplate from "./DefaultConfigurationTemplate";
 
 const StandartWindowsConfiguration = () => {
@@ -24,7 +8,8 @@ const StandartWindowsConfiguration = () => {
             sectionTitle={"Окна"}
             sections={[
                 {
-                    image: image_profile,
+                    media: image_profile,
+                    mediaType: "IMAGE",
                     title: "Оконный профиль ПВХ",
                     description: (
                         <>
@@ -39,19 +24,38 @@ const StandartWindowsConfiguration = () => {
                             </strong>
                             <br />
                             <br />
-                            По специальному запросу поставляем также окна Rehau
-                            для ценителей бренда.
+                            <strong>
+                                Всё стальное армирование внутри профиля наших
+                                изделий соответcтвует последнему оконному ГОСТ
+                                23166-2024 и имеет толщину не менее 1.5мм.
+                            </strong>
+                            <br />
+                            В крупногабаритные и цветные створки мы всегда
+                            устанавливаем усиленное армирование толщиной 1.8мм,
+                            2.0мм, 2.5мм, подбирая его в соотвествии с
+                            прочностным расчётом.
                             <br />
                             <br />
-                            Во всех наших окнах применяется только
-                            быстрозаменяемый уплотнитель не приклееный к
-                            профилю.
+                            Наша Компания одной из первых на рынке начала
+                            выполнять требование оконного ГОСТ 23166-2024,
+                            который увеличивает минимальную толщину армировки до
+                            1.5мм. Мы приветствуем усиление армирующего профиля,
+                            т.к. он напрямую влияет на стойкость конструкций к
+                            провисанию, ветровой и температурной нагрузкам.
+                            <br />
+                            <br />
+                            <strong>
+                                Во всех наших окнах применяется только
+                                быстрозаменяемый уплотнитель (не приклееный к
+                                профилю).
+                            </strong>
                         </>
                     ),
                 },
 
                 {
-                    image: image_furniture,
+                    media: "/video/G-U_windows_promo_1.mp4",
+                    mediaType: "VIDEO",
                     title: "Оконная фурнитура",
                     description: (
                         <>
@@ -63,11 +67,50 @@ const StandartWindowsConfiguration = () => {
                             На сегодняшний день мы рекомендуем по ряду причин
                             именно G-U.
                             <br />
+                            <br />К сожалению, по нашему опыту, только немецкие
+                            бренды фурнитуры (G-U, MACO, ROTO, Siegenia)
+                            обеспечивают качественную работу окна в долгосрочной
+                            перспективе (более 5 лет). Крайне не рекомендуем
+                            любую экономию на оконном механизме. Ремонт дешёвой
+                            фурнитуры требуется гораздо раньше и редко бывает на
+                            100% успешным.
+                            <br />
                             <br />
                             <strong>
-                                Микропроветривание на поворотно-откидные створки
-                                всегда включено в стоимость.
+                                Микропроветривание устанавливаем всегда.
                             </strong>
+                            <br />
+                            Без него очень сложно обеспечить нормальную
+                            вентиляцию помещения в зимнее время.
+                            <br />
+                            <br />
+                            <strong>
+                                Микролифт - приподниматель устанавливаем всегда
+                                (как на поворотно - откидные, так и на
+                                поворотные створки).
+                            </strong>
+                            <br />
+                            Не забываем &quot;включать&quot; его регулировкой
+                            при навешивании створки.
+                            <br />
+                            <br />
+                            <strong>
+                                На двери балконных блоков устанавливаем
+                                магнитную защёлку.
+                            </strong>
+                            <br />В отличие от механической, она не
+                            чувствительна к просадке створки и работает всегда
+                            идеально без &quot;заеданий&quot;.
+                            <br />
+                            <br />
+                            <strong>
+                                Для окон первых этажей предлагаем противовзлоные
+                                элементы.
+                            </strong>
+                            <br />
+                            Они не дают взломщикам проникнуть в дом бесшумно.
+                            Удорожание фурнитуры незначительное (порядка 500 -
+                            1500 руб).
                         </>
                     ),
                 },

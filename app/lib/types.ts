@@ -1,5 +1,6 @@
 import { SvgIconTypeMap } from "@mui/material";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
+import { Asset } from "next-video/dist/cjs/assets.js";
 import { StaticImageData } from "next/image";
 import { ReactElement } from "react";
 
@@ -101,7 +102,8 @@ export interface IDefaultConfigurationTable {
 }
 
 interface IDefaultConfigurationSubsection {
-    image: StaticImageData;
+    media: StaticImageData | string;
+    mediaType: "IMAGE" | "VIDEO";
     title: string;
     description: ReactElement;
 }

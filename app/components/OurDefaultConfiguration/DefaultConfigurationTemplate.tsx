@@ -10,14 +10,19 @@ import {
     TableBody,
     Box,
 } from "@mui/material";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+import Player from "next-video/player";
 
 const DefaultConfigurationTemplate = ({
     sectionTitle,
     sections,
 }: IDefaultConfigurationTable) => {
     return (
-        <TableContainer component={Paper} elevation={12} sx={{ mt: 6 }}>
+        <TableContainer
+            component={Paper}
+            elevation={12}
+            sx={{ mt: 6, height: "100%" }}
+        >
             <Table size="small" sx={{ tableLayout: "fixed" }}>
                 <TableHead>
                     <TableRow sx={{ bgcolor: "#333" }}>
@@ -40,45 +45,98 @@ const DefaultConfigurationTemplate = ({
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {sections.map((section) => {
+                    {sections.map((section, index) => {
                         return (
-                            <TableRow sx={{ verticalAlign: "top" }}>
-                                <TableCell sx={{ p: { xs: 2, md: 4 } }}>
-                                    {section.image.width >=
-                                    section.image.height ? (
-                                        <Image
-                                            src={section.image}
-                                            width={section.image.width}
-                                            height={section.image.height}
-                                            sizes="50vw"
-                                            alt={section.title}
-                                            style={{
-                                                width: "100%",
-                                                height: "auto",
-                                            }}
-                                        />
+                            <TableRow
+                                sx={{ verticalAlign: "top" }}
+                                key={section.title}
+                            >
+                                <TableCell
+                                    sx={{
+                                        p: {
+                                            xs: 2,
+                                            md: 4,
+                                            borderBottom:
+                                                index + 1 == sections.length
+                                                    ? 0
+                                                    : "1px solid rgba(224, 224, 224, 1)",
+                                        },
+                                    }}
+                                >
+                                    {section.mediaType == "IMAGE" ? (
+                                        (section.media as StaticImageData)
+                                            .width >=
+                                        (section.media as StaticImageData)
+                                            .height ? (
+                                            <Image
+                                                src={
+                                                    section.media as StaticImageData
+                                                }
+                                                width={
+                                                    (
+                                                        section.media as StaticImageData
+                                                    ).width
+                                                }
+                                                height={
+                                                    (
+                                                        section.media as StaticImageData
+                                                    ).height
+                                                }
+                                                sizes="50vw"
+                                                alt={section.title}
+                                                style={{
+                                                    width: "100%",
+                                                    height: "auto",
+                                                }}
+                                            />
+                                        ) : (
+                                            <Box
+                                                sx={{
+                                                    width: "100%",
+                                                    height: "300px",
+                                                    textAlign: "center",
+                                                }}
+                                            >
+                                                <Image
+                                                    src={
+                                                        section.media as StaticImageData
+                                                    }
+                                                    width={
+                                                        (
+                                                            section.media as StaticImageData
+                                                        ).width
+                                                    }
+                                                    height={
+                                                        (
+                                                            section.media as StaticImageData
+                                                        ).height
+                                                    }
+                                                    alt={section.title}
+                                                    style={{
+                                                        width: "auto",
+                                                        height: "100%",
+                                                        verticalAlign: "bottom",
+                                                    }}
+                                                />
+                                            </Box>
+                                        )
                                     ) : (
                                         <Box
                                             sx={{
                                                 width: "100%",
-                                                height: "300px",
-                                                textAlign: "center",
+                                                height: "auto",
+                                                border: "1px solid grey",
+                                                p: 1,
                                             }}
                                         >
-                                            <Image
-                                                src={section.image}
-                                                width={section.image.width}
-                                                height={section.image.height}
-                                                alt={section.title}
-                                                style={{
-                                                    width: "auto",
-                                                    height: "100%",
-                                                    verticalAlign: "bottom",
-                                                }}
+                                            <Player
+                                                src={section.media as string}
+                                                poster={(
+                                                    section.media as string
+                                                ).replace("mp4", "jpg")}
                                             />
                                         </Box>
                                     )}
-
                                     <Typography
                                         gutterBottom
                                         sx={{
