@@ -116,9 +116,16 @@ const PriceCompareApartments = () => {
                             sx={{ display: { xs: "none", sm: "table-cell" } }}
                         >
                             {renderLargeFont(<>ЭТАЖ</>, true)}
+
+                            {renderSubtitle(<>установки окон</>, true)}
                         </TableCell>
                         <TableCell sx={{ px: { xs: 0, sm: 1, md: 1 } }}>
                             {renderLargeFont(<>ПРОФИЛЬ&shy;НАЯ СИСТЕМА</>)}
+
+                            {renderSubtitle(
+                                <>минимально - рекомендованная</>,
+                                true
+                            )}
                         </TableCell>
                         <TableCell
                             sx={{

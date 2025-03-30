@@ -213,14 +213,16 @@ export default function Home() {
             </Container>
 
             <Box
-                width={"100%"}
-                bgcolor="#333"
-                textAlign={"center"}
-                padding={4}
-                marginTop={12}
+                sx={{
+                    width: "100%",
+                    bgcolor: "#333",
+                    textAlign: "center",
+                    p: 4,
+                    mt: 26,
+                }}
             >
                 {[
-                    <>НАШ ПРИНЦИП РАБОТЫ</>,
+                    // <>НАШ ПРИНЦИП РАБОТЫ</>,
                     <>
                         Мы не предлагаем &quot;дорогие&quot; или
                         &quot;дешёвые&quot; окна и двери.
