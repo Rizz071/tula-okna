@@ -45,7 +45,7 @@ export default function Page() {
                     caption: "Окна на дачу",
                     subCaption: "перейти в раздел",
                     image: dachaImg,
-                    link: "/okna/apartments",
+                    link: "/okna/dacha",
                     description: (
                         <>Без лишних переплат, только для летнего проживания.</>
                     ),

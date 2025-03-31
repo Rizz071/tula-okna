@@ -29,7 +29,7 @@ import ResponsiveHeader_H1 from "../components/Article/ResponsiveHeader_H1";
 export default function Page() {
     return (
         <>
-            <HeroImageSlider sliderImage={slideImage} isCardVisible={true} />
+            <HeroImageSlider sliderImage={slideImage} isCardVisible={false} />
 
             <ProductionCardsContainer
                 title={"ТЁПЛЫЕ РАЗДВИЖНЫЕ ДВЕРИ - ПОРТАЛЫ"}
@@ -494,9 +494,9 @@ export default function Page() {
                                 дома с круглогодичным продиванием.
                             </>,
                             <>
-                                Такие конструкции позволяют визуально "убрать"
-                                границу между внутренним помещением и природой
-                                за окном.
+                                Такие конструкции позволяют визуально
+                                &quot;убрать&quot; границу между внутренним
+                                помещением и природой за окном.
                             </>,
                             <>Необходимо по</>,
                         ],
@@ -523,9 +523,9 @@ export default function Page() {
                                 дома с круглогодичным продиванием.
                             </>,
                             <>
-                                Такие конструкции позволяют визуально "убрать"
-                                границу между внутренним помещением и природой
-                                за окном.
+                                Такие конструкции позволяют визуально
+                                &quot;убрать&quot; границу между внутренним
+                                помещением и природой за окном.
                             </>,
                             <>Необходимо по</>,
                             <>

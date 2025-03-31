@@ -45,6 +45,7 @@ const ProductionCardsContainer = ({ title, cardsArray }: Props) => {
                                 fontSize: { xs: "1.1rem", sm: "1.5rem" },
                                 textAlign: "center",
                                 py: 2,
+                                px: 2,
                                 textTransform: "uppercase",
                                 color: "white",
                                 fontWeight: 300,

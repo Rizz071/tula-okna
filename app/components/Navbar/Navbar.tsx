@@ -23,10 +23,10 @@ const Navbar = () => {
     const menuItems: IMainMenuItem[] = [
         { name: "главная", link: "/", icon: HomeSharpIcon },
         { name: "окна", link: "/okna", icon: WindowSharpIcon },
-        { name: "двери", link: "/", icon: MeetingRoomSharpIcon },
+        { name: "двери", link: "/doors", icon: MeetingRoomSharpIcon },
         { name: "балконы", link: "/balkony", icon: ViewArraySharpIcon },
         { name: "порталы", link: "/portaly", icon: DoorSlidingSharpIcon },
-        { name: "фасадное остекление", link: "/", icon: AppsSharpIcon },
+        // { name: "фасадное остекление", link: "/", icon: AppsSharpIcon },
         {
             name: "цены",
             link: "/ceny/stoimost-tipovyh-okon",
