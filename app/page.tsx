@@ -32,6 +32,7 @@ import rehau_sert_1 from "../public/images/certificates/rehau_cert1.jpg";
 import slideImage from "@/public/images/slides/MainSlide_6k_sharp.jpg";
 import Front_small_2 from "@/public/images/Front_small_2.webp";
 import Front_small_3 from "@/public/images/Front_small_3.webp";
+import lenta_10 from "@/public/images/lenta_10.png";
 import House from "@/public/images/House.webp";
 import Doors from "@/public/images/Doors.webp";
 import apartements1 from "@/public/images/window_14.png";
@@ -157,6 +158,60 @@ export default function Home() {
                                 <>
                                     Производственный цех нашего партнёра ЗСК
                                     ГЛАССПРОМ
+                                </>
+                            ),
+                            border: true,
+                        },
+                    },
+
+                    {
+                        imageSide: ImageSide.LEFT,
+                        articleTitle: "Наш подход к монтажу",
+                        articleParagraphsJSX: [
+                            <>
+                                Согласно требованиям ГОСТ 30971 монтажный шов
+                                должен быть трёхслойным: наружная гидроизоляция,
+                                слой монтажной пены и внутренняя пароизоляция.
+                            </>,
+                            <>
+                                Со стороны улицы мы должны защитить монтажную
+                                пену от солнечных лучей и влаги, а изнутри
+                                &mdash; от влажного воздуха жилого помещения.
+                            </>,
+                            <>
+                                К сожалению, на оконном рынке распространена
+                                ситуация, когда окна устанавливаются на одну
+                                только пену. В этом случае буквально через год
+                                пена желтеет и выкрашивается. Это ложная
+                                экономия, так как позже приводит к значительным
+                                затратам на ремонт, не сопоставимым с ценой
+                                изолирующих монтажных лент или мастики.
+                            </>,
+                            <>
+                                <strong>
+                                    Мы всегда включаем в стоимость стандартного
+                                    остекления монтажные ленты. Считаем, что это
+                                    важная часть монтажных работ и ГОСТ 30971
+                                    обязателен к исполнению.
+                                </strong>
+                            </>,
+                            <>
+                                Бывают случаи, когда установка монтажных лент
+                                действительно не обязательна. Эти моменты
+                                выясняются при проведении замера и
+                                согласовываются с клиентом.
+                            </>,
+                        ],
+                        articlesAccordion: [],
+                        articleImage: {
+                            imageSrc: lenta_10,
+                            imageCaption: (
+                                <>
+                                    Вертикальный разрез типового монтажного
+                                    узла. Профиль VEKA Euroline.
+                                    <br />
+                                    Используем ПСУЛ и полнобутиловые ленты,
+                                    которые не отслаиваются от стены.
                                 </>
                             ),
                             border: true,
@@ -827,7 +882,7 @@ export default function Home() {
                         </Box>
                     </Grid> */}
 
-                    <Grid size={{ xs: 12 }}>
+                    {/* <Grid size={{ xs: 12 }}>
                         <Divider />
                     </Grid>
                     <Grid size={{ xs: 12 }}>
@@ -876,15 +931,14 @@ export default function Home() {
 
                     <Grid size={{ xs: 12 }}>
                         <Divider />
-                    </Grid>
+                    </Grid> */}
 
                     <Grid size={{ xs: 12 }}>
                         <Typography
                             variant="h1"
                             sx={{ typography: { xs: "h5", md: "h1" } }}
                         >
-                            Как заказать окна Kaleva, Veka и Rehau в Туле и
-                            области
+                            Как заказать пластиковые окна в Туле
                         </Typography>
                     </Grid>
                     <Grid size={{ xs: 12, md: 6 }}>
@@ -907,7 +961,7 @@ export default function Home() {
 
                                 {
                                     item_label:
-                                        "Уточните детали заказа с монтажниками",
+                                        "Уточните детали заказа на замере с монтажниками",
                                     item_content:
                                         "Они подскажут, какой тип оконного блока вам подойдет лучше всего. Окна для летнего дома, квартиры или коттеджа, не говоря уже о техническом помещениии, будут очень разные!",
                                 },
@@ -945,12 +999,6 @@ export default function Home() {
                                 );
                             })}
                         </Stepper>
-
-                        <Typography>
-                            Хотите сделать свою квартиру максимально комфортной,
-                            привлекательной, безопасной - выберите оконные блоки
-                            от нашей Компании!
-                        </Typography>
                     </Grid>
 
                     <Grid size={{ xs: 12, md: 6 }}>
