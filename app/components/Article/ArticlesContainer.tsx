@@ -4,7 +4,7 @@ import { Fragment } from "react";
 import { articlesContainer, ImageSide } from "@/app/lib/types";
 import ArticleText from "./ArticleText";
 import ArticleDetails from "./ArticleDetails";
-import ArticleImage from "./ArticleImage";
+import ArticleMedia from "./ArticleMedia";
 import ResponsiveHeader_H1 from "./ResponsiveHeader_H1";
 import ResponsiveHeader_H2 from "./ResponsiveHeader_H2";
 
@@ -64,7 +64,7 @@ const ArticlesContainer = ({ mainTitle, articles }: articlesContainer) => {
                             }}
                         >
                             <Box sx={{ alignSelf: "center" }}>
-                                <ArticleImage article={article} />
+                                <ArticleMedia article={article} />
                             </Box>
                         </Grid>
 

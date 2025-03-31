@@ -28,7 +28,7 @@ export interface Article {
     articleTitle: string;
     articleParagraphsJSX: ReactElement[];
     articlesAccordion: ArticleDetailsAccordion[];
-    articleImage: ArticleImage;
+    articleMedia: ArticleImage | ReactElement;
     imageSide: ImageSide;
     anchor?: string;
 }
@@ -68,8 +68,6 @@ export interface IProfilePage {
         promoVideoSrc: string;
         promoVideoPictureSrc: string;
     }
-
-
 }
 
 interface ProfileTableLine {

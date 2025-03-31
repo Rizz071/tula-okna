@@ -88,7 +88,7 @@ export default function Page() {
                             </>,
                         ],
                         articlesAccordion: [],
-                        articleImage: {
+                        articleMedia: {
                             imageSrc: provedal_1,
                             imageCaption: (
                                 <>
@@ -136,7 +136,7 @@ export default function Page() {
                             </>,
                         ],
                         articlesAccordion: [],
-                        articleImage: {
+                        articleMedia: {
                             imageSrc: provedal_2,
                             imageCaption: (
                                 <>
@@ -200,7 +200,7 @@ export default function Page() {
                                 ],
                             },
                         ],
-                        articleImage: {
+                        articleMedia: {
                             imageSrc: provedal_compare_1,
                             imageCaption: <></>,
                         },

@@ -116,7 +116,7 @@ export default function Home() {
                             </>,
                         ],
                         articlesAccordion: [],
-                        articleImage: {
+                        articleMedia: {
                             imageSrc: worker_plant_1,
                             imageCaption: (
                                 <>
@@ -153,7 +153,7 @@ export default function Home() {
                             </>,
                         ],
                         articlesAccordion: [],
-                        articleImage: {
+                        articleMedia: {
                             imageSrc: glassprom1,
                             imageCaption: (
                                 <>
@@ -204,7 +204,7 @@ export default function Home() {
                             </>,
                         ],
                         articlesAccordion: [],
-                        articleImage: {
+                        articleMedia: {
                             imageSrc: lenta_10,
                             imageCaption: (
                                 <>
@@ -337,7 +337,7 @@ export default function Home() {
                             </>,
                         ],
                         articlesAccordion: [],
-                        articleImage: {
+                        articleMedia: {
                             imageSrc: besedka,
                             imageCaption: (
                                 <>

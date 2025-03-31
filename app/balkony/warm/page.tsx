@@ -67,7 +67,7 @@ export default function Page() {
                             </>,
                         ],
                         articlesAccordion: [],
-                        articleImage: {
+                        articleMedia: {
                             imageSrc: balc_1,
                             imageCaption: <>Утепленное остекление балкона</>,
                             border: true,
@@ -106,7 +106,7 @@ export default function Page() {
                             </>,
                         ],
                         articlesAccordion: [],
-                        articleImage: {
+                        articleMedia: {
                             imageSrc: balc_3,
                             imageCaption: (
                                 <>
@@ -151,7 +151,7 @@ export default function Page() {
                             </>,
                         ],
                         articlesAccordion: [],
-                        articleImage: {
+                        articleMedia: {
                             imageSrc: balc_2,
                             imageCaption: (
                                 <>

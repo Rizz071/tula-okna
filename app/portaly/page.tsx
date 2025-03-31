@@ -74,6 +74,61 @@ export default function Page() {
             />
 
             <Container maxWidth={"lg"}>
+                {/* <Grid container>
+                    <Grid size={6}>
+                        <Grid container size={12} columnSpacing={4}>
+                            <Grid size={6}>
+                                <Box
+                                    sx={{
+                                        width: "100%",
+                                        border: "1px solid grey",
+                                        mt: 0,
+                                        p: 1,
+                                    }}
+                                >
+                                    <Player
+                                        src={"/video/PortalPSK_2.mp4"}
+                                        // poster={"/video/PortalFS_1.jpg"}
+                                    />
+                                </Box>
+                            </Grid>
+                            <Grid size={6}>
+                                <Box
+                                    sx={{
+                                        width: "100%",
+                                        border: "1px solid grey",
+                                        mt: 0,
+                                        p: 1,
+                                    }}
+                                >
+                                    <Player
+                                        src={"/video/PortalPSK_3.mp4"}
+                                        // poster={"/video/PortalFS_1.jpg"}
+                                    />
+                                </Box>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid size={6}>
+                        <Typography sx={{ mt: 0 }}>
+                            <strong>Раздвижные пластиковые двери</strong> —
+                            прекрасное решение для частных домов, коттеджей и
+                            квартир с широким выходом на балкон. Такие
+                            конструкции позволяют отлично сохранять тепло в
+                            помещении, они полностью герметичны в закрытом
+                            положении, а также являются надежным препятствием на
+                            пути уличного шума.
+                        </Typography>
+                        <Typography>
+                            Сейчас порталы пвх приобретают всё большую
+                            популярность. Только раздвижные окна позволяют
+                            собрать теплые раздвижные створки шириной до 1,6 м и
+                            высотой до 2,7м каждая, причем для того, чтобы их
+                            открыть вполне хватит силы женщины или ребенка.
+                        </Typography>
+                    </Grid>
+                </Grid> */}
+
                 <Grid container spacing={8} sx={{ position: "relative" }}>
                     <Grid size={12} sx={{ mt: 12 }}>
                         <ResponsiveHeader_H1 text="Описание основных портальных конструкций" />
@@ -475,13 +530,52 @@ export default function Page() {
                             // </>,
                         ],
                         articlesAccordion: [],
-                        articleImage: {
-                            imageSrc: image_1,
-                            imageCaption: (
-                                <>Портальная дверь как выход на лоджию</>
-                            ),
-                            border: true,
-                        },
+                        articleMedia: (
+                            <>
+                                <Stack direction={"column"}>
+                                    <Stack direction={"row"} spacing={6}>
+                                        <Box
+                                            sx={{
+                                                width: "100%",
+                                                height: "100%",
+                                                display: "block",
+                                                p: "10px",
+                                                border: "solid 1px #333",
+                                            }}
+                                        >
+                                            <Player
+                                                src={"/video/PortalPSK_2.mp4"}
+                                                // poster={"/video/PortalFS_1.jpg"}
+                                            />
+                                        </Box>
+                                        <Box
+                                            sx={{
+                                                width: "100%",
+                                                height: "100%",
+                                                display: "block",
+                                                p: "10px",
+                                                border: "solid 1px #333",
+                                            }}
+                                        >
+                                            <Player
+                                                src={"/video/PortalPSK_2.mp4"}
+                                                // poster={"/video/PortalFS_1.jpg"}
+                                            />
+                                        </Box>
+                                    </Stack>
+                                    <Typography
+                                        variant="body2"
+                                        sx={{
+                                            textAlign: "center",
+                                            fontWeight: 500,
+                                            mt: 2,
+                                        }}
+                                    >
+                                        sdfsdfs df sdf sdf sd fs
+                                    </Typography>
+                                </Stack>
+                            </>
+                        ),
                     },
 
                     {
@@ -501,7 +595,7 @@ export default function Page() {
                             <>Необходимо по</>,
                         ],
                         articlesAccordion: [],
-                        articleImage: {
+                        articleMedia: {
                             imageSrc: balc_3,
                             imageCaption: (
                                 <>
@@ -527,7 +621,6 @@ export default function Page() {
                                 &quot;убрать&quot; границу между внутренним
                                 помещением и природой за окном.
                             </>,
-                            <>Необходимо по</>,
                             <>
                                 <strong>
                                     Только при этих условиях вы сможете избежать
@@ -537,7 +630,7 @@ export default function Page() {
                             </>,
                         ],
                         articlesAccordion: [],
-                        articleImage: {
+                        articleMedia: {
                             imageSrc: balc_2,
                             imageCaption: (
                                 <>

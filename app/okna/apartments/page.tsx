@@ -119,7 +119,7 @@ export default function Page() {
                                 ],
                             },
                         ],
-                        articleImage: {
+                        articleMedia: {
                             imageSrc: energosber_1,
                             imageCaption: (
                                 <>
@@ -175,7 +175,7 @@ export default function Page() {
                                 ],
                             },
                         ],
-                        articleImage: {
+                        articleMedia: {
                             imageSrc: furniture_1,
                             imageCaption: (
                                 <>
@@ -249,7 +249,7 @@ export default function Page() {
                                 ],
                             },
                         ],
-                        articleImage: {
+                        articleMedia: {
                             imageSrc: otkos_1,
                             imageCaption: (
                                 <>
@@ -318,7 +318,7 @@ export default function Page() {
                                 ],
                             },
                         ],
-                        articleImage: {
+                        articleMedia: {
                             imageSrc: psul_lenta_3,
                             imageCaption: (
                                 <>
@@ -416,7 +416,7 @@ export default function Page() {
                                 ],
                             },
                         ],
-                        articleImage: {
+                        articleMedia: {
                             imageSrc: veter_1,
                             imageCaption: (
                                 <>
@@ -483,7 +483,7 @@ export default function Page() {
                                 ],
                             },
                         ],
-                        articleImage: {
+                        articleMedia: {
                             imageSrc: micro_2,
                             imageCaption: (
                                 <>
