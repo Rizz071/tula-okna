@@ -48,7 +48,7 @@ const VekaUniqueAdvatages = () => {
                             ],
                         },
                     ],
-                    articleImage: {
+                    articleMedia: {
                         imageSrc: veka_thickness,
                         imageCaption: (
                             <>
@@ -113,7 +113,7 @@ const VekaUniqueAdvatages = () => {
                             ],
                         },
                     ],
-                    articleImage: {
+                    articleMedia: {
                         imageSrc: veka_armir_2,
                     },
                 },

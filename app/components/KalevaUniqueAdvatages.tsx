@@ -51,7 +51,7 @@ const KalevaUniqueAdvatages = () => {
                         </>,
                     ],
                     articlesAccordion: [],
-                    articleImage: {
+                    articleMedia: {
                         imageSrc: adv_1,
                         border: true,
                     },
@@ -96,7 +96,7 @@ const KalevaUniqueAdvatages = () => {
                         </>,
                     ],
                     articlesAccordion: [],
-                    articleImage: {
+                    articleMedia: {
                         imageSrc: adv_2,
                         border: true,
                     },
@@ -133,7 +133,7 @@ const KalevaUniqueAdvatages = () => {
                         </>,
                     ],
                     articlesAccordion: [],
-                    articleImage: {
+                    articleMedia: {
                         imageSrc: adv_3,
                         border: true,
                     },
