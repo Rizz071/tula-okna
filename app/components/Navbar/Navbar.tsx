@@ -15,6 +15,7 @@ import MeetingRoomSharpIcon from "@mui/icons-material/MeetingRoomSharp";
 import ViewArraySharpIcon from "@mui/icons-material/ViewArraySharp";
 import DoorSlidingSharpIcon from "@mui/icons-material/DoorSlidingSharp";
 import AppsSharpIcon from "@mui/icons-material/AppsSharp";
+import HeadsetMicIcon from "@mui/icons-material/HeadsetMic";
 
 const Navbar = () => {
     const theme = useTheme();
@@ -32,6 +33,7 @@ const Navbar = () => {
             link: "/ceny/stoimost-tipovyh-okon",
             icon: AppsSharpIcon,
         },
+        { name: "контакты", link: "/contacts", icon: HeadsetMicIcon },
     ];
 
     return (

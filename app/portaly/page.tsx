@@ -52,7 +52,7 @@ export default function Page() {
                                 порталов
                             </>
                         ),
-                        link: "#difference",
+                        link: "#portal_common",
                     },
                     {
                         image: portal_apartments,
@@ -172,7 +172,7 @@ export default function Page() {
                     },
 
                     {
-                        anchor: "portal_balc",
+                        anchor: "portal_common",
                         imageSide: ImageSide.RIGHT,
                         articleTitle: "Общее описание порталов",
                         articleParagraphsJSX: [
