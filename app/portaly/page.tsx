@@ -4,9 +4,6 @@ import { ImageSide } from "@/app/lib/types";
 import ProductionCardsContainer from "../components/ProductionCards/ProductionCardsContainer";
 import HeroImageSlider from "@/app/components/HeaderSlider";
 import ArticlesContainer from "@/app/components/Article/ArticlesContainer";
-import image_1 from "@/public/video/PortalPSK_2.jpg";
-import balc_2 from "@/public/images/Sovmesh2.jpg";
-import balc_3 from "@/public/images/balkoni/20160717_151629-2.png";
 import Player from "next-video/player";
 import Image from "next/image";
 import portal_apartments from "@/public/images/portali/portal5.jpg";
@@ -17,6 +14,7 @@ import porog_otopl_1 from "@/public/images/porog_otopl_1.png";
 import radiator_1 from "@/public/images/portal_radiator_1.png";
 import radiator_2 from "@/public/images/portal_radiator_2.jpg";
 import radiator_3 from "@/public/images/portal_radiator_3.jpg";
+import portal_section_2 from "@/public/images/Portal_section_2.png";
 
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ThumbDownIcon from "@mui/icons-material/ThumbDown";
@@ -26,8 +24,6 @@ import {
     Grid2 as Grid,
     List,
     ListItem,
-    ListItemAvatar,
-    ListItemText,
     Paper,
     Stack,
     Table,
@@ -36,7 +32,6 @@ import {
     TableContainer,
     TableHead,
     TableRow,
-    TextareaAutosize,
     Typography,
 } from "@mui/material";
 
@@ -114,7 +109,7 @@ export default function Page() {
                             <>
                                 Сейчас порталы пвх приобретают всё большую
                                 популярность. Только раздвижные окна позволяют
-                                собрать теплые раздвижные створки шириной до 1,6
+                                собрать тёплые раздвижные створки шириной до 1,6
                                 м и высотой до 2,7м каждая, причем для того,
                                 чтобы их открыть вполне хватит силы женщины или
                                 ребенка.
@@ -701,77 +696,8 @@ export default function Page() {
                     },
 
                     {
-                        anchor: "portal_veranda",
-                        imageSide: ImageSide.LEFT,
-                        articleTitle: "Складной портал для веранд и беседок",
-                        articleParagraphsJSX: [
-                            <>
-                                Портал, установленный в беседке превращает её в
-                                тёплое помещение зимой, а летом позволяет
-                                держать всё пространство открытым.
-                            </>,
-                            <>
-                                <strong>
-                                    Для особо длинных проёмов (до 4,5 метров)
-                                    отлично подходят складные порталы типа ФС.
-                                </strong>
-                            </>,
-                            <>
-                                Из-за особенностей их конструкции, такие порталы
-                                нельзя использовать в жилом помещении, но для
-                                тёплых веранд и беседок они подходят отлично.
-                            </>,
-                        ],
-                        articlesAccordion: [],
-                        articleMedia: (
-                            <Stack direction={"column"}>
-                                <Stack direction={"row"} spacing={4}>
-                                    <Box
-                                        sx={{
-                                            width: "100%",
-                                            height: "100%",
-                                            display: "block",
-                                            p: "10px",
-                                            border: "solid 1px #333",
-                                        }}
-                                    >
-                                        <Player
-                                            src={"/video/fs_portal_10.webm"}
-                                            // poster={"/video/PortalFS_1.jpg"}
-                                        />
-                                    </Box>
-                                    <Box
-                                        sx={{
-                                            width: "100%",
-                                            height: "100%",
-                                            display: "block",
-                                            p: "10px",
-                                            border: "solid 1px #333",
-                                        }}
-                                    >
-                                        <Player
-                                            src={"/video/fs_portal_11.webm"}
-                                            // poster={"/video/PortalFS_1.jpg"}
-                                        />
-                                    </Box>
-                                </Stack>
-                                <Typography
-                                    variant="body2"
-                                    sx={{
-                                        textAlign: "center",
-                                        fontWeight: 500,
-                                        mt: 2,
-                                    }}
-                                >
-                                    Сдвижные двери типа ПСК как выход на лоджию.
-                                </Typography>
-                            </Stack>
-                        ),
-                    },
-
-                    {
                         anchor: "portal_heating",
-                        imageSide: ImageSide.RIGHT,
+                        imageSide: ImageSide.LEFT,
                         articleTitle: "Требования к отоплению",
                         articleParagraphsJSX: [
                             <>
@@ -809,7 +735,7 @@ export default function Page() {
 
                     {
                         anchor: "portal_cottage",
-                        imageSide: ImageSide.LEFT,
+                        imageSide: ImageSide.RIGHT,
                         articleTitle: "",
                         articleParagraphsJSX: [
                             <>
@@ -958,60 +884,6 @@ export default function Page() {
                                         </TableBody>
                                     </Table>
                                 </TableContainer>
-
-                                {/* <Grid
-                                    container
-                                    rowSpacing={2}
-                                    columnSpacing={12}
-                                    sx={{ mt: 1, ml: 2 }}
-                                >
-                                    <Grid size={3}>
-                                        <strong>ОТЛИЧНО:</strong>
-                                    </Grid>
-                                    <Grid size={9}>
-                                        <strong>
-                                            Встроенные в пол конвекторы
-                                        </strong>
-                                        <br />
-                                        Они не мешают проходу, но относительно
-                                        дороги в установке
-                                    </Grid>
-                                    <Grid size={3}>
-                                        <strong>ДОПУСТИМО:</strong>
-                                    </Grid>
-                                    <Grid size={9}>
-                                        <strong>
-                                            Низкие напольные радиаторы
-                                        </strong>
-                                        <br />
-                                        Можно можно установить под глухую часть
-                                        портала.
-                                    </Grid>
-                                    <Grid size={3}>
-                                        <strong>ДОПУСТИМО:</strong>
-                                    </Grid>
-                                    <Grid size={9}>
-                                        <strong>
-                                            Вертикальные настенные радиаторы
-                                        </strong>
-                                        <br />
-                                        Такие радиаторы не мешают проходу, но
-                                        прогревают портал только по бокам. Зато
-                                        их можно установить на стене рядом с
-                                        открывающейся створкой.
-                                    </Grid>
-                                    <Grid size={3}>
-                                        <strong>ПЛОХО:</strong>
-                                    </Grid>
-                                    <Grid size={9}>
-                                        <strong>Тёплый пол</strong>
-                                        <br />К сожалению, многие выбирают
-                                        именно этот способ отопления, но он же
-                                        является самым негодным, т.к. не всегда
-                                        обеспечивает достаточного притока тепла
-                                        к стеклу.
-                                    </Grid>
-                                </Grid> */}
                             </>,
                         ],
                         articlesAccordion: [],
@@ -1029,7 +901,7 @@ export default function Page() {
 
                     {
                         anchor: "portal_assembly",
-                        imageSide: ImageSide.RIGHT,
+                        imageSide: ImageSide.LEFT,
                         articleTitle: "Особенности нашей сборки",
                         articleParagraphsJSX: [
                             <>
@@ -1049,8 +921,8 @@ export default function Page() {
                                         СОФТЛАЙН 70, 82)
                                     </ListItem>
                                     <ListItem>
-                                        2. Армирование профиля усиленное,
-                                        толщиной 1,8-2,0мм
+                                        2. Армирование профиля &mdash; усиленное
+                                        (толщиной 1,8 - 2,0мм)
                                     </ListItem>
                                     <ListItem>
                                         3. Фурнитура немецкого или австрийского
@@ -1064,16 +936,16 @@ export default function Page() {
                                     <ListItem>
                                         5. Энергосберегающее покрытие стекла
                                         (обычно два слоя) &mdash; для
-                                        компенсации большой теплопотери
+                                        компенсации теплопотери через стекло
                                     </ListItem>
                                     <ListItem>
-                                        6. Если есть среднее стекло, то оно
-                                        &mdash; не менее 5мм
+                                        6. Если есть среднее стекло, то &mdash;
+                                        не менее 5мм толщиной
                                     </ListItem>
                                     <ListItem>
                                         7. С трёх сторон устанавливаем доборные
-                                        профили удобства выполнения внутренней
-                                        отделки в дальнейшем
+                                        профили для удобства выполнения
+                                        внутренней отделки в будущем
                                     </ListItem>
                                     <ListItem>
                                         8. Если портал из двух и более контуров
@@ -1087,48 +959,39 @@ export default function Page() {
                             </>,
                             <>
                                 <strong>
-                                    На составляющих портала не допустимо
-                                    экономить!
-                                </strong>{" "}
-                                Тонкий профиль, слабое армирование, стёкла всего
-                                лишь 4мм толщиной &mdash; всё это может привести
-                                к ненадёжной конструкции, которую невозможно
-                                будет отрегулировать, или к саморазрушению
-                                стеклопакета из-за слипания стекол.
-                            </>,
-                            <>
-                                <strong>
-                                    Портал &mdash; сложное изделие, но собирая
-                                    его из надёжных комплектующих, можно не
-                                    вспоминать о регулировке годами.
+                                    На составляющих портала нельзя экономить!
                                 </strong>
+                                <br />
+                                Тонкий профиль класса Б, слабое армирование,
+                                стёкла всего лишь 4мм толщиной &mdash; всё это
+                                может привести к созданию ненадёжной
+                                конструкции, которую невозможно будет
+                                отрегулировать, или к саморазрушению
+                                стеклопакета из-за слипания стекол.
                             </>,
                         ],
                         articlesAccordion: [],
                         articleMedia: {
-                            imageSrc: radiator_2,
+                            imageSrc: portal_section_2,
                             imageCaption: (
-                                <>
-                                    Внутрипольный конвектор для отопления
-                                    портальных дверей
-                                </>
+                                <>Фрагмент сечения портала ПСК mZ 150-966</>
                             ),
-                            border: true,
+                            // border: true,
                         },
                     },
 
                     // {
                     //     anchor: "portal_cottage",
-                    //     imageSide: ImageSide.LEFT,
-                    //     articleTitle: "Подъёмно - сдвижной портал",
+                    //     imageSide: ImageSide.RIGHT,
+                    //     articleTitle: "Выбор портального порога",
                     //     articleParagraphsJSX: [
                     //         <>
-                    //             Для портальных дверей в общем случае существует
-                    //             два типа порога:
+                    //             Для портальных дверей в существует два типа
+                    //             порога:
                     //             <br />
-                    //             &emsp;- Высокий &quot;порог - рама&quot; (70мм)
+                    //             &emsp;- Высокий &quot;порог - рама&quot; (~70мм)
                     //             <br />
-                    //             &emsp;- Низкий алюминиевый порожек (20мм)
+                    //             &emsp;- Низкий алюминиевый порожек (~20мм)
                     //         </>,
                     //         <>
                     //             <strong>Высокий порог (рекомендуется!)</strong>
@@ -1172,49 +1035,14 @@ export default function Page() {
                     //     ],
                     //     articlesAccordion: [],
                     //     articleMedia: {
-                    //         imageSrc: radiator_2,
+                    //         imageSrc: portal_porog_compare_1,
                     //         imageCaption: (
                     //             <>
-                    //                 Внутрипольный конвектор для отопления
-                    //                 портальных дверей
+                    //                 Низкий порог &mdash; только для холодных
+                    //                 помещений!
                     //             </>
                     //         ),
-                    //         border: true,
-                    //     },
-                    // },
-
-                    // {
-                    //     anchor: "portal_cottage",
-                    //     imageSide: ImageSide.RIGHT,
-                    //     articleTitle: "Особенности нашей сборки и монтажа",
-                    //     articleParagraphsJSX: [
-                    //         <>
-                    //             Наиболее часто мы устанавливаем порталы именно в
-                    //             дома с круглогодичным продиванием.
-                    //         </>,
-                    //         <>
-                    //             Такие конструкции позволяют визуально
-                    //             &quot;убрать&quot; границу между внутренним
-                    //             помещением и природой за окном.
-                    //         </>,
-                    //         <>
-                    //             <strong>
-                    //                 Только при этих условиях вы сможете избежать
-                    //                 обильного выпадения конденсата на стекле в
-                    //                 зимний период!
-                    //             </strong>
-                    //         </>,
-                    //     ],
-                    //     articlesAccordion: [],
-                    //     articleMedia: {
-                    //         imageSrc: radiator_2,
-                    //         imageCaption: (
-                    //             <>
-                    //                 Внутрипольный конвектор для отопления
-                    //                 портальных дверей.
-                    //             </>
-                    //         ),
-                    //         border: true,
+                    //         // border: true,
                     //     },
                     // },
                 ]}

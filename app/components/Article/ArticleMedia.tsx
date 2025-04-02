@@ -30,7 +30,8 @@ const ArticleMedia = ({ article }: { article: Article }) => {
                     >
                         <Image
                             src={article.articleMedia.imageSrc}
-                            sizes={"50vw"}
+                            // unoptimized
+                            // quality={95}
                             style={{
                                 verticalAlign: "bottom",
                                 width: "100%",
