@@ -1,9 +1,9 @@
 const config = {
-    siteUrl: "https://тульские-окна.рф",
+    siteUrl: "https://xn----8sbnljdcvhzjm2j.xn--p1ai",
     generateRobotsTxt: true,
     robotsTxtOptions: {
         policies: [
-            { userAgent: "*", disallow: "/private/" },
+            // { userAgent: "*", disallow: "/private/" },
             { userAgent: "*", allow: "/" },
         ],
     },
