@@ -23,6 +23,17 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body>
+                <Script id="gtag-counter" strategy="afterInteractive">
+                    {`<!-- Google tag (gtag.js) -->
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W1C5W9379N"></script>
+                    <script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+
+                    gtag('config', 'G-W1C5W9379N');
+                    </script>`}
+                </Script>
                 <Script id="metrika-counter" strategy="afterInteractive">
                     {`(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
                     m[i].l=1*new Date();
