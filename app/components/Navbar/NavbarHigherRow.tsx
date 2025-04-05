@@ -68,6 +68,7 @@ const NavbarHigherRow = ({ menuItems }: { menuItems: IMainMenuItem[] }) => {
                 }}
             >
                 <Button
+                    href={"/okna/apartments"}
                     sx={{
                         color: "primary",
                         alignSelf: "flex-end",

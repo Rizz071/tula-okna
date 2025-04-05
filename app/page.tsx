@@ -79,17 +79,17 @@ export default function Home() {
                     {
                         image: dacha1,
                         caption: <>Остекление дач и беседок</>,
-                        link: "6 000",
+                        link: "/okna/dacha",
                     },
                     {
                         image: Doors,
                         caption: <>Входные двери тёплые</>,
-                        link: "15 000",
+                        link: "/doors",
                     },
                     {
                         image: Front_small_3,
                         caption: <>Раздвижные двери - порталы</>,
-                        link: "59 000",
+                        link: "/portaly",
                     },
                 ]}
             />
