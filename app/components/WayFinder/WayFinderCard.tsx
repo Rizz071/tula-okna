@@ -41,7 +41,7 @@ const WayFinderCard = ({
                             width={0}
                             height={0}
                             alt={caption}
-                            quality={95}
+                            // quality={90}
                             style={{
                                 height: 400,
                                 width: "auto",
