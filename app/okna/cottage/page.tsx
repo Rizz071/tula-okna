@@ -35,6 +35,13 @@ import windows_1 from "@/public/images/slides/windows_1.jpg";
 import burglar_1 from "@/public/images/slides/burglar_1.jpg";
 import HeaderSlider from "@/app/components/HeaderSlider";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Окна в коттедж",
+    description: "Выбор окон ПВХ в коттедж",
+};
+
 export default function Page() {
     return (
         <>

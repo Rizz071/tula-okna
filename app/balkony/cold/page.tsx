@@ -25,6 +25,13 @@ import provedal_1 from "@/public/images/balkoni/provedal_1.png";
 import provedal_2 from "@/public/images/balkoni/provedal_2.png";
 import provedal_3 from "@/public/images/balkoni/provedal3-2_crop.jpg";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Холодное остекление балкона ПРОВЕДАЛ",
+    description: "Холодное остекление балкона системой ПРОВЕДАЛ",
+};
+
 export default function Page() {
     return (
         <>

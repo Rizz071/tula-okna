@@ -10,6 +10,13 @@ import HeaderSlider from "@/app/components/HeaderSlider";
 import VekaUniqueAdvatages from "@/app/components/VekaUniqueAdvatages";
 import TemplateProfileSystem from "@/app/components/TemplateProfileSystem";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Окна VEKA Softline 82",
+    description: "Характеристика и стоимость VEKA Softline 82",
+};
+
 export default function Page() {
     return (
         <>

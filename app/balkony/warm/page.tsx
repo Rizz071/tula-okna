@@ -10,6 +10,13 @@ import balc_3 from "@/public/images/balkoni/20160717_151629-2.png";
 
 import WarmBalkonyChooser from "@/app/components/WarmBalkonyChooser";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Тёплое остекление балкона",
+    description: "Тёплое остекление балкона или лоджии окнами ПВХ",
+};
+
 export default function Page() {
     return (
         <>

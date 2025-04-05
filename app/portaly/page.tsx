@@ -19,6 +19,13 @@ import portal_section_2 from "@/public/images/Portal_section_2.png";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ThumbDownIcon from "@mui/icons-material/ThumbDown";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Раздвижные порталы ПВХ",
+    description: "Выбор раздвижных дверей-порталов ПВХ",
+};
+
 import {
     Box,
     Grid2 as Grid,

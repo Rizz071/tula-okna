@@ -35,7 +35,7 @@ const Navbar = () => {
         },
         { name: "контакты", link: "/contacts", icon: HeadsetMicIcon },
     ];
-
+    //TODO Меню на экране 320px выпирает вправо. Убрать вообще выплывающее меню, оставить приклееное
     return (
         <Box
             sx={{

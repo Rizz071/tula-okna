@@ -9,6 +9,12 @@ import { Container } from "@mui/material";
 import HeaderSlider from "@/app/components/HeaderSlider";
 import VekaUniqueAdvatages from "@/app/components/VekaUniqueAdvatages";
 import TemplateProfileSystem from "@/app/components/TemplateProfileSystem";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Окна VEKA Euroline",
+    description: "Характеристика и стоимость VEKA Euroline",
+};
 
 export default function Page() {
     return (

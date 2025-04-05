@@ -9,6 +9,12 @@ import { Container } from "@mui/material";
 import HeaderSlider from "@/app/components/HeaderSlider";
 import TemplateProfileSystem from "@/app/components/TemplateProfileSystem";
 import KalevaUniqueAdvatages from "@/app/components/KalevaUniqueAdvatages";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Окна КАЛЕВА Стандарт",
+    description: "Характеристика и стоимость КАЛЕВА Стандарт 70",
+};
 
 export default function Page() {
     return (

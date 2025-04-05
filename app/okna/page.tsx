@@ -3,6 +3,12 @@ import apartmentsImg from "@/public/images/Softline-70-Exterior-01.png";
 import cottageImg from "@/public/images/Artline-82-Exterior-01.png";
 import dachaImg from "@/public/images/okna/oknodom_1.png";
 import WayFinderContainer from "../components/WayFinder/WayFinderContainer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Выбор окон",
+    description: "Выбор окон ПВХ - Тульские Окна",
+};
 
 export default function Page() {
     return (

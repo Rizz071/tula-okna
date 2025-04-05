@@ -22,6 +22,13 @@ import micro_2 from "@/public/images/micro_2.png";
 import psul_lenta_3 from "@/public/images/psul_lenta_3.png";
 import veter_1 from "@/public/images/veter_1.png";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Окна в квартиру",
+    description: "Выбор окон ПВХ в квартиру",
+};
+
 export default function Page() {
     return (
         <>

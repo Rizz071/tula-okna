@@ -1,18 +1,15 @@
-import HeaderSlider from "./components/HeaderSlider";
 import {
     Container,
     Box,
     Typography,
-    Divider,
-    List,
-    ListItemText,
     Stepper,
     Step,
     StepLabel,
     StepContent,
     Grid2 as Grid,
 } from "@mui/material";
-import Image from "next/image";
+
+import HeaderSlider from "./components/HeaderSlider";
 import glassprom1 from "../public/images/glassprom1.jpg";
 import besedka from "../public/images/besedka.jpg";
 import worker_plant_1 from "../public/images/slides/worker_plant_1.jpg";
@@ -43,6 +40,13 @@ import ArticlesContainer from "./components/Article/ArticlesContainer";
 import ResponsiveHeader_H1 from "./components/Article/ResponsiveHeader_H1";
 import AdvantagesContainer from "./components/AdvantagesContainer";
 import OurDefaultConfigurationContainer from "./components/OurDefaultConfiguration/OurDefaultConfigurationContainer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Пластиковые окна в Туле от производителя!",
+    description:
+        "Качественные пластиковые окна в Туле по ГОСТ с гарантией без посреднических наценок.",
+};
 
 export default function Home() {
     return (

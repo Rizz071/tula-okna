@@ -4,6 +4,13 @@ import warmImg from "@/public/images/balkoni/warm_glazing_tmblr_2.jpg";
 import otdelkaImg from "@/public/images/balkoni/otdelka_tmblr_1.jpg";
 import WayFinderContainer from "../components/WayFinder/WayFinderContainer";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Остекление балконов в Туле",
+    description: "Выбор способа остекления балкона или лоджии",
+};
+
 export default function Page() {
     return (
         <WayFinderContainer

@@ -10,6 +10,12 @@ import HeaderSlider from "@/app/components/HeaderSlider";
 import TemplateProfileSystem from "@/app/components/TemplateProfileSystem";
 import KalevaUniqueAdvatages from "@/app/components/KalevaUniqueAdvatages";
 import Pricer from "@/app/components/PriceComponents/Pricer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Окна КАЛЕВА Профи",
+    description: "Характеристика и стоимость КАЛЕВА Профи 60",
+};
 
 export default function Page() {
     return (
