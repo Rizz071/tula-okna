@@ -1,2 +1,13 @@
+# *
 User-agent: *
-Disallow: /
+Disallow: /private/
+
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://тульские-окна.рф
+
+# Sitemaps
+Sitemap: https://тульские-окна.рф/sitemap.xml
