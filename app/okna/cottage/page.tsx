@@ -38,8 +38,8 @@ import HeaderSlider from "@/app/components/HeaderSlider";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Окна в коттедж",
-    description: "Выбор окон ПВХ в коттедж",
+    title: "Пластиковые окна в дом",
+    description: "Выбрать и заказать окна ПВХ для загородного дома",
 };
 
 export default function Page() {
@@ -81,7 +81,7 @@ export default function Page() {
                             },
                         }}
                     >
-                        Комплексное остекление коттеджей
+                        Пластиковые окна в дом
                     </Typography>
                     <Divider />
                     <Box padding={6}>

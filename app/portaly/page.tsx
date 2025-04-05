@@ -22,8 +22,8 @@ import ThumbDownIcon from "@mui/icons-material/ThumbDown";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Раздвижные порталы ПВХ",
-    description: "Выбор раздвижных дверей-порталов ПВХ",
+    title: "Раздвижные окна - порталы",
+    description: "Выборрать и заказать тёплые раздвижные окна ПВХ - порталы.",
 };
 
 import {
@@ -48,7 +48,7 @@ export default function Page() {
             <HeroImageSlider sliderImage={slideImage} isCardVisible={false} />
 
             <ProductionCardsContainer
-                title={"ТЁПЛЫЕ РАЗДВИЖНЫЕ ДВЕРИ - ПОРТАЛЫ"}
+                title={"ТЁПЛЫЕ РАЗДВИЖНЫЕ ОКНА - ПОРТАЛЫ"}
                 cardsArray={[
                     {
                         image: porog_otopl_1,

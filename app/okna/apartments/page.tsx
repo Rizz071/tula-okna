@@ -25,8 +25,9 @@ import veter_1 from "@/public/images/veter_1.png";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Окна в квартиру",
-    description: "Выбор окон ПВХ в квартиру",
+    title: "Пластиковые окна в квартиру",
+    description:
+        "Выбрать и заказать пластиковые окна в квартиру. Актуальные цены.",
 };
 
 export default function Page() {
@@ -35,7 +36,7 @@ export default function Page() {
             <HeaderSlider sliderImage={slideImage} isCardVisible={false} />
 
             <ProductionCardsContainer
-                title={"НАШИ ОКНА В КВАРТИРУ"}
+                title={"ПЛАСТИКОВЫЕ ОКНА В КВАРТИРУ"}
                 cardsArray={[
                     {
                         image: maximum_light,

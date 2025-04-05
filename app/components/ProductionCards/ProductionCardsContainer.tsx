@@ -40,6 +40,7 @@ const ProductionCardsContainer = ({ title, cardsArray }: Props) => {
                         }}
                     >
                         <Typography
+                            component={"h1"}
                             sx={{
                                 typography: "h5",
                                 fontSize: { xs: "1.1rem", sm: "1.5rem" },

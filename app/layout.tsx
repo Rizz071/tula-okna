@@ -9,6 +9,7 @@ import theme from "./lib/theme";
 import Navbar from "./components/Navbar/Navbar";
 import FooterContainer from "./components/Footer/FooterContainer";
 import { Suspense } from "react";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
     title: "Пластиковые окна в Туле от производителя!",
@@ -23,7 +24,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body>
-                <Script id="gtag-counter" strategy="afterInteractive">
+                {/* <Script id="gtag-counter" strategy="afterInteractive">
                     {`<!-- Google tag (gtag.js) -->
                     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W1C5W9379N"></script>
                     <script>
@@ -33,7 +34,7 @@ export default function RootLayout({
 
                     gtag('config', 'G-W1C5W9379N');
                     </script>`}
-                </Script>
+                </Script> */}
                 <Script id="metrika-counter" strategy="afterInteractive">
                     {`(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
                     m[i].l=1*new Date();
@@ -64,6 +65,7 @@ export default function RootLayout({
                     </ThemeProvider>
                 </AppRouterCacheProvider>
             </body>
+            <GoogleAnalytics gaId={"G-W1C5W9379N"} />
         </html>
     );
 }
