@@ -35,6 +35,7 @@ const ProductionCard = ({ imgSrc, caption, link }: Props) => {
                             // width:  "150px",
                             // height: "100px",
                             objectFit: "contain",
+                            maxWidth: "100%",
                         }}
                     />
                 </Box>
@@ -60,9 +61,9 @@ const ProductionCard = ({ imgSrc, caption, link }: Props) => {
                     <Typography
                         sx={{
                             fontSize: {
-                                xs: "medium",
-                                sm: "large",
-                                md: "larger",
+                                xs: "small",
+                                sm: "medium",
+                                md: "medium",
                             },
                             fontWeight: 300,
                             textAlign: {
@@ -71,11 +72,18 @@ const ProductionCard = ({ imgSrc, caption, link }: Props) => {
                                 lg: "left",
                             },
                             mt: { xs: 1, lg: 0 },
+                            lineHeight: "1.4rem",
+                            minHeight: "40px",
                         }}
                     >
                         {caption}
                     </Typography>
-                    <Button variant="outlined" size="small" href={link}>
+                    <Button
+                        variant="outlined"
+                        size="small"
+                        href={link}
+                        sx={{ fontSize: "x-small" }}
+                    >
                         ПЕРЕЙТИ
                     </Button>
                 </Stack>

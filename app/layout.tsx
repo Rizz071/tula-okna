@@ -65,7 +65,7 @@ export default function RootLayout({
                     </ThemeProvider>
                 </AppRouterCacheProvider>
             </body>
-            <GoogleTagManager gtmId={"GTM-NV692FRD"} />
+            <GoogleTagManager gtmId="GTM-NV692FRD" />
         </html>
     );
 }
