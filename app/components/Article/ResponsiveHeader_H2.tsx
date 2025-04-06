@@ -5,7 +5,7 @@ const ResponsiveHeader_H2 = ({ text }: { text: string }) => {
         <Typography
             variant={"h2"}
             sx={{
-                typography: { xs: "h3", md: "h2" },
+                typography: { xs: "h5", md: "h3", lg: "h2" },
                 mt: 0,
                 textAlign: { xs: "center", sm: "left" },
             }}

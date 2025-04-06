@@ -3,9 +3,9 @@ import { Typography } from "@mui/material";
 const ResponsiveHeader_H1 = ({ text }: { text: string }) => {
     return (
         <Typography
-            variant={"h1"}
+            // variant={"h1"}
             sx={{
-                typography: { xs: "h2", md: "h1" },
+                typography: { xs: "h3", md: "h2", lg: "h1" },
                 textAlign: { xs: "center" },
             }}
         >
