@@ -89,7 +89,11 @@ const WayFinderCard = ({
                     </CardActionArea>
                 </Card>
             </Link>
-            <Typography align={"center"}>{description}</Typography>
+            <Typography
+                sx={{ typography: "body2", textAlign: "center", px: 2 }}
+            >
+                {description}
+            </Typography>
         </>
     );
 };

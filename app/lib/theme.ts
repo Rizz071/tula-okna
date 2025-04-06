@@ -87,10 +87,19 @@ let theme = createTheme({
             fontWeight: 300,
             textAlign: "justify",
             marginTop: "1.5rem",
+            '@media (max-width:700px)': {
+                fontSize: "large",
+            },
+            // [theme.breakpoints.up('md')]: {
+            //     fontSize: "larger",
+            // },
         },
         h1: {
             fontFamily: roboto.style.fontFamily,
             fontSize: "2.5rem",
+            '@media (max-width:700px)': {
+                fontSize: "2rem",
+            },
             fontWeight: 400,
             textAlign: "center",
         },
@@ -126,6 +135,8 @@ let theme = createTheme({
     },
 
 
+
+
     // components: {
     //     MuiTypography: {
     //         defaultProps: {
@@ -138,6 +149,16 @@ let theme = createTheme({
     // },
 
 });
+
+// theme.typography.body1 = {
+//     fontSize: "larger",
+//     '@media (min-width:700px)': {
+//         fontSize: "medium",
+//     },
+//     [theme.breakpoints.up('md')]: {
+//         fontSize: "larger",
+//     },
+// };
 
 // theme = responsiveFontSizes(theme);
 

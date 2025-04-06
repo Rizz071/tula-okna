@@ -13,6 +13,7 @@ const ArticleMedia = ({ article }: { article: Article }) => {
     return (
         <Stack direction={"column"}>
             <Box
+                id={article.anchor}
                 alignSelf={"center"}
                 sx={{ m: 0, p: 0, width: "100%", height: "100%" }}
             >
@@ -30,8 +31,6 @@ const ArticleMedia = ({ article }: { article: Article }) => {
                     >
                         <Image
                             src={article.articleMedia.imageSrc}
-                            // unoptimized
-                            // quality={95}
                             style={{
                                 verticalAlign: "bottom",
                                 width: "100%",

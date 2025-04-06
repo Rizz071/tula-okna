@@ -11,7 +11,11 @@ import { Fragment } from "react";
 
 const ArticleDetails = ({ article }: { article: Article }) => {
     return (
-        <Accordion elevation={0} key={Math.round(Math.random())}>
+        <Accordion
+            elevation={0}
+            key={Math.round(Math.random())}
+            sx={{ mt: 2, "&:before": { height: "0px" } }}
+        >
             <AccordionSummary
                 sx={{ pl: 0 }}
                 aria-controls="panel1-content"
@@ -49,9 +53,10 @@ const ArticleDetails = ({ article }: { article: Article }) => {
                                 {accordionArticle.accordionParagraphs.map(
                                     (accordionParagraph, index) => (
                                         <Typography
-                                            variant="subtitle1"
+                                            // variant="subtitle1"
                                             key={index}
                                             sx={{
+                                                typography: "subtitle1",
                                                 color: "white",
                                                 bgcolor: "#333",
                                                 fontWeight: 300,

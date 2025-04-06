@@ -34,8 +34,8 @@ export interface Article {
 }
 
 export interface ArticleDetailsAccordion {
-    accordionTitle: string;
-    accordionParagraphs: string[];
+    accordionTitle: ReactElement;
+    accordionParagraphs: ReactElement[];
 }
 
 export interface ArticleImage {
