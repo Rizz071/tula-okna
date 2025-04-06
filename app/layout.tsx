@@ -24,7 +24,6 @@ export default function RootLayout({
     return (
         <html lang="ru">
             <body>
-                <GoogleTagManager gtmId={"G-W1C5W9379N"} />
                 {/* <Script id="gtag-counter" strategy="afterInteractive">
                     {`<!-- Google tag (gtag.js) -->
                     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W1C5W9379N"></script>
@@ -66,6 +65,7 @@ export default function RootLayout({
                     </ThemeProvider>
                 </AppRouterCacheProvider>
             </body>
+            <GoogleTagManager gtmId={"GTM-NV692FRD"} />
         </html>
     );
 }
