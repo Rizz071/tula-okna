@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Script from "next/script";
-import YandexMetrika from "./components/YandexMetrika/YandexMetrika.jsx";
+// import Script from "next/script";
+// import YandexMetrika from "./components/YandexMetrika/YandexMetrika.jsx";
 
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import "./globals.css";
@@ -8,7 +8,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "./lib/theme";
 import Navbar from "./components/Navbar/Navbar";
 import FooterContainer from "./components/Footer/FooterContainer";
-import { Suspense } from "react";
+// import { Suspense } from "react";
 import { GoogleTagManager } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
@@ -23,6 +23,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ru">
+            <GoogleTagManager gtmId="GTM-NV692FRD" />
             <body>
                 {/* <Script id="gtag-counter" strategy="afterInteractive">
                     {`<!-- Google tag (gtag.js) -->
@@ -35,7 +36,7 @@ export default function RootLayout({
                     gtag('config', 'G-W1C5W9379N');
                     </script>`}
                 </Script> */}
-                <Script id="metrika-counter" strategy="afterInteractive">
+                {/* <Script id="metrika-counter" strategy="afterInteractive">
                     {`(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
                     m[i].l=1*new Date();
                     for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
@@ -49,10 +50,10 @@ export default function RootLayout({
                             accurateTrackBounce:true,
                             webvisor:true
                     });`}
-                </Script>
-                <Suspense fallback={<></>}>
+                </Script> */}
+                {/* <Suspense fallback={<></>}>
                     <YandexMetrika />
-                </Suspense>
+                </Suspense> */}
                 <AppRouterCacheProvider>
                     <ThemeProvider theme={theme}>
                         <header>
@@ -65,7 +66,6 @@ export default function RootLayout({
                     </ThemeProvider>
                 </AppRouterCacheProvider>
             </body>
-            <GoogleTagManager gtmId="GTM-NV692FRD" />
         </html>
     );
 }

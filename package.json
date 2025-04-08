@@ -6,7 +6,8 @@
         "dev": "next dev",
         "build": "next build --debug && next-sitemap",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "deploy-server": "git pull && npm install && npm run build && pm2 start npm -- start"
     },
     "dependencies": {
         "@emotion/cache": "^11.14.0",
