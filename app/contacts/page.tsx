@@ -4,6 +4,7 @@ import {
     Container,
     Grid2 as Grid,
     Paper,
+    Stack,
     Table,
     TableBody,
     TableCell,
@@ -103,9 +104,15 @@ export default function Page() {
                                     title: "Связь с Компанией",
                                     infoCardLines: [
                                         {
-                                            leftProperty: "Телефон",
+                                            leftProperty: "Телефон в Туле",
                                             rightProperty: (
-                                                <>
+                                                <Stack
+                                                    direction={"column"}
+                                                    sx={{
+                                                        justifyContent:
+                                                            "center",
+                                                    }}
+                                                >
                                                     <Link
                                                         href={
                                                             "tel:+74872385550"
@@ -122,21 +129,75 @@ export default function Page() {
                                                                 m: 0,
                                                                 p: 0,
                                                                 fontSize: {
-                                                                    xs: "1.0rem",
-                                                                    md: "0.9rem",
+                                                                    xs: "1.1rem",
+                                                                    md: "1.2rem",
                                                                 },
                                                                 fontWeight: 500,
+                                                                color: "black",
                                                                 textAlign: {
                                                                     xs: "center",
                                                                     lg: "left",
                                                                 },
-                                                                color: "black",
                                                             }}
                                                         >
-                                                            +7 (4872) 38-55-50
+                                                            38-55-50
                                                         </Typography>
                                                     </Link>
-                                                </>
+
+                                                    <Link
+                                                        href={
+                                                            "tel:+79038405550"
+                                                        }
+                                                        style={{
+                                                            textDecoration:
+                                                                "none",
+                                                        }}
+                                                    >
+                                                        <Typography
+                                                            sx={{
+                                                                m: 0,
+                                                                p: 0,
+                                                                typography:
+                                                                    "overline",
+                                                                fontSize: {
+                                                                    xs: "1.0rem",
+                                                                    md: "0.8rem",
+                                                                },
+                                                                fontWeight: 500,
+                                                                color: "black",
+                                                                textAlign: {
+                                                                    xs: "center",
+                                                                    lg: "left",
+                                                                },
+                                                            }}
+                                                        >
+                                                            +7 (903) 840 55-50
+                                                        </Typography>
+                                                    </Link>
+
+                                                    <Typography
+                                                        sx={{
+                                                            m: 0,
+                                                            p: 0,
+                                                            typography:
+                                                                "caption",
+                                                            color: "secondary.main",
+                                                            fontSize: {
+                                                                xs: "small",
+                                                            },
+                                                            fontWeight: 700,
+                                                            textAlign: {
+                                                                xs: "center",
+                                                                lg: "left",
+                                                            },
+                                                        }}
+                                                    >
+                                                        Консультации,
+                                                        за&shy;ме&shy;ры,
+                                                        мон&shy;та&shy;жи,
+                                                        сро&shy;ки
+                                                    </Typography>
+                                                </Stack>
                                             ),
                                         },
                                         {
@@ -172,6 +233,30 @@ export default function Page() {
                                                         >
                                                             385391@mail.ru
                                                         </Typography>
+
+                                                        <Typography
+                                                            sx={{
+                                                                m: 0,
+                                                                p: 0,
+                                                                typography:
+                                                                    "caption",
+                                                                color: "secondary.main",
+                                                                fontSize: {
+                                                                    xs: "small",
+                                                                },
+                                                                fontWeight: 700,
+                                                                textAlign: {
+                                                                    xs: "center",
+                                                                    lg: "left",
+                                                                },
+                                                            }}
+                                                        >
+                                                            Приём заявок &mdash;
+                                                            расчёт прое&shy;кта
+                                                            и
+                                                            стои&shy;мос&shy;ти
+                                                            в тече&shy;ние суток
+                                                        </Typography>
                                                     </Link>
                                                 </>
                                             ),
@@ -188,7 +273,7 @@ export default function Page() {
                             <TableContainer component={Paper} elevation={12}>
                                 <Table
                                     size="small"
-                                    style={{ tableLayout: "fixed" }}
+                                    // style={{ tableLayout: "auto" }}
                                 >
                                     <TableHead sx={{ bgcolor: "#333" }}>
                                         <TableRow>
@@ -227,6 +312,7 @@ export default function Page() {
 
                                             <TableCell align="left">
                                                 <Typography
+                                                    gutterBottom
                                                     sx={{
                                                         typography: "overline",
                                                         m: 0,
@@ -241,6 +327,41 @@ export default function Page() {
                                                     }}
                                                 >
                                                     с 9.00 до 18.00
+                                                </Typography>
+
+                                                <Typography
+                                                    sx={{
+                                                        mt: 1,
+                                                        typography: "caption",
+                                                        color: "secondary.main",
+                                                        fontSize: {
+                                                            xs: "small",
+                                                        },
+                                                    }}
+                                                >
+                                                    <strong>
+                                                        По будням офис работает
+                                                        с 9.00 до 14.00
+                                                    </strong>
+                                                </Typography>
+
+                                                <Typography
+                                                    sx={{
+                                                        mt: 1,
+                                                        typography: "caption",
+                                                        color: "secondary.main",
+                                                        fontSize: {
+                                                            xs: "small",
+                                                        },
+                                                    }}
+                                                >
+                                                    <strong>
+                                                        Телефонные звон&shy;ки и
+                                                        сообщения в WhatsApp и
+                                                        на почту &mdash;
+                                                        обра&shy;ба&shy;ты&shy;вают&shy;ся
+                                                        до 18.00
+                                                    </strong>
                                                 </Typography>
                                             </TableCell>
                                         </TableRow>
@@ -276,15 +397,20 @@ export default function Page() {
                                                     с 9.00 до 15.00
                                                 </Typography>
                                                 <Typography
-                                                    variant="caption"
                                                     sx={{
+                                                        mt: 1,
+                                                        typography: "caption",
                                                         color: "secondary.main",
+                                                        fontSize: {
+                                                            xs: "small",
+                                                        },
                                                     }}
                                                 >
                                                     <strong>
-                                                        По субботам принимаются
-                                                        только звонки и почта,
-                                                        офис закрыт!
+                                                        По субботам ждём ваших
+                                                        обращений по телефону,
+                                                        на WhatsApp и почту,
+                                                        офис закрыт
                                                     </strong>
                                                 </Typography>
                                             </TableCell>
