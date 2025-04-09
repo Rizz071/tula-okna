@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     description:
         "Качественные пластиковые окна в Туле по ГОСТ с гарантией без посреднических наценок.",
     icons: {
-        icon: "@/public/favicon.png", // /public path
+        icon: "@/public/favicon.png",
     },
 };
 
