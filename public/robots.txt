@@ -1,13 +1,9 @@
 # *
 User-agent: *
-Disallow: /private/
-
-# *
-User-agent: *
 Allow: /
 
 # Host
-Host: https://тульские-окна.рф
+Host: https://xn----8sbnljdcvhzjm2j.xn--p1ai
 
 # Sitemaps
-Sitemap: https://тульские-окна.рф/sitemap.xml
+Sitemap: https://xn----8sbnljdcvhzjm2j.xn--p1ai/sitemap.xml

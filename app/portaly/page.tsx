@@ -4,7 +4,6 @@ import { ImageSide } from "@/app/lib/types";
 import ProductionCardsContainer from "../components/ProductionCards/ProductionCardsContainer";
 import HeroImageSlider from "@/app/components/HeaderSlider";
 import ArticlesContainer from "@/app/components/Article/ArticlesContainer";
-import Player from "next-video/player";
 import Image from "next/image";
 import portal_apartments from "@/public/images/portali/portal5.jpg";
 import portal_1 from "@/public/images/portali/portal8.jpg";
@@ -41,6 +40,7 @@ import {
     TableRow,
     Typography,
 } from "@mui/material";
+import VideoPlayerWrapper from "../components/VideoPlayerWrapper";
 
 export default function Page() {
     return (
@@ -134,9 +134,9 @@ export default function Page() {
                                         p: 1,
                                     }}
                                 >
-                                    <Player
-                                        src={"/video/G-U_portals_1.mp4"}
-                                        poster={"/video/G-U_portals_1.jpg"}
+                                    <VideoPlayerWrapper
+                                        videoSrc={"/video/G-U_portals_1.mp4"}
+                                        posterSrc={"/video/G-U_portals_1.jpg"}
                                     />
                                 </Box>
                                 <Typography
@@ -158,9 +158,9 @@ export default function Page() {
                                         p: 1,
                                     }}
                                 >
-                                    <Player
-                                        src={"/video/G-U_portals_2.mp4"}
-                                        poster={"/video/G-U_portals_2.jpg"}
+                                    <VideoPlayerWrapper
+                                        videoSrc={"/video/G-U_portals_2.mp4"}
+                                        posterSrc={"/video/G-U_portals_2.jpg"}
                                     />
                                 </Box>
                                 <Typography
@@ -480,9 +480,9 @@ export default function Page() {
                                             border: "solid 1px #333",
                                         }}
                                     >
-                                        <Player
-                                            src={"/video/PortalPSK_2.mp4"}
-                                            // poster={"/video/PortalFS_1.jpg"}
+                                        <VideoPlayerWrapper
+                                            videoSrc={"/video/PortalPSK_2.mp4"}
+                                            posterSrc={"/video/PortalPSK_2.jpg"}
                                         />
                                     </Box>
                                     <Box
@@ -494,9 +494,9 @@ export default function Page() {
                                             border: "solid 1px #333",
                                         }}
                                     >
-                                        <Player
-                                            src={"/video/PortalPSK_3.mp4"}
-                                            // poster={"/video/PortalFS_1.jpg"}
+                                        <VideoPlayerWrapper
+                                            videoSrc={"/video/PortalPSK_3.mp4"}
+                                            posterSrc={"/video/PortalPSK_3.jpg"}
                                         />
                                     </Box>
                                 </Stack>
@@ -547,9 +547,11 @@ export default function Page() {
                                         border: "solid 1px #333",
                                     }}
                                 >
-                                    <Player
-                                        src={"/video/Portal_cottage_1.mp4"}
-                                        poster={"/video/Portal_cottage_1.jpg"}
+                                    <VideoPlayerWrapper
+                                        videoSrc={"/video/Portal_cottage_1.mp4"}
+                                        posterSrc={
+                                            "/video/Portal_cottage_1.jpg"
+                                        }
                                     />
                                 </Box>
                                 <Typography
@@ -600,21 +602,10 @@ export default function Page() {
                                         border: "solid 1px #333",
                                     }}
                                 >
-                                    <video
-                                        poster={"/video/Portal_4.jpg"}
-                                        muted
-                                        controls
-                                        loop
-                                        disablePictureInPicture
-                                        controlsList={"nodownload"}
-                                        width="100%"
-                                    >
-                                        <source
-                                            src="/video/Portal_4.mp4"
-                                            type="video/mp4"
-                                        />
-                                        Ваш браузер не поддерживает видео.
-                                    </video>
+                                    <VideoPlayerWrapper
+                                        videoSrc={"/video/Portal_4.mp4"}
+                                        posterSrc={"/video/Portal_4.jpg"}
+                                    />
                                 </Box>
                                 <Typography
                                     variant="body2"
@@ -668,9 +659,14 @@ export default function Page() {
                                             border: "solid 1px #333",
                                         }}
                                     >
-                                        <Player
-                                            src={"/video/fs_portal_10.webm"}
-                                            // poster={"/video/PortalFS_1.jpg"}
+                                        <VideoPlayerWrapper
+                                            videoSrc={
+                                                "/video/fs_portal_10.webm"
+                                            }
+                                            posterSrc={
+                                                "/video/fs_portal_10.jpg"
+                                            }
+                                            videoType="video/webm"
                                         />
                                     </Box>
                                     <Box
@@ -682,9 +678,14 @@ export default function Page() {
                                             border: "solid 1px #333",
                                         }}
                                     >
-                                        <Player
-                                            src={"/video/fs_portal_11.webm"}
-                                            // poster={"/video/PortalFS_1.jpg"}
+                                        <VideoPlayerWrapper
+                                            videoSrc={
+                                                "/video/fs_portal_11.webm"
+                                            }
+                                            posterSrc={
+                                                "/video/fs_portal_11.jpg"
+                                            }
+                                            videoType="video/webm"
                                         />
                                     </Box>
                                 </Stack>

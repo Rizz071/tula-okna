@@ -11,7 +11,7 @@ import {
     Box,
 } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
-import Player from "next-video/player";
+import VideoPlayerWrapper from "../VideoPlayerWrapper";
 
 const DefaultConfigurationTemplate = ({
     sectionTitle,
@@ -129,12 +129,20 @@ const DefaultConfigurationTemplate = ({
                                                 p: 1,
                                             }}
                                         >
-                                            <Player
+                                            <VideoPlayerWrapper
+                                                videoSrc={
+                                                    section.media as string
+                                                }
+                                                posterSrc={(
+                                                    section.media as string
+                                                ).replace("mp4", "jpg")}
+                                            />
+                                            {/* <Player
                                                 src={section.media as string}
                                                 poster={(
                                                     section.media as string
                                                 ).replace("mp4", "jpg")}
-                                            />
+                                            /> */}
                                         </Box>
                                     )}
                                     <Typography

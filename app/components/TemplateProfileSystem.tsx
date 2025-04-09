@@ -11,12 +11,12 @@ import {
     TableBody,
 } from "@mui/material";
 import Image from "next/image";
-import Player from "next-video/player";
 
 import ResponsiveHeader_H1 from "./Article/ResponsiveHeader_H1";
 import { IProfilePage } from "../lib/types";
 
 import Pricer from "./PriceComponents/Pricer";
+import VideoPlayerWrapper from "./VideoPlayerWrapper";
 
 const TemplateProfileSystem = ({
     profilePage,
@@ -362,11 +362,10 @@ const TemplateProfileSystem = ({
             </Grid>
             <Grid order={{ xs: 5 }}>
                 <Box sx={{ width: "100%", border: "1px solid grey", p: 1 }}>
-                    <Player
-                        autoPlay
-                        muted
-                        src={profilePage.promoVideo.promoVideoSrc}
-                        poster={profilePage.promoVideo.promoVideoPictureSrc}
+                    <VideoPlayerWrapper
+                        videoSrc={profilePage.promoVideo.promoVideoSrc}
+                        posterSrc={profilePage.promoVideo.promoVideoPictureSrc}
+                        isAutoPlaying={true}
                     />
                 </Box>
             </Grid>

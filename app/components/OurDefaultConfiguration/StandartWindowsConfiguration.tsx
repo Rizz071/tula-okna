@@ -1,5 +1,5 @@
 import image_profile from "@/public/images/profiles/veka_compare_2_800px.jpg";
-import video_furniture from "@/public/video/PortalPSK_2.mp4";
+// import video_furniture from "@/public/video/PortalPSK_2.mp4";
 import DefaultConfigurationTemplate from "./DefaultConfigurationTemplate";
 
 const StandartWindowsConfiguration = () => {

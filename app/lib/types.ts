@@ -1,6 +1,5 @@
 import { SvgIconTypeMap } from "@mui/material";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
-import { Asset } from "next-video/dist/cjs/assets.js";
 import { StaticImageData } from "next/image";
 import { ReactElement } from "react";
 
