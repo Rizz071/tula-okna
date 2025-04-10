@@ -1,5 +1,5 @@
 import React from "react";
-import slideImage from "@/public/images/slides/Artline-82-Interior-01.jpg";
+import slideImage from "@/public/images/slides/kaleva_slider_2.jpg";
 import slide_1 from "@/public/images/standart_1.png";
 import cut_1 from "@/public/images/klv_standart_cut_1.png";
 import cut_2 from "@/public/images/klv_standart_cut_2.png";

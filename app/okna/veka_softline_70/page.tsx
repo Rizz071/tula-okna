@@ -1,5 +1,5 @@
 import React from "react";
-import slideImage from "@/public/images/slides/Artline-82-Interior-01.jpg";
+import slideImage from "@/public/images/slides/veka_70_slider_1.jpg";
 import slide_1 from "@/public/images/Sofltine_crop.png";
 import cut_1 from "@/public/images/sl_13.png";
 import cut_2 from "@/public/images/sl_18.png";

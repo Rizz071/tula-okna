@@ -68,7 +68,7 @@ const TemplateProfileSystem = ({
                             <Image
                                 src={profilePage.profileMainImage}
                                 alt={`${profilePage.profileSystemName} image`}
-                                // sizes={"50vw"}
+                                sizes={"50vw"}
                                 width={0}
                                 height={0}
                                 quality={90}

@@ -23,7 +23,7 @@ function HeaderSlider({ sliderImage, isCardVisible }: Props) {
             <Image
                 src={sliderImage}
                 alt="Slider hero image"
-                sizes={"100vw"}
+                // sizes={"100vw"}
                 quality={85}
                 style={{ objectFit: "cover" }}
                 fill
