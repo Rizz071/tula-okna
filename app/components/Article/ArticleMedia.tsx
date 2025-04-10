@@ -31,6 +31,7 @@ const ArticleMedia = ({ article }: { article: Article }) => {
                     >
                         <Image
                             src={article.articleMedia.imageSrc}
+                            sizes="(max-width: 700px) 100vw, 50vw"
                             style={{
                                 verticalAlign: "bottom",
                                 width: "100%",
