@@ -18,6 +18,13 @@ import HeaderSlider from "../components/HeaderSlider";
 import slide from "@/public/images/slides/HS_portal_1.jpg";
 import InfoCard from "../components/InfoCard";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Тульские Окна - Контакты",
+    description: "Схема проезда, график работы, телефон и почта.",
+};
+
 export default function Page() {
     return (
         <>

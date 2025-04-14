@@ -1,5 +1,3 @@
-// "use client";
-
 import React from "react";
 import slideImage from "@/public/images/slides/apartments_slide_2.jpg";
 import { Typography } from "@mui/material";

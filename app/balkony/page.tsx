@@ -43,7 +43,7 @@ export default function Page() {
                 {
                     caption: "Внутренняя отделка",
                     image: otdelkaImg,
-                    link: "/okna/interior",
+                    link: "/balkony/interior",
                     description: (
                         <>
                             Обшивка панелями/вагонкой, настил пола, потолок,
