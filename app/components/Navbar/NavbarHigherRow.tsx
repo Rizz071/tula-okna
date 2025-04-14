@@ -73,6 +73,10 @@ const NavbarHigherRow = ({ menuItems }: { menuItems: IMainMenuItem[] }) => {
                         color: "primary",
                         alignSelf: "flex-end",
                         mr: "auto",
+                        fontWeight: 400,
+                        fontSize: "large",
+                        margin: 0,
+                        textTransform: "none",
                     }}
                     startIcon={
                         <CalculateOutlinedIcon
@@ -83,23 +87,27 @@ const NavbarHigherRow = ({ menuItems }: { menuItems: IMainMenuItem[] }) => {
                         />
                     }
                 >
-                    <Typography
+                    {/* <Typography
                         color={"primary"}
                         fontWeight={"light"}
                         fontSize={"large"}
                         margin={0}
                         sx={{ textTransform: "none" }}
-                    >
-                        Калькулятор окон
-                    </Typography>
+                    > */}
+                    Калькулятор окон
+                    {/* </Typography> */}
                 </Button>
 
                 <Button
                     href={"/contacts"}
                     sx={{
                         color: "primary",
-                        paddingY: "3px",
                         mr: "auto",
+                        alignSelf: "flex-end",
+                        fontWeight: 400,
+                        fontSize: "large",
+                        margin: 0,
+                        textTransform: "none",
                     }}
                     startIcon={
                         <MapOutlinedIcon
@@ -110,15 +118,15 @@ const NavbarHigherRow = ({ menuItems }: { menuItems: IMainMenuItem[] }) => {
                         />
                     }
                 >
-                    <Typography
+                    {/* <Typography
                         color="primary"
                         fontWeight={"light"}
                         sx={{ textTransform: "none" }}
                         fontSize={"large"}
                         margin={0}
-                    >
-                        Схема проезда
-                    </Typography>
+                    > */}
+                    Схема проезда
+                    {/* </Typography> */}
                 </Button>
             </Box>
 
