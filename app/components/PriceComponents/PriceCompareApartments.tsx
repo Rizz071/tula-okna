@@ -55,7 +55,7 @@ const PriceCompareApartments = () => {
             >
                 <TableHead sx={{ bgcolor: "#333" }}>
                     <TableRow>
-                        <TableCell colSpan={6} sx={{ p: 1 }}>
+                        <TableCell colSpan={5} sx={{ p: 1 }}>
                             <Stack
                                 direction={"row"}
                                 sx={{ alignItems: "center" }}
@@ -138,16 +138,17 @@ const PriceCompareApartments = () => {
                             <Box sx={{ my: 1 }}>
                                 {renderLargeFont(<>СТОИМОСТЬ</>, true)}
 
-                                {renderSubtitle(
+                                {/* {renderSubtitle(
                                     <>
                                         окно, отлив, подо&shy;конник, откосы,
                                         монтаж по ГОСТ
                                     </>,
                                     true
-                                )}
+                                )} */}
+                                {renderSubtitle(<>Оконный блок</>, true)}
                             </Box>
                         </TableCell>
-                        <TableCell
+                        {/* <TableCell
                             sx={{ display: { xs: "none", sm: "table-cell" } }}
                         >
                             <Box sx={{ my: 1 }}>
@@ -157,7 +158,7 @@ const PriceCompareApartments = () => {
                                     <>только окно и отлив, монтаж по ГОСТ</>
                                 )}
                             </Box>
-                        </TableCell>
+                        </TableCell> */}
                         <TableCell sx={{ px: { xs: 0, sm: 1, md: 1 } }}>
                             {renderLargeFont(<>ОПЦИИ</>)}
                         </TableCell>
@@ -265,15 +266,26 @@ const PriceCompareApartments = () => {
                                             >
                                                 {renderSmallFont(
                                                     <>
-                                                        {
-                                                            currentWindowSystem.price_full
-                                                        }{" "}
+                                                        от{" "}
+                                                        {currentWindowSystem.price_full -
+                                                            18000}{" "}
                                                         руб
                                                     </>,
                                                     true
                                                 )}
+                                                {/* <Typography
+                                                    sx={{
+                                                        typography: "body2",
+                                                        fontSize: "0.7rem",
+                                                        textAlign: "center",
+                                                        my: 0,
+                                                        color: "secondary.main",
+                                                    }}
+                                                >
+                                                    Монтаж включён
+                                                </Typography> */}
                                             </TableCell>
-                                            <TableCell
+                                            {/* <TableCell
                                                 sx={{
                                                     display: {
                                                         xs: "none",
@@ -287,13 +299,24 @@ const PriceCompareApartments = () => {
                                             >
                                                 {renderSmallFont(
                                                     <>
-                                                        {
-                                                            currentWindowSystem.price_naked
-                                                        }{" "}
+                                                        от{" "}
+                                                        {currentWindowSystem.price_naked -
+                                                            5000}{" "}
                                                         руб
                                                     </>
                                                 )}
-                                            </TableCell>
+                                                <Typography
+                                                    sx={{
+                                                        typography: "body2",
+                                                        fontSize: "0.7rem",
+                                                        textAlign: "center",
+                                                        my: 0,
+                                                        color: "secondary.main",
+                                                    }}
+                                                >
+                                                    Монтаж включён
+                                                </Typography>
+                                            </TableCell> */}
 
                                             {windowSystemIndex == 0 && (
                                                 <TableCell
@@ -311,7 +334,7 @@ const PriceCompareApartments = () => {
                                                             "space-around"
                                                         }
                                                     >
-                                                        {renderSubtitle(
+                                                        {/* {renderSubtitle(
                                                             <>
                                                                 Без
                                                                 паро&shy;изоляции
@@ -321,7 +344,7 @@ const PriceCompareApartments = () => {
                                                                 }{" "}
                                                                 руб
                                                             </>
-                                                        )}
+                                                        )} */}
                                                         <br />
                                                         {currentConstructionType.additional_sash !=
                                                             0 &&
@@ -363,7 +386,7 @@ const PriceCompareApartments = () => {
 
                     <TableRow>
                         <TableCell
-                            colSpan={6}
+                            colSpan={5}
                             sx={{ px: { xs: 0, sm: 2 }, py: 2 }}
                         >
                             <PriceNotesBox />
