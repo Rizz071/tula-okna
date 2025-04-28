@@ -194,7 +194,6 @@ const PriceCompareApartments = () => {
                                                         src={
                                                             currentConstructionType.typeImageSrc
                                                         }
-                                                        alt={``}
                                                         width={932}
                                                         height={686}
                                                         quality={95}
@@ -204,6 +203,7 @@ const PriceCompareApartments = () => {
                                                             width: "100%",
                                                             height: "auto",
                                                         }}
+                                                        alt={`Тип окна, ${currentConstructionType.typeImageSrc}`}
                                                     />
                                                 </TableCell>
                                             )}

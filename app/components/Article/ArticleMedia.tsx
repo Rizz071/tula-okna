@@ -37,7 +37,7 @@ const ArticleMedia = ({ article }: { article: Article }) => {
                                 width: "100%",
                                 height: "auto",
                             }}
-                            alt={""}
+                            alt={`Иллюстрация к статье, адрес: ${article.articleMedia.imageSrc.src}`}
                         />
                     </Box>
                 ) : (

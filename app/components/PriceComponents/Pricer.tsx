@@ -99,7 +99,6 @@ const Pricer = ({ filterByProductName }: Props) => {
                                                     src={
                                                         constructionType.typeImageSrc
                                                     }
-                                                    alt={``}
                                                     width={932}
                                                     height={686}
                                                     quality={100}
@@ -109,6 +108,7 @@ const Pricer = ({ filterByProductName }: Props) => {
                                                         width: "100%",
                                                         height: "auto",
                                                     }}
+                                                    alt={`Тип оконной конструкции, ${constructionType.typeImageSrc}`}
                                                 />
 
                                                 <Typography

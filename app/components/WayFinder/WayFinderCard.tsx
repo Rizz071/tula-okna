@@ -31,17 +31,11 @@ const WayFinderCard = ({
                     elevation={6}
                 >
                     <CardActionArea sx={{ textAlign: "center" }}>
-                        {/* <CardMedia
-                            sx={{ height: 400 }}
-                            image={image.src}
-                            title={caption}
-                        /> */}
                         <Image
                             src={image}
                             width={0}
                             height={0}
-                            alt={caption}
-                            // quality={90}
+                            alt={`Изображение для ${caption}`}
                             style={{
                                 height: 400,
                                 width: "auto",

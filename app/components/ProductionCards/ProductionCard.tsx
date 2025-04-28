@@ -28,7 +28,7 @@ const ProductionCard = ({ imgSrc, caption, link }: Props) => {
                         // height={0}
                         quality={95}
                         // unoptimized
-                        alt={""} //TODO alt
+                        alt={`Изображение для ${caption}`}
                         style={{
                             width: "auto",
                             height: "100%",
