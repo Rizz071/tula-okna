@@ -9,6 +9,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Остекление балконов в Туле",
     description: "Выбор способа остекления балкона или лоджии",
+    alternates: {
+        canonical: "https://тульские-окна.рф/balkony/",
+    },
 };
 
 export default function Page() {

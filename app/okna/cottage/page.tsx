@@ -40,6 +40,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Пластиковые окна в дом",
     description: "Выбрать и заказать окна ПВХ для загородного дома",
+    alternates: {
+        canonical: "https://тульские-окна.рф/okna/cottage/",
+    },
 };
 
 export default function Page() {

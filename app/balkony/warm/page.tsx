@@ -15,6 +15,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Тёплое остекление балкона",
     description: "Тёплое остекление балкона или лоджии окнами ПВХ",
+    alternates: {
+        canonical: "https://тульские-окна.рф/balkony/warm/",
+    },
 };
 
 export default function Page() {

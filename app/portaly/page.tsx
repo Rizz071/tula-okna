@@ -23,6 +23,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Раздвижные окна - порталы",
     description: "Выборрать и заказать тёплые раздвижные окна ПВХ - порталы.",
+    alternates: {
+        canonical: "https://тульские-окна.рф/portaly/",
+    },
 };
 
 import {

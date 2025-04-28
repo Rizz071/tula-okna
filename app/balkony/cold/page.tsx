@@ -30,6 +30,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Холодное остекление балкона ПРОВЕДАЛ",
     description: "Холодное остекление балкона системой ПРОВЕДАЛ",
+    alternates: {
+        canonical: "https://тульские-окна.рф/balkony/cold/",
+    },
 };
 
 export default function Page() {

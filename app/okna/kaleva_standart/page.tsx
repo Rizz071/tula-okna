@@ -14,6 +14,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Окна КАЛЕВА Стандарт",
     description: "Характеристика и стоимость КАЛЕВА Стандарт 70",
+    alternates: {
+        canonical: "https://тульские-окна.рф/okna/kaleva_standart/",
+    },
 };
 
 export default function Page() {

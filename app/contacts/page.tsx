@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     title: "Тульские Окна - Контакты",
     description:
         "Схема проезда, график работы, телефон, WhatsApp и электронная почта.",
+    alternates: {
+        canonical: "https://тульские-окна.рф/contacts/",
+    },
 };
 
 export default function Page() {

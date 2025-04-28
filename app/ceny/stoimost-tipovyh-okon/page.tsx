@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     title: "Окна в Туле - цены от производителя",
     description:
         "Цены на окна в Туле без посреднических наценок прямо от производителя. От эконом до премиум класса.",
+    alternates: {
+        canonical: "https://тульские-окна.рф/ceny/stoimost-tipovyh-okon/",
+    },
 };
 
 export default function Page() {

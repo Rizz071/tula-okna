@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     title: "Пластиковые окна в квартиру",
     description:
         "Выбрать и заказать пластиковые окна в квартиру. Актуальные цены.",
+    alternates: {
+        canonical: "https://тульские-окна.рф/okna/apartments/",
+    },
 };
 
 export default function Page() {

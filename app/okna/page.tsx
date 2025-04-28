@@ -8,6 +8,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Выбор окон",
     description: "Выбор окон ПВХ - Тульские Окна",
+    alternates: {
+        canonical: "https://тульские-окна.рф/okna/",
+    },
 };
 
 export default function Page() {

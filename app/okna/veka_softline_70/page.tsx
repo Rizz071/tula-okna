@@ -15,6 +15,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Окна VEKA Softline 70",
     description: "Характеристика и стоимость VEKA Softline 70",
+    alternates: {
+        canonical: "https://тульские-окна.рф/okna/veka_softline_70/",
+    },
 };
 
 export default function Page() {
