@@ -1115,12 +1115,16 @@ export default function Home() {
                                 return (
                                     <Step key={index} active>
                                         <StepLabel>
-                                            <Typography variant="h5">
+                                            <Typography
+                                                sx={{ typography: "h5" }}
+                                            >
                                                 {item_label}
                                             </Typography>
                                         </StepLabel>
                                         <StepContent>
-                                            <Typography variant="subtitle1">
+                                            <Typography
+                                                sx={{ typography: "subtitle1" }}
+                                            >
                                                 {item_content}
                                             </Typography>
                                         </StepContent>
@@ -1176,12 +1180,16 @@ export default function Home() {
                                 return (
                                     <Step key={index} active>
                                         <StepLabel>
-                                            <Typography variant="h5">
+                                            <Typography
+                                                sx={{ typography: "h5" }}
+                                            >
                                                 {item_label}
                                             </Typography>
                                         </StepLabel>
                                         <StepContent>
-                                            <Typography variant="subtitle1">
+                                            <Typography
+                                                sx={{ typography: "subtitle1" }}
+                                            >
                                                 {item_content}
                                             </Typography>
                                         </StepContent>

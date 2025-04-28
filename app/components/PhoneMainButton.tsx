@@ -17,14 +17,14 @@ const PhoneMailButton = ({
 }: Props) => {
     return (
         <Box
-            sx={{ display: { xs: "none", sm: "flex" } }}
+            sx={{ display: { xs: "none", sm: "flex" }, maxWidth: "250px" }}
             flexDirection={"column"}
             alignSelf={"center"}
             justifyContent={"flex-end"}
             textAlign={"right"}
         >
             <Link href="/contacts" style={{ textDecoration: "none" }}>
-                <Button
+                {/* <Button
                     variant={"outlined"}
                     sx={{
                         display: isContactsVisible ? "none" : "block",
@@ -35,6 +35,16 @@ const PhoneMailButton = ({
                     // onClick={() => {
                     //     setIsContactsVisible(!isContactsVisible);
                     // }}
+                > */}
+                <Box
+                    sx={{
+                        px: 1.9,
+                        py: 0.55,
+                        borderWidth: "1px",
+                        borderRadius: "4px",
+                        borderStyle: "solid",
+                        borderColor: "primary.light",
+                    }}
                 >
                     <Stack direction={"row"}>
                         <SupportAgentOutlinedIcon
@@ -42,6 +52,7 @@ const PhoneMailButton = ({
                                 mr: 2,
                                 fontSize: "2.5rem",
                                 alignSelf: "center",
+                                color: "primary.main",
                             }}
                         />
                         <Stack
@@ -50,23 +61,29 @@ const PhoneMailButton = ({
                         >
                             <Typography
                                 variant="button"
-                                sx={{ fontWeight: 700, textAlign: "left" }}
+                                sx={{
+                                    fontWeight: 700,
+                                    textAlign: "left",
+                                    color: "primary.main",
+                                }}
                             >
                                 телефон и почта
                             </Typography>
                             <Typography
-                                variant="caption"
+                                variant="button"
                                 sx={{
                                     fontWeight: 400,
                                     fontSize: "0.6rem",
                                     textAlign: "left",
+                                    color: "primary.main",
                                 }}
                             >
                                 нажмите для просмотра
                             </Typography>
                         </Stack>
                     </Stack>
-                </Button>
+                </Box>
+                {/* </Button> */}
             </Link>
             <Box
                 sx={{

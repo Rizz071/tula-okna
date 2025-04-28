@@ -87,15 +87,7 @@ const NavbarHigherRow = ({ menuItems }: { menuItems: IMainMenuItem[] }) => {
                         />
                     }
                 >
-                    {/* <Typography
-                        color={"primary"}
-                        fontWeight={"light"}
-                        fontSize={"large"}
-                        margin={0}
-                        sx={{ textTransform: "none" }}
-                    > */}
                     Калькулятор окон
-                    {/* </Typography> */}
                 </Button>
 
                 <Button
@@ -118,15 +110,7 @@ const NavbarHigherRow = ({ menuItems }: { menuItems: IMainMenuItem[] }) => {
                         />
                     }
                 >
-                    {/* <Typography
-                        color="primary"
-                        fontWeight={"light"}
-                        sx={{ textTransform: "none" }}
-                        fontSize={"large"}
-                        margin={0}
-                    > */}
                     Схема проезда
-                    {/* </Typography> */}
                 </Button>
             </Box>
 
