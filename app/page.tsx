@@ -1116,6 +1116,7 @@ export default function Home() {
                                     <Step key={index} active>
                                         <StepLabel>
                                             <Typography
+                                                component={"span"}
                                                 sx={{ typography: "h5" }}
                                             >
                                                 {item_label}
@@ -1123,6 +1124,7 @@ export default function Home() {
                                         </StepLabel>
                                         <StepContent>
                                             <Typography
+                                                component={"span"}
                                                 sx={{ typography: "subtitle1" }}
                                             >
                                                 {item_content}
@@ -1181,6 +1183,7 @@ export default function Home() {
                                     <Step key={index} active>
                                         <StepLabel>
                                             <Typography
+                                                component={"span"}
                                                 sx={{ typography: "h5" }}
                                             >
                                                 {item_label}
@@ -1188,6 +1191,7 @@ export default function Home() {
                                         </StepLabel>
                                         <StepContent>
                                             <Typography
+                                                component={"span"}
                                                 sx={{ typography: "subtitle1" }}
                                             >
                                                 {item_content}
