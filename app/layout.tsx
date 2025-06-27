@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { Viewport } from "next";
 // import Script from "next/script";
 // import YandexMetrika from "./components/YandexMetrika/YandexMetrika.jsx";
 
@@ -10,6 +11,11 @@ import Navbar from "./components/Navbar/Navbar";
 import FooterContainer from "./components/Footer/FooterContainer";
 // import { Suspense } from "react";
 import { GoogleTagManager } from "@next/third-parties/google";
+
+export const viewport: Viewport = {
+    width: "device-width",
+    initialScale: 1,
+};
 
 export const metadata: Metadata = {
     title: "Пластиковые окна в Туле от производителя!",
