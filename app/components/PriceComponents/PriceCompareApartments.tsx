@@ -91,7 +91,7 @@ const PriceCompareApartments = () => {
                                             letterSpacing: "3px",
                                             textAlign: "center",
                                             fontSize: {
-                                                xs: "x-small",
+                                                xs: "small",
                                                 sm: "small",
                                                 md: "medium",
                                                 lg: "large",
@@ -123,7 +123,11 @@ const PriceCompareApartments = () => {
                             {renderLargeFont(<>ПРОФИЛЬ&shy;НАЯ СИСТЕМА</>)}
 
                             {renderSubtitle(
-                                <>минимально - рекомендованная</>,
+                                <>
+                                    рекомендо
+                                    <wbr />
+                                    ванная
+                                </>,
                                 true
                             )}
                         </TableCell>
@@ -159,7 +163,12 @@ const PriceCompareApartments = () => {
                                 )}
                             </Box>
                         </TableCell> */}
-                        <TableCell sx={{ px: { xs: 0, sm: 1, md: 1 } }}>
+                        <TableCell
+                            sx={{
+                                px: { xs: 0, sm: 1, md: 1 },
+                                display: { xs: "none", sm: "table-cell" },
+                            }}
+                        >
                             {renderLargeFont(<>ОПЦИИ</>)}
                         </TableCell>
                     </TableRow>
@@ -322,6 +331,10 @@ const PriceCompareApartments = () => {
                                                 <TableCell
                                                     sx={{
                                                         px: { xs: 1, md: 2 },
+                                                        display: {
+                                                            xs: "none",
+                                                            sm: "table-cell",
+                                                        },
                                                     }}
                                                     rowSpan={
                                                         currentConstructionType
@@ -406,7 +419,7 @@ function renderLargeFont(text: ReactElement, bold: boolean = false) {
                 px: { xs: 0, md: 1 },
                 textAlign: "center",
                 fontSize: {
-                    xs: "x-small",
+                    xs: "medium",
                     sm: "small",
                     md: "medium",
                     lg: "medium",
@@ -425,10 +438,10 @@ function renderSmallFont(text: ReactElement, bold: boolean = false) {
             sx={{
                 m: 0,
                 px: { xs: 0, md: 1 },
-                textAlign: "center",
+                textAlign: { xs: "left", md: "center" },
                 fontSize: {
-                    xs: "x-small",
-                    sm: "x-small",
+                    xs: "medium",
+                    sm: "small",
                     md: "small",
                     lg: "medium",
                 },
@@ -448,8 +461,8 @@ function renderSubtitle(text: ReactElement, bold: boolean = false) {
                 px: { xs: 0, md: 1 },
                 textAlign: "center",
                 fontSize: {
-                    xs: "xx-small",
-                    sm: "xx-small",
+                    xs: "small",
+                    sm: "small",
                     md: "x-small",
                     lg: "small",
                 },

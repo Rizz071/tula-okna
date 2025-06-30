@@ -140,7 +140,7 @@ export default function Page() {
                                                                 m: 0,
                                                                 p: 0,
                                                                 fontSize: {
-                                                                    xs: "1.1rem",
+                                                                    xs: "2rem",
                                                                     md: "1.2rem",
                                                                 },
                                                                 fontWeight: 500,
@@ -171,7 +171,7 @@ export default function Page() {
                                                                 typography:
                                                                     "overline",
                                                                 fontSize: {
-                                                                    xs: "1.0rem",
+                                                                    xs: "1.2rem",
                                                                     md: "0.8rem",
                                                                 },
                                                                 fontWeight: 500,
@@ -194,7 +194,8 @@ export default function Page() {
                                                                 "caption",
                                                             color: "secondary.main",
                                                             fontSize: {
-                                                                xs: "small",
+                                                                xs: "medium",
+                                                                lg: "small",
                                                             },
                                                             fontWeight: 700,
                                                             textAlign: {
@@ -231,7 +232,7 @@ export default function Page() {
                                                                 m: 0,
                                                                 p: 0,
                                                                 fontSize: {
-                                                                    xs: "1.0rem",
+                                                                    xs: "1.2rem",
                                                                     md: "0.9rem",
                                                                 },
                                                                 fontWeight: 500,
@@ -253,7 +254,8 @@ export default function Page() {
                                                                     "caption",
                                                                 color: "secondary.main",
                                                                 fontSize: {
-                                                                    xs: "small",
+                                                                    xs: "medium",
+                                                                    lg: "small",
                                                                 },
                                                                 fontWeight: 700,
                                                                 textAlign: {
@@ -315,6 +317,10 @@ export default function Page() {
                                                     variant="overline"
                                                     sx={{
                                                         lineHeight: "1.2rem",
+                                                        fontSize: {
+                                                            xs: "1rem",
+                                                            md: "0.8rem",
+                                                        },
                                                     }}
                                                 >
                                                     Понедельник - Пятница
@@ -329,7 +335,7 @@ export default function Page() {
                                                         m: 0,
                                                         p: 0,
                                                         fontSize: {
-                                                            xs: "0.8rem",
+                                                            xs: "1rem",
                                                             md: "0.8rem",
                                                         },
                                                         fontWeight: 500,
@@ -346,7 +352,8 @@ export default function Page() {
                                                         typography: "caption",
                                                         color: "secondary.main",
                                                         fontSize: {
-                                                            xs: "small",
+                                                            xs: "medium",
+                                                            lg: "small",
                                                         },
                                                     }}
                                                 >
@@ -362,7 +369,8 @@ export default function Page() {
                                                         typography: "caption",
                                                         color: "secondary.main",
                                                         fontSize: {
-                                                            xs: "small",
+                                                            xs: "medium",
+                                                            lg: "small",
                                                         },
                                                     }}
                                                 >
@@ -384,6 +392,10 @@ export default function Page() {
                                                     variant="overline"
                                                     sx={{
                                                         lineHeight: "1.2rem",
+                                                        fontSize: {
+                                                            xs: "1rem",
+                                                            md: "0.8rem",
+                                                        },
                                                     }}
                                                 >
                                                     Суббота
@@ -397,7 +409,7 @@ export default function Page() {
                                                         m: 0,
                                                         p: 0,
                                                         fontSize: {
-                                                            xs: "0.8rem",
+                                                            xs: "1rem",
                                                             md: "0.8rem",
                                                         },
                                                         fontWeight: 500,
@@ -413,7 +425,8 @@ export default function Page() {
                                                         typography: "caption",
                                                         color: "secondary.main",
                                                         fontSize: {
-                                                            xs: "small",
+                                                            xs: "medium",
+                                                            lg: "small",
                                                         },
                                                     }}
                                                 >
@@ -436,6 +449,10 @@ export default function Page() {
                                                         lineHeight: "1.2rem",
                                                         color: "red",
                                                         fontWeight: 500,
+                                                        fontSize: {
+                                                            xs: "1rem",
+                                                            md: "0.8rem",
+                                                        },
                                                     }}
                                                 >
                                                     Воскресенье
@@ -449,7 +466,7 @@ export default function Page() {
                                                         m: 0,
                                                         p: 0,
                                                         fontSize: {
-                                                            xs: "0.8rem",
+                                                            xs: "1rem",
                                                             md: "0.8rem",
                                                         },
                                                         fontWeight: 500,
@@ -640,6 +657,10 @@ export default function Page() {
                                                         sx={{
                                                             lineHeight:
                                                                 "1.2rem",
+                                                            fontSize: {
+                                                                xs: "0.9rem",
+                                                                md: "0.8rem",
+                                                            },
                                                         }}
                                                     >
                                                         {tableRow.leftCol}
@@ -654,7 +675,7 @@ export default function Page() {
                                                             m: 0,
                                                             p: 0,
                                                             fontSize: {
-                                                                xs: "0.7rem",
+                                                                xs: "0.9rem",
                                                                 md: "0.8rem",
                                                             },
                                                             fontWeight: 500,
