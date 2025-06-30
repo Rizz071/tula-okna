@@ -42,8 +42,9 @@ const WayFinderCard = ({
                                 verticalAlign: "bottom",
                             }}
                         />
-                        <CardContent sx={{ m: 0, p: 0 }} component="span">
+                        <CardContent sx={{ m: 0, p: 0 }}>
                             <Typography
+                                component="div"
                                 sx={{
                                     textAlign: "center",
                                     minHeight: 60,
