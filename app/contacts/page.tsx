@@ -32,7 +32,11 @@ export const metadata: Metadata = {
 export default function Page() {
     return (
         <>
-            <HeaderSlider sliderImage={slide} isCardVisible={false} />
+            <HeaderSlider
+                sliderImage={slide}
+                sliderImageAlt={"Главный слайд: фасад дома с окнами"}
+                isCardVisible={false}
+            />
 
             <Container maxWidth="lg" sx={{ mt: 6 }}>
                 <Grid

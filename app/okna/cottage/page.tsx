@@ -48,7 +48,11 @@ export const metadata: Metadata = {
 export default function Page() {
     return (
         <>
-            <HeaderSlider sliderImage={slideImage} isCardVisible={false} />
+            <HeaderSlider
+                sliderImage={slideImage}
+                sliderImageAlt="Главный слайд: остекление частных домов и коттеджей"
+                isCardVisible={false}
+            />
 
             <Container>
                 <Paper

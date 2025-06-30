@@ -5,10 +5,12 @@ import Image, { StaticImageData } from "next/image";
 
 interface Props {
     sliderImage: StaticImageData;
+    sliderImageAlt: string; // Add this line
     isCardVisible: boolean;
 }
 
-function HeaderSlider({ sliderImage, isCardVisible }: Props) {
+function HeaderSlider({ sliderImage, sliderImageAlt, isCardVisible }: Props) {
+    // Modify this line
     return (
         <Box
             sx={{
@@ -22,7 +24,7 @@ function HeaderSlider({ sliderImage, isCardVisible }: Props) {
         >
             <Image
                 src={sliderImage}
-                alt="Slider hero image"
+                alt={sliderImageAlt} // Modify this line
                 // sizes={"100vw"}
                 quality={85}
                 style={{ objectFit: "cover" }}

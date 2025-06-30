@@ -20,7 +20,11 @@ export const metadata: Metadata = {
 export default function Page() {
     return (
         <>
-            <HeaderSlider sliderImage={slide} isCardVisible={true} />
+            <HeaderSlider
+                sliderImage={slide}
+                sliderImageAlt="Главный слайд: огромный портал, открывающий потрясающий вид на природу"
+                isCardVisible={true}
+            />
 
             <Container
                 maxWidth="lg"

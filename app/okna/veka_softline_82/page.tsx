@@ -23,7 +23,11 @@ export const metadata: Metadata = {
 export default function Page() {
     return (
         <>
-            <HeaderSlider sliderImage={slideImage} isCardVisible={false} />
+            <HeaderSlider
+                sliderImage={slideImage}
+                sliderImageAlt="Главный слайд: окна ВЕКА СОФТЛАЙН 82"
+                isCardVisible={false}
+            />
 
             <Container maxWidth={"lg"} sx={{ mt: 8 }}>
                 <TemplateProfileSystem

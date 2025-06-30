@@ -48,7 +48,11 @@ import VideoPlayerWrapper from "../components/VideoPlayerWrapper";
 export default function Page() {
     return (
         <>
-            <HeroImageSlider sliderImage={slideImage} isCardVisible={false} />
+            <HeroImageSlider
+                sliderImage={slideImage}
+                sliderImageAlt="Главный слайд: портальное крупногабаритное остекление"
+                isCardVisible={false}
+            />
 
             <ProductionCardsContainer
                 title={"ТЁПЛЫЕ РАЗДВИЖНЫЕ ОКНА - ПОРТАЛЫ"}

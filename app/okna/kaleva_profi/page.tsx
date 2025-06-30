@@ -22,7 +22,11 @@ export const metadata: Metadata = {
 export default function Page() {
     return (
         <>
-            <HeaderSlider sliderImage={slideImage} isCardVisible={false} />
+            <HeaderSlider
+                sliderImage={slideImage}
+                sliderImageAlt="Главный слайд: окна КАЛЕВА Профи"
+                isCardVisible={false}
+            />
 
             <Container maxWidth={"lg"} sx={{ mt: 8 }}>
                 <TemplateProfileSystem

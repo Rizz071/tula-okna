@@ -23,7 +23,11 @@ export const metadata: Metadata = {
 export default function Page() {
     return (
         <>
-            <HeroImageSlider sliderImage={slideImage} isCardVisible={true} />
+            <HeroImageSlider
+                sliderImage={slideImage}
+                sliderImageAlt="Главный слайд: тёплое остекление балкона"
+                isCardVisible={true}
+            />
 
             <ProductionCardsContainer
                 title={"ТЕПЛЫЕ РАМЫ ПВХ ДЛЯ БАЛКОНА ИЛИ ЛОДЖИИ"}
