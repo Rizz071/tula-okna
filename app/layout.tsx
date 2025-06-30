@@ -25,9 +25,6 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ru">
-            <head>
-                <link rel="canonical" href="https://тульские-окна.рф/" />
-            </head>
             <GoogleTagManager gtmId="GTM-NV692FRD" />
             <body>
                 <AppRouterCacheProvider>
