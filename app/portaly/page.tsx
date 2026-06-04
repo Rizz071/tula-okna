@@ -1,5 +1,5 @@
 import React from "react";
-import slideImage from "@/public/images/Vekamotion-Max-Exterior-01.png";
+import slideImage from "@/public/images/Vekamotion-Max-Exterior-01.jpg";
 import { ImageSide } from "@/app/lib/types";
 import ProductionCardsContainer from "../components/ProductionCards/ProductionCardsContainer";
 import HeroImageSlider from "@/app/components/HeaderSlider";

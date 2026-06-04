@@ -1,6 +1,6 @@
 import React from "react";
 import apartmentsImg from "@/public/images/Softline-70-Exterior-01.png";
-import cottageImg from "@/public/images/Artline-82-Exterior-01.png";
+import cottageImg from "@/public/images/Artline-82-Exterior-01.jpg";
 import dachaImg from "@/public/images/okna/oknodom_1.png";
 import WayFinderContainer from "../components/WayFinder/WayFinderContainer";
 import { Metadata } from "next";
