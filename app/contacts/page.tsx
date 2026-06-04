@@ -2,7 +2,7 @@ import React from "react";
 import {
     Box,
     Container,
-    Grid2 as Grid,
+    Grid,
     Paper,
     Stack,
     Table,
@@ -17,6 +17,10 @@ import Link from "next/link";
 import HeaderSlider from "../components/HeaderSlider";
 import slide from "@/public/images/slides/HS_portal_1.jpg";
 import InfoCard from "../components/InfoCard";
+
+// Импорт иконок мессенджеров из MUI
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import TelegramIcon from "@mui/icons-material/Telegram";
 
 import { Metadata } from "next";
 
@@ -49,7 +53,7 @@ export default function Page() {
                 >
                     <Grid
                         size={{ xs: 12, md: 8 }}
-                        order={{ xs: 3, sm: 3, md: 1 }}
+                        sx={{ order: { xs: 3, sm: 3, md: 1 } }}
                     >
                         <TableContainer
                             component={Paper}
@@ -109,8 +113,7 @@ export default function Page() {
                     <Grid
                         container
                         size={{ xs: 12, sm: 12, md: 4 }}
-                        order={{ sx: 1, md: 2 }}
-                        direction={{ xs: "column", sm: "row", md: "column" }}
+                        sx={{order: { xs: 1, md: 2 }, flexDirection: { xs: "column", sm: "row", md: "column" } }}
                         spacing={6}
                     >
                         <Grid size={{ xs: 12, sm: 6, md: 12 }}>
@@ -216,6 +219,90 @@ export default function Page() {
                                                 </Stack>
                                             ),
                                         },
+{
+                                            leftProperty: "Мы в мессенджерах",
+                                            rightProperty: (
+                                                <Stack
+                                                    direction={"column"}
+                                                    spacing={1}
+                                                    sx={{
+                                                        justifyContent: "center",
+                                                    }}
+                                                >
+                                                    <Link
+                                                        href={"tel:+79030367081"}
+                                                        style={{
+                                                            textDecoration: "none",
+                                                        }}
+                                                    >
+                                                        <Typography
+                                                            sx={{
+                                                                m: 0,
+                                                                p: 0,
+                                                                typography: "overline",
+                                                                fontSize: {
+                                                                    xs: "1.2rem",
+                                                                    md: "0.8rem",
+                                                                },
+                                                                fontWeight: 500,
+                                                                color: "black",
+                                                                textAlign: {
+                                                                    xs: "center",
+                                                                    lg: "left",
+                                                                },
+                                                            }}
+                                                        >
+                                                            +7 (903) 036 70-81
+                                                        </Typography>
+                                                    </Link>
+
+                                                    {/* Горизонтальный стек кликабельных иконок */}
+                                                    <Stack 
+                                                        direction="row" 
+                                                        spacing={2} 
+                                                        sx={{ 
+                                                            justifyContent: { xs: "center", lg: "flex-start" },
+                                                            alignItems: "center",
+                                                            mt: 0.5 
+                                                        }}
+                                                    >
+                                                        <Link 
+                                                            href="https://max.ru/u/f9LHodD0cOL3gaCeG6-NsJVZ3A5BVIYaDQBPeAnEFyrkx6lv5FfjOw-cvBQ" 
+                                                            target="_blank" 
+                                                            rel="noopener noreferrer"
+                                                            style={{ display: "inline-flex" }}
+                                                        >
+                                                            <Box 
+                                                                component="img"
+                                                                src="/images/MAX.svg"
+                                                                alt="Мессенджер МАКС"
+                                                                sx={{ 
+                                                                    width: "1.8rem", 
+                                                                    height: "1.8rem", 
+                                                                    "&:hover": { opacity: 0.8 } 
+                                                                }} 
+                                                            />
+                                                        </Link>
+                                                        <Link 
+                                                            href="https://wa.me/79030367081" 
+                                                            target="_blank" 
+                                                            rel="noopener noreferrer"
+                                                            style={{ color: "#25D366", display: "inline-flex" }}
+                                                        >
+                                                            <WhatsAppIcon sx={{ fontSize: "1.8rem", "&:hover": { opacity: 0.8 } }} />
+                                                        </Link>
+                                                        <Link 
+                                                            href="https://t.me/+79030367081" 
+                                                            target="_blank" 
+                                                            rel="noopener noreferrer"
+                                                            style={{ color: "#24A1DE", display: "inline-flex" }}
+                                                        >
+                                                            <TelegramIcon sx={{ fontSize: "1.8rem", "&:hover": { opacity: 0.8 } }} />
+                                                        </Link>
+                                                    </Stack>
+                                                </Stack>
+                                            ),
+                                        },
                                         {
                                             leftProperty: "Электронная почта",
                                             rightProperty: (
@@ -285,7 +372,7 @@ export default function Page() {
 
                         <Grid
                             size={{ xs: 12, sm: 6, md: 12 }}
-                            order={{ xs: 2, md: 0 }}
+                            sx={{ order: { xs: 2, md: 0 }} }
                         >
                             <TableContainer component={Paper} elevation={12}>
                                 <Table
@@ -488,7 +575,7 @@ export default function Page() {
                             </TableContainer>
                         </Grid>
                     </Grid>
-                    <Grid size={{ xs: 12, sm: 6 }} order={10}>
+                    <Grid size={{ xs: 12, sm: 6 }} sx={{ order: 10 }} >
                         <Paper elevation={12} sx={{ mt: 6 }}>
                             <Box
                                 sx={{
@@ -514,8 +601,8 @@ export default function Page() {
 
                     <Grid
                         size={{ xs: 12, sm: 6 }}
-                        sx={{ justifyContent: "center" }}
-                        order={11}
+                        sx={{ justifyContent: "center", order: 11 }}
+                        
                     >
                         <TableContainer
                             component={Paper}

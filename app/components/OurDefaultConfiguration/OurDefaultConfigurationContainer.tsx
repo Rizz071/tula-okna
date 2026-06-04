@@ -1,4 +1,4 @@
-import { Typography, Grid2 as Grid } from "@mui/material";
+import { Typography, Grid } from "@mui/material";
 import ResponsiveHeader_H1 from "../Article/ResponsiveHeader_H1";
 import StandartWindowsConfiguration from "./StandartWindowsConfiguration";
 import StandartDoorsConfiguration from "./StandartDoorsConfiguration";

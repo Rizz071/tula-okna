@@ -6,7 +6,7 @@ import {
     Step,
     StepLabel,
     StepContent,
-    Grid2 as Grid,
+    Grid,
 } from "@mui/material";
 
 import HeaderSlider from "./components/HeaderSlider";

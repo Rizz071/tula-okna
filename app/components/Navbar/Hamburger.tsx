@@ -4,7 +4,7 @@ import {
     Box,
     IconButton,
     Drawer,
-    Grid2 as Grid,
+    Grid,
     Stack,
     Typography,
 } from "@mui/material";

@@ -1,17 +1,17 @@
 "use client";
 
 import {
-    TableContainer,
-    Paper,
-    Table,
-    TableHead,
-    TableRow,
-    TableCell,
-    Typography,
-    TableBody,
-    Stack,
-    Box,
-    Button,
+  TableContainer,
+  Paper,
+  Table,
+  TableHead,
+  TableRow,
+  TableCell,
+  Typography,
+  TableBody,
+  Stack,
+  Box,
+  Button,
 } from "@mui/material";
 import Image from "next/image";
 
@@ -23,136 +23,131 @@ import { ReactElement } from "react";
 import PriceNotesBox from "./PriceNotesBox";
 
 const PriceCompareApartments = () => {
-    const contentRef = useRef(null);
-    const reactToPrintFn = useReactToPrint({
-        contentRef,
-        pageStyle: `@media print {
+  const contentRef = useRef(null);
+  const reactToPrintFn = useReactToPrint({
+    contentRef,
+    pageStyle: `@media print {
           @page {
             size: 210mm 297mm;
             margin: 5mm;
           }
         }`,
-    });
+  });
 
-    const windowsTypesFromPrice = latestPrice.constructionTypes.map(
-        (constructionType) => constructionType
+  const windowsTypesFromPrice = latestPrice.constructionTypes.map(
+    (constructionType) => constructionType,
+  );
+
+  if (windowsTypesFromPrice.length == 0) {
+    console.error(
+      "Error during parsing apartement pricelist. Zero-length array.",
     );
+  }
 
-    if (windowsTypesFromPrice.length == 0) {
-        console.error(
-            "Error during parsing apartement pricelist. Zero-length array."
-        );
-    }
+  return (
+    <TableContainer component={Paper} elevation={12}>
+      <Table
+        size="small"
+        sx={{
+          tableLayout: { xs: "auto", md: "fixed" },
+        }}
+        ref={contentRef}
+      >
+        <TableHead sx={{ bgcolor: "#333" }}>
+          <TableRow>
+            <TableCell colSpan={5} sx={{ p: 1 }}>
+              <Stack direction={"row"} sx={{ alignItems: "center" }}>
+                <Button
+                  // size={"small"}
+                  variant={"outlined"}
+                  onClick={() => reactToPrintFn()}
+                  sx={{
+                    color: "white",
+                    borderColor: "white",
+                    fontSize: {
+                      xs: "x-small",
+                      md: "small",
+                    },
+                  }}
+                >
+                  Печать
+                </Button>
+                <Box
+                  sx={{
+                    textAlign: "center",
+                    width: "100%",
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      m: 0,
+                      p: 0,
+                      color: "white",
+                      fontWeight: { xs: 400, md: 300 },
+                      textTransform: "uppercase",
+                      letterSpacing: "3px",
+                      textAlign: "center",
+                      fontSize: {
+                        xs: "small",
+                        sm: "small",
+                        md: "medium",
+                        lg: "large",
+                      },
+                    }}
+                  >
+                    5- и 9-этажные дома. Актуальные цены на дату:{" "}
+                    {latestPrice.date}
+                  </Typography>
+                </Box>
+              </Stack>
+            </TableCell>
+          </TableRow>
+        </TableHead>
 
-    return (
-        <TableContainer component={Paper} elevation={12}>
-            <Table
-                size="small"
-                sx={{
-                    tableLayout: { xs: "auto", md: "fixed" },
-                }}
-                ref={contentRef}
+        <TableBody>
+          <TableRow>
+            <TableCell sx={{ px: { xs: 1, sm: 1, md: 1 } }}>
+              {renderLargeFont(<>ТИП КОНСТРУК&shy;ЦИИ</>)}
+            </TableCell>
+            <TableCell sx={{ display: { xs: "none", sm: "table-cell" } }}>
+              {renderLargeFont(<>ЭТАЖ</>, true)}
+
+              {renderSubtitle(<>установки окон</>, true)}
+            </TableCell>
+            <TableCell sx={{ px: { xs: 0, sm: 1, md: 1 } }}>
+              {renderLargeFont(<>ПРОФИЛЬ&shy;НАЯ СИСТЕМА</>)}
+
+              {renderSubtitle(
+                <>
+                  рекомендо
+                  <wbr />
+                  ванная
+                </>,
+                true,
+              )}
+            </TableCell>
+            <TableCell
+              sx={{
+                px: { xs: 1, sm: 1, md: 2 },
+                bgcolor: "lightyellow",
+                borderLeft: "1px solid rgba(224, 224, 224, 1)",
+                borderRight: "1px solid rgba(224, 224, 224, 1)",
+              }}
             >
-                <TableHead sx={{ bgcolor: "#333" }}>
-                    <TableRow>
-                        <TableCell colSpan={5} sx={{ p: 1 }}>
-                            <Stack
-                                direction={"row"}
-                                sx={{ alignItems: "center" }}
-                            >
-                                <Button
-                                    // size={"small"}
-                                    variant={"outlined"}
-                                    onClick={() => reactToPrintFn()}
-                                    sx={{
-                                        color: "white",
-                                        borderColor: "white",
-                                        fontSize: {
-                                            xs: "x-small",
-                                            md: "small",
-                                        },
-                                    }}
-                                >
-                                    Печать
-                                </Button>
-                                <Box
-                                    sx={{
-                                        textAlign: "center",
-                                        width: "100%",
-                                    }}
-                                >
-                                    <Typography
-                                        sx={{
-                                            m: 0,
-                                            p: 0,
-                                            color: "white",
-                                            fontWeight: { xs: 400, md: 300 },
-                                            textTransform: "uppercase",
-                                            letterSpacing: "3px",
-                                            textAlign: "center",
-                                            fontSize: {
-                                                xs: "small",
-                                                sm: "small",
-                                                md: "medium",
-                                                lg: "large",
-                                            },
-                                        }}
-                                    >
-                                        5- и 9-этажные дома. Актуальные цены на
-                                        дату: {latestPrice.date}
-                                    </Typography>
-                                </Box>
-                            </Stack>
-                        </TableCell>
-                    </TableRow>
-                </TableHead>
+              <Box sx={{ my: 1 }}>
+                {renderLargeFont(<>СТОИМОСТЬ</>, true)}
 
-                <TableBody>
-                    <TableRow>
-                        <TableCell sx={{ px: { xs: 1, sm: 1, md: 1 } }}>
-                            {renderLargeFont(<>ТИП КОНСТРУК&shy;ЦИИ</>)}
-                        </TableCell>
-                        <TableCell
-                            sx={{ display: { xs: "none", sm: "table-cell" } }}
-                        >
-                            {renderLargeFont(<>ЭТАЖ</>, true)}
-
-                            {renderSubtitle(<>установки окон</>, true)}
-                        </TableCell>
-                        <TableCell sx={{ px: { xs: 0, sm: 1, md: 1 } }}>
-                            {renderLargeFont(<>ПРОФИЛЬ&shy;НАЯ СИСТЕМА</>)}
-
-                            {renderSubtitle(
-                                <>
-                                    рекомендо
-                                    <wbr />
-                                    ванная
-                                </>,
-                                true
-                            )}
-                        </TableCell>
-                        <TableCell
-                            sx={{
-                                px: { xs: 1, sm: 1, md: 2 },
-                                bgcolor: "lightyellow",
-                                borderLeft: "1px solid rgba(224, 224, 224, 1)",
-                                borderRight: "1px solid rgba(224, 224, 224, 1)",
-                            }}
-                        >
-                            <Box sx={{ my: 1 }}>
-                                {renderLargeFont(<>СТОИМОСТЬ</>, true)}
-
-                                {/* {renderSubtitle(
+                {/* {renderSubtitle(
                                     <>
                                         окно, отлив, подо&shy;конник, откосы,
                                         монтаж по ГОСТ
                                     </>,
                                     true
                                 )} */}
-                                {renderSubtitle(<>Оконный блок</>, true)}
-                            </Box>
-                        </TableCell>
-                        {/* <TableCell
+                {renderSubtitle(<>Оконный блок</>, true)}
+              </Box>
+            </TableCell>
+            {/* <TableCell
                             sx={{ display: { xs: "none", sm: "table-cell" } }}
                         >
                             <Box sx={{ my: 1 }}>
@@ -163,126 +158,104 @@ const PriceCompareApartments = () => {
                                 )}
                             </Box>
                         </TableCell> */}
+            <TableCell
+              sx={{
+                px: { xs: 0, sm: 1, md: 1 },
+                display: { xs: "none", sm: "table-cell" },
+              }}
+            >
+              {renderLargeFont(<>ОПЦИИ</>)}
+            </TableCell>
+          </TableRow>
+
+          {latestPrice.constructionTypes.map(
+            (currentConstructionType, constructionIndex) => {
+              return currentConstructionType.products.map(
+                (currentWindowSystem, windowSystemIndex) => {
+                  return (
+                    <TableRow key={Math.round(Math.random() * 10000)}>
+                      {windowSystemIndex == 0 && (
                         <TableCell
-                            sx={{
-                                px: { xs: 0, sm: 1, md: 1 },
-                                display: { xs: "none", sm: "table-cell" },
-                            }}
+                          sx={{
+                            px: {
+                              xs: 1,
+                              sm: 1,
+                              md: 2,
+                            },
+                            maxWidth: "200px",
+                            // maxHeight: "100px",
+                          }}
+                          rowSpan={currentConstructionType.products.length}
                         >
-                            {renderLargeFont(<>ОПЦИИ</>)}
+                          <Image
+                            src={currentConstructionType.typeImageSrc}
+                            width={932}
+                            height={686}
+                            quality={95}
+                            // unoptimized
+                            priority
+                            style={{
+                              width: "100%",
+                              height: "auto",
+                            }}
+                            alt={`Тип окна, ${currentConstructionType.typeImageSrc}`}
+                          />
                         </TableCell>
-                    </TableRow>
+                      )}
 
-                    {latestPrice.constructionTypes.map(
-                        (currentConstructionType, constructionIndex) => {
-                            return currentConstructionType.products.map(
-                                (currentWindowSystem, windowSystemIndex) => {
-                                    return (
-                                        <TableRow
-                                            key={Math.round(
-                                                Math.random() * 10000
-                                            )}
-                                        >
-                                            {windowSystemIndex == 0 && (
-                                                <TableCell
-                                                    sx={{
-                                                        px: {
-                                                            xs: 1,
-                                                            sm: 1,
-                                                            md: 2,
-                                                        },
-                                                        maxWidth: "200px",
-                                                        // maxHeight: "100px",
-                                                    }}
-                                                    rowSpan={
-                                                        currentConstructionType
-                                                            .products.length
-                                                    }
-                                                >
-                                                    <Image
-                                                        src={
-                                                            currentConstructionType.typeImageSrc
-                                                        }
-                                                        width={932}
-                                                        height={686}
-                                                        quality={95}
-                                                        // unoptimized
-                                                        priority
-                                                        style={{
-                                                            width: "100%",
-                                                            height: "auto",
-                                                        }}
-                                                        alt={`Тип окна, ${currentConstructionType.typeImageSrc}`}
-                                                    />
-                                                </TableCell>
-                                            )}
-
-                                            <TableCell
-                                                sx={{
-                                                    display: {
-                                                        xs: "none",
-                                                        sm: "table-cell",
-                                                    },
-                                                    bgcolor:
-                                                        windowSystemIndex == 0
-                                                            ? "lightyellow"
-                                                            : "inherit",
-                                                }}
-                                            >
-                                                {renderSmallFont(
-                                                    renderFloor(
-                                                        currentWindowSystem.floor,
-                                                        currentConstructionType.type
-                                                    ),
-                                                    true
-                                                )}
-                                            </TableCell>
-                                            <TableCell
-                                                sx={{
-                                                    px: 0,
-                                                    bgcolor:
-                                                        windowSystemIndex == 0
-                                                            ? "lightyellow"
-                                                            : "inherit",
-                                                }}
-                                            >
-                                                <Button
-                                                    href={linkGenerator(
-                                                        currentWindowSystem.name.toUpperCase()
-                                                    )}
-                                                    variant={"text"}
-                                                    sx={{
-                                                        p: 0,
-                                                        color: "secondary.main",
-                                                    }}
-                                                >
-                                                    {renderSmallFont(
-                                                        <>
-                                                            {currentWindowSystem.name.toUpperCase()}
-                                                        </>
-                                                    )}
-                                                </Button>
-                                            </TableCell>
-                                            <TableCell
-                                                sx={{
-                                                    px: 1,
-                                                    bgcolor: "lightyellow",
-                                                    borderLeft:
-                                                        "1px solid rgba(224, 224, 224, 1)",
-                                                    borderRight:
-                                                        "1px solid rgba(224, 224, 224, 1)",
-                                                }}
-                                            >
-                                                {renderSmallFont(
-                                                    <>
-                                                        от{" "}
-                                                        {currentWindowSystem.price_full -
-                                                            18000}{" "}
-                                                        руб
-                                                    </>,
-                                                    true
-                                                )}
-                                                {/* <Typography
+                      <TableCell
+                        sx={{
+                          display: {
+                            xs: "none",
+                            sm: "table-cell",
+                          },
+                          bgcolor:
+                            windowSystemIndex == 0 ? "lightyellow" : "inherit",
+                        }}
+                      >
+                        {renderSmallFont(
+                          renderFloor(
+                            currentWindowSystem.floor,
+                            currentConstructionType.type,
+                          ),
+                          true,
+                        )}
+                      </TableCell>
+                      <TableCell
+                        sx={{
+                          px: 0,
+                          bgcolor:
+                            windowSystemIndex == 0 ? "lightyellow" : "inherit",
+                        }}
+                      >
+                        <Button
+                          href={linkGenerator(
+                            currentWindowSystem.name.toUpperCase(),
+                          )}
+                          variant={"text"}
+                          sx={{
+                            p: 0,
+                            color: "secondary.main",
+                          }}
+                        >
+                          {renderSmallFont(
+                            <>{currentWindowSystem.name.toUpperCase()}</>,
+                          )}
+                        </Button>
+                      </TableCell>
+                      <TableCell
+                        sx={{
+                          px: 1,
+                          bgcolor: "lightyellow",
+                          borderLeft: "1px solid rgba(224, 224, 224, 1)",
+                          borderRight: "1px solid rgba(224, 224, 224, 1)",
+                        }}
+                      >
+                        {renderSmallFont(
+                          <>от {currentWindowSystem.price_full - 18000} руб</>,
+                          true,
+                        )}
+                        {/* <Typography
                                                     sx={{
                                                         typography: "body2",
                                                         fontSize: "0.7rem",
@@ -293,8 +266,8 @@ const PriceCompareApartments = () => {
                                                 >
                                                     Монтаж включён
                                                 </Typography> */}
-                                            </TableCell>
-                                            {/* <TableCell
+                      </TableCell>
+                      {/* <TableCell
                                                 sx={{
                                                     display: {
                                                         xs: "none",
@@ -327,27 +300,24 @@ const PriceCompareApartments = () => {
                                                 </Typography>
                                             </TableCell> */}
 
-                                            {windowSystemIndex == 0 && (
-                                                <TableCell
-                                                    sx={{
-                                                        px: { xs: 1, md: 2 },
-                                                        display: {
-                                                            xs: "none",
-                                                            sm: "table-cell",
-                                                        },
-                                                    }}
-                                                    rowSpan={
-                                                        currentConstructionType
-                                                            .products.length
-                                                    }
-                                                >
-                                                    <Stack
-                                                        direction={"column"}
-                                                        justifyContent={
-                                                            "space-around"
-                                                        }
-                                                    >
-                                                        {/* {renderSubtitle(
+                      {windowSystemIndex == 0 && (
+                        <TableCell
+                          sx={{
+                            px: { xs: 1, md: 2 },
+                            display: {
+                              xs: "none",
+                              sm: "table-cell",
+                            },
+                          }}
+                          rowSpan={currentConstructionType.products.length}
+                        >
+                          <Stack
+                            direction="column"
+                            sx={{
+                              justifyContent: "space-around",
+                            }}
+                          >
+                            {/* {renderSubtitle(
                                                             <>
                                                                 Без
                                                                 паро&shy;изоляции
@@ -358,162 +328,151 @@ const PriceCompareApartments = () => {
                                                                 руб
                                                             </>
                                                         )} */}
-                                                        <br />
-                                                        {currentConstructionType.additional_sash !=
-                                                            0 &&
-                                                            renderSubtitle(
-                                                                <>
-                                                                    Дополни&shy;тель&shy;ная
-                                                                    створка
-                                                                    <br />
-                                                                    {
-                                                                        currentConstructionType.additional_sash
-                                                                    }{" "}
-                                                                    руб
-                                                                </>
-                                                            )}
-                                                        <br />
-                                                        {currentConstructionType.additional_sash !=
-                                                            0 &&
-                                                            renderSubtitle(
-                                                                <>
-                                                                    Дополни&shy;тель&shy;ная
-                                                                    москитная
-                                                                    сетка
-                                                                    <br />
-                                                                    {
-                                                                        currentConstructionType.additional_mosquito
-                                                                    }{" "}
-                                                                    руб
-                                                                </>
-                                                            )}
-                                                    </Stack>
-                                                </TableCell>
-                                            )}
-                                        </TableRow>
-                                    );
-                                }
-                            );
-                        }
-                    )}
-
-                    <TableRow>
-                        <TableCell
-                            colSpan={5}
-                            sx={{ px: { xs: 0, sm: 2 }, py: 2 }}
-                        >
-                            <PriceNotesBox />
+                            <br />
+                            {currentConstructionType.additional_sash != 0 &&
+                              renderSubtitle(
+                                <>
+                                  Дополни&shy;тель&shy;ная створка
+                                  <br />
+                                  {currentConstructionType.additional_sash} руб
+                                </>,
+                              )}
+                            <br />
+                            {currentConstructionType.additional_sash != 0 &&
+                              renderSubtitle(
+                                <>
+                                  Дополни&shy;тель&shy;ная москитная сетка
+                                  <br />
+                                  {
+                                    currentConstructionType.additional_mosquito
+                                  }{" "}
+                                  руб
+                                </>,
+                              )}
+                          </Stack>
                         </TableCell>
+                      )}
                     </TableRow>
-                </TableBody>
-            </Table>
-        </TableContainer>
-    );
+                  );
+                },
+              );
+            },
+          )}
+
+          <TableRow>
+            <TableCell colSpan={5} sx={{ px: { xs: 0, sm: 2 }, py: 2 }}>
+              <PriceNotesBox />
+            </TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
 };
 
 function renderLargeFont(text: ReactElement, bold: boolean = false) {
-    return (
-        <Typography
-            sx={{
-                m: 0,
-                px: { xs: 0, md: 1 },
-                textAlign: "center",
-                fontSize: {
-                    xs: "medium",
-                    sm: "small",
-                    md: "medium",
-                    lg: "medium",
-                },
-                fontWeight: bold == true ? 500 : 300,
-            }}
-        >
-            {text}
-        </Typography>
-    );
+  return (
+    <Typography
+      sx={{
+        m: 0,
+        px: { xs: 0, md: 1 },
+        textAlign: "center",
+        fontSize: {
+          xs: "medium",
+          sm: "small",
+          md: "medium",
+          lg: "medium",
+        },
+        fontWeight: bold == true ? 500 : 300,
+      }}
+    >
+      {text}
+    </Typography>
+  );
 }
 
 function renderSmallFont(text: ReactElement, bold: boolean = false) {
-    return (
-        <Typography
-            sx={{
-                m: 0,
-                px: { xs: 0, md: 1 },
-                textAlign: { xs: "left", md: "center" },
-                fontSize: {
-                    xs: "medium",
-                    sm: "small",
-                    md: "small",
-                    lg: "medium",
-                },
-                fontWeight: bold == true ? 400 : 300,
-            }}
-        >
-            {text}
-        </Typography>
-    );
+  return (
+    <Typography
+      sx={{
+        m: 0,
+        px: { xs: 0, md: 1 },
+        textAlign: { xs: "left", md: "center" },
+        fontSize: {
+          xs: "medium",
+          sm: "small",
+          md: "small",
+          lg: "medium",
+        },
+        fontWeight: bold == true ? 400 : 300,
+      }}
+    >
+      {text}
+    </Typography>
+  );
 }
 
 function renderSubtitle(text: ReactElement, bold: boolean = false) {
-    return (
-        <Typography
-            sx={{
-                m: 0,
-                px: { xs: 0, md: 1 },
-                textAlign: "center",
-                fontSize: {
-                    xs: "small",
-                    sm: "small",
-                    md: "x-small",
-                    lg: "small",
-                },
-                fontWeight: bold == true ? 400 : 300,
-            }}
-        >
-            {text}
-        </Typography>
-    );
+  return (
+    <Typography
+      sx={{
+        m: 0,
+        px: { xs: 0, md: 1 },
+        textAlign: "center",
+        fontSize: {
+          xs: "small",
+          sm: "small",
+          md: "x-small",
+          lg: "small",
+        },
+        fontWeight: bold == true ? 400 : 300,
+      }}
+    >
+      {text}
+    </Typography>
+  );
 }
 
 function renderFloor(
-    floorCode: number,
-    constructionTypeCode: number
+  floorCode: number,
+  constructionTypeCode: number,
 ): ReactElement {
-    switch (floorCode) {
-        case 0:
-            return constructionTypeCode < 3 ? (
-                <>1&mdash;5</>
-            ) : (
-                <>
-                    Балкон
-                    <br />
-                    остеклён
-                </>
-            );
-        case 1:
-            return constructionTypeCode < 3 ? (
-                <>6&mdash;12</>
-            ) : (
-                <>
-                    Балкон
-                    <br />
-                    НЕ остеклён
-                </>
-            );
-        case 2:
-            return constructionTypeCode < 3 ? (
-                <>13&mdash;17</>
-            ) : (
-                <>
-                    ПРЕМИУМ
-                    <br />
-                    вариант
-                </>
-            );
-        case 3:
-            return <>выше 18</>;
-    }
+  switch (floorCode) {
+    case 0:
+      return constructionTypeCode < 3 ? (
+        <>1&mdash;5</>
+      ) : (
+        <>
+          Балкон
+          <br />
+          остеклён
+        </>
+      );
+    case 1:
+      return constructionTypeCode < 3 ? (
+        <>6&mdash;12</>
+      ) : (
+        <>
+          Балкон
+          <br />
+          НЕ остеклён
+        </>
+      );
+    case 2:
+      return constructionTypeCode < 3 ? (
+        <>13&mdash;17</>
+      ) : (
+        <>
+          ПРЕМИУМ
+          <br />
+          вариант
+        </>
+      );
+    case 3:
+      return <>выше 18</>;
+  }
 
-    return <>Error!</>;
+  return <>Error!</>;
 }
 
 // function renderName(type: number): ReactElement {
@@ -564,18 +523,18 @@ function renderFloor(
 // }
 
 function linkGenerator(systemNane: string) {
-    switch (systemNane) {
-        case "КАЛЕВА 60":
-            return "/okna/kaleva_profi";
-        case "КАЛЕВА 70":
-            return "/okna/kaleva_standart";
-        case "VEKA SOFTLINE 70":
-            return "/okna/veka_softline_70";
-        case "VEKA SOFTLINE 82":
-            return "/okna/veka_softline_82";
-    }
+  switch (systemNane) {
+    case "КАЛЕВА 60":
+      return "/okna/kaleva_profi";
+    case "КАЛЕВА 70":
+      return "/okna/kaleva_standart";
+    case "VEKA SOFTLINE 70":
+      return "/okna/veka_softline_70";
+    case "VEKA SOFTLINE 82":
+      return "/okna/veka_softline_82";
+  }
 
-    return "";
+  return "";
 }
 
 export default PriceCompareApartments;

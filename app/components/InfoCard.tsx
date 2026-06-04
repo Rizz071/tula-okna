@@ -7,7 +7,7 @@ import {
     TableCell,
     Typography,
     TableBody,
-    Grid2 as Grid,
+    Grid,
 } from "@mui/material";
 import { IInfoCard } from "../lib/types";
 
@@ -47,10 +47,10 @@ const InfoCard = ({ infoCard }: { infoCard: IInfoCard }) => {
                                     <Grid
                                         container
                                         columnSpacing={2}
-                                        direction={{ xs: "column", lg: "row" }}
                                         sx={{
                                             justifyContent: "center",
                                             alignItems: "center",
+                                            flexDirection: {xs: "column", lg: "row"}
                                         }}
                                     >
                                         <Grid size={{ xs: 12, lg: 6 }}>

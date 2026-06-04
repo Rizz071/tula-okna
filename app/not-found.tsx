@@ -1,7 +1,7 @@
 import {
     Container,
     Typography,
-    Grid2 as Grid,
+    Grid,
     Box,
     Stack,
 } from "@mui/material";

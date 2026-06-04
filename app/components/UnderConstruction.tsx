@@ -1,5 +1,5 @@
 import under_construction_logo from "@/public/images/under_construction.png";
-import { Box, Container, Grid2 as Grid, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 
 const UnderConstruction = () => {

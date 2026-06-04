@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 
 import {
     Box,
-    Grid2 as Grid,
+    Grid,
     List,
     ListItem,
     Paper,

@@ -1,4 +1,4 @@
-import { Box, Container, Grid2 as Grid } from "@mui/material";
+import { Box, Container, Grid } from "@mui/material";
 import Image from "next/image";
 import background from "@/public/images/stoimost-fon.png";
 import man_image from "@/public/images/stoimost-img.webp";

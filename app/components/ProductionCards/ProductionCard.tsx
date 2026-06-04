@@ -1,4 +1,4 @@
-import { Typography, Button, Stack, Grid2 as Grid, Box } from "@mui/material";
+import { Typography, Button, Stack, Grid, Box } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
 import { ReactElement } from "react";
 

@@ -1,4 +1,4 @@
-import { Grid2 as Grid, Typography, Stack } from "@mui/material";
+import { Grid, Typography, Stack } from "@mui/material";
 import { ReactElement } from "react";
 import { SvgIconTypeMap } from "@mui/material/SvgIcon";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
