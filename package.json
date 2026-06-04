@@ -8,7 +8,7 @@
         "start": "next start",
         "lint": "eslint .",
         "deploy-local-to-remote": "git add -A && git commit -am \"deploy\" && git push origin main-develop:main-develop && git checkout main && git merge main-develop  && git push origin main:main && git checkout main-develop",
-        "deploy-server-with-kill": "pm2 kill && git pull && npm install && npm run build && pm2 start npm -- start",
+        "deploy-server-with-kill": "pm2 kill && git pull && npm install && npm run build && pm2 start npm --name \"tula-okna\" -- start",
         "deploy-server-with-reload": "git pull && npm install && npm run build && pm2 reload all"
     },
     "dependencies": {
