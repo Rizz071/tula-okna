@@ -7,6 +7,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "./lib/theme";
 import Navbar from "./components/Navbar/Navbar";
 import FooterContainer from "./components/Footer/FooterContainer";
+import YandexMetrika from "@/app/components/YandexMetrika/YandexMetrika";
 import { GoogleTagManager } from "@next/third-parties/google";
 
 export const viewport: Viewport = {
@@ -27,6 +28,7 @@ export default function RootLayout({
         <html lang="ru">
             <GoogleTagManager gtmId="GTM-NV692FRD" />
             <body>
+                <YandexMetrika />
                 <AppRouterCacheProvider>
                     <ThemeProvider theme={theme}>
                         <header>
