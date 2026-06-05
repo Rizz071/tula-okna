@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { Toolbar, Box, Button, Typography, Stack } from "@mui/material";
 import Link from "next/link";
@@ -8,131 +10,139 @@ import Image from "next/image";
 import CalculateOutlinedIcon from "@mui/icons-material/CalculateOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import { IMainMenuItem } from "@/app/lib/types";
+import { reachMetrikaGoal } from "@/app/lib/metrika";
 
 const NavbarHigherRow = ({ menuItems }: { menuItems: IMainMenuItem[] }) => {
-  const [isContactsVisible, setIsContactsVisible] = useState<boolean>(false);
+    const [isContactsVisible, setIsContactsVisible] = useState<boolean>(false);
 
-  const DESKTOP_HIGH_ROW_HEIGHT = "90px";
-  const MOBILE_HIGH_ROW_HEIGHT = "70px";
+    const DESKTOP_HIGH_ROW_HEIGHT = "90px";
+    const MOBILE_HIGH_ROW_HEIGHT = "70px";
 
-  return (
-    <Toolbar
-      sx={{
-        justifyContent: "space-between",
-        fontWeight: "light",
-        mt: 1,
-        mb: 1,
-        height: {
-          xs: MOBILE_HIGH_ROW_HEIGHT,
-          sm: DESKTOP_HIGH_ROW_HEIGHT,
-        },
-        columnGap: 2,
-      }}
-    >
-      <Stack
-        direction={"column"}
-        sx={{
-          height: {
-            xs: MOBILE_HIGH_ROW_HEIGHT,
-            sm: DESKTOP_HIGH_ROW_HEIGHT,
-          },
-        }}
-      >
-        <Link href={"/"} style={{ width: "100%", height: "100%" }}>
-          <Image
-            src={logoImage}
-            width={0}
-            height={0}
-            style={{
-              width: "100%",
-              height: "100%",
+    return (
+        <Toolbar
+            sx={{
+                justifyContent: "space-between",
+                fontWeight: "light",
+                mt: 1,
+                mb: 1,
+                height: {
+                    xs: MOBILE_HIGH_ROW_HEIGHT,
+                    sm: DESKTOP_HIGH_ROW_HEIGHT,
+                },
+                columnGap: 2,
             }}
-            alt="Company logo"
-          />
-        </Link>
-      </Stack>
-
-      <Box
-        sx={{
-          display: { xs: "none", md: "flex" },
-          flexDirection: {
-            sm: "column",
-            lg: "row",
-          },
-          justifyContent: {
-            sm: "flex-start",
-            lg: "space-between",
-          },
-          gap: { sm: 0, lg: 1 },
-          alignSelf: "flex-end",
-        }}
-      >
-        <Button
-          href={"/okna/apartments"}
-          sx={{
-            color: "primary",
-            alignSelf: "flex-end",
-            mr: "auto",
-            fontWeight: 400,
-            fontSize: "large",
-            margin: 0,
-            textTransform: "none",
-          }}
-          startIcon={
-            <CalculateOutlinedIcon
-              sx={{
-                width: { lg: 35 },
-                height: { lg: 35 },
-              }}
-            />
-          }
         >
-          Калькулятор окон
-        </Button>
+            <Stack
+                direction={"column"}
+                sx={{
+                    height: {
+                        xs: MOBILE_HIGH_ROW_HEIGHT,
+                        sm: DESKTOP_HIGH_ROW_HEIGHT,
+                    },
+                }}
+            >
+                <Link href={"/"} style={{ width: "100%", height: "100%" }}>
+                    <Image
+                        src={logoImage}
+                        width={0}
+                        height={0}
+                        style={{
+                            width: "100%",
+                            height: "100%",
+                        }}
+                        alt="Company logo"
+                    />
+                </Link>
+            </Stack>
 
-        <Button
-          href={"/contacts"}
-          sx={{
-            color: "primary",
-            mr: "auto",
-            alignSelf: "flex-end",
-            fontWeight: 400,
-            fontSize: "large",
-            margin: 0,
-            textTransform: "none",
-          }}
-          startIcon={
-            <MapOutlinedIcon
-              sx={{
-                width: { lg: 35 },
-                height: { lg: 35 },
-              }}
-            />
-          }
-        >
-          Схема проезда
-        </Button>
-      </Box>
+            <Box
+                sx={{
+                    display: { xs: "none", md: "flex" },
+                    flexDirection: {
+                        sm: "column",
+                        lg: "row",
+                    },
+                    justifyContent: {
+                        sm: "flex-start",
+                        lg: "space-between",
+                    },
+                    gap: { sm: 0, lg: 1 },
+                    alignSelf: "flex-end",
+                }}
+            >
+                <Button
+                    href={"/okna/apartments"}
+                    sx={{
+                        color: "primary",
+                        alignSelf: {
+                            xs: "flex-start",
+                            lg: "flex-end",
+                        },
+                        mr: "auto",
+                        fontWeight: 400,
+                        fontSize: "large",
+                        margin: 0,
+                        textTransform: "none",
+                    }}
+                    startIcon={
+                        <CalculateOutlinedIcon
+                            sx={{
+                                width: { lg: 35 },
+                                height: { lg: 35 },
+                            }}
+                        />
+                    }
+                >
+                    Калькулятор окон
+                </Button>
 
-      <Box sx={{ alignSelf: "flex-end" }}>
-        <PhoneMailButton
-          isContactsVisible={isContactsVisible}
-          setIsContactsVisible={setIsContactsVisible}
-        />
-      </Box>
+                <Button
+                    href={"/contacts"}
+                    sx={{
+                        color: "primary",
+                        mr: "auto",
+                        alignSelf: {
+                            xs: "flex-start",
+                            lg: "flex-end",
+                        },
+                        fontWeight: 400,
+                        fontSize: "large",
+                        margin: 0,
+                        textTransform: "none",
+                    }}
+                    startIcon={
+                        <MapOutlinedIcon
+                            sx={{
+                                width: { lg: 35 },
+                                height: { lg: 35 },
+                            }}
+                        />
+                    }
+                    onClick={() => reachMetrikaGoal("click_contacts")} // Вешаем обработчик события клика счётчика Метрики
+                >
+                    Схема проезда
+                </Button>
+            </Box>
 
-      <Box
-        sx={{
-          display: {
-            xs: "flex",
-            sm: "none",
-          },
-        }}
-      >
-        <Hamburger menuItems={menuItems} />
-      </Box>
-    </Toolbar>
-  );
+            <Box sx={{ alignSelf: "flex-end" }}>
+                <PhoneMailButton
+                    isContactsVisible={isContactsVisible}
+                    setIsContactsVisible={setIsContactsVisible}
+                />
+            </Box>
+
+            <Box
+                sx={{
+                    display: {
+                        xs: "flex",
+                        sm: "none",
+                    },
+                }}
+            >
+                <Hamburger menuItems={menuItems} />
+            </Box>
+        </Toolbar>
+    );
 };
 
 export default NavbarHigherRow;
