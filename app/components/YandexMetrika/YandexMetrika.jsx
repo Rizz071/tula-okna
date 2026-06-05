@@ -1,27 +1,33 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script";
 import { trackMetrikaHit } from "@/app/lib/metrika"; // Импортируем наш безопасный метод
 
-export default function YandexMetrika() {
+// Выносим хуки и логику трекинга в отдельный внутренний компонент
+function MetrikaTracker() {
     const pathname = usePathname();
     const searchParams = useSearchParams();
 
     useEffect(() => {
-        // Превращаем параметры в строку
         const currentParams = searchParams.toString();
-
-        // Формируем чистый URL: если параметров нет, не пишем "?" в конце
         const url = currentParams ? `${pathname}?${currentParams}` : pathname;
 
-        // Вызываем централизованный метод трекинга
         trackMetrikaHit(url);
     }, [pathname, searchParams]);
 
+    return null;
+}
+
+export default function YandexMetrika() {
     return (
         <>
+            {/* Оборачиваем трекер в Suspense. 
+                Это скажет Next.js: "Всё ок, при сборке на сервере пропусти этот шаг, он выполнится в браузере" */}
+            <Suspense fallback={null}>
+                <MetrikaTracker />
+            </Suspense>
             {/* Инициализация самого счетчика */}
             <Script id="yandex-metrika" strategy="afterInteractive">
                 {`
