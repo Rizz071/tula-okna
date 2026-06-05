@@ -8,7 +8,7 @@
         "start": "next start",
         "lint": "eslint .",
         "deploy-local-to-remote": "git add -A && git commit -am \"deploy\" && git push origin main-develop:main-develop && git checkout main && git merge main-develop  && git push origin main:main && git checkout main-develop",
-        "deploy-at-server": "git pull && npm install && npm run build && pm2 restart"
+        "deploy-at-server": "git pull && npm install && npm run build && pm2 restart ecosystem.config.js"
     },
     "dependencies": {
         "@emotion/cache": "^11.14.0",
